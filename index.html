@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Outils Dofus par Ato</title>
+    <link rel="icon" type="image/png" href="images/tifoux.png">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #111827; /* bg-gray-900 */
+        }
+        /* Le fond d'image précédent est remplacé par la vidéo */
+        .main-container {
+            position: relative; /* Nécessaire pour le positionnement absolu de la vidéo */
+            min-height: 100vh;
+            overflow: hidden; /* Pour s'assurer que la vidéo ne déborde pas */
+        }
+        .video-background {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            z-index: -2; /* Place la vidéo derrière tout le contenu */
+        }
+        .video-background video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover; /* S'assure que la vidéo couvre toute la zone */
+        }
+        .video-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.7); /* Overlay plus sombre (opacité augmentée à 0.7) */
+            z-index: -1; /* Au-dessus de la vidéo, mais derrière le contenu */
+        }
+        .card-bg {
+            background-color: rgba(31, 41, 55, 0.85); /* bg-gray-800 with 85% opacity */
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+    </style>
+</head>
+<body class="text-white antialiased">
+
+    <div class="main-container">
+        <!-- Conteneur pour la vidéo de fond -->
+        <div class="video-background">
+            <video autoplay loop muted playsinline>
+                <source src="images/headervideo.mp4" type="video/mp4">
+                Ton navigateur ne supporte pas la lecture de vidéos.
+            </video>
+        </div>
+        <!-- Overlay pour améliorer la lisibilité du texte sur la vidéo -->
+        <div class="video-overlay"></div>
+
+        <div class="relative z-10 container mx-auto p-4 md:p-8 max-w-4xl min-h-screen flex flex-col">
+            
+            <!-- Sélecteur de langue -->
+            <div class="flex justify-end mb-4">
+                <select id="language-selector" class="bg-gray-700 border border-gray-600 rounded-lg px-3 py-1 text-white focus:ring-2 focus:ring-teal-500 focus:border-teal-500 transition">
+                    <option value="fr">🇫🇷 Français</option>
+                    <option value="en">🇬🇧 English</option>
+                    <option value="es">🇪🇸 Español</option>
+                    <option value="pt-br">🇧🇷 Português (BR)</option>
+                    <option value="it">🇮🇹 Italiano</option>
+                </select>
+            </div>
+
+            <!-- Logo Dofus et titres déplacés ici -->
+            <div class="text-center my-4"> <!-- Ajustement de l'espace vertical -->
+                <img src="images/LogoDofus.webp" alt="Logo Dofus" class="h-48 md:h-64 mx-auto mb-4 opacity-80"> <!-- Taille du logo ajustée -->
+                <h1 class="text-4xl md:text-5xl font-bold text-teal-400" data-translate-key="main_title">Outils pour Dofus</h1>
+                <p class="text-gray-400 mt-2" data-translate-key="subtitle">Une collection d'outils pour t'aider dans ton aventure.</p>
+            </div>
+
+            <!-- Contenu principal -->
+            <main class="flex-grow">
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    
+                    <!-- Nouvelle carte pour le calculateur de coût de recette (PREMIER) -->
+                    <div class="card-bg p-6 rounded-2xl shadow-lg flex flex-col justify-between hover:border-teal-500 border-2 border-transparent transition-all duration-300 transform hover:-translate-y-1">
+                        <div>
+                            <div class="flex justify-center mb-4">
+                                <img src="images/craftkamas.png" alt="Craft Kamas" class="h-32 w-32 object-contain">
+                            </div>
+                            <h2 class="text-2xl font-bold text-white mb-2 text-center" data-translate-key="recipe_cost_calculator_title">Calculateur de Coût de Recette</h2>
+                            <p class="text-gray-400 mb-6 text-center" data-translate-key="recipe_cost_calculator_desc">
+                                Calcule le coût total des ressources nécessaires pour fabriquer un objet.
+                            </p>
+                        </div>
+                        <a href="https://atowhy.github.io/recipe_cost_calculator.html" class="mt-auto block text-center w-full bg-teal-600 hover:bg-teal-700 text-white font-bold py-3 px-4 rounded-lg transition-transform transform hover:scale-105 shadow-md" data-translate-key="btn_access">
+                            Accéder à l'outil
+                        </a>
+                    </div>
+
+                    <!-- Carte pour le calculateur d'XP familier (DEUXIÈME) -->
+                    <div class="card-bg p-6 rounded-2xl shadow-lg flex flex-col justify-between hover:border-teal-500 border-2 border-transparent transition-all duration-300 transform hover:-translate-y-1">
+                        <div>
+                            <div class="flex justify-center mb-4">
+                                <img src="images/tifoux.png" alt="Tifoux" class="h-32 w-32 object-contain">
+                            </div>
+                            <h2 class="text-2xl font-bold text-white mb-2 text-center" data-translate-key="calculator_title">Calculateur d'xp pour familier</h2>
+                            <p class="text-gray-400 mb-6 text-center" data-translate-key="calculator_desc">
+                                Optimise les coûts pour monter tes familiers en trouvant les ressources les plus rentables.
+                            </p>
+                        </div>
+                        <a href="pet_xp_calculator.html" class="mt-auto block text-center w-full bg-teal-600 hover:bg-teal-700 text-white font-bold py-3 px-4 rounded-lg transition-transform transform hover:scale-105 shadow-md" data-translate-key="btn_access">
+                            Accéder à l'outil
+                        </a>
+                    </div>
+
+                    <!-- Nouvelle carte pour le calculateur de taux de butin -->
+                    <div class="card-bg p-6 rounded-2xl shadow-lg flex flex-col justify-between hover:border-teal-500 border-2 border-transparent transition-all duration-300 transform hover:-translate-y-1">
+                        <div>
+                            <div class="flex justify-center mb-4">
+                                <img src="images/parangon.png" alt="Parangon" class="h-32 w-32 object-contain">
+                            </div>
+                            <h2 class="text-2xl font-bold text-white mb-2 text-center" data-translate-key="droprate_calculator_title">Calculateur de Taux de Butin</h2>
+                            <p class="text-gray-400 mb-6 text-center" data-translate-key="droprate_calculator_desc">
+                                Estime tes chances d'obtenir des objets en fonction de ta prospection et bonus.
+                            </p>
+                        </div>
+                        <a href="droprate_calculator.html" class="mt-auto block text-center w-full bg-teal-600 hover:bg-teal-700 text-white font-bold py-3 px-4 rounded-lg transition-transform transform hover:scale-105 shadow-md" data-translate-key="btn_access">
+                            Accéder à l'outil
+                        </a>
+                    </div>
+
+                    <!-- Nouvelle carte pour le calculateur d'XP de personnage -->
+                    <div class="card-bg p-6 rounded-2xl shadow-lg flex flex-col justify-between hover:border-teal-500 border-2 border-transparent transition-all duration-300 transform hover:-translate-y-1">
+                        <div>
+                            <div class="flex justify-center mb-4">
+                                <img src="images/dofuscawotte.png" alt="Dofus Cawotte" class="h-32 w-32 object-contain">
+                            </div>
+                            <h2 class="text-2xl font-bold text-white mb-2 text-center" data-translate-key="char_xp_calculator_title">Calculateur d'XP de Personnage</h2>
+                            <p class="text-gray-400 mb-6 text-center" data-translate-key="char_xp_calculator_desc">
+                                Calcule l'XP et le temps nécessaire pour ton personnage.
+                            </p>
+                        </div>
+                        <a href="https://atowhy.github.io/char_xp_calculator.html" class="mt-auto block text-center w-full bg-teal-600 hover:bg-teal-700 text-white font-bold py-3 px-4 rounded-lg transition-transform transform hover:scale-105 shadow-md" data-translate-key="btn_access">
+                            Accéder à l'outil
+                        </a>
+                    </div>
+
+                    <!-- Carte pour un futur outil (exemple) -->
+                    <div class="card-bg p-6 rounded-2xl shadow-lg flex flex-col justify-between border-2 border-dashed border-gray-700">
+                         <div class="text-center">
+                            <h2 class="text-2xl font-bold text-gray-500 mb-2" data-translate-key="soon_title">Outil à venir...</h2>
+                            <p class="text-gray-600 mb-6" data-translate-key="soon_desc">
+                               Un nouvel outil sera bientôt disponible ici.
+                            </p>
+                            <div class="flex justify-center mb-4">
+                                <img src="images/Ougah.png" alt="Ougah" class="h-28 w-28 object-contain opacity-30">
+                            </div>
+                        </div>
+                         <div class="mt-auto block text-center w-full bg-gray-700 text-gray-500 font-bold py-3 px-4 rounded-lg cursor-not-allowed" data-translate-key="btn_unavailable">
+                            Indisponible
+                        </div>
+                    </div>
+
+                </div>
+            </main>
+
+            <!-- Pied de page -->
+            <footer class="text-center text-gray-500 text-sm mt-12 pb-4">
+                <p data-translate-key="signature">Apps by Ato</p>
+                <p class="text-xs text-gray-600 mt-4" data-translate-key="disclaimer">Dofus et toutes les images associées utilisées sur ce site sont la propriété d'Ankama</p>
+            </footer>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const translations = {
+                fr: {
+                    main_title: "Outils pour Dofus",
+                    subtitle: "Une collection d'outils pour t'aider dans ton aventure.",
+                    calculator_title: "Calculateur d'xp pour familier",
+                    calculator_desc: "Optimise les coûts pour monter tes familiers en trouvant les ressources les plus rentables.",
+                    droprate_calculator_title: "Calculateur de Taux de Butin",
+                    droprate_calculator_desc: "Estime tes chances d'obtenir des objets en fonction de ta prospection et bonus.",
+                    char_xp_calculator_title: "Calculateur d'XP de Personnage",
+                    char_xp_calculator_desc: "Calcule l'XP et le temps nécessaire pour ton personnage.",
+                    recipe_cost_calculator_title: "Calculateur de Coût de Recette",
+                    recipe_cost_calculator_desc: "Calcule le coût total des ressources nécessaires pour fabriquer un objet.",
+                    btn_access: "Accéder à l'outil",
+                    soon_title: "Outil à venir...",
+                    soon_desc: "Un nouvel outil sera bientôt disponible ici.",
+                    btn_unavailable: "Indisponible",
+                    signature: "Apps by Ato",
+                    disclaimer: "Dofus et toutes les images associées utilisées sur ce site sont la propriété d'Ankama"
+                },
+                en: {
+                    main_title: "Tools for Dofus",
+                    subtitle: "A collection of tools to help you in your adventure.",
+                    calculator_title: "Pet XP Calculator",
+                    calculator_desc: "Optimize costs to level up your pets by finding the most profitable resources.",
+                    droprate_calculator_title: "Drop Rate Calculator",
+                    droprate_calculator_desc: "Estimate your chances of obtaining items based on your prospecting and bonuses.",
+                    char_xp_calculator_title: "Character XP Calculator",
+                    char_xp_calculator_desc: "Calculates the XP and time needed for your character.",
+                    recipe_cost_calculator_title: "Recipe Cost Calculator",
+                    recipe_cost_calculator_desc: "Calculates the total cost of resources needed to craft an item.",
+                    btn_access: "Access the tool",
+                    soon_title: "Tool coming soon...",
+                    soon_desc: "A new tool will be available here soon.",
+                    btn_unavailable: "Unavailable",
+                    signature: "Apps by Ato",
+                    disclaimer: "Dofus and any related images used on this website are the properties of Ankama"
+                },
+                es: {
+                    main_title: "Herramientas para Dofus",
+                    subtitle: "Una colección de herramientas para ayudarte en tu aventura.",
+                    calculator_title: "Calculadora de XP para Mascota",
+                    calculator_desc: "Optimiza los costos para subir de nivel a tus mascotas encontrando los recursos más rentables.",
+                    droprate_calculator_title: "Calculadora de Tasa de Drop",
+                    droprate_calculator_desc: "Estima tus posibilidades de obtener objetos según tu prospección y bonificaciones.",
+                    char_xp_calculator_title: "Calculadora de XP de Personaje",
+                    char_xp_calculator_desc: "Calcula la XP y el tiempo necesario para tu personaje.",
+                    recipe_cost_calculator_title: "Calculadora de Costo de Receta",
+                    recipe_cost_calculator_desc: "Calcula el costo total de los recursos necesarios para fabricar un objeto.",
+                    btn_access: "Acceder a la herramienta",
+                    soon_title: "Herramienta próximamente...",
+                    soon_desc: "Una nueva herramienta estará disponible aquí pronto.",
+                    btn_unavailable: "No disponible",
+                    signature: "Apps by Ato",
+                    disclaimer: "Dofus y cualquier imagen relacionada utilizada en este sitio web son propiedad de Ankama"
+                },
+                'pt-br': {
+                    main_title: "Ferramentas para Dofus",
+                    subtitle: "Una colección de herramientas para ajudá-lo em sua aventura.",
+                    calculator_title: "Calculadora de XP para Mascote",
+                    calculator_desc: "Otimize os custos para evoluir seus mascotes encontrando os recursos mais lucrativos.",
+                    droprate_calculator_title: "Calculadora de Taxa de Drop",
+                    droprate_calculator_desc: "Estime suas chances de obter itens com base na sua prospecção e bônus.",
+                    char_xp_calculator_title: "Calculadora de XP de Personagem",
+                    char_xp_calculator_desc: "Calcule a XP e o tempo necessário para seu personagem.",
+                    recipe_cost_calculator_title: "Calculadora de Custo de Receita",
+                    recipe_cost_calculator_desc: "Calcule o custo total dos recursos necessários para fabricar um objeto.",
+                    btn_access: "Acessar a ferramenta",
+                    soon_title: "Ferramenta em breve...",
+                    soon_desc: "Uma nova ferramenta estará disponível aqui em breve.",
+                    btn_unavailable: "Indisponível",
+                    signature: "Apps by Ato",
+                    disclaimer: "Dofus e quaisquer images liées utilisées sur ce site Web sont la propriété d'Ankama"
+                },
+                it: {
+                    main_title: "Strumenti per Dofus",
+                    subtitle: "Una raccolta di strumenti per aiutarti nella tua avventura.",
+                    calculator_title: "Calcolatore di XP per Famiglio",
+                    calculator_desc: "Ottimizza i costi per far salire di livello i tuoi famigli trovando le risorse più redditizie.",
+                    droprate_calculator_title: "Calcolatore Tasso di Drop",
+                    droprate_calculator_desc: "Stima le tue possibilità di ottenere oggetti in base alla tua prospezione e bonus.",
+                    char_xp_calculator_title: "Calcolatore XP Personaggio",
+                    char_xp_calculator_desc: "Stima l'XP e il tempo necessario per il tuo personaggio.",
+                    recipe_cost_calculator_title: "Calcolatore Costo Ricetta",
+                    recipe_cost_calculator_desc: "Calcola il costo totale delle risorse necessarie per creare un oggetto.",
+                    btn_access: "Accedi allo strumento",
+                    soon_title: "Strumento in arrivo...",
+                    soon_desc: "Un nuovo strumento sarà presto disponibile qui.",
+                    btn_unavailable: "Non disponibile",
+                    signature: "Apps by Ato",
+                    disclaimer: "Dofus e qualsiasi immagine correlata utilizzata su questo sito Web sono di proprietà di Ankama"
+                }
+            };
+
+            const languageSelector = document.getElementById('language-selector');
+
+            function setLanguage(lang) {
+                localStorage.setItem('dofusToolsLang', lang);
+                languageSelector.value = lang;
+                document.querySelectorAll('[data-translate-key]').forEach(element => {
+                    const key = element.getAttribute('data-translate-key');
+                    if (translations[lang] && translations[lang][key]) {
+                        element.textContent = translations[lang][key];
+                    }
+                });
+            }
+
+            languageSelector.addEventListener('change', (e) => {
+                setLanguage(e.target.value);
+            });
+
+            const savedLang = localStorage.getItem('dofusToolsLang') || 'fr';
+            setLanguage(savedLang);
+        });
+    </script>
+
+</body>
+</html>
