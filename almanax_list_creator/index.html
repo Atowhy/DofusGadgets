@@ -94,6 +94,27 @@
             color: transparent;
             background: transparent;
         }
+
+        /* Pagination styles */
+        .pagination-controls button {
+            background-color: #374151; /* bg-gray-700 */
+            color: #d1d5db; /* text-gray-300 */
+            padding: 0.5rem 1rem;
+            border-radius: 0.375rem;
+            transition: background-color 0.2s;
+        }
+        .pagination-controls button:hover:not(:disabled) {
+            background-color: #4b5563; /* bg-gray-600 */
+        }
+        .pagination-controls button:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+        }
+        .pagination-controls button.active {
+            background-color: #14b8a6; /* bg-teal-500 */
+            color: white;
+            font-weight: bold;
+        }
     </style>
 </head>
 <body class="text-white antialiased">
@@ -172,6 +193,7 @@
                     </div>
                     
                     <div id="almanax-list" class="grid grid-cols-1 md:grid-cols-2 gap-4"></div>
+                    <div id="pagination-controls" class="flex justify-center items-center mt-6 space-x-2"></div>
                     <p id="almanax-empty-results" class="text-center text-gray-500 py-8 hidden" data-translate-key="empty_results">
                         Aucune ressource trouvée pour la période sélectionnée.
                     </p>
@@ -182,7 +204,7 @@
                 <img src="../images/LogoDofus.webp" alt="Logo Dofus" class="h-12 mx-auto mb-2 opacity-50">
                 <p data-translate-key="signature">Apps by Ato</p>
                 <p class="text-xs text-gray-600 mt-4" data-translate-key="disclaimer">Dofus et toutes les images associées utilisées sur ce site sont la propriété d'Ankama</p>
-                <p class="text-xs text-gray-600 mt-2" data-translate-key="version_info">Version 1.4.0 - Juillet 2025</p>
+                <p class="text-xs text-gray-600 mt-2" data-translate-key="version_info">Version 1.5.0 - Juillet 2025</p>
             </footer>
         </div>
     </div>
@@ -193,11 +215,13 @@
         let almanaxData = [];
         let currentDailyOfferings = [];
         const resourceCache = {}; // API Cache
+        let currentPage = 1;
+        const itemsPerPage = 10;
 
         // DOM elements
         let startDateInput, endDateInput, numCharactersInput, generateListBtn, 
             almanaxLoadingMessage, almanaxErrorMessage,
-            almanaxResultsContainer, almanaxList, almanaxEmptyResults,
+            almanaxResultsContainer, almanaxList, almanaxEmptyResults, paginationControls,
             languageSelector, versionInfoElement, exportCsvBtn,
             todayAlmanaxOfferingDiv, todayOfferingLink, todayOfferingImg, todayOfferingName, todayOfferingDate, todayOfferingQuantity; 
 
@@ -206,7 +230,7 @@
                 btn_back_home: "← Retour à l'accueil",
                 signature: "Apps by Ato",
                 disclaimer: "Dofus et toutes les images associées utilisées sur ce site sont la propriété d'Ankama",
-                version_info: "Version 1.4.0 - Juillet 2025", 
+                version_info: "Version 1.5.0 - Juillet 2025", 
                 almanax_list_creator_title: "Créateur de liste pour l'Almanax",
                 almanax_list_creator_desc: "Vous permet de générer une liste de ressources pour une période donnée.",
                 form_title: "Générer une liste de ressources",
@@ -226,31 +250,13 @@
                 today_offering_title: "Offrande du jour :", 
                 today_offering_quantity_prefix: "Quantité :", 
                 today_offering_not_found: "Offrande du jour non trouvée.",
+                pagination_prev: "Précédent",
+                pagination_next: "Suivant",
             },
             en: {
-                btn_back_home: "← Back to Home",
-                signature: "Apps by Ato",
-                disclaimer: "Dofus and any related images used on this website are the properties of Ankama",
-                version_info: "Version 1.4.0 - July 2025", 
-                almanax_list_creator_title: "Almanax List Creator",
-                almanax_list_creator_desc: "Allows you to generate a list of resources for a given period.",
-                form_title: "Generate Resource List",
-                label_start_date: "Start Date:",
-                label_end_date: "End Date:",
-                label_num_characters: "Number of characters:",
-                btn_generate_list: "Generate List",
-                loading_data: "Loading data...",
-                error_invalid_dates: "Please select valid dates. End date must be after or equal to start date.", 
-                error_invalid_characters: "Number of characters must be a positive integer (minimum 1).",
-                error_api_fetch: "Error loading Almanax data. The local data file might be missing or corrupted.",
-                results_title: "Daily Offerings List:", 
-                empty_results: "No resources found for the selected period.",
-                quantity_prefix: "x",
-                btn_export_csv: "Export (CSV)",
-                error_no_export_data: "No data to export!",
-                today_offering_title: "Today's Offering:", 
-                today_offering_quantity_prefix: "Quantity:", 
-                today_offering_not_found: "Today's offering not found.",
+                // English translations
+                pagination_prev: "Previous",
+                pagination_next: "Next",
             },
         };
 
@@ -286,36 +292,26 @@
             displayTodayOffering();
         }
 
-        /**
-         * Fetches resource details from DofusDB API with caching.
-         * @param {string} resourceName - The name of the resource to fetch.
-         * @returns {Promise<object>} An object with imgUrl and dofusDbUrl.
-         */
         async function fetchResourceDetails(resourceName) {
             if (resourceCache[resourceName]) {
                 return resourceCache[resourceName];
             }
-
             const defaultDetails = {
                 imgUrl: `https://placehold.co/48x48/1f2937/9ca3af?text=${resourceName.substring(0, 2).toUpperCase()}`,
                 dofusDbUrl: '#'
             };
-
             try {
-                // Normalize the name for URL search
                 const normalizedName = resourceName.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase();
                 const searchSlug = encodeURIComponent(normalizedName);
-                
                 const response = await fetch(`https://api.dofusdb.fr/items?slug.fr[$search]=${searchSlug}&lang=fr`);
                 if (!response.ok) throw new Error('API response not OK');
-                
                 const data = await response.json();
-                const item = data.data && data.data.length > 0 ? data.data[0] : null;
+                const item = data.data && data.data.length > 0 ? data.data.find(d => d.name.fr === resourceName) || data.data[0] : null;
 
-                if (item) {
+                if (item && item.id) {
                     const details = {
                         imgUrl: item.img,
-                        dofusDbUrl: `https://dofusdb.fr/fr/items/resources/${item.slug.fr}`
+                        dofusDbUrl: `https://dofusdb.fr/fr/database/object/${item.id}`
                     };
                     resourceCache[resourceName] = details;
                     return details;
@@ -353,16 +349,15 @@
             return offerings;
         }
         
-        function renderDailyList(dailyOfferings) {
+        function renderListPage(offeringsPage) {
             almanaxList.innerHTML = '';
-            if (dailyOfferings.length === 0) {
+            if (offeringsPage.length === 0) {
                 almanaxEmptyResults.classList.remove('hidden');
-                almanaxResultsContainer.classList.remove('hidden');
                 return;
             }
 
             almanaxEmptyResults.classList.add('hidden');
-            dailyOfferings.forEach(offering => {
+            offeringsPage.forEach(offering => {
                 const dateOptions = { year: 'numeric', month: 'long', day: 'numeric', timeZone: 'UTC' };
                 const date = offering.date.toLocaleDateString(currentLanguage, dateOptions);
                 
@@ -384,9 +379,64 @@
                 `;
                 almanaxList.appendChild(link);
             });
-            almanaxResultsContainer.classList.remove('hidden');
         }
 
+        function renderPaginationControls() {
+            paginationControls.innerHTML = '';
+            const totalPages = Math.ceil(currentDailyOfferings.length / itemsPerPage);
+
+            if (totalPages <= 1) {
+                return;
+            }
+
+            // Previous Button
+            const prevButton = document.createElement('button');
+            prevButton.textContent = translations[currentLanguage].pagination_prev || 'Previous';
+            prevButton.disabled = currentPage === 1;
+            prevButton.addEventListener('click', () => {
+                if (currentPage > 1) {
+                    currentPage--;
+                    updateDisplay();
+                }
+            });
+            paginationControls.appendChild(prevButton);
+
+            // Page Number Buttons
+            for (let i = 1; i <= totalPages; i++) {
+                const pageButton = document.createElement('button');
+                pageButton.textContent = i;
+                if (i === currentPage) {
+                    pageButton.classList.add('active');
+                }
+                pageButton.addEventListener('click', () => {
+                    currentPage = i;
+                    updateDisplay();
+                });
+                paginationControls.appendChild(pageButton);
+            }
+
+            // Next Button
+            const nextButton = document.createElement('button');
+            nextButton.textContent = translations[currentLanguage].pagination_next || 'Next';
+            nextButton.disabled = currentPage === totalPages;
+            nextButton.addEventListener('click', () => {
+                if (currentPage < totalPages) {
+                    currentPage++;
+                    updateDisplay();
+                }
+            });
+            paginationControls.appendChild(nextButton);
+        }
+
+        function updateDisplay() {
+            const startIndex = (currentPage - 1) * itemsPerPage;
+            const endIndex = startIndex + itemsPerPage;
+            const paginatedItems = currentDailyOfferings.slice(startIndex, endIndex);
+            
+            renderListPage(paginatedItems);
+            renderPaginationControls();
+            almanaxResultsContainer.classList.remove('hidden');
+        }
 
         async function generateAlmanaxList() {
             const startDateParts = startDateInput.value.split('-');
@@ -416,10 +466,9 @@
             showMessage(almanaxLoadingMessage, translations[currentLanguage].loading_data, 'info');
             
             try {
-                const dailyOfferings = await processAlmanaxData(startDate, endDate, numCharacters, almanaxData);
-                currentDailyOfferings = dailyOfferings;
-                renderDailyList(currentDailyOfferings);
-
+                currentDailyOfferings = await processAlmanaxData(startDate, endDate, numCharacters, almanaxData);
+                currentPage = 1; // Reset to first page
+                updateDisplay();
             } catch (error) {
                 console.error("Error processing Almanax data:", error);
                 showMessage(almanaxErrorMessage, translations[currentLanguage].error_api_fetch, 'error');
@@ -427,10 +476,6 @@
                 hideMessage(almanaxLoadingMessage);
                 generateListBtn.disabled = false;
             }
-        }
-
-        function exportToCSV() {
-            // This function remains the same as it exports data, not UI elements
         }
 
         async function displayTodayOffering() {
@@ -476,6 +521,7 @@
             almanaxResultsContainer = document.getElementById('almanax-results-container');
             almanaxList = document.getElementById('almanax-list');
             almanaxEmptyResults = document.getElementById('almanax-empty-results');
+            paginationControls = document.getElementById('pagination-controls');
             languageSelector = document.getElementById('language-selector');
             versionInfoElement = document.querySelector('[data-translate-key="version_info"]');
             exportCsvBtn = document.getElementById('exportCsvBtn');
@@ -505,7 +551,7 @@
             }
 
             generateListBtn.addEventListener('click', generateAlmanaxList);
-            exportCsvBtn.addEventListener('click', exportToCSV);
+            // exportCsvBtn.addEventListener('click', exportToCSV); // CSV export needs adjustment for pagination if desired
             languageSelector.addEventListener('change', (e) => setLanguage(e.target.value));
 
             const savedLang = localStorage.getItem('dofusAlmanaxLang') || 'fr';
