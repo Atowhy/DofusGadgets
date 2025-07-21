@@ -395,51 +395,46 @@
         /**
          * Processes Almanax data for a given date range and number of characters.
          * Returns a list of daily offerings, each with date, resource details, and quantity.
-         * @param {Date} startDate - The start date of the period.
-         * @param {Date} endDate - The end date of the period.
+         * @param {Date} startDate - The start date of the period (must be a UTC date).
+         * @param {Date} endDate - The end date of the period (must be a UTC date).
          * @param {number} numCharacters - The number of characters multiplier.
          * @param {Array} fullAlmanaxData - The loaded full Almanax data from JSON.
          * @returns {Array} A list of daily offering objects.
          */
         function processAlmanaxData(startDate, endDate, numCharacters, fullAlmanaxData) {
             const dailyOfferings = [];
-            const defaultItemIconUrl = 'https://placehold.co/48x48/1f2937/9ca3af?text=?'; 
-
-            let loopDate = new Date(startDate);
-            // Ensure loopDate is at the start of the day in UTC to avoid timezone issues
-            loopDate = new Date(Date.UTC(loopDate.getFullYear(), loopDate.getMonth(), loopDate.getDate()));
-
-            let endLoopDate = new Date(endDate);
-            // Ensure endLoopDate is at the start of the day in UTC
-            endLoopDate = new Date(Date.UTC(endLoopDate.getFullYear(), endLoopDate.getMonth(), endLoopDate.getDate()));
+            
+            // Create a mutable copy of the start date to use in the loop.
+            let loopDate = new Date(startDate.getTime());
+            let endLoopDate = new Date(endDate.getTime());
 
             while (loopDate.getTime() <= endLoopDate.getTime()) {
-                const month = loopDate.getMonth() + 1;
-                const day = loopDate.getDate();
+                // Use getUTCMonth and getUTCDate to avoid timezone-related errors.
+                const month = loopDate.getUTCMonth() + 1;
+                const day = loopDate.getUTCDate();
                 const monthDayKey = `${month.toString().padStart(2, '0')}-${day.toString().padStart(2, '0')}`;
 
-                // Use the correct JSON keys: short_date, resource, resource_count
+                // Find the entry for the current day in the data file.
                 const entry = fullAlmanaxData.find(item => item.short_date === monthDayKey);
 
                 if (entry && entry.resource && entry.resource_count !== null) {
                     const resourceName = entry.resource;
-                    const quantity = entry.resource_count * numCharacters; // Apply multiplier here
+                    const quantity = entry.resource_count * numCharacters;
                     
-                    // Generate resource_id (slug) and img URL from resource name
                     const resourceId = resourceName.toLowerCase().replace(/[^a-z0-9\s]/g, '').replace(/\s/g, '-');
                     const resourceImg = `https://placehold.co/40x40/1f2937/9ca3af?text=${resourceName.substring(0, 2).toUpperCase()}`;
 
                     dailyOfferings.push({
-                        date: new Date(loopDate), // Store a copy of the date (still UTC midnight)
+                        date: new Date(loopDate.getTime()), // Store a copy of the date
                         name: resourceName,
                         quantity: quantity,
                         img: resourceImg,
-                        id: resourceId // Store ID for consistency if needed
+                        id: resourceId
                     });
                 }
                 
-                // Increment date by one day
-                loopDate.setDate(loopDate.getDate() + 1); 
+                // Increment the date by one day using the UTC-safe method.
+                loopDate.setUTCDate(loopDate.getUTCDate() + 1); 
             }
             return dailyOfferings;
         }
@@ -593,7 +588,7 @@
                 return;
             }
 
-            // Get current date in France's timezone
+            // Get current date in France's timezone to match Dofus servers
             const now = new Date();
             const parisTime = new Date(now.toLocaleString('en-US', { timeZone: 'Europe/Paris' }));
             
@@ -606,12 +601,11 @@
             const todayEntry = almanaxData.find(item => item.short_date === monthDayKey);
 
             if (todayEntry && todayEntry.resource && todayEntry.resource_count !== null) {
-                // Generate resource_id (slug) and img URL from resource name for today's offering
                 const resourceName = todayEntry.resource;
                 const resourceId = resourceName.toLowerCase().replace(/[^a-z0-9\s]/g, '').replace(/\s/g, '-');
                 const resourceImg = `https://placehold.co/48x48/1f2937/9ca3af?text=${resourceName.substring(0, 2).toUpperCase()}`;
 
-                todayOfferingImg.src = resourceImg; // Use generated image URL
+                todayOfferingImg.src = resourceImg;
                 todayOfferingImg.alt = resourceName;
                 todayOfferingName.textContent = resourceName;
                 todayOfferingQuantity.textContent = `${translations[currentLanguage].today_offering_quantity_prefix} ${todayEntry.resource_count.toLocaleString(currentLanguage)}`;
@@ -664,7 +658,6 @@
                     throw new Error(`Failed to load local Almanax data: ${response.statusText}`);
                 }
                 almanaxData = await response.json();
-                console.log("Almanax data loaded:", almanaxData);
                 hideMessage(almanaxLoadingMessage);
             } catch (error) {
                 console.error("Error loading almanax_offerings.json:", error);
