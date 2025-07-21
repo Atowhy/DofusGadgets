@@ -8,39 +8,99 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&display=swap" rel="stylesheet">
     <style>
+        /* Base body styles for centering and background */
         body {
             font-family: 'Inter', sans-serif;
             background-color: #111827; /* bg-gray-900 */
+            display: flex; /* Use flexbox for centering */
+            justify-content: center; /* Center horizontally */
+            align-items: center; /* Center vertically */
+            min-height: 100vh; /* Full viewport height */
+            margin: 0;
+            color: #e2e8f0; /* Light text */
         }
-        /* Le fond d'image précédent est remplacé par la vidéo */
+
+        /* Style for the password protection screen */
+        #password-protection {
+            text-align: center;
+            padding: 40px;
+            background-color: rgba(31, 41, 55, 0.9); /* bg-gray-800 with opacity */
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+            z-index: 20; /* Ensure it's above the background */
+        }
+        #password-protection h2 { /* Specific style for the "Site is not yet ready!" text */
+            color: #ef4444; /* red-500 */
+            font-size: 2em;
+            margin-bottom: 20px;
+        }
+        #password-protection p {
+            margin: 10px 0;
+        }
+        #password-protection input[type="password"] {
+            padding: 10px 15px;
+            margin: 15px 0;
+            border: 1px solid #4b5563; /* gray-600 */
+            border-radius: 8px;
+            background-color: #374151; /* gray-700 */
+            color: white;
+            width: 80%;
+            max-width: 300px;
+            font-size: 16px;
+        }
+        #password-protection button {
+            background-color: #14b8a6; /* teal-500 */
+            color: white;
+            padding: 10px 25px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s ease;
+        }
+        #password-protection button:hover {
+            background-color: #0f9f90; /* darker teal */
+        }
+        #message {
+            color: #ef4444; /* red-500 */
+            margin-top: 10px;
+            font-weight: 500;
+        }
+
+        /* Initially hide the main content of the website */
         .main-container {
-            position: relative; /* Nécessaire pour le positionnement absolu de la vidéo */
+            display: none;
+            position: relative;
             min-height: 100vh;
-            overflow: hidden; /* Pour s'assurer que la vidéo ne déborde pas */
+            overflow: hidden;
+            width: 100%; /* Ensure it takes full width when visible */
         }
+
+        /* Background video styles */
         .video-background {
-            position: absolute;
+            position: fixed; /* Use fixed to ensure it covers the whole screen */
             top: 0;
             left: 0;
             width: 100%;
             height: 100%;
             overflow: hidden;
-            z-index: -2; /* Place la vidéo derrière tout le contenu */
+            z-index: -2;
         }
         .video-background video {
             width: 100%;
             height: 100%;
-            object-fit: cover; /* S'assure que la vidéo couvre toute la zone */
+            object-fit: cover;
         }
         .video-overlay {
-            position: absolute;
+            position: fixed; /* Use fixed for overlay too */
             top: 0;
             left: 0;
             width: 100%;
             height: 100%;
-            background-color: rgba(0, 0, 0, 0.7); /* Overlay plus sombre (opacité augmentée à 0.7) */
-            z-index: -1; /* Au-dessus de la vidéo, mais derrière le contenu */
+            background-color: rgba(0, 0, 0, 0.7);
+            z-index: -1;
         }
+        /* Card background for the main content */
         .card-bg {
             background-color: rgba(31, 41, 55, 0.85); /* bg-gray-800 with 85% opacity */
             border: 1px solid rgba(255, 255, 255, 0.1);
@@ -49,20 +109,32 @@
 </head>
 <body class="text-white antialiased">
 
+    <!-- Password Protection Screen -->
+    <!-- This div will be shown first when the page loads -->
+    <div id="password-protection">
+        <h2>Site is not yet ready!</h2>
+        <p>Please enter the password to access the content:</p>
+        <input type="password" id="passwordInput" placeholder="Enter password" onkeydown="if(event.key === 'Enter') checkPassword()">
+        <button onclick="checkPassword()">Submit</button>
+        <p id="message"></p>
+    </div>
+
+    <!-- Your original main website content -->
+    <!-- This div is initially hidden and will be shown after correct password entry -->
     <div class="main-container">
-        <!-- Conteneur pour la vidéo de fond -->
+        <!-- Background video container -->
         <div class="video-background">
             <video autoplay loop muted playsinline>
                 <source src="images/headervideo.mp4" type="video/mp4">
-                Ton navigateur ne supporte pas la lecture de vidéos.
+                Your browser does not support the video tag.
             </video>
         </div>
-        <!-- Overlay pour améliorer la lisibilité du texte sur la vidéo -->
+        <!-- Overlay for better text readability on video -->
         <div class="video-overlay"></div>
 
         <div class="relative z-10 container mx-auto p-4 md:p-8 max-w-4xl min-h-screen flex flex-col">
             
-            <!-- Sélecteur de langue -->
+            <!-- Language selector -->
             <div class="flex justify-end mb-4">
                 <select id="language-selector" class="bg-gray-700 border border-gray-600 rounded-lg px-3 py-1 text-white focus:ring-2 focus:ring-teal-500 focus:border-teal-500 transition">
                     <option value="fr">🇫🇷 Français</option>
@@ -73,18 +145,18 @@
                 </select>
             </div>
 
-            <!-- Logo Dofus et titres déplacés ici -->
-            <div class="text-center my-4"> <!-- Ajustement de l'espace vertical -->
-                <img src="images/LogoDofus.webp" alt="Logo Dofus" class="h-48 md:h-64 mx-auto mb-4 opacity-80"> <!-- Taille du logo ajustée -->
+            <!-- Dofus Logo and titles -->
+            <div class="text-center my-4">
+                <img src="images/LogoDofus.webp" alt="Logo Dofus" class="h-48 md:h-64 mx-auto mb-4 opacity-80">
                 <h1 class="text-4xl md:text-5xl font-bold text-teal-400" data-translate-key="main_title">Outils pour Dofus</h1>
                 <p class="text-gray-400 mt-2" data-translate-key="subtitle">Une collection d'outils pour t'aider dans ton aventure.</p>
             </div>
 
-            <!-- Contenu principal -->
+            <!-- Main content area with tool cards -->
             <main class="flex-grow">
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                     
-                    <!-- Nouvelle carte pour le calculateur de coût de recette (PREMIER) -->
+                    <!-- Card for Recipe Cost Calculator -->
                     <div class="card-bg p-6 rounded-2xl shadow-lg flex flex-col justify-between hover:border-teal-500 border-2 border-transparent transition-all duration-300 transform hover:-translate-y-1">
                         <div>
                             <div class="flex justify-center mb-4">
@@ -95,12 +167,13 @@
                                 Calcule le coût total des ressources nécessaires pour fabriquer un objet.
                             </p>
                         </div>
-                        <a href="https://atowhy.github.io/recipe_cost_calculator.html" class="mt-auto block text-center w-full bg-teal-600 hover:bg-teal-700 text-white font-bold py-3 px-4 rounded-lg transition-transform transform hover:scale-105 shadow-md" data-translate-key="btn_access">
+                        <!-- Corrected URL: Removed 'DofusGadgets/' as this is the index.html itself, assuming it's served from the root of the custom domain -->
+                        <a href="recipe_cost_calculator.html" class="mt-auto block text-center w-full bg-teal-600 hover:bg-teal-700 text-white font-bold py-3 px-4 rounded-lg transition-transform transform hover:scale-105 shadow-md" data-translate-key="btn_access">
                             Accéder à l'outil
                         </a>
                     </div>
 
-                    <!-- Carte pour le calculateur d'XP familier (DEUXIÈME) -->
+                    <!-- Card for Pet XP Calculator -->
                     <div class="card-bg p-6 rounded-2xl shadow-lg flex flex-col justify-between hover:border-teal-500 border-2 border-transparent transition-all duration-300 transform hover:-translate-y-1">
                         <div>
                             <div class="flex justify-center mb-4">
@@ -111,12 +184,13 @@
                                 Optimise les coûts pour monter tes familiers en trouvant les ressources les plus rentables.
                             </p>
                         </div>
+                        <!-- Corrected URL -->
                         <a href="pet_xp_calculator.html" class="mt-auto block text-center w-full bg-teal-600 hover:bg-teal-700 text-white font-bold py-3 px-4 rounded-lg transition-transform transform hover:scale-105 shadow-md" data-translate-key="btn_access">
                             Accéder à l'outil
                         </a>
                     </div>
 
-                    <!-- Nouvelle carte pour le calculateur de taux de butin -->
+                    <!-- Card for Drop Rate Calculator -->
                     <div class="card-bg p-6 rounded-2xl shadow-lg flex flex-col justify-between hover:border-teal-500 border-2 border-transparent transition-all duration-300 transform hover:-translate-y-1">
                         <div>
                             <div class="flex justify-center mb-4">
@@ -127,12 +201,13 @@
                                 Estime tes chances d'obtenir des objets en fonction de ta prospection et bonus.
                             </p>
                         </div>
+                        <!-- Corrected URL -->
                         <a href="droprate_calculator.html" class="mt-auto block text-center w-full bg-teal-600 hover:bg-teal-700 text-white font-bold py-3 px-4 rounded-lg transition-transform transform hover:scale-105 shadow-md" data-translate-key="btn_access">
                             Accéder à l'outil
                         </a>
                     </div>
 
-                    <!-- Nouvelle carte pour le calculateur d'XP de personnage -->
+                    <!-- Card for Character XP Calculator -->
                     <div class="card-bg p-6 rounded-2xl shadow-lg flex flex-col justify-between hover:border-teal-500 border-2 border-transparent transition-all duration-300 transform hover:-translate-y-1">
                         <div>
                             <div class="flex justify-center mb-4">
@@ -143,39 +218,41 @@
                                 Calcule l'XP et le temps nécessaire pour ton personnage.
                             </p>
                         </div>
-                        <a href="https://atowhy.github.io/char_xp_calculator.html" class="mt-auto block text-center w-full bg-teal-600 hover:bg-teal-700 text-white font-bold py-3 px-4 rounded-lg transition-transform transform hover:scale-105 shadow-md" data-translate-key="btn_access">
+                        <!-- Corrected URL -->
+                        <a href="char_xp_calculator.html" class="mt-auto block text-center w-full bg-teal-600 hover:bg-teal-700 text-white font-bold py-3 px-4 rounded-lg transition-transform transform hover:scale-105 shadow-md" data-translate-key="btn_access">
                             Accéder à l'outil
                         </a>
                     </div>
 
-                    <!-- Carte pour un futur outil (exemple) -->
+                    <!-- Card for a future tool (example) -->
                     <div class="card-bg p-6 rounded-2xl shadow-lg flex flex-col justify-between border-2 border-dashed border-gray-700">
                          <div class="text-center">
                             <h2 class="text-2xl font-bold text-gray-500 mb-2" data-translate-key="soon_title">Outil à venir...</h2>
                             <p class="text-gray-600 mb-6" data-translate-key="soon_desc">
-                               Un nouvel outil sera bientôt disponible ici!
+                               A new tool will be available here soon!
                             </p>
                             <div class="flex justify-center mb-4">
                                 <img src="images/Ougah.png" alt="Ougah" class="h-28 w-28 object-contain opacity-30">
                             </div>
                         </div>
                          <div class="mt-auto block text-center w-full bg-gray-700 text-gray-500 font-bold py-3 px-4 rounded-lg cursor-not-allowed" data-translate-key="btn_unavailable">
-                            Indisponible
+                            Unavailable
                         </div>
                     </div>
 
                 </div>
             </main>
 
-            <!-- Pied de page -->
+            <!-- Footer section -->
             <footer class="text-center text-gray-500 text-sm mt-12 pb-4">
                 <p data-translate-key="signature">Apps by Ato</p>
-                <p class="text-xs text-gray-600 mt-4" data-translate-key="disclaimer">Dofus et toutes les images associées utilisées sur ce site sont la propriété d'Ankama</p>
+                <p class="text-xs text-gray-600 mt-4" data-translate-key="disclaimer">Dofus and any related images used on this website are the properties of Ankama</p>
             </footer>
         </div>
     </div>
 
     <script>
+        // Language translation logic (your existing code)
         document.addEventListener('DOMContentLoaded', () => {
             const translations = {
                 fr: {
@@ -223,7 +300,7 @@
                     droprate_calculator_desc: "Estima tus posibilidades de obtener objetos según tu prospección y bonificaciones.",
                     char_xp_calculator_title: "Calculadora de XP de Personaje",
                     char_xp_calculator_desc: "Calcula la XP y el tiempo necesario para tu personaje.",
-                    recipe_cost_calculator_title: "Calculadora de Costo de Receta",
+                    recipe_cost_calculator_title: "Calculadora de Costo de Fabricación",
                     recipe_cost_calculator_desc: "Calcula el costo total de los recursos necesarios para fabricar un objeto.",
                     btn_access: "Acceder a la herramienta",
                     soon_title: "Herramienta próximamente...",
@@ -290,6 +367,26 @@
             const savedLang = localStorage.getItem('dofusToolsLang') || 'fr';
             setLanguage(savedLang);
         });
+
+        // NEW JAVASCRIPT FOR PASSWORD PROTECTION
+        function checkPassword() {
+            const passwordInput = document.getElementById('passwordInput');
+            const messageElement = document.getElementById('message');
+            const passwordProtectionDiv = document.getElementById('password-protection');
+            const mainContentDiv = document.querySelector('.main-container'); // Select the div that holds your main site content
+
+            const correctPassword = 'Ato7776'; // Define your password here
+
+            if (passwordInput.value === correctPassword) {
+                passwordProtectionDiv.style.display = 'none'; // Hide the password screen
+                mainContentDiv.style.display = 'block'; // Show your main website content
+                messageElement.textContent = ''; // Clear any previous messages
+            } else {
+                messageElement.textContent = 'Incorrect password. Please try again.';
+                passwordInput.value = ''; // Clear the input field
+                passwordInput.focus(); // Put focus back on the input
+            }
+        }
     </script>
 
 </body>
