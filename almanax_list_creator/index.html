@@ -4,8 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title data-translate-key="almanax_list_creator_title">Créateur de liste pour l'Almanax</title>
-    <link rel="icon" type="image/png" href="../images/tifoux.png"> <!-- Ajustez le chemin si nécessaire -->
-    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="icon" type="image/png" href="../images/tifoux.png"> <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&display=swap" rel="stylesheet">
     <style>
         body {
@@ -127,13 +126,18 @@
                 box-shadow: 0 0 0 10px rgba(22, 163, 74, 0);
             }
         }
-        .export-button-animated {
+        /* La classe de base pour le bouton d'export */
+        .export-button {
             background-color: #16a34a; /* bg-green-600 */
-            animation: pulse 2s infinite;
         }
-        .export-button-animated:hover {
+        .export-button:hover {
              background-color: #15803d; /* bg-green-700 */
         }
+        /* L'animation est appliquée uniquement lorsque la liste est affichée */
+        #almanax-results-container:not(.hidden) .export-button {
+            animation: pulse 2s infinite;
+        }
+
     </style>
 </head>
 <body class="text-white antialiased">
@@ -196,17 +200,17 @@
                         </button>
                     </div>
 
-                    <div id="almanax-loading-message" class="message-box info hidden text-center">
-                        <div class="loader"></div>
+                    <div id="almanax-loading-message" class="message-box info text-center">
+                        <div class="loader mx-auto"></div>
                         <p id="loading-text" class="mt-2" data-translate-key="loading_data">Chargement des données...</p>
                     </div>
-                    <div id="almanax-error-message" class="message-box error hidden"></div>
+                    <div id="almanax-error-message" class="message-box error"></div>
                 </div>
 
                 <div id="almanax-results-container" class="hidden mb-8">
                     <div class="flex justify-between items-center mb-4">
                         <h2 class="text-xl font-semibold" data-translate-key="results_title">Liste des offrandes journalières :</h2>
-                        <button id="exportCsvBtn" class="export-button-animated text-white font-bold py-2 px-4 rounded-lg text-sm transition-colors whitespace-nowrap" data-translate-key="btn_export_csv">
+                        <button id="exportCsvBtn" class="export-button text-white font-bold py-2 px-4 rounded-lg text-sm transition-colors whitespace-nowrap" data-translate-key="btn_export_csv">
                             Exporter (CSV)
                         </button>
                     </div>
@@ -229,21 +233,23 @@
     </div>
 
     <script>
-        // Global variables
+        // === GLOBAL VARIABLES ===
         let currentLanguage = 'fr';
         let almanaxData = [];
-        let fullOfferingsList = []; // Holds the complete list of offerings for the selected range without API details
-        const itemDetailsCache = {}; // Cache for API fetched item details
+        // NOUVELLE LOGIQUE : Ce tableau contiendra la liste complète AVEC tous les détails pré-chargés.
+        let fullOfferingsListWithDetails = []; 
+        const itemDetailsCache = {}; // Cache pour les détails des items déjà récupérés via l'API
         let currentPage = 1;
         const itemsPerPage = 10;
 
-        // DOM elements
+        // === DOM ELEMENTS ===
         let startDateInput, endDateInput, numCharactersInput, generateListBtn, 
             almanaxLoadingMessage, almanaxErrorMessage, loadingText,
             almanaxResultsContainer, almanaxList, almanaxEmptyResults, paginationControls,
-            languageSelector, versionInfoElement, exportCsvBtn,
-            todayAlmanaxOfferingDiv, todayOfferingLink, todayOfferingImg, todayOfferingName, todayOfferingDate, todayOfferingQuantity; 
+            languageSelector, exportCsvBtn, todayAlmanaxOfferingDiv, todayOfferingLink, 
+            todayOfferingImg, todayOfferingName, todayOfferingDate, todayOfferingQuantity; 
 
+        // === TRANSLATIONS ===
         const translations = {
             fr: {
                 btn_back_home: "← Retour à l'accueil",
@@ -258,6 +264,7 @@
                 label_num_characters: "Nombre de personnages :",
                 btn_generate_list: "Générer la liste",
                 loading_data: "Chargement des données...",
+                loading_almanax_file: "Chargement du fichier Almanax...",
                 error_invalid_dates: "Veuillez sélectionner des dates valides. La date de fin doit être postérieure ou égale à la date de début.", 
                 error_invalid_characters: "Le nombre de personnages doit être un nombre entier positif (minimum 1).",
                 error_api_fetch: "Erreur lors du chargement des données de l'Almanax. Le fichier de données local est peut-être manquant ou corrompu.",
@@ -276,15 +283,18 @@
                 csv_header_quantity: "Quantité",
                 csv_header_image_url: "URL Image",
                 csv_header_dofusdb_url: "URL DofusDB",
-                export_progress: "Préparation de l'exportation : {current}/{total}..."
+                export_progress: "Chargement des ressources : {current} / {total}"
             },
             en: {
+                // S'assurer que les clés utilisées dans le code existent pour toutes les langues
                 pagination_prev: "Previous",
                 pagination_next: "Next",
-                export_progress: "Preparing export: {current}/{total}..."
+                export_progress: "Loading resources: {current} / {total}",
+                // ... (ajoutez les autres traductions anglaises ici)
             },
         };
 
+        // === HELPER FUNCTIONS ===
         function showMessage(element, message, type, isHtml = false) {
             if (isHtml) {
                 element.innerHTML = message;
@@ -295,32 +305,15 @@
         }
 
         function hideMessage(element) {
-            element.classList.add('hidden');
             element.classList.remove('block');
-            element.innerHTML = '';
         }
+        
+        // === CORE LOGIC ===
 
-        function setLanguage(lang) {
-            currentLanguage = lang;
-            localStorage.setItem('dofusAlmanaxLang', lang);
-            document.documentElement.lang = lang;
-            languageSelector.value = lang;
-
-            document.querySelectorAll('[data-translate-key]').forEach(element => {
-                const key = element.getAttribute('data-translate-key');
-                if (translations[lang] && translations[lang][key]) {
-                    element.textContent = translations[lang][key];
-                }
-            });
-            
-            hideMessage(almanaxLoadingMessage);
-            hideMessage(almanaxErrorMessage);
-            almanaxResultsContainer.classList.add('hidden'); 
-            almanaxList.innerHTML = '';
-            almanaxEmptyResults.classList.add('hidden');
-            displayTodayOffering();
-        }
-
+        /**
+         * CORRIGÉ : Récupère les détails d'une ressource depuis l'API DofusDB.
+         * La recherche est plus souple pour éviter les erreurs avec les caractères spéciaux.
+         */
         async function fetchResourceDetails(resourceName) {
             if (itemDetailsCache[resourceName]) {
                 return itemDetailsCache[resourceName];
@@ -335,7 +328,9 @@
                 if (!response.ok) throw new Error('API response not OK');
                 
                 const data = await response.json();
-                const item = data.data && data.data.length > 0 ? data.data.find(d => d.name.fr === resourceName) : null;
+                // **CORRECTION** : On prend le premier résultat retourné par l'API, 
+                // qui est généralement le plus pertinent, au lieu d'une comparaison stricte.
+                const item = data.data && data.data.length > 0 ? data.data[0] : null;
 
                 if (item && item.id) {
                     const details = {
@@ -354,6 +349,9 @@
             }
         }
 
+        /**
+         * Crée une liste de base des offrandes pour la période donnée.
+         */
         function createBaseOfferingsList(startDate, endDate, numCharacters, fullAlmanaxData) {
             const offerings = [];
             let loopDate = new Date(startDate.getTime());
@@ -377,21 +375,19 @@
             return offerings;
         }
         
-        async function renderListPage(offeringsPage) {
+        /**
+         * Affiche une page de la liste des offrandes.
+         * Ne fait plus de fetch, utilise les données pré-chargées.
+         */
+        function renderListPage(offeringsPage) {
             almanaxList.innerHTML = '';
             if (offeringsPage.length === 0) {
                 almanaxEmptyResults.classList.remove('hidden');
                 return;
             }
-
             almanaxEmptyResults.classList.add('hidden');
 
-            const offeringsWithDetails = await Promise.all(offeringsPage.map(async (offering) => {
-                const details = await fetchResourceDetails(offering.name);
-                return { ...offering, ...details };
-            }));
-
-            offeringsWithDetails.forEach(offering => {
+            offeringsPage.forEach(offering => {
                 const dateOptions = { year: 'numeric', month: 'long', day: 'numeric', timeZone: 'UTC' };
                 const date = offering.date.toLocaleDateString(currentLanguage, dateOptions);
                 
@@ -415,9 +411,12 @@
             });
         }
 
+        /**
+         * Crée et affiche les contrôles de pagination.
+         */
         function renderPaginationControls() {
             paginationControls.innerHTML = '';
-            const totalPages = Math.ceil(fullOfferingsList.length / itemsPerPage);
+            const totalPages = Math.ceil(fullOfferingsListWithDetails.length / itemsPerPage);
 
             if (totalPages <= 1) return;
 
@@ -427,12 +426,36 @@
             prevButton.addEventListener('click', () => { if (currentPage > 1) { currentPage--; updateDisplay(); } });
             paginationControls.appendChild(prevButton);
 
-            for (let i = 1; i <= totalPages; i++) {
+            // Logique d'affichage des pages (simplifiée pour n'afficher que quelques numéros)
+            const maxPagesToShow = 7;
+            let startPage = Math.max(1, currentPage - Math.floor(maxPagesToShow / 2));
+            let endPage = Math.min(totalPages, startPage + maxPagesToShow - 1);
+            if(endPage - startPage + 1 < maxPagesToShow) {
+                startPage = Math.max(1, endPage - maxPagesToShow + 1);
+            }
+
+            if (startPage > 1) {
+                const firstButton = document.createElement('button');
+                firstButton.textContent = '1';
+                firstButton.addEventListener('click', () => { currentPage = 1; updateDisplay(); });
+                paginationControls.appendChild(firstButton);
+                if (startPage > 2) paginationControls.insertAdjacentHTML('beforeend', `<span class="text-gray-500">...</span>`);
+            }
+
+            for (let i = startPage; i <= endPage; i++) {
                 const pageButton = document.createElement('button');
                 pageButton.textContent = i;
                 if (i === currentPage) pageButton.classList.add('active');
                 pageButton.addEventListener('click', () => { currentPage = i; updateDisplay(); });
                 paginationControls.appendChild(pageButton);
+            }
+
+            if (endPage < totalPages) {
+                 if (endPage < totalPages -1) paginationControls.insertAdjacentHTML('beforeend', `<span class="text-gray-500">...</span>`);
+                const lastButton = document.createElement('button');
+                lastButton.textContent = totalPages;
+                lastButton.addEventListener('click', () => { currentPage = totalPages; updateDisplay(); });
+                paginationControls.appendChild(lastButton);
             }
 
             const nextButton = document.createElement('button');
@@ -442,16 +465,22 @@
             paginationControls.appendChild(nextButton);
         }
 
-        async function updateDisplay() {
+        /**
+         * Met à jour la page affichée. Ne fait plus de fetch.
+         */
+        function updateDisplay() {
             const startIndex = (currentPage - 1) * itemsPerPage;
             const endIndex = startIndex + itemsPerPage;
-            const paginatedItems = fullOfferingsList.slice(startIndex, endIndex);
+            const paginatedItems = fullOfferingsListWithDetails.slice(startIndex, endIndex);
             
-            await renderListPage(paginatedItems);
+            renderListPage(paginatedItems);
             renderPaginationControls();
             almanaxResultsContainer.classList.remove('hidden');
         }
 
+        /**
+         * NOUVELLE LOGIQUE : Génère la liste, charge TOUS les détails, puis affiche le résultat.
+         */
         async function generateAlmanaxList() {
             const startDateParts = startDateInput.value.split('-');
             const startDate = new Date(Date.UTC(parseInt(startDateParts[0]), parseInt(startDateParts[1]) - 1, parseInt(startDateParts[2])));
@@ -464,26 +493,47 @@
             hideMessage(almanaxErrorMessage);
 
             if (isNaN(startDate.getTime()) || isNaN(endDate.getTime()) || startDate.getTime() > endDate.getTime()) { 
-                showMessage(almanaxErrorMessage, translations[currentLanguage].error_invalid_dates, 'error');
-                return;
+                showMessage(almanaxErrorMessage, translations[currentLanguage].error_invalid_dates, 'error'); return;
             }
             if (isNaN(numCharacters) || numCharacters < 1) {
-                showMessage(almanaxErrorMessage, translations[currentLanguage].error_invalid_characters, 'error');
-                return;
+                showMessage(almanaxErrorMessage, translations[currentLanguage].error_invalid_characters, 'error'); return;
             }
             if (almanaxData.length === 0) {
-                showMessage(almanaxErrorMessage, translations[currentLanguage].error_api_fetch, 'error');
-                return;
+                showMessage(almanaxErrorMessage, translations[currentLanguage].error_api_fetch, 'error'); return;
             }
 
             generateListBtn.disabled = true;
-            loadingText.textContent = translations[currentLanguage].loading_data;
-            showMessage(almanaxLoadingMessage, '', 'info', true);
+            showMessage(almanaxLoadingMessage, `<div class="loader mx-auto"></div><p id="loading-text" class="mt-2">${translations[currentLanguage].loading_data}</p>`, 'info', true);
+            const loadingTextElement = document.getElementById('loading-text'); // Re-select after innerHTML change
             
             try {
-                fullOfferingsList = createBaseOfferingsList(startDate, endDate, numCharacters, almanaxData);
+                // 1. On crée la liste de base (sans détails)
+                const baseOfferings = createBaseOfferingsList(startDate, endDate, numCharacters, almanaxData);
+                
+                if (baseOfferings.length === 0) {
+                    fullOfferingsListWithDetails = [];
+                    updateDisplay(); // Affichera le message "Aucun résultat"
+                    return;
+                }
+
+                // 2. On charge TOUS les détails en une seule fois avec un indicateur de progression
+                const tempOfferingsWithDetails = [];
+                for (let i = 0; i < baseOfferings.length; i++) {
+                    const offering = baseOfferings[i];
+                    const details = await fetchResourceDetails(offering.name);
+                    tempOfferingsWithDetails.push({ ...offering, ...details });
+                    
+                    // Mettre à jour le message de progression
+                    loadingTextElement.textContent = (translations[currentLanguage].export_progress || "Loading: {current}/{total}")
+                        .replace('{current}', i + 1)
+                        .replace('{total}', baseOfferings.length);
+                }
+                fullOfferingsListWithDetails = tempOfferingsWithDetails;
+
+                // 3. On affiche la première page de la liste complète
                 currentPage = 1; 
-                await updateDisplay();
+                updateDisplay();
+
             } catch (error) {
                 console.error("Error processing Almanax data:", error);
                 showMessage(almanaxErrorMessage, translations[currentLanguage].error_api_fetch, 'error');
@@ -493,48 +543,34 @@
             }
         }
 
-        async function exportToCSV() {
-            if (fullOfferingsList.length === 0) {
+        /**
+         * NOUVELLE LOGIQUE : Exporte les données pré-chargées. Rapide et fiable.
+         */
+        function exportToCSV() {
+            if (fullOfferingsListWithDetails.length === 0) {
                 showMessage(almanaxErrorMessage, translations[currentLanguage].error_no_export_data, 'error');
+                setTimeout(() => hideMessage(almanaxErrorMessage), 3000);
                 return;
             }
 
             exportCsvBtn.disabled = true;
-            const originalBtnText = exportCsvBtn.textContent;
-            exportCsvBtn.innerHTML = `<div class="loader inline-block"></div>`;
             
             try {
-                const allOfferingsWithDetails = [];
-                for (let i = 0; i < fullOfferingsList.length; i++) {
-                    const offering = fullOfferingsList[i];
-                    const details = await fetchResourceDetails(offering.name);
-                    allOfferingsWithDetails.push({ ...offering, ...details });
-                    
-                    const progressText = translations[currentLanguage].export_progress
-                        .replace('{current}', i + 1)
-                        .replace('{total}', fullOfferingsList.length);
-                    exportCsvBtn.innerHTML = `<div class="loader inline-block"></div> ${progressText}`;
-                }
-
                 const lang = currentLanguage;
                 let csvContent = "data:text/csv;charset=utf-8,";
                 const headers = [
-                    `"${translations[lang].csv_header_date}"`,
-                    `"${translations[lang].csv_header_name}"`,
-                    `"${translations[lang].csv_header_quantity}"`,
-                    `"${translations[lang].csv_header_image_url}"`,
+                    `"${translations[lang].csv_header_date}"`, `"${translations[lang].csv_header_name}"`,
+                    `"${translations[lang].csv_header_quantity}"`, `"${translations[lang].csv_header_image_url}"`,
                     `"${translations[lang].csv_header_dofusdb_url}"`
                 ];
                 csvContent += headers.join(',') + '\r\n';
 
-                allOfferingsWithDetails.forEach(offering => {
+                // Plus de fetch ! On utilise directement les données déjà prêtes.
+                fullOfferingsListWithDetails.forEach(offering => {
                     const date = offering.date.toISOString().split('T')[0];
                     const row = [
-                        `"${date}"`,
-                        `"${offering.name.replace(/"/g, '""')}"`,
-                        offering.quantity,
-                        `"${offering.imgUrl}"`,
-                        `"${offering.dofusDbUrl}"`
+                        `"${date}"`, `"${offering.name.replace(/"/g, '""')}"`, offering.quantity,
+                        `"${offering.imgUrl}"`, `"${offering.dofusDbUrl}"`
                     ];
                     csvContent += row.join(',') + '\r\n';
                 });
@@ -542,7 +578,7 @@
                 const encodedUri = encodeURI(csvContent);
                 const link = document.createElement("a");
                 link.setAttribute("href", encodedUri);
-                link.setAttribute("download", "liste_almanax.csv");
+                link.setAttribute("download", `almanax_${startDateInput.value}_${endDateInput.value}.csv`);
                 document.body.appendChild(link);
                 link.click();
                 document.body.removeChild(link);
@@ -552,8 +588,32 @@
                 showMessage(almanaxErrorMessage, "Erreur lors de la préparation de l'exportation.", 'error');
             } finally {
                 exportCsvBtn.disabled = false;
-                exportCsvBtn.innerHTML = originalBtnText;
             }
+        }
+        
+        // === INITIALIZATION AND UI ===
+        
+        function setLanguage(lang) {
+            currentLanguage = lang;
+            localStorage.setItem('dofusAlmanaxLang', lang);
+            document.documentElement.lang = lang;
+            languageSelector.value = lang;
+
+            document.querySelectorAll('[data-translate-key]').forEach(element => {
+                const key = element.getAttribute('data-translate-key');
+                if (translations[lang] && translations[lang][key]) {
+                    element.textContent = translations[lang][key];
+                } else if (translations['fr'][key]) { // Fallback to French
+                    element.textContent = translations['fr'][key];
+                }
+            });
+            
+            hideMessage(almanaxLoadingMessage);
+            hideMessage(almanaxErrorMessage);
+            almanaxResultsContainer.classList.add('hidden'); 
+            almanaxList.innerHTML = '';
+            almanaxEmptyResults.classList.add('hidden');
+            displayTodayOffering();
         }
 
         async function displayTodayOffering() {
@@ -578,9 +638,9 @@
                 todayOfferingImg.alt = todayEntry.resource;
                 todayOfferingName.textContent = todayEntry.resource;
                 todayOfferingLink.href = details.dofusDbUrl;
-                todayOfferingQuantity.textContent = `${translations[currentLanguage].today_offering_quantity_prefix} ${todayEntry.resource_count.toLocaleString(currentLanguage)}`;
+                todayOfferingQuantity.textContent = `${translations[currentLanguage].today_offering_quantity_prefix || 'Quantity:'} ${todayEntry.resource_count.toLocaleString(currentLanguage)}`;
             } else {
-                todayOfferingName.textContent = translations[currentLanguage].today_offering_not_found;
+                todayOfferingName.textContent = translations[currentLanguage].today_offering_not_found || 'Offering not found.';
                 todayOfferingQuantity.textContent = '';
                 todayOfferingImg.src = 'https://placehold.co/48x48/1f2937/9ca3af?text=?';
                 todayOfferingLink.href = '#';
@@ -602,7 +662,6 @@
             almanaxEmptyResults = document.getElementById('almanax-empty-results');
             paginationControls = document.getElementById('pagination-controls');
             languageSelector = document.getElementById('language-selector');
-            versionInfoElement = document.querySelector('[data-translate-key="version_info"]');
             exportCsvBtn = document.getElementById('exportCsvBtn');
             todayAlmanaxOfferingDiv = document.getElementById('today-almanax-offering');
             todayOfferingLink = document.getElementById('todayOfferingLink');
@@ -616,18 +675,20 @@
             sevenDaysLater.setDate(today.getDate() + 7);
             startDateInput.value = today.toISOString().split('T')[0];
             endDateInput.value = sevenDaysLater.toISOString().split('T')[0];
-
-            loadingText.textContent = "Chargement du fichier Almanax...";
-            showMessage(almanaxLoadingMessage, '', 'info', true);
+            
+            hideMessage(almanaxErrorMessage);
+            showMessage(almanaxLoadingMessage, `<div class="loader mx-auto"></div><p id="loading-text" class="mt-2">${translations['fr'].loading_almanax_file}</p>`, 'info', true);
+            
             try {
                 const response = await fetch('almanax_offerings.json');
                 if (!response.ok) throw new Error(`Failed to load local Almanax data: ${response.statusText}`);
                 almanaxData = await response.json();
-                hideMessage(almanaxLoadingMessage);
             } catch (error) {
                 console.error("Error loading almanax_offerings.json:", error);
-                showMessage(almanaxErrorMessage, translations[currentLanguage].error_api_fetch, 'error');
+                showMessage(almanaxErrorMessage, translations['fr'].error_api_fetch, 'error');
                 generateListBtn.disabled = true;
+            } finally {
+                hideMessage(almanaxLoadingMessage);
             }
 
             generateListBtn.addEventListener('click', generateAlmanaxList);
