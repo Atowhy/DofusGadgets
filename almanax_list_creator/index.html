@@ -214,19 +214,8 @@
                     </div>
                 </div>
 
-                <!-- Daily Offerings List -->
-                <div id="almanax-daily-results-container" class="hidden mb-8">
-                    <h2 class="text-xl font-semibold mb-4" data-translate-key="daily_results_title">Offrandes journalières :</h2>
-                    <div id="almanax-daily-list" class="space-y-3">
-                        <!-- Daily resources will be displayed here -->
-                    </div>
-                    <p id="almanax-empty-daily-results" class="text-center text-gray-500 py-8 hidden" data-translate-key="empty_results">
-                        Aucune offrande trouvée pour la période sélectionnée.
-                    </p>
-                </div>
-
-                <!-- Aggregated Results Section -->
-                <div id="almanax-aggregated-results-container" class="hidden">
+                <!-- Aggregated Results Section (moved to appear first) -->
+                <div id="almanax-aggregated-results-container" class="hidden mb-8">
                     <div class="flex justify-between items-center mb-4">
                         <h2 class="text-xl font-semibold" data-translate-key="aggregated_results_title">Résumé des ressources totales :</h2>
                         <!-- Export CSV Button -->
@@ -242,6 +231,17 @@
                         Aucune ressource totale trouvée pour la période sélectionnée.
                     </p>
                 </div>
+
+                <!-- Daily Offerings List (moved to appear second) -->
+                <div id="almanax-daily-results-container" class="hidden">
+                    <h2 class="text-xl font-semibold mb-4" data-translate-key="daily_results_title">Offrandes journalières :</h2>
+                    <div id="almanax-daily-list" class="space-y-3">
+                        <!-- Daily resources will be displayed here -->
+                    </div>
+                    <p id="almanax-empty-daily-results" class="text-center text-gray-500 py-8 hidden" data-translate-key="empty_results">
+                        Aucune offrande trouvée pour la période sélectionnée.
+                    </p>
+                </div>
             </div>
             
             <footer class="text-center text-gray-500 text-sm mt-auto pt-12 pb-4">
@@ -249,7 +249,7 @@
                 <img src="../images/LogoDofus.webp" alt="Logo Dofus" class="h-12 mx-auto mb-2 opacity-50">
                 <p data-translate-key="signature">Apps by Ato</p>
                 <p class="text-xs text-gray-600 mt-4" data-translate-key="disclaimer">Dofus et toutes les images associées utilisées sur ce site sont la propriété d'Ankama</p>
-                <p class="text-xs text-gray-600 mt-2" data-translate-key="version_info">Version 1.0.4 - Juillet 2025</p>
+                <p class="text-xs text-gray-600 mt-2" data-translate-key="version_info">Version 1.0.5 - Juillet 2025</p>
             </footer>
         </div>
     </div>
@@ -276,7 +276,7 @@
                 btn_back_home: "← Retour à l'accueil",
                 signature: "Apps by Ato",
                 disclaimer: "Dofus et toutes les images associées utilisées sur ce site sont la propriété d'Ankama",
-                version_info: "Version 1.0.4 - Juillet 2025", // Updated version
+                version_info: "Version 1.0.5 - Juillet 2025", // Updated version
                 almanax_list_creator_title: "Créateur de liste pour l'Almanax",
                 almanax_list_creator_desc: "Vous permet de générer une liste de ressources pour une période donnée.",
                 form_title: "Générer une liste de ressources",
@@ -289,11 +289,11 @@
                 error_invalid_characters: "Le nombre de personnages doit être un nombre entier positif (minimum 1).",
                 error_api_fetch: "Erreur lors du chargement des données de l'Almanax. Le fichier de données local est peut-être manquant ou corrompu.",
                 error_no_data: "Aucune donnée d'Almanax trouvée pour la période sélectionnée.",
-                daily_results_title: "Offrandes journalières :", // New translation key
-                aggregated_results_title: "Résumé des ressources totales :", // New translation key
-                empty_results: "Aucune ressource trouvée pour la période sélectionnée.", // Used for both empty lists
-                total_quantity: "Total :", // Used for aggregated total
-                daily_quantity: "Quantité :", // New translation key for daily list
+                daily_results_title: "Offrandes journalières :", 
+                aggregated_results_title: "Résumé des ressources totales :", 
+                empty_results: "Aucune ressource trouvée pour la période sélectionnée.", 
+                total_quantity: "Total :", 
+                daily_quantity: "Quantité :", 
                 btn_export_csv: "Exporter (CSV)",
                 error_no_export_data: "Aucune donnée à exporter !",
                 today_offering_title: "Offrande du jour :", 
@@ -304,7 +304,7 @@
                 btn_back_home: "← Back to Home",
                 signature: "Apps by Ato",
                 disclaimer: "Dofus and any related images used on this website are the properties of Ankama",
-                version_info: "Version 1.0.4 - July 2025", 
+                version_info: "Version 1.0.5 - July 2025", 
                 almanax_list_creator_title: "Almanax List Creator",
                 almanax_list_creator_desc: "Allows you to generate a list of resources for a given period.",
                 form_title: "Generate Resource List",
@@ -332,7 +332,7 @@
                 btn_back_home: "← Volver al Inicio",
                 signature: "Apps by Ato",
                 disclaimer: "Dofus y cualquier imagen relacionada utilizada en este sitio web son propiedad de Ankama",
-                version_info: "Versión 1.0.4 - Julio 2025", 
+                version_info: "Versión 1.0.5 - Julio 2025", 
                 almanax_list_creator_title: "Creador de lista para el Almanax",
                 almanax_list_creator_desc: "Te permite generar una lista de recursos para un período dado.",
                 form_title: "Generar lista de recursos",
@@ -360,7 +360,7 @@
                 btn_back_home: "← Voltar ao Início",
                 signature: "Apps by Ato",
                 disclaimer: "Dofus e quaisquer imagens relacionadas usadas neste site são propriedade da Ankama",
-                version_info: "Versão 1.0.4 - Julho 2025", 
+                version_info: "Version 1.0.5 - Julho 2025", 
                 almanax_list_creator_title: "Criador de lista para o Almanax",
                 almanax_list_creator_desc: "Permite gerar uma lista de recursos para um determinado período.",
                 form_title: "Gerar Lista de Recursos",
@@ -388,7 +388,7 @@
                 btn_back_home: "← Torna alla Home",
                 signature: "Apps by Ato",
                 disclaimer: "Dofus e qualsiasi immagine correlata utilizzata su questo sito Web sono di proprietà di Ankama",
-                version_info: "Versione 1.0.4 - Luglio 2025", 
+                version_info: "Versione 1.0.5 - Luglio 2025", 
                 almanax_list_creator_title: "Creatore di liste per l'Almanax",
                 almanax_list_creator_desc: "Ti permette di generare una lista di risorse per un dato periodo.",
                 form_title: "Genera lista risorse",
@@ -473,10 +473,12 @@
             const defaultItemIconUrl = 'https://placehold.co/48x48/1f2937/9ca3af?text=?';
 
             let loopDate = new Date(startDate);
-            loopDate.setHours(0, 0, 0, 0); // Normalize to midnight
+            // Ensure loopDate is at the start of the day in UTC to avoid timezone issues
+            loopDate = new Date(Date.UTC(loopDate.getFullYear(), loopDate.getMonth(), loopDate.getDate()));
 
             let endLoopDate = new Date(endDate);
-            endLoopDate.setHours(0, 0, 0, 0); // Normalize to midnight
+            // Ensure endLoopDate is at the start of the day in UTC
+            endLoopDate = new Date(Date.UTC(endLoopDate.getFullYear(), endLoopDate.getMonth(), endLoopDate.getDate()));
 
             while (loopDate.getTime() <= endLoopDate.getTime()) {
                 const month = loopDate.getMonth() + 1;
@@ -491,13 +493,14 @@
                     const resourceImg = entry.resource_img || defaultItemIconUrl;
 
                     dailyOfferings.push({
-                        date: new Date(loopDate), // Store a copy of the date
+                        date: new Date(loopDate), // Store a copy of the date (still UTC midnight)
                         name: resourceName,
                         quantity: quantity,
                         img: resourceImg
                     });
                 }
-                loopDate.setDate(loopDate.getDate() + 1);
+                // Increment date by one day
+                loopDate.setDate(loopDate.getDate() + 1); 
             }
             return dailyOfferings;
         }
@@ -539,6 +542,7 @@
                 const listItem = document.createElement('div');
                 listItem.classList.add('daily-list-item');
                 
+                // Format date for display in local timezone
                 const formattedDate = offering.date.toLocaleDateString(currentLanguage, { year: 'numeric', month: 'long', day: 'numeric' });
 
                 listItem.innerHTML = `
@@ -584,8 +588,13 @@
 
         // Main function to generate the list
         async function generateAlmanaxList() {
-            const startDate = new Date(startDateInput.value);
-            const endDate = new Date(endDateInput.value);
+            // Parse dates from input values as UTC to ensure consistent daily iteration
+            const startDateParts = startDateInput.value.split('-');
+            const startDate = new Date(Date.UTC(parseInt(startDateParts[0]), parseInt(startDateParts[1]) - 1, parseInt(startDateParts[2])));
+
+            const endDateParts = endDateInput.value.split('-');
+            const endDate = new Date(Date.UTC(parseInt(endDateParts[0]), parseInt(endDateParts[1]) - 1, parseInt(endDateParts[2])));
+            
             const numCharacters = parseInt(numCharactersInput.value);
 
             // Hide previous results and messages
@@ -595,7 +604,7 @@
             almanaxAggregatedList.innerHTML = '';
             hideMessage(almanaxErrorMessage);
 
-            if (isNaN(startDate.getTime()) || isNaN(endDate.getTime()) || startDate > endDate) {
+            if (isNaN(startDate.getTime()) || isNaN(endDate.getTime()) || startDate.getTime() > endDate.getTime()) { // Use getTime() for robust comparison
                 showMessage(almanaxErrorMessage, translations[currentLanguage].error_invalid_dates, 'error');
                 return;
             }
