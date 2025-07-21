@@ -63,6 +63,9 @@
             border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 0.5rem;
             background-color: rgba(45, 55, 72, 0.8);
              transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+             /* Ensure text color is inherited for links and no underline */
+             color: inherit;
+             text-decoration: none;
         }
          .resource-item:hover {
             transform: translateY(-2px);
@@ -391,7 +394,7 @@
                 pagination_prev: "Precedente",
                 pagination_next: "Successivo",
                 csv_header_date: "Data",
-                csv_header_name: "Nome",
+                csv_header_name: "Nom",
                 csv_header_quantity: "Quantità",
             }
         };
@@ -459,11 +462,20 @@
                 const dateOptions = { year: 'numeric', month: 'long', day: 'numeric', timeZone: 'UTC' };
                 const date = offering.date.toLocaleDateString(currentLanguage, dateOptions);
                 
-                const itemDiv = document.createElement('div');
-                itemDiv.classList.add('resource-item');
+                let itemElement;
+                if (offering.resource_url) {
+                    itemElement = document.createElement('a');
+                    itemElement.href = offering.resource_url;
+                    itemElement.target = "_blank"; // Ouvre le lien dans un nouvel onglet
+                    // Ajoute les classes existantes de resource-item et les classes spécifiques aux liens
+                    itemElement.classList.add('resource-item', 'flex', 'items-center', 'gap-4', 'w-full', 'no-underline', 'text-white');
+                } else {
+                    itemElement = document.createElement('div');
+                    itemElement.classList.add('resource-item');
+                }
 
-                // Création du contenu de l'élément de ressource
-                let resourceContent = `
+                // Contenu HTML pour l'élément de ressource
+                itemElement.innerHTML = `
                     <img src="${offering.imgUrl}" onerror="this.onerror=null;this.src='https://placehold.co/48x48/1f2937/9ca3af?text=?';" alt="${offering.name}">
                     <div class="flex-grow">
                         <p class="text-lg font-semibold">${offering.name}</p>
@@ -471,15 +483,8 @@
                     </div>
                     <span class="text-teal-300 text-xl font-bold">${translations[currentLanguage].quantity_prefix}${offering.quantity.toLocaleString(currentLanguage)}</span>
                 `;
-
-                // Si une URL de ressource est présente, envelopper le contenu dans un lien
-                if (offering.resource_url) {
-                    itemDiv.innerHTML = `<a href="${offering.resource_url}" target="_blank" class="flex items-center gap-4 w-full no-underline text-white">${resourceContent}</a>`;
-                } else {
-                    itemDiv.innerHTML = resourceContent;
-                }
                 
-                almanaxList.appendChild(itemDiv);
+                almanaxList.appendChild(itemElement);
             });
         }
 
