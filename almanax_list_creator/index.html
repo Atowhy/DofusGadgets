@@ -396,13 +396,16 @@
             const aggregatedResources = {}; // { resource_id: { name: "...", img: "...", totalQuantity: X } }
             const defaultItemIconUrl = 'https://placehold.co/48x48/1f2937/9ca3af?text=?'; // Updated default size
 
-            let currentDate = new Date(startDate);
-            let tempEndDate = new Date(endDate);
+            let loopDate = new Date(startDate); // Create a mutable copy for the loop
+            loopDate.setHours(0, 0, 0, 0); // Normalize to midnight
+
+            let endLoopDate = new Date(endDate);
+            endLoopDate.setHours(0, 0, 0, 0); // Normalize to midnight
 
             // Loop through each day in the selected range
-            while (currentDate <= tempEndDate) {
-                const month = currentDate.getMonth() + 1; // getMonth() is 0-indexed
-                const day = currentDate.getDate();
+            while (loopDate.getTime() <= endLoopDate.getTime()) { // Use getTime() for robust comparison
+                const month = loopDate.getMonth() + 1; // getMonth() is 0-indexed
+                const day = loopDate.getDate();
                 const monthDayKey = `${month.toString().padStart(2, '0')}-${day.toString().padStart(2, '0')}`; // Format as MM-DD (e.g., "01-01")
 
                 // Find the entry for the current day in the loaded data
@@ -423,7 +426,9 @@
                     }
                     aggregatedResources[resourceId].totalQuantity += quantity;
                 }
-                currentDate.setDate(currentDate.getDate() + 1); // Move to the next day
+                
+                // Increment date by one day
+                loopDate.setDate(loopDate.getDate() + 1); 
             }
 
             // Apply character multiplier after aggregation
@@ -497,7 +502,7 @@
             }
         }
 
-        // New: Function to export data to CSV
+        // Function to export data to CSV
         function exportToCSV() {
             if (currentAggregatedResources.length === 0) {
                 const originalText = exportCsvBtn.textContent;
@@ -541,7 +546,7 @@
             document.body.removeChild(link);
         }
 
-        // New: Function to display today's Almanax offering
+        // Function to display today's Almanax offering
         function displayTodayOffering() {
             if (almanaxData.length === 0) {
                 todayAlmanaxOfferingDiv.classList.add('hidden');
@@ -550,10 +555,12 @@
 
             // Get current date in France's timezone
             const now = new Date();
-            const options = { timeZone: 'Europe/Paris', month: '2-digit', day: '2-digit' };
-            const formatter = new Intl.DateTimeFormat('fr-FR', options);
-            const [month, day] = formatter.format(now).split('/');
-            const monthDayKey = `${month}-${day}`; // Format as MM-DD (e.g., "07-20")
+            // Create a new Date object representing the current time in Paris
+            const parisTime = new Date(now.toLocaleString('en-US', { timeZone: 'Europe/Paris' }));
+            
+            const month = parisTime.getMonth() + 1; // getMonth() is 0-indexed
+            const day = parisTime.getDate();
+            const monthDayKey = `${month.toString().padStart(2, '0')}-${day.toString().padStart(2, '0')}`; // Format as MM-DD (e.g., "07-20")
 
             const todayEntry = almanaxData.find(item => item.month_day === monthDayKey);
 
