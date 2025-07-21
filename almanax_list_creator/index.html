@@ -221,7 +221,7 @@
                 <img src="../images/LogoDofus.webp" alt="Logo Dofus" class="h-12 mx-auto mb-2 opacity-50">
                 <p data-translate-key="signature">Apps by Ato</p>
                 <p class="text-xs text-gray-600 mt-4" data-translate-key="disclaimer">Dofus et toutes les images associées utilisées sur ce site sont la propriété d'Ankama</p>
-                <p class="text-xs text-gray-600 mt-2" data-translate-key="version_info">Version 1.9.0 - Juillet 2025</p>
+                <p class="text-xs text-gray-600 mt-2" data-translate-key="version_info">Version 1.9.1 - Juillet 2025</p>
             </footer>
         </div>
     </div>
@@ -248,7 +248,7 @@
                 btn_back_home: "← Retour à l'accueil",
                 signature: "Apps by Ato",
                 disclaimer: "Dofus et toutes les images associées utilisées sur ce site sont la propriété d'Ankama",
-                version_info: "Version 1.9.0 - Juillet 2025", 
+                version_info: "Version 1.9.1 - Juillet 2025", 
                 almanax_list_creator_title: "Créateur de liste pour l'Almanax",
                 almanax_list_creator_desc: "Vous permet de générer une liste de ressources pour une période donnée.",
                 form_title: "Générer une liste de ressources",
@@ -523,17 +523,27 @@
             }
             todayAlmanaxOfferingDiv.style.display = 'block';
             const now = new Date();
-            const parisTime = new Date(now.toLocaleString('en-US', { timeZone: 'Europe/Paris' }));
-            const month = parisTime.getMonth() + 1;
-            const day = parisTime.getDate();
+
+            // --- NOUVELLE LOGIQUE DE DATE CORRIGÉE ---
+            // Utilise Intl.DateTimeFormat pour obtenir de manière fiable la date actuelle à Paris.
+            // C'est la méthode la plus robuste pour gérer les fuseaux horaires en JS natif.
+            const options = { timeZone: 'Europe/Paris', month: 'numeric', day: 'numeric' };
+            const formatter = new Intl.DateTimeFormat('en-US', options); // 'en-US' pour un format de sortie prévisible (MM/DD)
+            const parts = formatter.formatToParts(now);
+            
+            const month = parseInt(parts.find(p => p.type === 'month').value, 10);
+            const day = parseInt(parts.find(p => p.type === 'day').value, 10);
+            
             const monthDayKey = `${month.toString().padStart(2, '0')}-${day.toString().padStart(2, '0')}`;
             const todayEntry = almanaxData.find(item => item.short_date === monthDayKey);
             
-            const dateOptions = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
-            const dateString = parisTime.toLocaleDateString(currentLanguage, dateOptions);
+            // Pour l'affichage, on utilise aussi le fuseau horaire de Paris pour être cohérent.
+            const dateOptions = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric', timeZone: 'Europe/Paris' };
+            const dateString = now.toLocaleDateString(currentLanguage, dateOptions);
             todayOfferingDate.textContent = dateString;
 
             if (todayEntry) {
+                // Le reste de la fonction utilise les `month` et `day` corrigés
                 todayOfferingImg.src = getLocalImageNameForDate(month, day);
                 todayOfferingImg.alt = todayEntry.resource;
                 todayOfferingName.textContent = todayEntry.resource;
