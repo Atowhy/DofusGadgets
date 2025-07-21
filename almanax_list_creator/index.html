@@ -30,10 +30,7 @@
             background-color: rgba(31, 41, 55, 0.85); /* bg-gray-800 avec 85% d'opacité */
             border: 1px solid rgba(255, 255, 255, 0.1);
         }
-        .placeholder-custom::placeholder {
-            color: #9ca3af;
-        }
-
+        
         /* Styles pour les messages */
         .message-box {
             padding: 1rem;
@@ -42,34 +39,18 @@
             font-weight: 500;
             display: none; /* Hidden by default */
         }
-        .message-box.block { /* Added this class for explicit display */
-            display: block;
-        }
+        .message-box.block { display: block; }
         .message-box.error {
-            background-color: rgba(239, 68, 68, 0.1); /* Red-500 avec opacité */
-            color: #ef4444; /* text-red-500 */
-            border-left: 4px solid #ef4444; /* border-red-500 */
-        }
-        .message-box.success {
-            background-color: rgba(20, 184, 166, 0.1); /* Teal-500 avec opacité */
-            color: #14b8a6; /* text-teal-500 */
-            border-left: 4px solid #14b8a6; /* border-teal-500 */
+            background-color: rgba(239, 68, 68, 0.1); color: #ef4444; border-left: 4px solid #ef4444;
         }
         .message-box.info {
-            background-color: rgba(59, 130, 246, 0.1); /* Blue-500 avec opacité */
-            color: #3b82f6; /* text-blue-500 */
-            border-left: 4px solid #3b82f6; /* border-blue-500 */
+            background-color: rgba(59, 130, 246, 0.1); color: #3b82f6; border-left: 4px solid #3b82f6;
         }
 
-        /* Loader for API calls */
+        /* Loader */
         .loader {
-            width: 20px;
-            height: 20px;
-            border: 3px solid #4b5563; /* border-gray-600 */
-            border-bottom-color: #14b8a6; /* teal-500 */
-            border-radius: 50%;
-            display: inline-block;
-            box-sizing: border-box;
+            width: 20px; height: 20px; border: 3px solid #4b5563; border-bottom-color: #14b8a6;
+            border-radius: 50%; display: inline-block; box-sizing: border-box;
             animation: rotation 1s linear infinite;
         }
         @keyframes rotation {
@@ -79,28 +60,37 @@
 
         /* Resource list styling */
         .resource-item {
-            display: flex;
-            align-items: center;
-            gap: 1rem; /* Increased gap */
-            padding: 0.75rem;
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            border-radius: 0.5rem;
+            display: flex; align-items: center; gap: 1rem; padding: 0.75rem;
+            border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 0.5rem;
             background-color: rgba(45, 55, 72, 0.8);
         }
         .resource-item img {
-            width: 48px;
-            height: 48px;
-            object-fit: contain;
-            border-radius: 0.25rem;
-            background-color: rgba(255, 255, 255, 0.05);
-            flex-shrink: 0; /* Prevent image from shrinking */
+            width: 48px; height: 48px; object-fit: contain; border-radius: 0.25rem;
+            background-color: rgba(255, 255, 255, 0.05); flex-shrink: 0;
+        }
+
+        /* IMPROVEMENT: Make date input more clickable */
+        input[type="date"] {
+            cursor: pointer;
+            position: relative;
+        }
+        /* Hide the default calendar icon to make the whole field the button */
+        input[type="date"]::-webkit-calendar-picker-indicator {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            width: auto;
+            height: auto;
+            color: transparent;
+            background: transparent;
         }
     </style>
 </head>
 <body class="text-white antialiased">
 
     <div class="main-container relative min-h-screen">
-        <!-- CHANGE: Increased max-width for larger screens from max-w-xl to max-w-4xl -->
         <div class="relative z-10 container mx-auto p-4 md:p-8 max-w-4xl min-h-screen flex flex-col">
             
             <div class="flex justify-between items-center mb-4">
@@ -170,7 +160,8 @@
                         </button>
                     </div>
                     
-                    <div id="almanax-list" class="space-y-3"></div>
+                    <!-- IMPROVEMENT: Use a responsive grid for the list -->
+                    <div id="almanax-list" class="grid grid-cols-1 md:grid-cols-2 gap-4"></div>
                     <p id="almanax-empty-results" class="text-center text-gray-500 py-8 hidden" data-translate-key="empty_results">
                         Aucune ressource trouvée pour la période sélectionnée.
                     </p>
@@ -181,7 +172,7 @@
                 <img src="../images/LogoDofus.webp" alt="Logo Dofus" class="h-12 mx-auto mb-2 opacity-50">
                 <p data-translate-key="signature">Apps by Ato</p>
                 <p class="text-xs text-gray-600 mt-4" data-translate-key="disclaimer">Dofus et toutes les images associées utilisées sur ce site sont la propriété d'Ankama</p>
-                <p class="text-xs text-gray-600 mt-2" data-translate-key="version_info">Version 1.1.0 - Juillet 2025</p>
+                <p class="text-xs text-gray-600 mt-2" data-translate-key="version_info">Version 1.2.0 - Juillet 2025</p>
             </footer>
         </div>
     </div>
@@ -190,8 +181,7 @@
         // Global variables
         let currentLanguage = 'fr';
         let almanaxData = [];
-        let currentDailyOfferings = []; // Store daily offerings for export
-        const defaultItemIconUrl = 'https://placehold.co/48x48/1f2937/9ca3af?text=?'; 
+        let currentDailyOfferings = [];
 
         // DOM elements
         let startDateInput, endDateInput, numCharactersInput, generateListBtn, 
@@ -200,13 +190,12 @@
             languageSelector, versionInfoElement, exportCsvBtn,
             todayAlmanaxOfferingDiv, todayOfferingImg, todayOfferingName, todayOfferingDate, todayOfferingQuantity; 
 
-        // Translations object
         const translations = {
             fr: {
                 btn_back_home: "← Retour à l'accueil",
                 signature: "Apps by Ato",
                 disclaimer: "Dofus et toutes les images associées utilisées sur ce site sont la propriété d'Ankama",
-                version_info: "Version 1.1.0 - Juillet 2025", 
+                version_info: "Version 1.2.0 - Juillet 2025", 
                 almanax_list_creator_title: "Créateur de liste pour l'Almanax",
                 almanax_list_creator_desc: "Vous permet de générer une liste de ressources pour une période donnée.",
                 form_title: "Générer une liste de ressources",
@@ -235,7 +224,7 @@
                 btn_back_home: "← Back to Home",
                 signature: "Apps by Ato",
                 disclaimer: "Dofus and any related images used on this website are the properties of Ankama",
-                version_info: "Version 1.1.0 - July 2025", 
+                version_info: "Version 1.2.0 - July 2025", 
                 almanax_list_creator_title: "Almanax List Creator",
                 almanax_list_creator_desc: "Allows you to generate a list of resources for a given period.",
                 form_title: "Generate Resource List",
@@ -260,7 +249,6 @@
                 csv_header_quantity: "Quantity",
                 csv_header_image_url: "Image URL"
             },
-            // ... other languages omitted for brevity but would follow the same structure
         };
 
         function showMessage(element, message, type) {
@@ -338,7 +326,7 @@
                 const resourceDiv = document.createElement('div');
                 resourceDiv.classList.add('resource-item');
                 resourceDiv.innerHTML = `
-                    <img src="${offering.img}" onerror="this.onerror=null;this.src='${defaultItemIconUrl}';" alt="${offering.name}">
+                    <img src="${offering.img}" onerror="this.onerror=null;this.src='https://placehold.co/48x48/1f2937/9ca3af?text=?';" alt="${offering.name}">
                     <div class="flex-grow">
                         <p class="text-lg font-semibold">${offering.name}</p>
                         <p class="text-sm text-gray-400">${date}</p>
@@ -419,12 +407,7 @@
 
             currentDailyOfferings.forEach(offering => {
                 const date = offering.date.toISOString().split('T')[0];
-                const row = [
-                    `"${date}"`,
-                    `"${offering.name.replace(/"/g, '""')}"`, 
-                    offering.quantity,
-                    `"${offering.img}"`
-                ];
+                const row = [ `"${date}"`, `"${offering.name.replace(/"/g, '""')}"`, offering.quantity, `"${offering.img}"` ];
                 csvContent += row.join(',') + '\r\n';
             });
 
@@ -471,6 +454,7 @@
         }
 
         document.addEventListener('DOMContentLoaded', async () => {
+            // Initialize DOM elements
             startDateInput = document.getElementById('startDate');
             endDateInput = document.getElementById('endDate');
             numCharactersInput = document.getElementById('numCharacters');
@@ -489,12 +473,14 @@
             todayOfferingDate = document.getElementById('todayOfferingDate');
             todayOfferingQuantity = document.getElementById('todayOfferingQuantity');
 
+            // IMPROVEMENT: Set default date range to one week
             const today = new Date();
-            const thirtyDaysLater = new Date();
-            thirtyDaysLater.setDate(today.getDate() + 30);
+            const sevenDaysLater = new Date();
+            sevenDaysLater.setDate(today.getDate() + 7);
             startDateInput.value = today.toISOString().split('T')[0];
-            endDateInput.value = thirtyDaysLater.toISOString().split('T')[0];
+            endDateInput.value = sevenDaysLater.toISOString().split('T')[0];
 
+            // Load data
             showMessage(almanaxLoadingMessage, translations[currentLanguage].loading_data, 'info');
             try {
                 const response = await fetch('almanax_offerings.json');
@@ -507,10 +493,12 @@
                 generateListBtn.disabled = true;
             }
 
+            // Event Listeners
             generateListBtn.addEventListener('click', generateAlmanaxList);
             exportCsvBtn.addEventListener('click', exportToCSV);
             languageSelector.addEventListener('change', (e) => setLanguage(e.target.value));
 
+            // Initial setup
             const savedLang = localStorage.getItem('dofusAlmanaxLang') || 'fr';
             setLanguage(savedLang);
             displayTodayOffering();
