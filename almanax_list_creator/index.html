@@ -58,19 +58,15 @@
         }
 
         /* Resource list styling */
-        .resource-item-link {
-            display: block;
-            transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
-            border-radius: 0.5rem; /* Match the inner item's radius */
-        }
-        .resource-item-link:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 4px 15px rgba(0, 255, 255, 0.1);
-        }
         .resource-item {
             display: flex; align-items: center; gap: 1rem; padding: 0.75rem;
             border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 0.5rem;
             background-color: rgba(45, 55, 72, 0.8);
+             transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+        }
+         .resource-item:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 15px rgba(0, 255, 255, 0.1);
         }
         .resource-item img {
             width: 48px; height: 48px; object-fit: contain; border-radius: 0.25rem;
@@ -225,7 +221,7 @@
                 <img src="../images/LogoDofus.webp" alt="Logo Dofus" class="h-12 mx-auto mb-2 opacity-50">
                 <p data-translate-key="signature">Apps by Ato</p>
                 <p class="text-xs text-gray-600 mt-4" data-translate-key="disclaimer">Dofus et toutes les images associées utilisées sur ce site sont la propriété d'Ankama</p>
-                <p class="text-xs text-gray-600 mt-2" data-translate-key="version_info">Version 1.9.3 - Juillet 2025</p>
+                <p class="text-xs text-gray-600 mt-2" data-translate-key="version_info">Version 1.9.4 - Juillet 2025</p>
             </footer>
         </div>
     </div>
@@ -235,7 +231,6 @@
         let currentLanguage = 'fr';
         let almanaxData = [];
         let fullOfferingsListWithDetails = []; 
-        const itemDetailsCache = {}; // Cache pour les URL DofusDB
         let currentPage = 1;
         const itemsPerPage = 10;
         const monthNames = ["january", "february", "march", "april", "may", "june", "july", "august", "september", "october", "november", "december"];
@@ -253,7 +248,7 @@
                 btn_back_home: "← Retour à l'accueil",
                 signature: "Apps by Ato",
                 disclaimer: "Dofus et toutes les images associées utilisées sur ce site sont la propriété d'Ankama",
-                version_info: "Version 1.9.3 - Juillet 2025", 
+                version_info: "Version 1.9.4 - Juillet 2025", 
                 almanax_list_creator_title: "Créateur de liste pour l'Almanax",
                 almanax_list_creator_desc: "Vous permet de générer une liste de ressources pour une période donnée.",
                 form_title: "Générer une liste de ressources",
@@ -278,7 +273,6 @@
                 csv_header_date: "Date",
                 csv_header_name: "Nom",
                 csv_header_quantity: "Quantité",
-                export_progress: "Chargement des liens : {current} / {total}"
             },
             en: {
                 // ... (ajoutez les autres traductions anglaises ici)
@@ -286,16 +280,9 @@
         };
 
         // === HELPER FUNCTIONS ===
-        function showMessage(element, messageKey, type, isHtml = false, replacements = {}) {
-            let message = translations[currentLanguage][messageKey] || translations['fr'][messageKey] || messageKey;
-            for (const key in replacements) {
-                message = message.replace(`{${key}}`, replacements[key]);
-            }
-            if (isHtml) {
-                element.innerHTML = message;
-            } else {
-                element.innerHTML = `<p>${message}</p>`;
-            }
+        function showMessage(element, messageKey, type) {
+            const message = translations[currentLanguage][messageKey] || translations['fr'][messageKey];
+            element.innerHTML = `<p>${message}</p>`;
             element.className = `message-box ${type} block`;
         }
 
@@ -310,30 +297,33 @@
         
         // === CORE LOGIC ===
 
-        async function fetchDofusDbUrl(resourceName) {
-            if (itemDetailsCache[resourceName]) {
-                return itemDetailsCache[resourceName];
-            }
-            try {
-                const searchName = encodeURIComponent(resourceName);
-                const response = await fetch(`https://api.dofusdb.fr/items?name.fr=${searchName}&lang=fr`);
-                if (!response.ok) throw new Error('API response not OK');
-                
-                const data = await response.json();
-                const item = data.data && data.data.length > 0 ? data.data[0] : null;
+        /**
+         * Crée la liste complète des offrandes avec les détails (nom, quantité, image locale).
+         */
+        function createFullOfferingsList(startDate, endDate, numCharacters, fullAlmanaxData) {
+            const offerings = [];
+            let loopDate = new Date(startDate.getTime());
+            let endLoopDate = new Date(endDate.getTime());
 
-                if (item && item.id) {
-                    const url = `https://dofusdb.fr/fr/database/object/${item.id}`;
-                    itemDetailsCache[resourceName] = url;
-                    return url;
+            while (loopDate.getTime() <= endLoopDate.getTime()) {
+                const month = loopDate.getUTCMonth() + 1;
+                const day = loopDate.getUTCDate();
+                const monthDayKey = `${month.toString().padStart(2, '0')}-${day.toString().padStart(2, '0')}`;
+                const entry = fullAlmanaxData.find(item => item.short_date === monthDayKey);
+
+                if (entry) {
+                    offerings.push({
+                        date: new Date(loopDate.getTime()),
+                        name: entry.resource,
+                        quantity: entry.resource_count * numCharacters,
+                        imgUrl: getLocalImageNameForDate(month, day)
+                    });
                 }
-            } catch (error) {
-                console.error(`Failed to fetch DofusDB URL for ${resourceName}:`, error);
+                loopDate.setUTCDate(loopDate.getUTCDate() + 1); 
             }
-            itemDetailsCache[resourceName] = '#'; // Cache failure to avoid re-fetching
-            return '#';
+            return offerings;
         }
-
+        
         /**
          * Affiche une page de la liste des offrandes.
          */
@@ -349,23 +339,18 @@
                 const dateOptions = { year: 'numeric', month: 'long', day: 'numeric', timeZone: 'UTC' };
                 const date = offering.date.toLocaleDateString(currentLanguage, dateOptions);
                 
-                const link = document.createElement('a');
-                link.href = offering.dofusDbUrl || '#';
-                link.target = '_blank';
-                link.rel = 'noopener noreferrer';
-                link.classList.add('resource-item-link');
+                const itemDiv = document.createElement('div');
+                itemDiv.classList.add('resource-item');
 
-                link.innerHTML = `
-                    <div class="resource-item">
-                        <img src="${offering.imgUrl}" onerror="this.onerror=null;this.src='https://placehold.co/48x48/1f2937/9ca3af?text=?';" alt="${offering.name}">
-                        <div class="flex-grow">
-                            <p class="text-lg font-semibold">${offering.name}</p>
-                            <p class="text-sm text-gray-400">${date}</p>
-                        </div>
-                        <span class="text-teal-300 text-xl font-bold">${translations[currentLanguage].quantity_prefix}${offering.quantity.toLocaleString(currentLanguage)}</span>
+                itemDiv.innerHTML = `
+                    <img src="${offering.imgUrl}" onerror="this.onerror=null;this.src='https://placehold.co/48x48/1f2937/9ca3af?text=?';" alt="${offering.name}">
+                    <div class="flex-grow">
+                        <p class="text-lg font-semibold">${offering.name}</p>
+                        <p class="text-sm text-gray-400">${date}</p>
                     </div>
+                    <span class="text-teal-300 text-xl font-bold">${translations[currentLanguage].quantity_prefix}${offering.quantity.toLocaleString(currentLanguage)}</span>
                 `;
-                almanaxList.appendChild(link);
+                almanaxList.appendChild(itemDiv);
             });
         }
 
@@ -436,9 +421,9 @@
         }
 
         /**
-         * Génère la liste.
+         * Génère la liste. C'est maintenant une fonction synchrone et très rapide.
          */
-        async function generateAlmanaxList() {
+        function generateAlmanaxList() {
             const startDate = new Date(startDateInput.value + 'T00:00:00Z');
             const endDate = new Date(endDateInput.value + 'T00:00:00Z');
             const numCharacters = parseInt(numCharactersInput.value);
@@ -457,49 +442,9 @@
                 showMessage(almanaxErrorMessage, 'error_file_fetch', 'error'); return;
             }
             
-            generateListBtn.disabled = true;
-            const loadingHtml = `<div class="loader mx-auto"></div><p id="loading-text" class="mt-2"></p>`;
-            showMessage(almanaxLoadingMessage, loadingHtml, 'info', true);
-            const loadingTextElement = document.getElementById('loading-text');
-
-            // 1. Create base list without DofusDB URLs
-            let loopDate = new Date(startDate.getTime());
-            const offerings = [];
-            while (loopDate.getTime() <= endDate.getTime()) {
-                const month = loopDate.getUTCMonth() + 1;
-                const day = loopDate.getUTCDate();
-                const monthDayKey = `${month.toString().padStart(2, '0')}-${day.toString().padStart(2, '0')}`;
-                const entry = almanaxData.find(item => item.short_date === monthDayKey);
-
-                if (entry) {
-                    offerings.push({
-                        date: new Date(loopDate.getTime()),
-                        name: entry.resource,
-                        quantity: entry.resource_count * numCharacters,
-                        imgUrl: getLocalImageNameForDate(month, day)
-                    });
-                }
-                loopDate.setUTCDate(loopDate.getUTCDate() + 1); 
-            }
-
-            // 2. Fetch DofusDB URLs efficiently
-            const uniqueResourceNames = [...new Set(offerings.map(o => o.name))];
-            for (let i = 0; i < uniqueResourceNames.length; i++) {
-                const name = uniqueResourceNames[i];
-                showMessage(loadingTextElement, 'export_progress', 'info', false, {current: i + 1, total: uniqueResourceNames.length});
-                await fetchDofusDbUrl(name);
-            }
-
-            // 3. Add URLs to the list
-            fullOfferingsListWithDetails = offerings.map(o => ({
-                ...o,
-                dofusDbUrl: itemDetailsCache[o.name] || '#'
-            }));
-            
+            fullOfferingsListWithDetails = createFullOfferingsList(startDate, endDate, numCharacters, almanaxData);
             currentPage = 1; 
             updateDisplay();
-            hideMessage(almanaxLoadingMessage);
-            generateListBtn.disabled = false;
         }
 
         /**
