@@ -198,7 +198,7 @@
 
                     <div id="almanax-loading-message" class="message-box info hidden text-center">
                         <div class="loader"></div>
-                        <p class="mt-2" data-translate-key="loading_data">Chargement des données...</p>
+                        <p id="loading-text" class="mt-2" data-translate-key="loading_data">Chargement des données...</p>
                     </div>
                     <div id="almanax-error-message" class="message-box error hidden"></div>
                 </div>
@@ -211,7 +211,6 @@
                         </button>
                     </div>
                     
-                    <!-- FIX: Removed min-h-[480px] to allow the grid to resize naturally -->
                     <div id="almanax-list" class="grid grid-cols-1 md:grid-cols-2 gap-4"></div>
                     <div id="pagination-controls" class="flex justify-center items-center mt-6 space-x-2"></div>
                     <p id="almanax-empty-results" class="text-center text-gray-500 py-8 hidden" data-translate-key="empty_results">
@@ -224,7 +223,7 @@
                 <img src="../images/LogoDofus.webp" alt="Logo Dofus" class="h-12 mx-auto mb-2 opacity-50">
                 <p data-translate-key="signature">Apps by Ato</p>
                 <p class="text-xs text-gray-600 mt-4" data-translate-key="disclaimer">Dofus et toutes les images associées utilisées sur ce site sont la propriété d'Ankama</p>
-                <p class="text-xs text-gray-600 mt-2" data-translate-key="version_info">Version 1.7.0 - Juillet 2025</p>
+                <p class="text-xs text-gray-600 mt-2" data-translate-key="version_info">Version 1.8.0 - Juillet 2025</p>
             </footer>
         </div>
     </div>
@@ -240,7 +239,7 @@
 
         // DOM elements
         let startDateInput, endDateInput, numCharactersInput, generateListBtn, 
-            almanaxLoadingMessage, almanaxErrorMessage,
+            almanaxLoadingMessage, almanaxErrorMessage, loadingText,
             almanaxResultsContainer, almanaxList, almanaxEmptyResults, paginationControls,
             languageSelector, versionInfoElement, exportCsvBtn,
             todayAlmanaxOfferingDiv, todayOfferingLink, todayOfferingImg, todayOfferingName, todayOfferingDate, todayOfferingQuantity; 
@@ -250,7 +249,7 @@
                 btn_back_home: "← Retour à l'accueil",
                 signature: "Apps by Ato",
                 disclaimer: "Dofus et toutes les images associées utilisées sur ce site sont la propriété d'Ankama",
-                version_info: "Version 1.7.0 - Juillet 2025", 
+                version_info: "Version 1.8.0 - Juillet 2025", 
                 almanax_list_creator_title: "Créateur de liste pour l'Almanax",
                 almanax_list_creator_desc: "Vous permet de générer une liste de ressources pour une période donnée.",
                 form_title: "Générer une liste de ressources",
@@ -276,16 +275,22 @@
                 csv_header_name: "Nom",
                 csv_header_quantity: "Quantité",
                 csv_header_image_url: "URL Image",
-                csv_header_dofusdb_url: "URL DofusDB"
+                csv_header_dofusdb_url: "URL DofusDB",
+                export_progress: "Préparation de l'exportation : {current}/{total}..."
             },
             en: {
                 pagination_prev: "Previous",
                 pagination_next: "Next",
+                export_progress: "Preparing export: {current}/{total}..."
             },
         };
 
-        function showMessage(element, message, type) {
-            element.innerHTML = `<p>${message}</p>`;
+        function showMessage(element, message, type, isHtml = false) {
+            if (isHtml) {
+                element.innerHTML = message;
+            } else {
+                element.innerHTML = `<p>${message}</p>`;
+            }
             element.className = `message-box ${type} block`;
         }
 
@@ -325,13 +330,11 @@
                 dofusDbUrl: '#'
             };
             try {
-                // FIX: Use a more precise search query by encoding the full name
                 const searchName = encodeURIComponent(resourceName);
                 const response = await fetch(`https://api.dofusdb.fr/items?name.fr=${searchName}&lang=fr`);
                 if (!response.ok) throw new Error('API response not OK');
                 
                 const data = await response.json();
-                // FIX: Find the exact match from the results, as the API might return partial matches
                 const item = data.data && data.data.length > 0 ? data.data.find(d => d.name.fr === resourceName) : null;
 
                 if (item && item.id) {
@@ -474,7 +477,8 @@
             }
 
             generateListBtn.disabled = true;
-            showMessage(almanaxLoadingMessage, translations[currentLanguage].loading_data, 'info');
+            loadingText.textContent = translations[currentLanguage].loading_data;
+            showMessage(almanaxLoadingMessage, '', 'info', true);
             
             try {
                 fullOfferingsList = createBaseOfferingsList(startDate, endDate, numCharacters, almanaxData);
@@ -496,14 +500,21 @@
             }
 
             exportCsvBtn.disabled = true;
-            exportCsvBtn.innerHTML = `<div class="loader inline-block"></div> Exportation...`;
+            const originalBtnText = exportCsvBtn.textContent;
+            exportCsvBtn.innerHTML = `<div class="loader inline-block"></div>`;
             
             try {
-                // FIX: Fetch details for ALL items before exporting
-                const allOfferingsWithDetails = await Promise.all(fullOfferingsList.map(async (offering) => {
+                const allOfferingsWithDetails = [];
+                for (let i = 0; i < fullOfferingsList.length; i++) {
+                    const offering = fullOfferingsList[i];
                     const details = await fetchResourceDetails(offering.name);
-                    return { ...offering, ...details };
-                }));
+                    allOfferingsWithDetails.push({ ...offering, ...details });
+                    
+                    const progressText = translations[currentLanguage].export_progress
+                        .replace('{current}', i + 1)
+                        .replace('{total}', fullOfferingsList.length);
+                    exportCsvBtn.innerHTML = `<div class="loader inline-block"></div> ${progressText}`;
+                }
 
                 const lang = currentLanguage;
                 let csvContent = "data:text/csv;charset=utf-8,";
@@ -541,7 +552,7 @@
                 showMessage(almanaxErrorMessage, "Erreur lors de la préparation de l'exportation.", 'error');
             } finally {
                 exportCsvBtn.disabled = false;
-                exportCsvBtn.innerHTML = translations[currentLanguage].btn_export_csv;
+                exportCsvBtn.innerHTML = originalBtnText;
             }
         }
 
@@ -584,6 +595,7 @@
             numCharactersInput = document.getElementById('numCharacters');
             generateListBtn = document.getElementById('generateListBtn');
             almanaxLoadingMessage = document.getElementById('almanax-loading-message');
+            loadingText = document.getElementById('loading-text');
             almanaxErrorMessage = document.getElementById('almanax-error-message');
             almanaxResultsContainer = document.getElementById('almanax-results-container');
             almanaxList = document.getElementById('almanax-list');
@@ -605,7 +617,8 @@
             startDateInput.value = today.toISOString().split('T')[0];
             endDateInput.value = sevenDaysLater.toISOString().split('T')[0];
 
-            showMessage(almanaxLoadingMessage, "Chargement du fichier Almanax...", 'info');
+            loadingText.textContent = "Chargement du fichier Almanax...";
+            showMessage(almanaxLoadingMessage, '', 'info', true);
             try {
                 const response = await fetch('almanax_offerings.json');
                 if (!response.ok) throw new Error(`Failed to load local Almanax data: ${response.statusText}`);
