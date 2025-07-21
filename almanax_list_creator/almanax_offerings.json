@@ -71,2439 +71,2439 @@
     },
     {
         "short_date": "01-11",
-        "offering_to": "Etnop",
-        "bonus": "Challenge supplémentaireUn challenge supplémentaire est généré contre les monstres présents dans le donjon des Dopeuls.",
+        "offering_to": "Ashvey",
+        "bonus": "ButinLes chances d'obtenir du butin sont augmentées de 50 % sur les créatures de type Dopeuls.",
         "resource_count": 6,
         "resource": "Miroir de Dopeul"
     },
     {
         "short_date": "01-12",
-        "offering_to": "Kip",
-        "bonus": "Récolte abondanteLes quantités d'Argent récupérées par les Mineurs sont augmentées de 125 %.",
+        "offering_to": "Rojers",
+        "bonus": "Minerai abondantLes quantités d'Argent récupérées par les Mineurs sont augmentées de 125 %.",
         "resource_count": 30,
         "resource": "Argent"
     },
     {
         "short_date": "01-13",
-        "offering_to": "Nessil",
-        "bonus": "Points d'expérienceLes gains d'expérience sont augmentés de 75 % sur tous les gardiens de donjon.",
+        "offering_to": "Katlestyn",
+        "bonus": "Challenges augmentésLes bonus apportés par les challenges réussis sont augmentés de 150 % dans les 4 zones des remparts du Château Harebourg et dans la Tour de la Clepsydre.",
         "resource_count": 2,
         "resource": "Bave de Nessil"
     },
     {
         "short_date": "01-14",
-        "offering_to": "Ozie",
-        "bonus": "Économie d'ingrédientsLes Bûcherons économisent 15 % de leurs ingrédients lorsqu'ils fabriquent des objets.",
+        "offering_to": "Guigui",
+        "bonus": "Bois abondantLes quantités de Bois de Tremble récupérées par les Bûcherons sont augmentées de 125 %.",
         "resource_count": 10,
         "resource": "Bois de Tremble"
     },
     {
         "short_date": "01-15",
-        "offering_to": "Mégab",
-        "bonus": "ButinLes chances d'obtenir du butin sont augmentées de 100 % dans le donjon du Repaire des Recrues.",
-        "resource_count": 6,
-        "resource": "Botte trouée de Mégabwork"
+        "offering_to": "Poupline",
+        "bonus": "ButinLes chances d'obtenir du butin sont augmentées de 50 % sur les créatures de type Bworks de Cania.",
+        "resource_count": 10,
+        "resource": "Botte trouée"
     },
     {
         "short_date": "01-16",
-        "offering_to": "Anik",
-        "bonus": "Apparition des ressourcesLa vitesse d'apparition des ressources récoltées par les Alchimistes est augmentée de 100 %.",
+        "offering_to": "Bubba",
+        "bonus": "Challenge supplémentaireUn challenge supplémentaire est généré contre les monstres présents dans la zone de la Bordure de Brâkmar.",
         "resource_count": 6,
         "resource": "Relique Familiale"
     },
     {
         "short_date": "01-17",
-        "offering_to": "Arak",
-        "bonus": "Challenge supplémentaireUn challenge supplémentaire est généré contre les créatures de type Araknes.",
-        "resource_count": 9,
+        "offering_to": "Kia",
+        "bonus": "Challenges augmentésLes bonus apportés par les challenges réussis sont augmentés de 125 % sur les créatures de type Arak-haï.",
+        "resource_count": 2,
         "resource": "Glande d'Arak-haï"
     },
     {
         "short_date": "01-18",
-        "offering_to": "Ixa",
-        "bonus": "Économie d'ingrédientsLes Pêcheurs économisent 15 % de leurs ingrédients lorsqu'ils fabriquent des objets.",
+        "offering_to": "Yêcetu",
+        "bonus": "Pêche abondanteLes quantités de poissons récupérées par les Pêcheurs de tous niveaux sont augmentées de 100 %.",
         "resource_count": 40,
         "resource": "Poisson-Chaton"
     },
     {
         "short_date": "01-19",
-        "offering_to": "Alash",
-        "bonus": "Points d'expérienceLes gains d'expérience sont augmentés de 50 % sur les créatures de type Serpents.",
+        "offering_to": "Eskarina",
+        "bonus": "Anomalies temporellesLes gains d'expérience des montures sont augmentés de 100 % dans toutes les zones influencées par une anomalie temporelle. De plus, les gains d'expérience et les chances d'obtenir du butin sont augmentés de 25 % dans la zone de Crocuzko.",
         "resource_count": 2,
         "resource": "Pagne d'Alashasss"
     },
     {
         "short_date": "01-20",
-        "offering_to": "Rabrack",
-        "bonus": "ButinLes chances d'obtenir du butin sont augmentées de 100 % dans le donjon du Laboratoire de Brumen Tinctorias.",
+        "offering_to": "Inkola",
+        "bonus": "ButinLes chances d'obtenir du butin sont augmentées de 50 % sur les créatures de type Rats Brâkmariens.",
         "resource_count": 2,
         "resource": "Poil de Rat Brâkmarien"
     },
     {
         "short_date": "01-21",
-        "offering_to": "Gluto",
-        "bonus": "Quête répétableUne quête répétable spéciale est disponible aujourd'hui près de la taverne d'Astrub. Réalisable à partir du niveau 20, elle est indépendante de la quête d'offrande.\nNom de la quête : Le Glouton des tavernes.",
+        "offering_to": "Magikow",
+        "bonus": "Fabrication intensivePour chaque objet fabriqué, les Alchimistes ont 25 % de chances de créer un second objet.",
         "resource_count": 1,
         "resource": "Bouteille de Gloutoburg"
     },
     {
         "short_date": "01-22",
-        "offering_to": "Uba",
-        "bonus": "Récolte abondanteLes quantités d'Ortie récupérées par les Alchimistes sont augmentées de 200 %.",
+        "offering_to": "Danizzal",
+        "bonus": "Cueillette abondanteLes quantités d'Ortie récupérées par les Alchimistes sont augmentées de 125 %.",
         "resource_count": 40,
         "resource": "Ortie"
     },
     {
         "short_date": "01-23",
-        "offering_to": "Kuri",
-        "bonus": "Forgemagie amélioréeLes Forgemages ont 15 % de chances de ne pas consommer de rune lorsqu'ils tentent d'améliorer un objet.",
+        "offering_to": "Kestra",
+        "bonus": "Forgemagie amélioréeLes Sculptemages ont 15 % de chances de ne pas consumer de rune lorsqu'ils tentent d'améliorer une arme.",
         "resource_count": 2,
         "resource": "Rune So"
     },
     {
         "short_date": "01-24",
-        "offering_to": "Abra",
-        "bonus": "Points d'expérienceLes gains d'expérience sont augmentés de 50 % sur les créatures de type Abraknydes Sombres.",
+        "offering_to": "Shiva",
+        "bonus": "Challenges augmentésLes bonus apportés par les challenges réussis sont augmentés de 150 % dans le donjon de la Clairière du Chêne Mou.",
         "resource_count": 2,
         "resource": "Bourgeon d'Abraknyde Sombre Irascible"
     },
     {
         "short_date": "01-25",
-        "offering_to": "Koa",
-        "bonus": "ButinLes chances d'obtenir du butin sont augmentées de 100 % dans le donjon du Canyon Sauvage.",
+        "offering_to": "Billfer",
+        "bonus": "Points d'expérienceLes gains d'expérience sont augmentés de 75 % dans la zone du Cimetière Primitif.",
         "resource_count": 5,
         "resource": "Tibia de Koalak Fossoyeur"
     },
     {
         "short_date": "01-26",
-        "offering_to": "Igo",
-        "bonus": "Récolte abondanteLes quantités de Bois de Chêne récupérées par les Bûcherons sont augmentées de 125 %.",
+        "offering_to": "Pierrock",
+        "bonus": "Bois abondantLes quantités de Bois de Chêne récupérées par les Bûcherons sont augmentées de 125 %.",
         "resource_count": 40,
         "resource": "Bois de Chêne"
     },
     {
         "short_date": "01-27",
-        "offering_to": "Kasu",
-        "bonus": "Économie d'ingrédientsLes Boulangers économisent 15 % de leurs ingrédients lorsqu'ils fabriquent des objets.",
+        "offering_to": "Maribri",
+        "bonus": "Fabrication intensivePour chaque objet fabriqué, les Paysans ont 25 % de chances de créer un second objet.",
         "resource_count": 4,
         "resource": "Carasau"
     },
     {
         "short_date": "01-28",
-        "offering_to": "Rapi",
-        "bonus": "Challenges augmentésLes bonus apportés par les challenges réussis sont augmentés de 150 % dans le donjon du Repaire des Roublards.",
+        "offering_to": "Koppapi",
+        "bonus": "Challenges augmentésLes bonus apportés par les challenges réussis sont augmentés de 150 % dans le donjon du Repaire de Sphincter Cell.",
         "resource_count": 2,
         "resource": "Queue de Rat Pine"
     },
     {
         "short_date": "01-29",
-        "offering_to": "Bou",
-        "bonus": "Apparition des ressourcesLa vitesse d'apparition des ressources récoltées par les Paysans est augmentée de 100 %.",
+        "offering_to": "Krala",
+        "bonus": "Challenge supplémentaireUn challenge supplémentaire est généré contre les monstres présents dans la zone du Coin des Bouftous.",
         "resource_count": 6,
         "resource": "Laine de Bouftou"
     },
     {
         "short_date": "01-30",
-        "offering_to": "Enir",
-        "bonus": "ButinLes chances d'obtenir du butin sont augmentées de 100 % dans le donjon de la Cache de Kankreblath.",
+        "offering_to": "Lôrf",
+        "bonus": "ButinLes chances d'obtenir du butin sont augmentées de 50 % sur les créatures de type Bandits, dont les Artisans sombres.",
         "resource_count": 6,
         "resource": "Bourse Suspecte"
     },
     {
         "short_date": "01-31",
-        "offering_to": "Mensa",
-        "bonus": "Récolte abondanteLes quantités de Menthe Sauvage récupérées par les Alchimistes sont augmentées de 200 %.",
+        "offering_to": "Teskirf",
+        "bonus": "Cueillette abondanteLes quantités de Menthe Sauvage récupérées par les Alchimistes sont augmentées de 125 %.",
         "resource_count": 40,
         "resource": "Menthe Sauvage"
     },
     {
         "short_date": "02-01",
-        "offering_to": "Sil",
-        "bonus": "Points d'expérienceLes gains d'expérience sont augmentés de 50 % sur les créatures de type Tortues.",
+        "offering_to": "Tolgnas",
+        "bonus": "Points d'expérience et butin en larmesLes gains d'expérience lors des combats contre les monstres et les chances d'obtenir du butin sont augmentés de 50 % pour tous les aventuriers qui sont sous l'influence d'une Idole de Tolgnas.",
         "resource_count": 1,
         "resource": "Blessure du Sacrieur"
     },
     {
         "short_date": "02-02",
-        "offering_to": "Osa",
-        "bonus": "Élevage de monturesLes bonus d'expérience donnés par les objets d'élevage sont augmentés de 150 %.",
+        "offering_to": "Ruevas",
+        "bonus": "La Grande BouffeLes bonus apportés par les challenges réussis sont augmentés de 125 % sur toutes les créatures considérées comme des Bouftous, y compris les boufmouths et les boufcouls. De plus, les gains d'expérience sont augmentés de 50 % pour les Chasseurs, les Paysans et les Pêcheurs.",
         "resource_count": 2,
         "resource": "Brioche à la viande de bouftou"
     },
     {
         "short_date": "02-03",
-        "offering_to": "Grab",
-        "bonus": "Quête répétableUne quête répétable spéciale est disponible aujourd'hui près de l'atelier des bricoleurs de la ville de Brâkmar. Réalisable à partir du niveau 20, elle est indépendante de la quête d'offrande.\nNom de la quête : Vols à la charrette.",
+        "offering_to": "Marke",
+        "bonus": "Points d'expérienceLes gains d'expérience sont augmentés de 50 % sur les créatures de type Magik Riktus.",
         "resource_count": 6,
         "resource": "Bombe de Graboule"
     },
     {
         "short_date": "02-04",
-        "offering_to": "Blé",
-        "bonus": "Apparition des ressourcesLa vitesse d'apparition des ressources récoltées par les Mineurs est augmentée de 100 %.",
+        "offering_to": "Eritem",
+        "bonus": "ButinLes chances d'obtenir du butin sont augmentées de 75 % dans la zone des Crocs de verre.",
         "resource_count": 2,
         "resource": "Molaire de Blérice"
     },
     {
         "short_date": "02-05",
-        "offering_to": "Néfl",
-        "bonus": "Challenge supplémentaireUn challenge supplémentaire est généré contre les monstres présents dans le donjon de l'Arbre Hakam.",
-        "resource_count": 1,
-        "resource": "Fil de Néfleuse"
+        "offering_to": "Val",
+        "bonus": "Percepteurs avidesLe butin généré par les Percepteurs est augmenté de 200 % dans les donjons de niveau 80 à 110.",
+        "resource_count": 6,
+        "resource": "Fil de Néfileuse"
     },
     {
         "short_date": "02-06",
-        "offering_to": "Boi",
-        "bonus": "Objets de qualitéLa qualité des objets fabriqués dans la ville de Brâkmar est augmentée.",
+        "offering_to": "Misdup",
+        "bonus": "Économie d'ingrédientsLes Forgerons économisent 15 % de leurs ingrédients lorsqu'ils fabriquent des objets.",
         "resource_count": 2,
         "resource": "Marteau de Boisaille"
     },
     {
         "short_date": "02-07",
-        "offering_to": "Chav",
-        "bonus": "Points d'expérienceLes gains d'expérience sont augmentés de 50 % sur les créatures de type Champas.",
+        "offering_to": "Kimykay",
+        "bonus": "Anomalies temporellesLes gains d'expérience sont augmentés de 50 % dans toutes les zones influencées par une anomalie temporelle. De plus, les gains d'expérience et les chances d'obtenir du butin sont augmentés de 25 % dans la zone du Bord de la Forêt Maléfique.",
         "resource_count": 6,
         "resource": "Lamelle de Champa Vert"
     },
     {
         "short_date": "02-08",
-        "offering_to": "Eji",
-        "bonus": "Récolte abondanteLes quantités de Bois de Frêne récupérées par les Bûcherons sont augmentées de 125 %.",
+        "offering_to": "Eramas",
+        "bonus": "Bois abondantLes quantités de Bois de Frêne récupérées par les Bûcherons sont augmentées de 125 %.",
         "resource_count": 40,
         "resource": "Bois de Frêne"
     },
     {
         "short_date": "02-09",
-        "offering_to": "Kani",
-        "bonus": "ButinLes chances d'obtenir du butin sont augmentées de 100 % dans le donjon du Nid du Kwakwa.",
+        "offering_to": "Kilistin",
+        "bonus": "ButinLes chances d'obtenir du butin sont augmentées de 100 % dans le donjon de la Grotte de Kanigroula.",
         "resource_count": 2,
         "resource": "Tignasse de Kanihilan"
     },
     {
         "short_date": "02-10",
-        "offering_to": "Pikt",
+        "offering_to": "Meash",
         "bonus": "Élevage de monturesToutes les variétés de dragodindes, volkornes et muldos dorés donnent naissance à un bébé supplémentaire.",
         "resource_count": 6,
         "resource": "Pic de Dragodinde Dorée"
     },
     {
         "short_date": "02-11",
-        "offering_to": "Bar",
-        "bonus": "Récolte abondanteLes quantités de Bar Rikain récupérées par les Pêcheurs sont augmentées de 125 %.",
+        "offering_to": "Bazûkana",
+        "bonus": "Pêche abondanteLes quantités de Bar Rikain et de Tanche récupérées par les Pêcheurs sont augmentées de 125 %.",
         "resource_count": 40,
         "resource": "Bar Rikain"
     },
     {
         "short_date": "02-12",
-        "offering_to": "Mulo",
-        "bonus": "Points d'expérienceLes gains d'expérience sont augmentés de 75 % sur tous les gardiens de donjon.",
+        "offering_to": "Karlita",
+        "bonus": "Challenges augmentésLes bonus apportés par les challenges réussis sont augmentés de 125 % sur les créatures de type Mulous.",
         "resource_count": 5,
         "resource": "Poils de Mulounoké"
     },
     {
         "short_date": "02-13",
-        "offering_to": "Karn",
-        "bonus": "Quête répétableUne quête répétable spéciale est disponible aujourd'hui près de l'atelier des tailleurs de la ville de Bonta. Réalisable à partir du niveau 20, elle est indépendante de la quête d'offrande.\nNom de la quête : La fête aux tire-fesses.",
-        "resource_count": 1,
-        "resource": "Bottes Karnaval"
+        "offering_to": "Edyxo",
+        "bonus": "Minerai abondantLes quantités de Cuivre récupérées par les Mineurs sont augmentées de 125 %.",
+        "resource_count": 30,
+        "resource": "Cuivre"
     },
     {
         "short_date": "02-14",
-        "offering_to": "Valen",
-        "bonus": "Élevage de monturesLes bonus de caractéristiques donnés par les objets d'élevage sont augmentés de 150 %.",
+        "offering_to": "Duf",
+        "bonus": "Expérience amoureuseTous les personnages atteints par la Malédiction du Ballotin voient leurs gains d'expérience augmentés de 100 % lors des combats contre les monstres.",
         "resource_count": 9,
         "resource": "Shigekax Passion"
     },
     {
         "short_date": "02-15",
-        "offering_to": "Vieu",
-        "bonus": "ButinLes chances d'obtenir du butin sont augmentées de 100 % dans le donjon du Manoir des Katrepat.",
+        "offering_to": "Güss",
+        "bonus": "Coffres aux trésorsDes Coffres de Güss peuvent être gagnés à la fin des chasses aux trésors.",
         "resource_count": 1,
         "resource": "Potion de Vieillesse"
     },
     {
         "short_date": "02-16",
-        "offering_to": "Astru",
-        "bonus": "Quête répétableUne quête répétable spéciale est disponible aujourd'hui près de l'atelier des boulangers d'Astrub. Réalisable à partir du niveau 20, elle est indépendante de la quête d'offrande.\nNom de la quête : Contrôles anti-baston.",
+        "offering_to": "Tehego",
+        "bonus": "Économie d'ingrédientsLes Chasseurs économisent 15 % de leurs ingrédients lorsqu'ils fabriquent des objets.",
         "resource_count": 6,
         "resource": "Beignet Astrubien"
     },
     {
         "short_date": "02-17",
-        "offering_to": "Champa",
-        "bonus": "Challenge supplémentaireUn challenge supplémentaire est généré contre les monstres présents dans le donjon des Champas.",
+        "offering_to": "Fitsef",
+        "bonus": "Cadeaux surprisesDes Pochettes-Surprises ont été ajoutées aux butins des monstres. Lorsqu'elles sont utilisées, elles permettent d'obtenir des Beignets de Karnaval ou bien de se retrouver déguisé en monstre Tout-Fou.",
         "resource_count": 1,
-        "resource": "Écorce de Champaknyde"
+        "resource": "Bottes Karnaval"
     },
     {
         "short_date": "02-18",
-        "offering_to": "Abra",
-        "bonus": "Points d'expérienceLes gains d'expérience sont augmentés de 50 % sur les créatures de type Abraknes Sombres.",
+        "offering_to": "Amirniana",
+        "bonus": "Points d'expérienceLes gains d'expérience sont augmentés de 50 % sur les créatures de type Abraknydiens Sombres.",
         "resource_count": 6,
         "resource": "Écorce d'Abrakne Sombre"
     },
     {
         "short_date": "02-19",
-        "offering_to": "Carpi",
-        "bonus": "Récolte abondanteLes quantités de Carpe d'Iem récupérées par les Pêcheurs sont augmentées de 125 %.",
+        "offering_to": "Karat",
+        "bonus": "Pêche abondanteLes quantités de Poisson-Chaton et de Carpe d'Iem récupérées par les Pêcheurs sont augmentées de 125 %.",
         "resource_count": 40,
         "resource": "Carpe d'Iem"
     },
     {
         "short_date": "02-20",
-        "offering_to": "Bitou",
-        "bonus": "ButinLes chances d'obtenir du butin sont augmentées de 100 % dans le donjon de la Canopée du Kimbo.",
+        "offering_to": "Atog",
+        "bonus": "Challenges augmentésLes bonus apportés par les challenges réussis sont augmentés de 150 % dans les zones du Feuillage et du Tronc de l'arbre Hakam.",
         "resource_count": 3,
         "resource": "Croupion du Bitouf aérien"
     },
     {
         "short_date": "02-21",
-        "offering_to": "Bwor",
-        "bonus": "Économie d'ingrédientsLes Bricoleurs économisent 15 % de leurs ingrédients lorsqu'ils fabriquent des objets.",
+        "offering_to": "Bii",
+        "bonus": "ButinLes chances d'obtenir du butin sont augmentées de 75 % dans les zones du Village des Bworks et du Campement des Bworks.",
         "resource_count": 9,
         "resource": "Bière bwork"
     },
     {
         "short_date": "02-22",
-        "offering_to": "Drago",
-        "bonus": "Points d'expérienceLes gains d'expérience sont augmentés de 50 % sur les créatures de type Dragoeufs.",
+        "offering_to": "Ludobel",
+        "bonus": "Points d'expérienceLes gains d'expérience sont augmentés de 75 % dans la zone du Sanctuaire des Dragoeufs.",
         "resource_count": 5,
         "resource": "Peau de Dragueuse"
     },
     {
         "short_date": "02-23",
-        "offering_to": "Malbo",
-        "bonus": "Challenge supplémentaireUn challenge supplémentaire est généré contre les monstres présents dans le donjon de la Forêt Pétrifiée.",
+        "offering_to": "Rumo",
+        "bonus": "Challenges augmentésLes bonus apportés par les challenges réussis sont augmentés de 150 % dans le donjon du Tertre du long sommeil.",
         "resource_count": 2,
         "resource": "Corne de Malbois"
     },
     {
         "short_date": "02-24",
-        "offering_to": "Esko",
-        "bonus": "ButinLes chances d'obtenir du butin sont augmentées de 100 % dans le donjon de la Grotte des Glistes.",
+        "offering_to": "Vinstyl",
+        "bonus": "Challenge supplémentaireUn challenge supplémentaire est généré contre les monstres présents dans les salles de la Base Abyssale.",
         "resource_count": 2,
         "resource": "Cuir d'Eskoglyphe"
     },
     {
         "short_date": "02-25",
-        "offering_to": "Goul",
-        "bonus": "Points d'expérienceLes gains d'expérience sont augmentés de 50 % sur les créatures de type Goules.",
+        "offering_to": "Kanabal",
+        "bonus": "ButinLes chances d'obtenir du butin sont augmentées de 100 % dans le donjon du Manoir de Katrepat.",
         "resource_count": 1,
         "resource": "Goulobule rouge"
     },
     {
         "short_date": "02-26",
-        "offering_to": "Blin",
-        "bonus": "Challenge supplémentaireUn challenge supplémentaire est généré contre les monstres présents dans le donjon des Blops.",
+        "offering_to": "Krisdip",
+        "bonus": "Challenges augmentésLes bonus apportés par les challenges réussis sont augmentés de 125 % sur les créatures de type Marteaux-Aigris.",
         "resource_count": 2,
         "resource": "Armure de Blindur"
     },
     {
         "short_date": "02-27",
-        "offering_to": "Mari",
-        "bonus": "Économie d'ingrédientsLes Poissonniers économisent 15 % de leurs ingrédients lorsqu'ils fabriquent des objets.",
+        "offering_to": "Tiko",
+        "bonus": "Gibier abondantLes quantités de Viande Saignante et de Viande Persillée récupérées par les Chasseurs sont augmentées de 125 %.",
         "resource_count": 4,
         "resource": "Marinade Sucrée-Salée"
     },
     {
         "short_date": "02-28",
-        "offering_to": "Domo",
-        "bonus": "Points d'expérienceLes gains d'expérience sont augmentés de 50 % sur les créatures de type Demoiselles.",
+        "offering_to": "Tidihef",
+        "bonus": "Points d'expérienceLes gains d'expérience sont augmentés de 100 % dans le donjon de l'Arbre de Moon.",
         "resource_count": 3,
         "resource": "Plume de Domoizelle"
     },
     {
         "short_date": "02-29",
-        "offering_to": "Truk",
-        "bonus": "Économie d'ingrédientsLes Bouchers économisent 15 % de leurs ingrédients lorsqu'ils fabriquent des objets.",
+        "offering_to": "Yalpriaf",
+        "bonus": "Points d'expérience et butin pour tousLes gains d'expérience et les chances d'obtenir du butin sont augmentés de 75 % lors des combats contre les monstres. De plus, les gains d'expérience sont augmentés de 50 % pour tous les métiers.",
         "resource_count": 6,
         "resource": "Nageoire de Compétition"
     },
     {
         "short_date": "03-01",
-        "offering_to": "Janat",
+        "offering_to": "Jonat",
         "bonus": "Économie d'ingrédientsLes Bijoutiers économisent 15 % de leurs ingrédients lorsqu'ils fabriquent des objets.",
         "resource_count": 1,
         "resource": "La Chaîne Nhanor Kibrill"
     },
     {
         "short_date": "03-02",
-        "offering_to": "Martalo",
+        "offering_to": "Meluze",
         "bonus": "Points d'expérienceLes bonus apportés par les challenges réussis sont augmentés de 150 % dans la zone de la Vallée de la Morh'Kitu.",
         "resource_count": 5,
         "resource": "Crâne d'Aventurier"
     },
     {
         "short_date": "03-03",
-        "offering_to": "Meluze",
+        "offering_to": "Marifriss",
         "bonus": "Bois abondantLes quantités de Bois de Charme et de Bois de Bambou Sombre récupérées par les Bûcherons sont augmentées de 125 %.",
         "resource_count": 20,
         "resource": "Bois de Charme"
     },
     {
         "short_date": "03-04",
-        "offering_to": "Martriss",
-        "bonus": "Points d'expérienceLes gains d'expérience sont augmentés de 50 % sur les créatures de type Bulvesants.",
+        "offering_to": "Sylkauf",
+        "bonus": "Points d'expérienceLes gains d'expérience sont augmentés de 50 % sur les créatures de type Sylvesprits.",
         "resource_count": 3,
         "resource": "Volve de Fistulor"
     },
     {
         "short_date": "03-05",
-        "offering_to": "Sylrauf",
+        "offering_to": "Darkchy",
         "bonus": "Anomalies temporellesLes chances d'obtenir du butin sont augmentées de 50 % dans toutes les zones influencées par une anomalie temporelle. De plus, les gains d'expérience et les chances d'obtenir du butin sont augmentés de 25 % dans la zone des Landes de Cania.",
         "resource_count": 3,
         "resource": "Poil de Gliglitch"
     },
     {
         "short_date": "03-06",
-        "offering_to": "Darkchy",
+        "offering_to": "Marilez",
         "bonus": "Objets de qualitéLa qualité des objets fabriqués dans la ville de la Bourgade est augmentée.",
         "resource_count": 1,
         "resource": "Baguette de Glace"
     },
     {
         "short_date": "03-07",
-        "offering_to": "Marilez",
+        "offering_to": "Tella",
         "bonus": "Challenges augmentésLes bonus apportés par les challenges réussis sont augmentés de 125 % sur les créatures de type Kozaru.",
         "resource_count": 4,
         "resource": "Tête de lance de Fangshu"
     },
     {
         "short_date": "03-08",
-        "offering_to": "Téla",
-        "bonus": "ButinLes chances d'obtenir du butin sont augmentées de 50 % sur les créatures de type Wabbits, Wabbits mutants et Garde du Wa.",
+        "offering_to": "Davkaz",
+        "bonus": "ButinLes chances d'obtenir du butin sont augmentées de 50 % sur les créatures de type Wabbits, Wabbits mutants et Gawde du Wa.",
         "resource_count": 6,
         "resource": "Patte de Wabbit"
     },
     {
         "short_date": "03-09",
-        "offering_to": "Davkaz",
+        "offering_to": "Totot",
         "bonus": "Récolte abondanteLes quantités de Houblon récupérées par les Paysans sont augmentées de 125 %.",
         "resource_count": 50,
         "resource": "Houblon"
     },
     {
         "short_date": "03-10",
-        "offering_to": "Tifot",
-        "bonus": "Challenges augmentés et expérience des métiersLes bonus apportés par les challenges réussis sont augmentés de 75 %. De plus, les gains d'expérience sont augmentés de 25 % pour tous les métiers.",
-        "resource_count": 1,
-        "resource": "Foudroyeur en Frêne"
-    },
-    {
-        "short_date": "03-11",
-        "offering_to": "Bryss",
+        "offering_to": "Inndo",
         "bonus": "Élevage de monturesToutes les variétés de dragodindes, volkornes et muldos indigo ainsi que de volkornes saphir donnent naissance à un bébé supplémentaire.",
         "resource_count": 1,
         "resource": "Foudroyeur en Frêne"
     },
     {
-        "short_date": "03-12",
-        "offering_to": "Irdor",
+        "short_date": "03-11",
+        "offering_to": "Laetux",
         "bonus": "Challenge supplémentaireUn challenge supplémentaire est généré contre les monstres présents dans les zones des Marécages d'Amakna, des Marécages nauséabonds et des Marécages sans fond.",
         "resource_count": 8,
         "resource": "Dent de Crocodaille"
     },
     {
-        "short_date": "03-13",
-        "offering_to": "Jetox",
+        "short_date": "03-12",
+        "offering_to": "Tajonoo",
         "bonus": "Économie d'ingrédientsLes Pêcheurs économisent 15 % de leurs ingrédients lorsqu'ils fabriquent des objets.",
         "resource_count": 3,
         "resource": "Poisson Pané Frit"
     },
     {
-        "short_date": "03-14",
-        "offering_to": "Tajonoo",
+        "short_date": "03-13",
+        "offering_to": "Maëmon",
         "bonus": "Expérience RobillesqueLes gains d'expérience sont augmentés de 75 % sur tous les gardiens de donjon.",
         "resource_count": 2,
         "resource": "Œil de Harrogant"
     },
     {
-        "short_date": "03-15",
-        "offering_to": "Maenon",
-        "bonus": "Cueillette abondanteLes quantités de Trèfles à 5 feuilles récupérées par les Alchimistes sont augmentées de 125 %.",
+        "short_date": "03-14",
+        "offering_to": "Todobaï",
+        "bonus": "Cueillette abondanteLes quantités de Trèfles à 5 Feuilles récupérées par les Alchimistes sont augmentées de 125 %.",
         "resource_count": 40,
-        "resource": "Trèfle à feuilles"
+        "resource": "Trèfle à 5 feuilles"
     },
     {
-        "short_date": "03-16",
-        "offering_to": "Todobal",
-        "bonus": "Challenge supplémentaireUn challenge supplémentaire est généré contre les créatures de type Trolls de Litneg.",
+        "short_date": "03-15",
+        "offering_to": "Cycloune",
+        "bonus": "Challenge supplémentaireUn challenge supplémentaire est généré contre les créatures de type Troolls de Litneg.",
         "resource_count": 5,
         "resource": "Gratrooll"
     },
     {
-        "short_date": "03-17",
-        "offering_to": "Cyclone",
+        "short_date": "03-16",
+        "offering_to": "Orété",
         "bonus": "Points d'expérienceLes gains d'expérience sont augmentés de 50 % sur les créatures de type Zoths.",
         "resource_count": 4,
         "resource": "Jouet de Gamine Zoth"
     },
     {
-        "short_date": "03-18",
-        "offering_to": "Oreté",
-        "bonus": "Fortune des LeprechaunsLes aventuriers en quête de bricoleurs peuvent récupérer deux fois plus de pièces sur les Leprechauns.",
+        "short_date": "03-17",
+        "offering_to": "Wish",
+        "bonus": "Fortune des LeprechaunsLes aventuriers en quête de binouzetons peuvent récupérer deux fois plus de pièces sur les Leprechauns.",
         "resource_count": 1,
         "resource": "Cape du Piou Vert"
     },
     {
-        "short_date": "03-19",
-        "offering_to": "Wish",
-        "bonus": "Forgemagie amélioréeLes Forgemages ont 15 % de chances de ne pas consommer de rune lorsqu'ils tentent d'améliorer un objet.",
+        "short_date": "03-18",
+        "offering_to": "Ninefi",
+        "bonus": "Forgemagie amélioréeLes Façomages ont 15 % de chances de ne pas consumer de rune lorsqu'ils tentent d'améliorer un objet.",
         "resource_count": 2,
         "resource": "Rune Fui"
     },
     {
-        "short_date": "03-20",
-        "offering_to": "Nilinefi",
-        "bonus": "Récolte abondanteLes quantités de Manganèse récupérées par les Mineurs sont augmentées de 125 %.",
+        "short_date": "03-19",
+        "offering_to": "Icleen",
+        "bonus": "Minerai abondantLes quantités de Manganèse récupérées par les Mineurs sont augmentées de 125 %.",
         "resource_count": 30,
         "resource": "Manganèse"
     },
     {
-        "short_date": "03-21",
-        "offering_to": "Manta",
-        "bonus": "Points d'expérienceLes gains d'expérience sont augmentés de 50 % sur les créatures de type Mantazes.",
+        "short_date": "03-20",
+        "offering_to": "Elosi",
+        "bonus": "Points d'expérienceLes gains d'expérience sont augmentés de 100 % dans le Vaisseau du Capitaine Meno.",
         "resource_count": 2,
         "resource": "Queue de Mantaze"
     },
     {
-        "short_date": "03-22",
-        "offering_to": "Feut",
-        "bonus": "ButinLes chances d'obtenir du butin sont augmentées de 100 % dans le donjon de la Tour de la Clepsydre.",
+        "short_date": "03-21",
+        "offering_to": "Cébeyon",
+        "bonus": "Anomalies temporellesLe butin généré par les Percepteurs est augmenté de 100 % dans toutes les zones influencées par une anomalie temporelle. De plus, les gains d'expérience et les chances d'obtenir du butin sont augmentés de 25 % dans la zone de la Caserne du Jour sans fin.",
         "resource_count": 2,
         "resource": "Œil de Feutôme"
     },
     {
-        "short_date": "03-23",
-        "offering_to": "Verg",
-        "bonus": "Challenge supplémentaireUn challenge supplémentaire est généré contre les monstres présents dans le donjon de la Crevasse Perge.",
+        "short_date": "03-22",
+        "offering_to": "Konala",
+        "bonus": "ButinLes chances d'obtenir du butin sont augmentées de 100 % dans la Forgefroide de Missiz Frizz.",
         "resource_count": 2,
         "resource": "Incus de Verglasseur"
     },
     {
-        "short_date": "03-24",
-        "offering_to": "Crac",
-        "bonus": "Points d'expérienceLes gains d'expérience sont augmentés de 50 % sur les créatures de type Scarafeuilles.",
+        "short_date": "03-23",
+        "offering_to": "Perviom",
+        "bonus": "Apparition des ressourcesLa vitesse d'apparition des bois de tous types est augmentée de 100 %.",
         "resource_count": 1,
         "resource": "Gravure de Crachin"
     },
     {
-        "short_date": "03-25",
-        "offering_to": "Scara",
-        "bonus": "ButinLes chances d'obtenir du butin sont augmentées de 100 % dans le donjon du Territoire des Porcos.",
+        "short_date": "03-24",
+        "offering_to": "Socren",
+        "bonus": "Points d'expérienceLes gains d'expérience sont augmentés de 50 % sur les créatures de type Scarafeuilles.",
         "resource_count": 6,
         "resource": "Ailes de Scarafeuille Blanc"
     },
     {
-        "short_date": "03-26",
-        "offering_to": "Bacte",
-        "bonus": "Points d'expérienceLes gains d'expérience sont augmentés de 50 % sur les créatures de type Bacterribs.",
+        "short_date": "03-25",
+        "offering_to": "Fala",
+        "bonus": "ButinLes chances d'obtenir du butin sont augmentées de 50 % sur les créatures de type Krobes.",
         "resource_count": 2,
         "resource": "Antenne de Bacterrib"
     },
     {
-        "short_date": "03-27",
-        "offering_to": "Glou",
-        "bonus": "ButinLes chances d'obtenir du butin sont augmentées de 100 % dans le donjon du Jardin d'Hiver.",
+        "short_date": "03-26",
+        "offering_to": "Dees",
+        "bonus": "Challenges augmentésLes bonus apportés par les challenges réussis sont augmentés de 125 % sur les créatures de type Gloursons.",
         "resource_count": 1,
         "resource": "Incisive de Glourmand"
     },
     {
-        "short_date": "03-28",
-        "offering_to": "Papi",
-        "bonus": "Économie d'ingrédientsLes Poissonniers économisent 15 % de leurs ingrédients lorsqu'ils fabriquent des objets.",
+        "short_date": "03-27",
+        "offering_to": "Sha",
+        "bonus": "Gibier abondantLes quantités de Viande Minérale et de Viande Frelatée récupérées par les Chasseurs sont augmentées de 125%.",
         "resource_count": 4,
         "resource": "Papillote au Citron"
     },
     {
-        "short_date": "03-29",
-        "offering_to": "Kani",
-        "bonus": "Points d'expérienceLes gains d'expérience sont augmentés de 50 % sur les créatures de type Kanimates.",
+        "short_date": "03-28",
+        "offering_to": "Clynt",
+        "bonus": "Points d'expérienceLes gains d'expérience sont augmentés de 100 % dans le Transporteur de Sylargh.",
         "resource_count": 2,
         "resource": "Canine de Kanimate"
     },
     {
-        "short_date": "03-30",
-        "offering_to": "Cyb",
-        "bonus": "ButinLes chances d'obtenir du butin sont augmentées de 100 % dans le donjon de l'Atelier du Tanukouï San.",
+        "short_date": "03-29",
+        "offering_to": "Ocarian",
+        "bonus": "ButinLes chances d'obtenir du butin sont augmentées de 100 % dans la Grotte du Bworker.",
         "resource_count": 2,
         "resource": "Boulon de Cybwork"
     },
     {
-        "short_date": "03-31",
-        "offering_to": "Fenn",
-        "bonus": "Challenge supplémentaireUn challenge supplémentaire est généré contre les monstres présents dans le donjon des Kitsounes.",
+        "short_date": "03-30",
+        "offering_to": "Mahadine",
+        "bonus": "Points d'expérienceLes gains d'expérience sont augmentés de 50 % sur les créatures de type Animaux du désert.",
         "resource_count": 6,
         "resource": "Queue de Fennex"
     },
     {
-        "short_date": "04-01",
-        "offering_to": "Drago",
-        "bonus": "Points d'expérienceLes gains d'expérience sont augmentés de 50 % sur les créatures de type Dragoeufs.",
-        "resource_count": 1,
-        "resource": "Œuf de Dragoeuf Calcaire"
+        "short_date": "03-31",
+        "offering_to": "Kimbru",
+        "bonus": "Challenges augmentésLes bonus apportés par les challenges réussis sont augmentés de 150 % dans le donjon des Larves.",
+        "resource_count": 6,
+        "resource": "Dent de Larve Émeraude"
     },
     {
-        "short_date": "04-02",
-        "offering_to": "Flud",
-        "bonus": "Quête répétableUne quête répétable spéciale est disponible aujourd'hui près de l'atelier des alchimistes du village d'Amakna. Réalisable à partir du niveau 20, elle est indépendante de la quête d'offrande.\nNom de la quête : Qui vole un œuf cherche l'embrouille.",
+        "short_date": "04-01",
+        "offering_to": "Azra",
+        "bonus": "Points d'expérience et butin sur les créatures marinesLes gains d'expérience et les chances d'obtenir du butin sont augmentés de 50 % sur tous les monstres considérés comme des créatures marines (pichons, monstres des plages, corailleurs, crustorails, tortues de Moon, crabe Hijacob, gélikan, Kralamoure Géant, monstres des abysses de Sufokia, Mercemers, Submergés, Crocodailles de Crocuzko).",
         "resource_count": 3,
         "resource": "Fluide Glacial"
     },
     {
-        "short_date": "04-03",
-        "offering_to": "Abreu",
-        "bonus": "Élevage de monturesLes bonus d'endurance donnés par les objets d'élevage sont augmentés de 150 %.",
+        "short_date": "04-02",
+        "offering_to": "Yamato",
+        "bonus": "Challenge supplémentaireUn challenge supplémentaire est généré contre les monstres présents dans la zone du Territoire Cacterre.",
         "resource_count": 1,
         "resource": "Abreuvoir en Frêne"
     },
     {
-        "short_date": "04-04",
-        "offering_to": "Lant",
-        "bonus": "ButinLes chances d'obtenir du butin sont augmentées de 100 % dans le donjon du Labyrinthe du Minotoror.",
+        "short_date": "04-03",
+        "offering_to": "Jébédaï",
+        "bonus": "Points d'expérienceLes gains d'expérience sont augmentés de 75 % dans la zone du Mont des Tombeaux.",
         "resource_count": 3,
         "resource": "Lanterne usée"
     },
     {
-        "short_date": "04-05",
-        "offering_to": "Sécu",
+        "short_date": "04-04",
+        "offering_to": "Typlanêt",
         "bonus": "Objets de qualitéLa qualité des objets fabriqués dans la ville de Sufokia est augmentée.",
         "resource_count": 1,
         "resource": "Ceinture de Sécurité"
     },
     {
-        "short_date": "04-06",
-        "offering_to": "Edel",
-        "bonus": "Récolte abondanteLes quantités d'Edelweiss récupérées par les Alchimistes sont augmentées de 125 %.",
-        "resource_count": 40,
-        "resource": "Edelweiss"
+        "short_date": "04-05",
+        "offering_to": "Etnop",
+        "bonus": "Quête répétable et chocomaniaUne quête répétable spéciale est disponible aujourd'hui près du sanctuaire des Zobals. Réalisable à partir du niveau 20, elle est indépendante de la quête d'offrande.\nNom de la quête : Qui vole un oeuf cherche l'embrouille.\n\nDe plus, les gains d'expérience et les chances d'obtenir du butin sont augmentés de 30 % dans toutes les zones de l'Île de Pwâk.",
+        "resource_count": 1,
+        "resource": "Œuf de Dragoeuf Calcaire"
     },
     {
-        "short_date": "04-07",
-        "offering_to": "Merg",
-        "bonus": "Points d'expérienceLes gains d'expérience sont augmentés de 50 % sur les créatures de type Mergranlos.",
+        "short_date": "04-06",
+        "offering_to": "Itourp",
+        "bonus": "ButinLes chances d'obtenir du butin sont augmentées de 75 % dans la zone des Hauts des Hurlements.",
         "resource_count": 5,
         "resource": "Canine de Mergranlou"
     },
     {
-        "short_date": "04-08",
-        "offering_to": "Orge",
+        "short_date": "04-07",
+        "offering_to": "Bensom",
         "bonus": "Récolte abondanteLes quantités d'Orge récupérées par les Paysans sont augmentées de 125 %.",
         "resource_count": 50,
         "resource": "Orge"
     },
     {
-        "short_date": "04-09",
-        "offering_to": "Tort",
-        "bonus": "Challenge supplémentaireUn challenge supplémentaire est généré contre les monstres présents dans le donjon de la Baie de Cania.",
+        "short_date": "04-08",
+        "offering_to": "Enaibi",
+        "bonus": "Points d'expérienceLes gains d'expérience sont augmentés de 75 % dans la zone de la Plage de la Tortue.",
         "resource_count": 6,
         "resource": "Carapace Verte"
     },
     {
-        "short_date": "04-10",
-        "offering_to": "Gobv",
-        "bonus": "ButinLes chances d'obtenir du butin sont augmentées de 100 % dans le donjon du Donjon des Gobelins.",
+        "short_date": "04-09",
+        "offering_to": "Mak",
+        "bonus": "Challenges augmentésLes bonus apportés par les challenges réussis sont augmentés de 150 % dans le donjon du Théâtre de Dramak.",
         "resource_count": 5,
         "resource": "Plume de Gobvious"
     },
     {
-        "short_date": "04-11",
-        "offering_to": "Forti",
-        "bonus": "Forgemagie amélioréeLes Forgemages ont 15 % de chances de ne pas consommer de rune lorsqu'ils tentent d'améliorer un objet.",
+        "short_date": "04-10",
+        "offering_to": "Nunu",
+        "bonus": "Élevage de monturesToutes les variétés de dragodindes, volkornes et muldos pourpres ainsi que de volkornes jade donnent naissance à un bébé supplémentaire.",
         "resource_count": 2,
         "resource": "Anneau Fortifiant"
     },
     {
-        "short_date": "04-12",
-        "offering_to": "Blop",
-        "bonus": "Points d'expérienceLes gains d'expérience sont augmentés de 50 % sur les créatures de type Blops.",
+        "short_date": "04-11",
+        "offering_to": "Jay",
+        "bonus": "Anomalies temporellesLes gains d'expérience sont augmentés de 50 % dans toutes les zones influencées par une anomalie temporelle. De plus, les gains d'expérience et les chances d'obtenir du butin sont augmentés de 25 % dans la zone du Lac de Cania.",
         "resource_count": 6,
         "resource": "Bout de Blop Coco"
     },
     {
-        "short_date": "04-13",
-        "offering_to": "Jian",
-        "bonus": "ButinLes chances d'obtenir du butin sont augmentées de 100 % dans le donjon du Cimetière Primitif.",
+        "short_date": "04-12",
+        "offering_to": "Mobbib",
+        "bonus": "ButinLes chances d'obtenir du butin sont augmentées de 50 % sur les créatures de type Armée de Brume.",
         "resource_count": 3,
         "resource": "Os de Jiangshi-Nobi"
     },
     {
-        "short_date": "04-14",
-        "offering_to": "Kali",
-        "bonus": "Récolte abondanteLes quantités de Bois de Kaliptus récupérées par les Bûcherons sont augmentées de 125 %.",
+        "short_date": "04-13",
+        "offering_to": "Gorzarel",
+        "bonus": "Bois abondantLes quantités de Bois d'Ébène et de Bois de Kaliptus récupérées par les Bûcherons sont augmentées de 125 %.",
         "resource_count": 40,
         "resource": "Bois de Kaliptus"
     },
     {
-        "short_date": "04-15",
-        "offering_to": "Kwak",
-        "bonus": "Points d'expérienceLes gains d'expérience sont augmentés de 50 % sur les créatures de type Kwaks.",
+        "short_date": "04-14",
+        "offering_to": "Bûnty",
+        "bonus": "ButinLes chances d'obtenir du butin sont augmentées de 100 % dans le Nid du Kwakwa.",
         "resource_count": 4,
         "resource": "Plume du Kwak de Vent"
     },
     {
-        "short_date": "04-16",
-        "offering_to": "Baff",
-        "bonus": "Élevage de monturesLes bonus d'amour donnés par les objets d'élevage sont augmentés de 150 %.",
+        "short_date": "04-15",
+        "offering_to": "Mascha",
+        "bonus": "Fabrication intensivePour chaque objet fabriqué, les Bricoleurs ont 25 % de chances de créer un second objet.",
         "resource_count": 1,
         "resource": "Baffeur en Frêne"
     },
     {
-        "short_date": "04-17",
-        "offering_to": "Greu",
-        "bonus": "Récolte abondanteLes quantités de Greuvettes récupérées par les Pêcheurs sont augmentées de 125 %.",
+        "short_date": "04-16",
+        "offering_to": "Favarez",
+        "bonus": "Pêche abondanteLes quantités de Greuvette et de Crabe Sourimi récupérées par les Pêcheurs sont augmentées de 125 %.",
         "resource_count": 40,
         "resource": "Greuvette"
     },
     {
-        "short_date": "04-18",
-        "offering_to": "Multy",
-        "bonus": "Quête répétableUne quête répétable spéciale est disponible aujourd'hui près de l'atelier des bijoutiers du village d'Amakna. Réalisable à partir du niveau 20, elle est indépendante de la quête d'offrande.\nNom de la quête : Les Bijoux de la vieille.",
+        "short_date": "04-17",
+        "offering_to": "Sehb",
+        "bonus": "ButinLes chances d'obtenir du butin sont augmentées de 75 % dans la zone de la péninsule des Gelées.",
         "resource_count": 1,
         "resource": "Multygely"
     },
     {
-        "short_date": "04-19",
-        "offering_to": "Cuir",
-        "bonus": "ButinLes chances d'obtenir du butin sont augmentées de 100 % dans le donjon de la Caverne des Fungus.",
+        "short_date": "04-18",
+        "offering_to": "Duc",
+        "bonus": "Points d'expérienceLes gains d'expérience sont augmentés de 100 % dans le donjon des Salons privés de Klime.",
         "resource_count": 2,
         "resource": "Cuir de Cuirboule"
     },
     {
-        "short_date": "04-20",
-        "offering_to": "Or",
-        "bonus": "Récolte abondanteLes quantités d'Or récupérées par les Mineurs sont augmentées de 125 %.",
+        "short_date": "04-19",
+        "offering_to": "Tchoub",
+        "bonus": "Minerai abondantLes quantités d'Or récupérées par les Mineurs sont augmentées de 150 %.",
         "resource_count": 30,
         "resource": "Or"
     },
     {
-        "short_date": "04-21",
-        "offering_to": "Nect",
-        "bonus": "Économie d'ingrédientsLes Façonneurs économisent 15 % de leurs ingrédients lorsqu'ils fabriquent des objets.",
+        "short_date": "04-20",
+        "offering_to": "Viti",
+        "bonus": "Challenges augmentésLes bonus apportés par les challenges réussis sont augmentés de 125 % sur les créatures de type Plantalas.",
         "resource_count": 2,
         "resource": "Nectar de l'Orient"
     },
     {
-        "short_date": "04-22",
-        "offering_to": "Boul",
-        "bonus": "Quête répétableUne quête répétable spéciale est disponible aujourd'hui près du temple Crâ. Réalisable à partir du niveau 20, elle est indépendante de la quête d'offrande.\nNom de la quête : Attention à la boule.",
+        "short_date": "04-21",
+        "offering_to": "Scheik",
+        "bonus": "Coffres aux trésorsDes Coffres de Scheik peuvent être gagnés à la fin des chasses aux trésors.",
         "resource_count": 1,
         "resource": "Boule polie"
     },
     {
-        "short_date": "04-23",
-        "offering_to": "Tila",
-        "bonus": "Points d'expérienceLes gains d'expérience sont augmentés de 50 % sur les créatures de type Tilamproies.",
+        "short_date": "04-22",
+        "offering_to": "Sylfaen",
+        "bonus": "ButinLes chances d'obtenir du butin sont augmentées de 50 % sur les créatures de type Monstres des ruines sous-marines.",
         "resource_count": 2,
         "resource": "Dent de Tilamproie"
     },
     {
-        "short_date": "04-24",
-        "offering_to": "Ouas",
-        "bonus": "ButinLes chances d'obtenir du butin sont augmentées de 100 % dans le donjon de la Tanière des Givrefoux.",
+        "short_date": "04-23",
+        "offering_to": "Katelruz",
+        "bonus": "Points d'expérienceLes gains d'expérience sont augmentés de 50 % sur les créatures de type Monstres des Tourbières.",
         "resource_count": 5,
         "resource": "Bave de Ouassingue"
     },
     {
-        "short_date": "04-25",
-        "offering_to": "Craq",
-        "bonus": "Points d'expérienceLes gains d'expérience sont augmentés de 50 % sur les créatures de type Craqueleurs.",
+        "short_date": "04-24",
+        "offering_to": "Lakha",
+        "bonus": "Challenge supplémentaireUn challenge supplémentaire est généré contre les monstres présents dans la zone de la Montagne des Craqueleurs.",
         "resource_count": 6,
         "resource": "Pierre du Craqueleur"
     },
     {
-        "short_date": "04-26",
-        "offering_to": "Vian",
-        "bonus": "Économie d'ingrédientsLes Bouchers économisent 15 % de leurs ingrédients lorsqu'ils fabriquent des objets.",
+        "short_date": "04-25",
+        "offering_to": "Rakreveï",
+        "bonus": "Gibier abondantLes quantités de Viande Rassie et de Viande Exsudative récupérées par les Chasseurs sont augmentées de 125 %.",
         "resource_count": 6,
         "resource": "Viande Rassie"
     },
     {
-        "short_date": "04-27",
-        "offering_to": "Kama",
-        "bonus": "ButinLes chances d'obtenir du butin sont augmentées de 100 % dans le donjon de la Mine de Sakaï.",
+        "short_date": "04-26",
+        "offering_to": "Fako",
+        "bonus": "Quêtes et kamasLes gains de kamas sont augmentés de 100 % pour toutes les quêtes.",
         "resource_count": 1,
         "resource": "Kamatrix"
     },
     {
-        "short_date": "04-28",
-        "offering_to": "Fouf",
-        "bonus": "Challenge supplémentaireUn challenge supplémentaire est généré contre les monstres présents dans le donjon du Labyrinthe du Dragon Cochon.",
+        "short_date": "04-27",
+        "offering_to": "Proff",
+        "bonus": "Challenges augmentésLes bonus apportés par les challenges réussis sont augmentés de 125 % sur les créatures de type Ruffians de Cania.",
         "resource_count": 6,
         "resource": "Oreille de Foufayteur"
     },
     {
-        "short_date": "04-29",
-        "offering_to": "Cris",
-        "bonus": "Apparition des ressourcesLa vitesse d'apparition des ressources récoltées par les Mineurs est augmentée de 100 %.",
+        "short_date": "04-28",
+        "offering_to": "Shinkarré",
+        "bonus": "Minerai abondantLes quantités de minerai récupérées par les Mineurs de tous niveaux sont augmentées de 100 %.",
         "resource_count": 1,
         "resource": "Cristal"
     },
     {
-        "short_date": "04-30",
-        "offering_to": "Tofu",
-        "bonus": "Points d'expérienceLes gains d'expérience sont augmentés de 50 % sur les créatures de type Tofus.",
+        "short_date": "04-29",
+        "offering_to": "Mylka",
+        "bonus": "ButinLes chances d'obtenir du butin sont augmentées de 50 % sur les créatures de type Tofus.",
         "resource_count": 6,
         "resource": "Plume de Tofu"
     },
     {
-        "short_date": "05-01",
-        "offering_to": "Pand",
-        "bonus": "Récolte abondanteLes quantités de Graine de Pandouille récupérées par les Paysans sont augmentées de 125 %.",
+        "short_date": "04-30",
+        "offering_to": "Franek",
+        "bonus": "Cueillette abondanteLes quantités de Plantes récupérées par les Alchimistes de tous niveaux sont augmentées de 100 %.",
         "resource_count": 40,
         "resource": "Graine de Pandouille"
     },
     {
-        "short_date": "05-02",
-        "offering_to": "Expl",
-        "bonus": "ButinLes chances d'obtenir du butin sont augmentées de 100 % dans le donjon du Repaire des Bandits.",
+        "short_date": "05-01",
+        "offering_to": "Esthoma",
+        "bonus": "Fabrique FéériqueLes gains d'expérience sont augmentés de 50 % pour tous les métiers. De plus, pour chaque Fée d'Artifice fabriquée, les personnages ont 25 % de chances de créer une seconde Fée et 15 % de chances d'économiser des ingrédients. Ils peuvent aussi récupérer 2 fois plus de Capsules Explosives en combattant des Bworks Mages.",
         "resource_count": 2,
         "resource": "Capsule Explosive"
     },
     {
-        "short_date": "05-03",
-        "offering_to": "Cham",
-        "bonus": "Points d'expérienceLes gains d'expérience sont augmentés de 50 % sur les créatures de type Champodontes.",
+        "short_date": "05-02",
+        "offering_to": "Gymcitro",
+        "bonus": "Points d'expérienceLes gains d'expérience sont augmentés de 100 % dans le donjon du Temple du Grand Ougah.",
         "resource_count": 1,
         "resource": "Langue de Champodonte"
     },
     {
-        "short_date": "05-04",
-        "offering_to": "Truc",
-        "bonus": "Challenge supplémentaireUn challenge supplémentaire est généré contre les monstres présents dans le donjon du Bworker.",
+        "short_date": "05-03",
+        "offering_to": "Rikku",
+        "bonus": "Anomalies temporellesLes bonus apportés par les challenges réussis sont augmentés de 75 % dans toutes les zones influencées par une anomalie temporelle. De plus, les gains d'expérience et les chances d'obtenir du butin sont augmentés de 25 % dans la zone du Cirque de Cania.",
         "resource_count": 4,
         "resource": "Croupion de Truchmuche"
     },
     {
-        "short_date": "05-05",
-        "offering_to": "Gob",
-        "bonus": "Points d'expérienceLes gains d'expérience sont augmentés de 50 % sur les créatures de type Gobelins.",
+        "short_date": "05-04",
+        "offering_to": "Malava",
+        "bonus": "ButinLes chances d'obtenir du butin sont augmentées de 50 % sur les créatures de type Gobelins d'Amakna.",
         "resource_count": 6,
         "resource": "Longue-vue de Gob-Trotteur"
     },
     {
-        "short_date": "05-06",
-        "offering_to": "Frag",
-        "bonus": "ButinLes chances d'obtenir du butin sont augmentées de 100 % dans le donjon du Goulet du Rasboul.",
+        "short_date": "05-05",
+        "offering_to": "Bo",
+        "bonus": "Challenge supplémentaireUn challenge supplémentaire est généré contre les monstres présents dans la zone des Plaines Rocheuses.",
         "resource_count": 6,
         "resource": "Fragment de Pierre Pointue"
     },
     {
-        "short_date": "05-07",
-        "offering_to": "Erabl",
-        "bonus": "Récolte abondanteLes quantités de Bois d'Érable récupérées par les Bûcherons sont augmentées de 125 %.",
+        "short_date": "05-06",
+        "offering_to": "Bipup",
+        "bonus": "Bois abondantLes quantités de Bombu et d'Érable récupérées par les Bûcherons sont augmentées de 125 %.",
         "resource_count": 40,
         "resource": "Bois d'Érable"
     },
     {
-        "short_date": "05-08",
-        "offering_to": "Klé",
-        "bonus": "Points d'expérienceLes gains d'expérience sont augmentés de 50 % sur les créatures de type Klémorts.",
+        "short_date": "05-07",
+        "offering_to": "Azkatraz",
+        "bonus": "Challenges augmentésLes bonus apportés par les challenges réussis sont augmentés de 150 % dans les donjons de la Tour de Solar et de la Tour de Bethel.",
         "resource_count": 1,
         "resource": "Dent de Klémort"
     },
     {
-        "short_date": "05-09",
-        "offering_to": "Pata",
-        "bonus": "Récolte abondanteLes quantités de Pomme de Terre récupérées par les Paysans sont augmentées de 125 %.",
+        "short_date": "05-08",
+        "offering_to": "Bigg",
+        "bonus": "Quête répétableUne quête répétable spéciale est disponible aujourd'hui près du château d'Amakna. Réalisable à partir du niveau 20, elle est indépendante de la quête d'offrande.\nNom de la quête : Le fabuleux festin d'Amélie Poêlon.",
         "resource_count": 20,
         "resource": "Pomme de Terre"
     },
     {
-        "short_date": "05-10",
-        "offering_to": "Peti",
-        "bonus": "Objets de qualitéLa qualité des objets fabriqués dans la ville de Pandala est augmentée.",
-        "resource_count": 1,
-        "resource": "Sac du Petit Récolteur"
+        "short_date": "05-09",
+        "offering_to": "Bern",
+        "bonus": "ButinLes chances d'obtenir du butin sont augmentées de 75 % dans la zone du Canyon Sauvage.",
+        "resource_count": 6,
+        "resource": "Pierre Médicinale"
     },
     {
-        "short_date": "05-11",
-        "offering_to": "Drag",
-        "bonus": "Élevage de monturesToutes les variétés de dragodindes, volkornes et muldos amande donnent naissance à un bébé supplémentaire.",
+        "short_date": "05-10",
+        "offering_to": "Loumi",
+        "bonus": "Élevage de monturesToutes les variétés de dragodindes, volkornes et muldos turquoise donnent naissance à un bébé supplémentaire.",
         "resource_count": 6,
         "resource": "Pic de Dragodinde"
     },
     {
-        "short_date": "05-12",
-        "offering_to": "Fiol",
-        "bonus": "Économie d'ingrédientsLes Alchimistes économisent 15 % de leurs ingrédients lorsqu'ils fabriquent des objets.",
+        "short_date": "05-11",
+        "offering_to": "Duanaf",
+        "bonus": "Expérience des métiersLes gains d'expérience sont augmentés de 50 % pour les métiers de forgemagie d'armes (Forgemage et Sculptemage).",
         "resource_count": 1,
         "resource": "Fiole à élément"
     },
     {
-        "short_date": "05-13",
-        "offering_to": "Malt",
+        "short_date": "05-12",
+        "offering_to": "Zebdara",
         "bonus": "Récolte abondanteLes quantités de Malt récupérées par les Paysans sont augmentées de 125 %.",
         "resource_count": 50,
         "resource": "Malt"
     },
     {
-        "short_date": "05-14",
-        "offering_to": "Skeu",
-        "bonus": "ButinLes chances d'obtenir du butin sont augmentées de 100 % dans le donjon de la Tanière de Skeunk.",
+        "short_date": "05-13",
+        "offering_to": "Todeb",
+        "bonus": "Challenges augmentésLes bonus apportés par les challenges réussis sont augmentés de 150 % dans le donjon du Repaire de Skeunk.",
         "resource_count": 1,
         "resource": "Dédicace de Skeunk pour Émeraude"
     },
     {
-        "short_date": "05-15",
-        "offering_to": "Bow",
-        "bonus": "Objets de qualitéLa qualité des objets fabriqués dans la ville d'Amakna est augmentée.",
+        "short_date": "05-14",
+        "offering_to": "Emil",
+        "bonus": "Objets de qualitéLa qualité des objets fabriqués dans le village et la forêt d'Amakna est augmentée.",
         "resource_count": 1,
         "resource": "Bouclier de Bowisse"
     },
     {
-        "short_date": "05-16",
-        "offering_to": "Khan",
-        "bonus": "Points d'expérienceLes gains d'expérience sont augmentés de 50 % sur les créatures de type Kanigrous.",
+        "short_date": "05-15",
+        "offering_to": "Nell",
+        "bonus": "Cadeaux surprisesDes Boufballes Surprises ont été ajoutées aux butins des monstres. Lorsqu'elles sont utilisées, elles permettent d'obtenir des Bouf'gommes de différents parfums.",
         "resource_count": 2,
         "resource": "Collier de Khan Karkass"
     },
     {
-        "short_date": "05-17",
-        "offering_to": "Bella",
-        "bonus": "Récolte abondanteLes quantités de Belladone récupérées par les Alchimistes sont augmentées de 125 %.",
+        "short_date": "05-16",
+        "offering_to": "Ku",
+        "bonus": "Apparition des ressourcesLa vitesse d'apparition des fleurs et des plantes cueillies par les Alchimistes est augmentée de 100 %.",
         "resource_count": 40,
         "resource": "Belladone"
     },
     {
-        "short_date": "05-18",
-        "offering_to": "Roiss",
-        "bonus": "ButinLes chances d'obtenir du butin sont augmentées de 100 % dans le donjon du Théâtre de Dramak.",
+        "short_date": "05-17",
+        "offering_to": "Khâm",
+        "bonus": "ButinLes chances d'obtenir du butin sont augmentées de 50 % sur les créatures de type Monstres des Tourbières.",
         "resource_count": 1,
         "resource": "Étoffe du Roissingue"
     },
     {
-        "short_date": "05-19",
-        "offering_to": "Bulb",
-        "bonus": "Points d'expérienceLes gains d'expérience sont augmentés de 50 % sur les créatures de type Bulbambous.",
+        "short_date": "05-18",
+        "offering_to": "Kevlatahmu",
+        "bonus": "Anomalies temporellesLe butin généré par les Percepteurs est augmenté de 100 % dans toutes les zones influencées par une anomalie temporelle. De plus, les gains d'expérience et les chances d'obtenir du butin sont augmentés de 25 % dans la zone de Plantala.",
         "resource_count": 3,
         "resource": "Pollen de Bulbiflore"
     },
     {
-        "short_date": "05-20",
-        "offering_to": "Etai",
-        "bonus": "Récolte abondanteLes quantités d'Étain récupérées par les Mineurs sont augmentées de 125 %.",
+        "short_date": "05-19",
+        "offering_to": "Tyrben",
+        "bonus": "Minerai abondantLes quantités d'Étain et de Silicate récupérées par les Mineurs sont augmentées de 125 %.",
         "resource_count": 30,
         "resource": "Étain"
     },
     {
-        "short_date": "05-21",
-        "offering_to": "Caw",
-        "bonus": "Points d'expérienceLes gains d'expérience sont augmentés de 50 % sur les créatures de type Wabbits.",
-        "resource_count": 2,
-        "resource": "Cawotte"
+        "short_date": "05-20",
+        "offering_to": "Jember",
+        "bonus": "Économie d'ingrédientsLes Façonneurs économisent 15 % de leurs ingrédients lorsqu'ils fabriquent des objets.",
+        "resource_count": 1,
+        "resource": "Bouclier Tonbarien"
     },
     {
-        "short_date": "05-22",
-        "offering_to": "Capo",
-        "bonus": "Objets de qualitéLa qualité des objets fabriqués dans la ville d'Astrub est augmentée.",
+        "short_date": "05-21",
+        "offering_to": "Ntamak",
+        "bonus": "Expérience des métiersLes gains d'expérience sont augmentés de 50 % pour les métiers de fabrication de vêtements et de parures (Bijoutier, Cordonnier et Tailleur).",
         "resource_count": 1,
         "resource": "Capouze des Champs"
     },
     {
-        "short_date": "05-23",
-        "offering_to": "Peti",
-        "bonus": "Objets de qualitéLa qualité des objets fabriqués dans la ville d'Incarnam est augmentée.",
+        "short_date": "05-22",
+        "offering_to": "Krisegis",
+        "bonus": "Expérience des quêtesLes gains d'expérience sont augmentés de 100 % pour toutes les quêtes.",
         "resource_count": 1,
         "resource": "Sac du Petit Aventurier"
     },
     {
-        "short_date": "05-24",
-        "offering_to": "Broc",
-        "bonus": "Récolte abondanteLes quantités de Brochet récupérées par les Pêcheurs sont augmentées de 125 %.",
+        "short_date": "05-23",
+        "offering_to": "Osebo",
+        "bonus": "Pêche abondanteLes quantités de Brochet, de Perche et de Lotte récupérées par les Pêcheurs sont augmentées de 125 %.",
         "resource_count": 40,
         "resource": "Brochet"
     },
     {
-        "short_date": "05-25",
-        "offering_to": "Seig",
-        "bonus": "Récolte abondanteLes quantités de Seigle récupérées par les Paysans sont augmentées de 125 %.",
+        "short_date": "05-24",
+        "offering_to": "Daza",
+        "bonus": "Apparition des ressourcesLa vitesse d'apparition des ressources est augmentée de 150 % dans la zone des Champs de Cania.",
         "resource_count": 40,
         "resource": "Seigle"
     },
     {
-        "short_date": "05-26",
-        "offering_to": "Kili",
-        "bonus": "ButinLes chances d'obtenir du butin sont augmentées de 100 % dans le donjon de la Volière de la Haute Truche.",
+        "short_date": "05-25",
+        "offering_to": "Seyfani",
+        "bonus": "Points d'expérienceLes gains d'expérience sont augmentés de 75 % dans la zone des Plaines Herbeuses.",
         "resource_count": 5,
         "resource": "Duvet du Kilibriss"
     },
     {
-        "short_date": "05-27",
-        "offering_to": "Gami",
-        "bonus": "Points d'expérienceLes gains d'expérience sont augmentés de 50 % sur les créatures de type Gaminos.",
+        "short_date": "05-26",
+        "offering_to": "Taelstrom",
+        "bonus": "Challenge supplémentaireUn challenge supplémentaire est généré contre les monstres présents dans la zone du Labyrinthe du Minotoror.",
         "resource_count": 4,
         "resource": "Corne de Gamino"
     },
     {
-        "short_date": "05-28",
-        "offering_to": "Tanc",
-        "bonus": "Économie d'ingrédientsLes Poissonniers économisent 15 % de leurs ingrédients lorsqu'ils fabriquent des objets.",
+        "short_date": "05-27",
+        "offering_to": "Milidès",
+        "bonus": "Fabrication intensivePour chaque objet fabriqué, les Pêcheurs ont 25 % de chances de créer un second objet.",
         "resource_count": 2,
         "resource": "Tanche en Matelote"
     },
     {
-        "short_date": "05-29",
-        "offering_to": "Vian",
-        "bonus": "Économie d'ingrédientsLes Bouchers économisent 15 % de leurs ingrédients lorsqu'ils fabriquent des objets.",
+        "short_date": "05-28",
+        "offering_to": "Izmar",
+        "bonus": "Gibier abondantLes quantités de Viande Sanguinolente récupérées par les Chasseurs sont augmentées de 125%.",
         "resource_count": 6,
         "resource": "Viande Sanguinolente"
     },
     {
-        "short_date": "05-30",
-        "offering_to": "Chaf",
-        "bonus": "ButinLes chances d'obtenir du butin sont augmentées de 100 % dans le donjon du Cimetière des Héros.",
-        "resource_count": 6,
-        "resource": "Miséricorde du Chafer d'Élite"
+        "short_date": "05-29",
+        "offering_to": "Alikindoy",
+        "bonus": "Nature généreuseLa vitesse d'apparition des ressources de tous types est augmentée de 100 %. De plus, les récolteurs peuvent récupérer des Fleurs de Rosal ou des Fringales de Silouate en affrontant les Protecteurs de ressources.",
+        "resource_count": 1,
+        "resource": "Sac du Petit Récolteur"
     },
     {
-        "short_date": "05-31",
-        "offering_to": "Pui",
-        "bonus": "Forgemagie amélioréeLes Forgemages ont 15 % de chances de ne pas consommer de rune lorsqu'ils tentent d'améliorer un objet.",
+        "short_date": "05-30",
+        "offering_to": "Xandra",
+        "bonus": "Forgemagie amélioréeLes Forgemages ont 15 % de chances de ne pas consumer de rune lorsqu'ils tentent d'améliorer une arme.",
         "resource_count": 3,
         "resource": "Rune Pui"
     },
     {
-        "short_date": "06-01",
-        "offering_to": "Dram",
-        "bonus": "Challenge supplémentaireUn challenge supplémentaire est généré contre les monstres présents dans le donjon du Sanctuaire de l'Almanax.",
+        "short_date": "05-31",
+        "offering_to": "Tiny",
+        "bonus": "ButinLes chances d'obtenir du butin sont augmentées de 100 % dans le donjon de l'Antre du Korriandre.",
         "resource_count": 3,
         "resource": "Lamelle de Dramanite"
     },
     {
-        "short_date": "06-02",
-        "offering_to": "Crab",
-        "bonus": "Points d'expérienceLes gains d'expérience sont augmentés de 50 % sur les créatures de type Crabes.",
+        "short_date": "06-01",
+        "offering_to": "Namyknof",
+        "bonus": "Challenge supplémentaireUn challenge supplémentaire est généré contre les créatures de type Monstres des plages.",
         "resource_count": 6,
         "resource": "Pince de Crabe"
     },
     {
-        "short_date": "06-03",
-        "offering_to": "Bisc",
-        "bonus": "Économie d'ingrédientsLes Paysans économisent 15 % de leurs ingrédients lorsqu'ils fabriquent des objets.",
+        "short_date": "06-02",
+        "offering_to": "Elgero",
+        "bonus": "Vœu de pauvretéDes Sébiles d'Elgero ont été ajoutées aux butins des monstres des donjons. Lorsqu'elles sont utilisées, elles font disparaître les kamas... et permettent de bénéficier d'un effet aléatoire de charité bien ordonnée.",
         "resource_count": 2,
         "resource": "Biscotte"
     },
     {
-        "short_date": "06-04",
-        "offering_to": "Grai",
-        "bonus": "ButinLes chances d'obtenir du butin sont augmentées de 100 % dans le donjon de la Ruche Gloursonne.",
+        "short_date": "06-03",
+        "offering_to": "Mikart",
+        "bonus": "Percepteurs avidesLe butin généré par les Percepteurs est augmenté de 200 % dans les donjons de niveau 40 à 70.",
         "resource_count": 6,
         "resource": "Graine de la Discorde"
     },
     {
-        "short_date": "06-05",
-        "offering_to": "Bouf",
-        "bonus": "Objets de qualitéLa qualité des objets fabriqués dans la ville du Berceau est augmentée.",
+        "short_date": "06-04",
+        "offering_to": "Martero",
+        "bonus": "Gardiens de la natureLes protecteurs de ressources ont 5 fois plus de chances d'apparaître pendant les activités de récolte. De plus, la vitesse d'apparition des Archimonstres est augmentée de 200 %.",
         "resource_count": 1,
         "resource": "Bouclier du Bouftou"
     },
     {
-        "short_date": "06-06",
-        "offering_to": "Viru",
-        "bonus": "Points d'expérienceLes gains d'expérience sont augmentés de 50 % sur les créatures de type Virustines.",
+        "short_date": "06-05",
+        "offering_to": "Aris",
+        "bonus": "Points d'expérienceLes gains d'expérience sont augmentés de 50 % sur les créatures de type Krobes.",
         "resource_count": 2,
         "resource": "Coquille de Virustine"
     },
     {
-        "short_date": "06-07",
-        "offering_to": "Cycl",
-        "bonus": "ButinLes chances d'obtenir du butin sont augmentées de 100 % dans le donjon de l'Oeil de Vortex.",
+        "short_date": "06-06",
+        "offering_to": "Mendelia",
+        "bonus": "ButinLes chances d'obtenir du butin sont augmentées de 100 % dans le Donjon du Comte Harebourg.",
         "resource_count": 2,
         "resource": "Œil de Cycloïde"
     },
     {
-        "short_date": "06-08",
-        "offering_to": "Blér",
-        "bonus": "Challenge supplémentaireUn challenge supplémentaire est généré contre les monstres présents dans le donjon du Donjon des Blérorts.",
+        "short_date": "06-07",
+        "offering_to": "Halden",
+        "bonus": "Points d'expérienceLes gains d'expérience sont augmentés de 50 % sur les créatures de type Bléros.",
         "resource_count": 2,
         "resource": "Griffe de Blérauve"
     },
     {
-        "short_date": "06-09",
-        "offering_to": "Tive",
-        "bonus": "Élevage de monturesLes bonus de maturité donnés par les objets d'élevage sont augmentés de 150 %.",
+        "short_date": "06-08",
+        "offering_to": "Tigibon",
+        "bonus": "Anomalies temporellesLes gains d'expérience des montures sont augmentés de 100 % dans toutes les zones influencées par une anomalie temporelle. De plus, les gains d'expérience et les chances d'obtenir du butin sont augmentés de 25 % dans la zone de la Route des Roulottes.",
         "resource_count": 6,
         "resource": "Roue de Tivelo"
     },
     {
+        "short_date": "06-09",
+        "offering_to": "Toun",
+        "bonus": "Quête répétableUne quête répétable spéciale est disponible aujourd'hui à l'est de l'atelier des bûcherons de la forêt d'Amakna. Réalisable à partir du niveau 20, elle est indépendante de la quête d'offrande.\nNom de la quête : Que le Gwan Kwic me cwoque.",
+        "resource_count": 2,
+        "resource": "Cawotte"
+    },
+    {
         "short_date": "06-10",
-        "offering_to": "Orch",
-        "bonus": "Récolte abondanteLes quantités d'Orchidée Freyesque récupérées par les Alchimistes sont augmentées de 125 %.",
-        "resource_count": 40,
-        "resource": "Orchidée Freyesque"
+        "offering_to": "Jibejan",
+        "bonus": "Élevage de monturesToutes les variétés de dragodindes, volkornes et muldos amande donnent naissance à un bébé supplémentaire.",
+        "resource_count": 1,
+        "resource": "Lailait d’amande"
     },
     {
         "short_date": "06-11",
-        "offering_to": "Lait",
-        "bonus": "Économie d'ingrédientsLes Paysans économisent 15 % de leurs ingrédients lorsqu'ils fabriquent des objets.",
-        "resource_count": 6,
-        "resource": "Lait de Dragodinde"
-    },
-    {
-        "short_date": "06-12",
-        "offering_to": "Bouc",
-        "bonus": "Quête répétableUne quête répétable spéciale est disponible aujourd'hui près de la taverne de la Chopenbois. Réalisable à partir du niveau 20, elle est indépendante de la quête d'offrande.\nNom de la quête : Le tonneau percé.",
+        "offering_to": "Teluomaj",
+        "bonus": "ButinLes chances d'obtenir du butin sont augmentées de 100 % dans le Camp du Comte Razof.",
         "resource_count": 1,
         "resource": "Bouteille de Bouchonnois"
     },
     {
-        "short_date": "06-13",
-        "offering_to": "Harp",
-        "bonus": "ButinLes chances d'obtenir du butin sont augmentées de 100 % dans le donjon du Vaisseau du Capitaine Meno.",
+        "short_date": "06-12",
+        "offering_to": "Aazimar",
+        "bonus": "Challenges augmentésLes bonus apportés par les challenges réussis sont augmentés de 150 % dans le donjon de l'Aquadôme de Merkator.",
         "resource_count": 1,
         "resource": "Sang de Harpo"
     },
     {
-        "short_date": "06-14",
-        "offering_to": "Bamb",
-        "bonus": "Récolte abondanteLes quantités de Bois de Bambou récupérées par les Bûcherons sont augmentées de 125 %.",
+        "short_date": "06-13",
+        "offering_to": "Blou",
+        "bonus": "Bois abondantLes quantités de Bambou récupérées par les Bûcherons sont augmentées de 125 %.",
         "resource_count": 40,
         "resource": "Bois de Bambou"
     },
     {
-        "short_date": "06-15",
-        "offering_to": "Clef",
-        "bonus": "Économie d'ingrédientsLes Bricoleurs économisent 15 % de leurs ingrédients lorsqu'ils fabriquent des objets.",
+        "short_date": "06-14",
+        "offering_to": "Yaka",
+        "bonus": "Économie d'ingrédientsLes Bricoleurs ont 15 % de chances d'économiser des ingrédients lorsqu'ils fabriquent des objets.",
         "resource_count": 1,
         "resource": "Clef des Champs"
     },
     {
-        "short_date": "06-16",
-        "offering_to": "Cora",
-        "bonus": "Points d'expérienceLes gains d'expérience sont augmentés de 50 % sur les créatures de type Corailleurs.",
+        "short_date": "06-15",
+        "offering_to": "Bek",
+        "bonus": "Points d'expérienceLes gains d'expérience sont augmentés de 100 % dans laGrotte Hesque.",
         "resource_count": 6,
         "resource": "Coccyx du Corailleur"
     },
     {
-        "short_date": "06-17",
-        "offering_to": "Drag",
-        "bonus": "ButinLes chances d'obtenir du butin sont augmentées de 100 % dans le donjon du Sanctuaire des Dragoeufs.",
+        "short_date": "06-16",
+        "offering_to": "Pytch",
+        "bonus": "Challenge supplémentaireUn challenge supplémentaire est généré contre les monstres présents dans les zones de la Presqu'île des Dragoeufs.",
         "resource_count": 6,
         "resource": "Coquille de Dragoeuf Ardoise"
     },
     {
-        "short_date": "06-18",
-        "offering_to": "Abra",
-        "bonus": "Points d'expérienceLes gains d'expérience sont augmentés de 50 % sur les créatures de type Abraknydes.",
+        "short_date": "06-17",
+        "offering_to": "Seyroth",
+        "bonus": "Challenges augmentésLes bonus apportés par les challenges réussis sont augmentés de 125 % sur les créatures de type Abraknydiens.",
         "resource_count": 6,
         "resource": "Racine d'Abraknyde"
     },
     {
-        "short_date": "06-19",
-        "offering_to": "Cend",
-        "bonus": "Récolte abondanteLes quantités de Cendrepierre récupérées par les Mineurs sont augmentées de 125 %.",
+        "short_date": "06-18",
+        "offering_to": "Redfis",
+        "bonus": "Minerai abondantLes quantités de Cendrepierre récupérées par les Mineurs sont augmentées de 125 %.",
         "resource_count": 30,
         "resource": "Cendrepierre"
     },
     {
-        "short_date": "06-20",
-        "offering_to": "Crac",
-        "bonus": "ButinLes chances d'obtenir du butin sont augmentées de 100 % dans le donjon de la Forgemalée de Brâkmar.",
+        "short_date": "06-19",
+        "offering_to": "Lim",
+        "bonus": "ButinLes chances d'obtenir du butin sont augmentées de 75 % dans la zone de Feudala.",
         "resource_count": 4,
         "resource": "Peau de Crachefoux"
     },
     {
-        "short_date": "06-21",
-        "offering_to": "Blé",
+        "short_date": "06-20",
+        "offering_to": "Grut",
         "bonus": "Récolte abondanteLes quantités de Blé récupérées par les Paysans sont augmentées de 125 %.",
         "resource_count": 50,
         "resource": "Blé"
     },
     {
-        "short_date": "06-22",
-        "offering_to": "Goba",
-        "bonus": "Challenge supplémentaireUn challenge supplémentaire est généré contre les monstres présents dans le donjon du Donjon des Larves.",
+        "short_date": "06-21",
+        "offering_to": "Atsu",
+        "bonus": "Du miel dans les oreillesLes amateurs de musique peuvent récupérer deux fois plus de pollenectar sur les créatures du Monde des Douze (hors dimensions, zones sous-marines et intérieurs).",
         "resource_count": 6,
         "resource": "Tambour de Gobaladée"
     },
     {
-        "short_date": "06-23",
-        "offering_to": "Crus",
-        "bonus": "Points d'expérienceLes gains d'expérience sont augmentés de 50 % sur les créatures de type Crustorails.",
-        "resource_count": 6,
+        "short_date": "06-22",
+        "offering_to": "Gnat",
+        "bonus": "Challenge supplémentaireUn challenge supplémentaire est généré contre les monstres présents dans les zones de la Plage de Corail.",
+        "resource_count": 2,
         "resource": "Pince de Crustorail"
     },
     {
-        "short_date": "06-24",
-        "offering_to": "Appe",
-        "bonus": "ButinLes chances d'obtenir du butin sont augmentées de 100 % dans le donjon du Puits de l'Élu.",
+        "short_date": "06-23",
+        "offering_to": "Hellmut",
+        "bonus": "Points d'expérienceLes gains d'expérience sont augmentés de 50 % sur les créatures de type Possédés.",
         "resource_count": 1,
         "resource": "Appendice Démoniaque"
     },
     {
-        "short_date": "06-25",
-        "offering_to": "Larv",
-        "bonus": "Points d'expérienceLes gains d'expérience sont augmentés de 50 % sur les créatures de type Larves.",
+        "short_date": "06-24",
+        "offering_to": "Azrou",
+        "bonus": "ButinLes chances d'obtenir du butin sont augmentées de 50 % sur les créatures de typeAnimaux des champs.",
         "resource_count": 1,
         "resource": "Peau de Larve Champêtre"
     },
     {
-        "short_date": "06-26",
-        "offering_to": "Eau",
-        "bonus": "Apparition des ressourcesLa vitesse d'apparition des ressources récoltées par les Pêcheurs est augmentée de 100 %.",
+        "short_date": "06-25",
+        "offering_to": "Oopah",
+        "bonus": "Apparition des ressourcesLa vitesse d'apparition des ressources est augmentée de 150 % dans la zone de la Mine Istairameur.",
         "resource_count": 1,
         "resource": "Eau Ferrugineuse"
     },
     {
-        "short_date": "06-27",
-        "offering_to": "Bouc",
-        "bonus": "Objets de qualitéLa qualité des objets fabriqués dans la ville des Douze est augmentée.",
+        "short_date": "06-26",
+        "offering_to": "Bouliks",
+        "bonus": "Objets de qualitéLa qualité des objets fabriqués sur l'île de Pandala est augmentée.",
         "resource_count": 1,
         "resource": "Bouclier Volant"
     },
     {
-        "short_date": "06-28",
-        "offering_to": "Grof",
-        "bonus": "ButinLes chances d'obtenir du butin sont augmentées de 100 % dans le donjon de l'Hypogée de l'Obsidiantre.",
+        "short_date": "06-27",
+        "offering_to": "Ansôh",
+        "bonus": "ButinLes chances d'obtenir du butin sont augmentées de 100 % dans le Temple de Koutoulou.",
         "resource_count": 2,
         "resource": "Tentacule de Grofond"
     },
     {
-        "short_date": "06-29",
-        "offering_to": "Momi",
-        "bonus": "Challenge supplémentaireUn challenge supplémentaire est généré contre les monstres présents dans le donjon du Donjon des Squelettes.",
+        "short_date": "06-28",
+        "offering_to": "Ikoan",
+        "bonus": "Anomalies temporellesLes bonus apportés par les challenges réussis sont augmentés de 75 % dans toutes les zones influencées par une anomalie temporelle. De plus, les gains d'expérience et les chances d'obtenir du butin sont augmentés de 25 % dans la zone de la Pyramide Maudite.",
         "resource_count": 2,
         "resource": "Grenat de Momistik"
     },
     {
-        "short_date": "06-30",
-        "offering_to": "Vian",
-        "bonus": "Économie d'ingrédientsLes Bouchers économisent 15 % de leurs ingrédients lorsqu'ils fabriquent des objets.",
+        "short_date": "06-29",
+        "offering_to": "Poch",
+        "bonus": "Gibier abondantLes quantités de Viande Gâtée et de Viande Noire récupérées par les Chasseurs sont augmentées de 125%.",
         "resource_count": 2,
         "resource": "Viande Noire"
     },
     {
-        "short_date": "07-01",
-        "offering_to": "Goba",
-        "bonus": "Points d'expérienceLes gains d'expérience sont augmentés de 50 % sur les créatures de type Gobelins.",
+        "short_date": "06-30",
+        "offering_to": "Lamarilu",
+        "bonus": "Points d'expérienceLes gains d'expérience sont augmentés de 100 % dans l'Akadémie des Gobs.",
         "resource_count": 6,
         "resource": "Bonnet de Gobaliste"
     },
     {
-        "short_date": "07-02",
-        "offering_to": "Drag",
-        "bonus": "ButinLes chances d'obtenir du butin sont augmentées de 100 % dans le donjon du Donjon des Dragoss.",
+        "short_date": "07-01",
+        "offering_to": "Rems",
+        "bonus": "ButinLes chances d'obtenir du butin sont augmentées de 50 % sur les créatures de type Dragoss.",
         "resource_count": 5,
         "resource": "Écaille de Dragoss Charbon"
     },
     {
-        "short_date": "07-03",
-        "offering_to": "Tofu",
-        "bonus": "Challenge supplémentaireUn challenge supplémentaire est généré contre les monstres présents dans le donjon du Toflailler Royal.",
+        "short_date": "07-02",
+        "offering_to": "Yanouchk",
+        "bonus": "Challenges augmentésLes bonus apportés par les challenges réussis sont augmentés de 150 % dans le donjon du Tofulailler Royal.",
         "resource_count": 1,
         "resource": "Œuf de Tofubine"
     },
     {
-        "short_date": "07-04",
-        "offering_to": "Raid",
-        "bonus": "Économie d'ingrédientsLes Alchimistes économisent 15 % de leurs ingrédients lorsqu'ils fabriquent des objets.",
+        "short_date": "07-03",
+        "offering_to": "Sirdal",
+        "bonus": "Économie d'ingrédientsLes Alchimistes ont 15 % de chances d'économiser des ingrédients lorsqu'ils fabriquent des objets.",
         "resource_count": 3,
         "resource": "Potion Raide Dite"
     },
     {
-        "short_date": "07-05",
-        "offering_to": "Frit",
-        "bonus": "Économie d'ingrédientsLes Poissonniers économisent 15 % de leurs ingrédients lorsqu'ils fabriquent des objets.",
+        "short_date": "07-04",
+        "offering_to": "Eiwech",
+        "bonus": "Rêve amaknéenLes gains d'expérience et les chances d'obtenir du butin sont augmentés de 50 % sur tous les monstres présents dans les zones du royaume d'Amakna. De plus, les quantités de Points de rêve obtenus dans les Songes infinis sont augmentées de 200 %.",
         "resource_count": 4,
         "resource": "Friture Amaknéenne"
     },
     {
-        "short_date": "07-06",
-        "offering_to": "Tanu",
-        "bonus": "Points d'expérienceLes gains d'expérience sont augmentés de 50 % sur les créatures de type Tanukis.",
+        "short_date": "07-05",
+        "offering_to": "Alaokit",
+        "bonus": "ButinLes chances d'obtenir du butin sont augmentées de 100 % dans le donjon de l'Atelier du Tanukouï San.",
         "resource_count": 2,
         "resource": "Poils magiques de Tanuki"
     },
     {
-        "short_date": "07-07",
-        "offering_to": "Trui",
-        "bonus": "Récolte abondanteLes quantités de Truite récupérées par les Pêcheurs sont augmentées de 125 %.",
+        "short_date": "07-06",
+        "offering_to": "Poupik",
+        "bonus": "Pêche abondanteLes quantités de Goujon et de Truite récupérées par les Pêcheurs sont augmentées de 125 %.",
         "resource_count": 40,
         "resource": "Truite"
     },
     {
-        "short_date": "07-08",
-        "offering_to": "Maïs",
-        "bonus": "Récolte abondanteLes quantités de Maïs récupérées par les Paysans sont augmentées de 125 %.",
+        "short_date": "07-07",
+        "offering_to": "Lazura",
+        "bonus": "Récolte abondanteLes quantités de Maïs et de Millet récupérées par les Paysans sont augmentées de 125 %.",
         "resource_count": 50,
         "resource": "Maïs"
     },
     {
-        "short_date": "07-09",
-        "offering_to": "Nœud",
-        "bonus": "Économie d'ingrédientsLes Façonneurs économisent 15 % de leurs ingrédients lorsqu'ils fabriquent des objets.",
+        "short_date": "07-08",
+        "offering_to": "Unkn",
+        "bonus": "Points d'expérienceLes gains d'expérience sont augmentés de 50 % sur les créatures de type Pirates de Moon.",
         "resource_count": 2,
         "resource": "Nœud de Marin"
     },
     {
-        "short_date": "07-10",
-        "offering_to": "Pod",
-        "bonus": "Forgemagie amélioréeLes Forgemages ont 15 % de chances de ne pas consommer de rune lorsqu'ils tentent d'améliorer un objet.",
+        "short_date": "07-09",
+        "offering_to": "Blid",
+        "bonus": "Forgemagie amélioréeLes Cordomages ont 15 % de chances de ne pas consumer de rune lorsqu'ils tentent d'améliorer un objet.",
         "resource_count": 2,
         "resource": "Rune Pod"
     },
     {
-        "short_date": "07-11",
-        "offering_to": "Siff",
-        "bonus": "Objets de qualitéLa qualité des objets fabriqués dans la ville de Frigost est augmentée.",
+        "short_date": "07-10",
+        "offering_to": "Jihelair",
+        "bonus": "Élevage de monturesToutes les variétés de dragodindes, volkornes et muldos prune donnent naissance à un bébé supplémentaire.",
         "resource_count": 1,
         "resource": "Arc Sifflant"
     },
     {
-        "short_date": "07-12",
-        "offering_to": "Baux",
-        "bonus": "Récolte abondanteLes quantités de Bauxite récupérées par les Mineurs sont augmentées de 125 %.",
+        "short_date": "07-11",
+        "offering_to": "Oskerine",
+        "bonus": "Minerai abondantLes quantités de Bauxite récupérées par les Mineurs sont augmentées de 125 %.",
         "resource_count": 30,
         "resource": "Bauxite"
     },
     {
-        "short_date": "07-13",
-        "offering_to": "Barb",
-        "bonus": "Points d'expérienceLes gains d'expérience sont augmentés de 50 % sur les créatures de type Barbélier.",
+        "short_date": "07-12",
+        "offering_to": "Pasquéoz",
+        "bonus": "Challenge supplémentaireUn challenge supplémentaire est généré contre les créatures de type Clan Martegel.",
         "resource_count": 2,
         "resource": "Poils de barbe de Barbélier"
     },
     {
-        "short_date": "07-14",
-        "offering_to": "Kwap",
-        "bonus": "Challenge supplémentaireUn challenge supplémentaire est généré contre les monstres présents dans le donjon du Donjon des Kwapas.",
+        "short_date": "07-13",
+        "offering_to": "Klernodie",
+        "bonus": "ButinLes chances d'obtenir du butin sont augmentées de 100 % dans le donjon de la Vallée de la Dame des eaux.",
         "resource_count": 2,
         "resource": "Eau de Kwapa"
     },
     {
-        "short_date": "07-15",
-        "offering_to": "Chai",
-        "bonus": "ButinLes chances d'obtenir du butin sont augmentées de 100 % dans le donjon de la Prison de la Nouvelle-Bontique.",
+        "short_date": "07-14",
+        "offering_to": "Zuart",
+        "bonus": "Expérience du KolizéumLes gains d'expérience sont augmentés de 75 % lors des combats du Kolizéum.",
         "resource_count": 6,
         "resource": "Chaînes Brisées"
     },
     {
-        "short_date": "07-16",
-        "offering_to": "Vian",
-        "bonus": "Économie d'ingrédientsLes Bouchers économisent 15 % de leurs ingrédients lorsqu'ils fabriquent des objets.",
+        "short_date": "07-15",
+        "offering_to": "Bouilli",
+        "bonus": "Gibier abondantLes quantités de Viande Goûtue récupérées par les Chasseurs sont augmentées de 125%.",
         "resource_count": 2,
         "resource": "Viande Goûtue"
     },
     {
-        "short_date": "07-17",
-        "offering_to": "Boue",
-        "bonus": "Challenge supplémentaireUn challenge supplémentaire est généré contre les monstres présents dans le donjon du Donjon des Tournesols.",
+        "short_date": "07-16",
+        "offering_to": "Okajin",
+        "bonus": "Anomalies temporellesLes chances d'obtenir du butin sont augmentées de 50 % dans toutes les zones influencées par une anomalie temporelle. De plus, les gains d'expérience et les chances d'obtenir du butin sont augmentés de 25 % dans les zones des forêts de Vulkania.",
         "resource_count": 2,
         "resource": "Boue Vénérable"
     },
     {
-        "short_date": "07-18",
-        "offering_to": "Larv",
-        "bonus": "Points d'expérienceLes gains d'expérience sont augmentés de 50 % sur les créatures de type Larves.",
+        "short_date": "07-17",
+        "offering_to": "Luzbel",
+        "bonus": "Points d'expérienceLes gains d'expérience sont augmentés de 75 % dans la zone des Prairies d'Astrub.",
         "resource_count": 6,
         "resource": "Peau de Larve Verte"
     },
     {
-        "short_date": "07-19",
-        "offering_to": "Pioch",
-        "bonus": "Objets de qualitéLa qualité des objets fabriqués dans la ville de la Forgemalée de Brâkmar est augmentée.",
+        "short_date": "07-18",
+        "offering_to": "Titi",
+        "bonus": "ConcassagePour chaque rune obtenue en brisant des objets, les concasseurs ont 10 % de chances de créer une seconde rune.",
         "resource_count": 1,
         "resource": "Mauvaise Pioche"
     },
     {
-        "short_date": "07-20",
-        "offering_to": "Trit",
-        "bonus": "ButinLes chances d'obtenir du butin sont augmentées de 100 % dans le donjon du Palais de Dantinéa.",
+        "short_date": "07-19",
+        "offering_to": "Alucard",
+        "bonus": "Points d'expérienceLes gains d'expérience sont augmentés de 100 % dans le donjon du Palais de Dantinea.",
         "resource_count": 1,
         "resource": "Peau de Trithon"
     },
     {
-        "short_date": "07-21",
+        "short_date": "07-20",
         "offering_to": "Gurvamon",
         "bonus": "Apparition des ressourcesLa vitesse d'apparition des céréales récoltées par les Paysans est augmentée de 100 %.",
         "resource_count": 1,
         "resource": "Huile de Tournesol Sauvage"
     },
     {
-        "short_date": "07-22",
+        "short_date": "07-21",
         "offering_to": "Alhera",
         "bonus": "ButinLes chances d'obtenir du butin sont augmentées de 50 % sur les créatures de type Gobelins de Sakaï.",
         "resource_count": 1,
         "resource": "Fragment de pépite de Sakaï"
     },
     {
-        "short_date": "07-23",
-        "offering_to": "Sard",
-        "bonus": "Économie d'ingrédientsLes Poissonniers économisent 15 % de leurs ingrédients lorsqu'ils fabriquent des objets.",
+        "short_date": "07-22",
+        "offering_to": "Tholank",
+        "bonus": "Points d'expérienceLes gains d'expérience sont augmentés de 75 % dans les zones du Port de givre et de La Bourgade.",
         "resource_count": 3,
         "resource": "Sardine à l'Étouffée"
     },
     {
-        "short_date": "07-24",
-        "offering_to": "Chac",
-        "bonus": "Élevage de monturesLes bonus de sérénité donnés par les objets d'élevage sont augmentés de 150 %.",
+        "short_date": "07-23",
+        "offering_to": "Kaoly",
+        "bonus": "Expérience des familiersLes gains d'expérience des familiers sont augmentés de 50 %.",
         "resource_count": 1,
         "resource": "Chacha"
     },
     {
-        "short_date": "07-25",
-        "offering_to": "Orme",
-        "bonus": "Récolte abondanteLes quantités de Bois d'Orme récupérées par les Bûcherons sont augmentées de 125 %.",
+        "short_date": "07-24",
+        "offering_to": "Xan",
+        "bonus": "Bois abondantLes quantités de Bambou Sacré et d'Orme récupérées par les Bûcherons sont augmentées de 125 %.",
         "resource_count": 10,
         "resource": "Bois d'Orme"
     },
     {
-        "short_date": "07-26",
-        "offering_to": "Bwor",
-        "bonus": "ButinLes chances d'obtenir du butin sont augmentées de 100 % dans le donjon de la Bworkette.",
+        "short_date": "07-25",
+        "offering_to": "Anulideven",
+        "bonus": "Challenges augmentésLes bonus apportés par les challenges réussis sont augmentés de 150 % dans la zone de Gisgoul.",
         "resource_count": 3,
         "resource": "Furoncle de la Mama Bwork"
     },
     {
-        "short_date": "07-27",
-        "offering_to": "Malé",
-        "bonus": "Challenge supplémentaireUn challenge supplémentaire est généré contre les monstres présents dans le donjon du Donjon des Malépics.",
+        "short_date": "07-26",
+        "offering_to": "Lokhaan",
+        "bonus": "Challenge supplémentaireUn challenge supplémentaire est généré contre les monstres présents dans les zones de l'Orée enchantée et du Dédale du Dark Vlad.",
         "resource_count": 3,
         "resource": "Pic de Malépik"
     },
     {
-        "short_date": "07-28",
-        "offering_to": "Boul",
-        "bonus": "Économie d'ingrédientsLes Boulangers économisent 15 % de leurs ingrédients lorsqu'ils fabriquent des objets.",
+        "short_date": "07-27",
+        "offering_to": "Benka",
+        "bonus": "Gibier abondantLes quantités de Viande Hachée et de Viande Faisandée récupérées par les Chasseurs sont augmentées de 125%.",
         "resource_count": 6,
         "resource": "Boulette de Viande"
     },
     {
-        "short_date": "07-29",
-        "offering_to": "Lich",
-        "bonus": "ButinLes chances d'obtenir du butin sont augmentées de 100 % dans le donjon du Donjon des Lichangoro.",
+        "short_date": "07-28",
+        "offering_to": "Nobozil",
+        "bonus": "Points d'expérienceLes gains d'expérience sont augmentés de 100 % dans le donjon du Dojo du Vent.",
         "resource_count": 4,
         "resource": "Lame brisée de Lichangoro"
     },
     {
-        "short_date": "07-30",
-        "offering_to": "Cact",
-        "bonus": "Points d'expérienceLes gains d'expérience sont augmentés de 50 % sur les créatures de type Cacterres.",
+        "short_date": "07-29",
+        "offering_to": "Olileb",
+        "bonus": "ButinLes chances d'obtenir du butin sont augmentées de 100 % dans le donjon de laCaverne d'El Piko.",
         "resource_count": 2,
         "resource": "Jus de Cacterre"
     },
     {
-        "short_date": "07-31",
-        "offering_to": "Boos",
-        "bonus": "ButinLes chances d'obtenir du butin sont augmentées de 100 % dans le donjon du Donjon des Boostaches.",
+        "short_date": "07-30",
+        "offering_to": "Aleb",
+        "bonus": "Troollez manègeLes gains d'expérience et les chances d'obtenir du butin sont augmentés de 100 % dans le donjon de la Maison Fantôme. De plus, Leonzi Trool attend les aventuriers à la Foire du Trool. Sa bénédiction permet de trooller à tout va (bonus d'initiative et coups critiques durant 15 combats).",
         "resource_count": 3,
         "resource": "Cuir de Boostache Prépubère"
     },
     {
-        "short_date": "08-01",
-        "offering_to": "Crâm",
-        "bonus": "Challenge supplémentaireUn challenge supplémentaire est généré contre les monstres présents dans le donjon du Donjon des Crâmbo.",
+        "short_date": "07-31",
+        "offering_to": "Krisdanh",
+        "bonus": "Points d'expérienceLes gains d'expérience sont augmentés de 50 % sur les créatures de type Chassouilleurs.",
         "resource_count": 2,
         "resource": "Flèche de Crâmbo"
     },
     {
-        "short_date": "08-02",
-        "offering_to": "Saug",
-        "bonus": "Récolte abondanteLes quantités de Sauge récupérées par les Alchimistes sont augmentées de 125 %.",
+        "short_date": "08-01",
+        "offering_to": "Jycêdus",
+        "bonus": "Cueillette abondanteLes quantités de Sauge récupérées par les Alchimistes sont augmentées de 125 %.",
         "resource_count": 40,
         "resource": "Sauge"
     },
     {
-        "short_date": "08-03",
-        "offering_to": "Truc",
-        "bonus": "Points d'expérienceLes gains d'expérience sont augmentés de 50 % sur les créatures de type Truchideurs.",
+        "short_date": "08-02",
+        "offering_to": "Pô",
+        "bonus": "Challenges augmentésLes bonus apportés par les challenges réussis sont augmentés de 125 % sur les créatures de type Truches.",
         "resource_count": 4,
         "resource": "Plume de Truchideur"
     },
     {
-        "short_date": "08-04",
-        "offering_to": "Poti",
-        "bonus": "Économie d'ingrédientsLes Alchimistes économisent 15 % de leurs ingrédients lorsqu'ils fabriquent des objets.",
+        "short_date": "08-03",
+        "offering_to": "Puliblak",
+        "bonus": "Quête répétableUne quête répétable spéciale est disponible aujourd'hui au sud des portes de Bonta. Réalisable à partir du niveau 20, elle est indépendante de la quête d'offrande.\nNom de la quête : Bon comme du bon pain.",
         "resource_count": 3,
         "resource": "Potion de cité : Bonta"
     },
     {
-        "short_date": "08-05",
-        "offering_to": "Cend",
-        "bonus": "Challenge supplémentaireUn challenge supplémentaire est généré contre les monstres présents dans le donjon du Donjon des Cendres.",
+        "short_date": "08-04",
+        "offering_to": "Anshâ",
+        "bonus": "ButinLes chances d'obtenir du butin sont augmentées de 100 % dans le Cratère Minus.",
         "resource_count": 4,
         "resource": "Cendres Matures"
     },
     {
-        "short_date": "08-06",
-        "offering_to": "Pois",
-        "bonus": "Récolte abondanteLes quantités de Poisskaille récupérées par les Pêcheurs sont augmentées de 125 %.",
+        "short_date": "08-05",
+        "offering_to": "Meda",
+        "bonus": "Pêche abondanteLes quantités de Poisskaille récupérées par les Pêcheurs sont augmentées de 200 %.",
         "resource_count": 10,
         "resource": "Poisskaille"
     },
     {
-        "short_date": "08-07",
-        "offering_to": "Crèm",
-        "bonus": "Quête répétableUne quête répétable spéciale est disponible aujourd'hui près de la plage de l'île de Moon. Réalisable à partir du niveau 20, elle est indépendante de la quête d'offrande.\nNom de la quête : Le coup de soleil.",
+        "short_date": "08-06",
+        "offering_to": "Jü",
+        "bonus": "Challenge supplémentaireUn challenge supplémentaire est généré contre les monstres présents dans la zone des Calanques d'Astrub.",
         "resource_count": 6,
         "resource": "Crème à bronzer"
     },
     {
-        "short_date": "08-08",
-        "offering_to": "Tron",
-        "bonus": "Points d'expérienceLes gains d'expérience sont augmentés de 50 % sur les créatures de type Tronkoblops.",
+        "short_date": "08-07",
+        "offering_to": "Dramon",
+        "bonus": "Challenges augmentésLes bonus apportés par les challenges réussis sont augmentés de 150 % dans le donjon de l'Antre du Blop Multicolore Royal.",
         "resource_count": 3,
         "resource": "Racine de Tronkoblop"
     },
     {
-        "short_date": "08-09",
-        "offering_to": "Alum",
-        "bonus": "Apparition des ressourcesLa vitesse d'apparition des ressources récoltées par les Mineurs est augmentée de 100 %.",
+        "short_date": "08-08",
+        "offering_to": "Zeg",
+        "bonus": "Économie d'ingrédientsLes Mineurs ont 15 % de chances d'économiser des ingrédients lorsqu'ils fabriquent des objets.",
         "resource_count": 1,
         "resource": "Aluminite"
     },
     {
-        "short_date": "08-10",
-        "offering_to": "Tour",
-        "bonus": "Points d'expérienceLes gains d'expérience sont augmentés de 50 % sur les créatures de type Tournesols.",
+        "short_date": "08-09",
+        "offering_to": "Tix",
+        "bonus": "ButinLes chances d'obtenir du butin sont augmentées de 50 % sur les créatures de type Plantes des champs.",
         "resource_count": 6,
         "resource": "Pétale de Tournesol Sauvage"
     },
     {
-        "short_date": "08-11",
-        "offering_to": "Mang",
-        "bonus": "Élevage de monturesLes bonus de maturité donnés par les objets d'élevage sont augmentés de 150 %.",
+        "short_date": "08-10",
+        "offering_to": "Rigamix",
+        "bonus": "Élevage de monturesToutes les variétés de dragodindes, volkornes et muldos capables de se reproduire donnent naissance à un bébé supplémentaire.",
         "resource_count": 1,
         "resource": "Mangeoire en Frêne"
     },
     {
-        "short_date": "08-12",
-        "offering_to": "Kapo",
-        "bonus": "Économie d'ingrédientsLes Tailleurs économisent 15 % de leurs ingrédients lorsqu'ils fabriquent des objets.",
+        "short_date": "08-11",
+        "offering_to": "Matgap",
+        "bonus": "ButinLes chances d'obtenir du butin sont augmentées de 75 % dans la zone du Mont des Tombeaux.",
         "resource_count": 3,
         "resource": "Kapokaza"
     },
     {
-        "short_date": "08-13",
-        "offering_to": "Vian",
-        "bonus": "Économie d'ingrédientsLes Bouchers économisent 15 % de leurs ingrédients lorsqu'ils fabriquent des objets.",
+        "short_date": "08-12",
+        "offering_to": "Sab",
+        "bonus": "Gibier abondantLes quantités de Viande Macérée et de Viande de Brousse récupérées par les Chasseurs sont augmentées de 125%.",
         "resource_count": 4,
         "resource": "Viande de Brousse"
     },
     {
-        "short_date": "08-14",
-        "offering_to": "Flaq",
-        "bonus": "Challenge supplémentaireUn challenge supplémentaire est généré contre les monstres présents dans le donjon du Donjon des Flaqueux.",
+        "short_date": "08-13",
+        "offering_to": "Ouchim",
+        "bonus": "Challenge supplémentaireUn challenge supplémentaire est généré contre les créatures de type Monstres de Vulkania.",
         "resource_count": 2,
         "resource": "Flaque Vénérable"
     },
     {
-        "short_date": "08-15",
-        "offering_to": "Croc",
-        "bonus": "Points d'expérienceLes gains d'expérience sont augmentés de 50 % sur les créatures de type Crocodailles.",
+        "short_date": "08-14",
+        "offering_to": "Margarou",
+        "bonus": "Challenges augmentésLes bonus apportés par les challenges réussis sont augmentés de 125 % sur les créatures de type Crocodailles de Crocuzko.",
         "resource_count": 1,
         "resource": "Œil de Crocodaille albinos"
     },
     {
-        "short_date": "08-16",
-        "offering_to": "Etoi",
-        "bonus": "ButinLes chances d'obtenir du butin sont augmentées de 100 % dans le donjon du Donjon des Étoiles.",
+        "short_date": "08-15",
+        "offering_to": "Orreip",
+        "bonus": "Anomalies en folieLes gains d'expérience, les chances d'obtenir du butin et le butin généré par les Percepteurs sont augmentés de 100 % dans toutes les zones influencées par une anomalie temporelle.",
         "resource_count": 6,
         "resource": "Paupière d'Étoile"
     },
     {
-        "short_date": "08-17",
-        "offering_to": "Gins",
-        "bonus": "Récolte abondanteLes quantités de Ginseng récupérées par les Alchimistes sont augmentées de 125 %.",
+        "short_date": "08-16",
+        "offering_to": "Lortecaps",
+        "bonus": "Cueillette abondanteLes quantités deGinseng et de Graines de Pandouille récupérées par les Alchimistes sont augmentées de 125 %.",
         "resource_count": 40,
         "resource": "Ginseng"
     },
     {
-        "short_date": "08-18",
-        "offering_to": "Corb",
-        "bonus": "Points d'expérienceLes gains d'expérience sont augmentés de 50 % sur les créatures de type Corbacs.",
-        "resource_count": 6,
-        "resource": "Plume de Corbac"
-    },
-    {
-        "short_date": "08-19",
-        "offering_to": "Rubi",
-        "bonus": "Apparition des ressourcesLa vitesse d'apparition des ressources récoltées par les Mineurs est augmentée de 100 %.",
-        "resource_count": 1,
-        "resource": "Pierre de Rubis"
-    },
-    {
-        "short_date": "08-20",
-        "offering_to": "Appr",
-        "bonus": "Objets de qualitéLa qualité des objets fabriqués dans la ville des Apprentis est augmentée.",
-        "resource_count": 1,
-        "resource": "Bottes de l'Apprenti"
-    },
-    {
-        "short_date": "08-21",
-        "offering_to": "Coco",
-        "bonus": "ButinLes chances d'obtenir du butin sont augmentées de 100 % dans le donjon du Donjon des Cocons.",
-        "resource_count": 2,
-        "resource": "Cocon de Ver de Terre"
-    },
-    {
-        "short_date": "08-22",
-        "offering_to": "Corb",
-        "bonus": "Points d'expérienceLes gains d'expérience sont augmentés de 50 % sur les créatures de type Corbacs Apprivoisés.",
-        "resource_count": 1,
-        "resource": "Plume de Corbac Apprivoisé"
-    },
-    {
-        "short_date": "08-23",
-        "offering_to": "Craq",
-        "bonus": "Challenge supplémentaireUn challenge supplémentaire est généré contre les monstres présents dans le donjon du Donjon des Craqueleurs.",
-        "resource_count": 2,
-        "resource": "Cœur de Craqueleur Légendaire"
-    },
-    {
-        "short_date": "08-24",
-        "offering_to": "Trop",
-        "bonus": "Objets de qualitéLa qualité des objets fabriqués dans la ville des Trophées est augmentée.",
-        "resource_count": 1,
-        "resource": "Trophée de l'Apprenti"
-    },
-    {
-        "short_date": "08-25",
-        "offering_to": "Wabb",
-        "bonus": "Points d'expérienceLes gains d'expérience sont augmentés de 50 % sur les créatures de type Wabbits Squelettes.",
-        "resource_count": 4,
-        "resource": "Patte de Wabbit Squelette"
-    },
-    {
-        "short_date": "08-26",
-        "offering_to": "Bouf",
-        "bonus": "ButinLes chances d'obtenir du butin sont augmentées de 100 % dans le donjon du Donjon des Bouftous.",
-        "resource_count": 6,
-        "resource": "Peau de Bouftou Royal"
-    },
-    {
-        "short_date": "08-27",
-        "offering_to": "Chan",
-        "bonus": "Récolte abondanteLes quantités de Chanvre récupérées par les Paysans sont augmentées de 125 %.",
-        "resource_count": 40,
-        "resource": "Chanvre"
-    },
-    {
-        "short_date": "08-28",
-        "offering_to": "Corb",
-        "bonus": "Points d'expérienceLes gains d'expérience sont augmentés de 50 % sur les créatures de type Corbacs Noirs.",
-        "resource_count": 1,
-        "resource": "Plume de Corbac Noir"
-    },
-    {
-        "short_date": "08-29",
-        "offering_to": "Vian",
-        "bonus": "Économie d'ingrédientsLes Bouchers économisent 15 % de leurs ingrédients lorsqu'ils fabriquent des objets.",
-        "resource_count": 3,
-        "resource": "Viande Hachée"
-    },
-    {
-        "short_date": "08-30",
-        "offering_to": "Corb",
-        "bonus": "ButinLes chances d'obtenir du butin sont augmentées de 100 % dans le donjon du Donjon des Corbacs.",
-        "resource_count": 2,
-        "resource": "Œil de Corbac"
-    },
-    {
-        "short_date": "08-31",
-        "offering_to": "Caw",
-        "bonus": "ButinLes chances d'obtenir du butin sont augmentées de 100 % dans le donjon du Donjon des Wabbits.",
-        "resource_count": 1,
-        "resource": "Dofus Cawotte"
-    },
-    {
-        "short_date": "09-01",
-        "offering_to": "Scor",
-        "bonus": "Points d'expérienceLes gains d'expérience sont augmentés de 50 % sur les créatures de type Scorbutes.",
-        "resource_count": 6,
-        "resource": "Queue de Scorbute"
-    },
-    {
-        "short_date": "09-02",
-        "offering_to": "Noye",
-        "bonus": "Récolte abondanteLes quantités de Bois de Noyer récupérées par les Bûcherons sont augmentées de 125 %.",
-        "resource_count": 40,
-        "resource": "Bois de Noyer"
-    },
-    {
-        "short_date": "09-03",
-        "offering_to": "Appr",
-        "bonus": "Objets de qualitéLa qualité des objets fabriqués dans la ville des Apprentis est augmentée.",
-        "resource_count": 1,
-        "resource": "Anneau de l'Apprenti"
-    },
-    {
-        "short_date": "09-04",
-        "offering_to": "Corb",
-        "bonus": "ButinLes chances d'obtenir du butin sont augmentées de 100 % dans le donjon du Donjon des Corbacs Apprivoisés.",
-        "resource_count": 6,
-        "resource": "Œil de Corbac Apprivoisé"
-    },
-    {
-        "short_date": "09-05",
-        "offering_to": "Vian",
-        "bonus": "Économie d'ingrédientsLes Bouchers économisent 15 % de leurs ingrédients lorsqu'ils fabriquent des objets.",
-        "resource_count": 2,
-        "resource": "Viande de Dragodinde"
-    },
-    {
-        "short_date": "09-06",
-        "offering_to": "Fer",
-        "bonus": "Récolte abondanteLes quantités de Fer récupérées par les Mineurs sont augmentées de 125 %.",
-        "resource_count": 30,
-        "resource": "Fer"
-    },
-    {
-        "short_date": "09-07",
-        "offering_to": "Aven",
-        "bonus": "Objets de qualitéLa qualité des objets fabriqués dans la ville des Aventuriers est augmentée.",
-        "resource_count": 1,
-        "resource": "Bottes de l'Aventurier"
-    },
-    {
-        "short_date": "09-08",
-        "offering_to": "Corb",
-        "bonus": "ButinLes chances d'obtenir du butin sont augmentées de 100 % dans le donjon du Donjon des Corbacs Noirs.",
-        "resource_count": 2,
-        "resource": "Œil de Corbac Noir"
-    },
-    {
-        "short_date": "09-09",
-        "offering_to": "Drag",
-        "bonus": "Points d'expérienceLes gains d'expérience sont augmentés de 50 % sur les créatures de type Dragodindes Sauvages.",
-        "resource_count": 6,
-        "resource": "Queue de Dragodinde Sauvage"
-    },
-    {
-        "short_date": "09-10",
-        "offering_to": "Trop",
-        "bonus": "Objets de qualitéLa qualité des objets fabriqués dans la ville des Trophées est augmentée.",
-        "resource_count": 1,
-        "resource": "Trophée de l'Aventurier"
-    },
-    {
-        "short_date": "09-11",
-        "offering_to": "Wabb",
-        "bonus": "Points d'expérienceLes gains d'expérience sont augmentés de 50 % sur les créatures de type Wabbits Garous.",
-        "resource_count": 4,
-        "resource": "Patte de Wabbit Garou"
-    },
-    {
-        "short_date": "09-12",
-        "offering_to": "Bouf",
-        "bonus": "ButinLes chances d'obtenir du butin sont augmentées de 100 % dans le donjon du Donjon des Bouftous Célestes.",
-        "resource_count": 6,
-        "resource": "Peau de Bouftou Céleste"
-    },
-    {
-        "short_date": "09-13",
-        "offering_to": "Céré",
-        "bonus": "Récolte abondanteLes quantités de Céréale récupérées par les Paysans sont augmentées de 125 %.",
-        "resource_count": 40,
-        "resource": "Céréale"
-    },
-    {
-        "short_date": "09-14",
-        "offering_to": "Corb",
-        "bonus": "Points d'expérienceLes gains d'expérience sont augmentés de 50 % sur les créatures de type Corbacs Blancs.",
-        "resource_count": 1,
-        "resource": "Plume de Corbac Blanc"
-    },
-    {
-        "short_date": "09-15",
-        "offering_to": "Vian",
-        "bonus": "Économie d'ingrédientsLes Bouchers économisent 15 % de leurs ingrédients lorsqu'ils fabriquent des objets.",
-        "resource_count": 3,
-        "resource": "Viande Séchée de Dragodinde"
-    },
-    {
-        "short_date": "09-16",
-        "offering_to": "Corb",
-        "bonus": "ButinLes chances d'obtenir du butin sont augmentées de 100 % dans le donjon du Donjon des Corbacs Blancs.",
-        "resource_count": 2,
-        "resource": "Œil de Corbac Blanc"
-    },
-    {
-        "short_date": "09-17",
-        "offering_to": "Dofu",
-        "bonus": "ButinLes chances d'obtenir du butin sont augmentées de 100 % dans le donjon du Donjon des Dofus.",
-        "resource_count": 1,
-        "resource": "Dofus Émeraude"
-    },
-    {
-        "short_date": "09-18",
-        "offering_to": "Scor",
-        "bonus": "Points d'expérienceLes gains d'expérience sont augmentés de 50 % sur les créatures de type Scorbutes Royaux.",
-        "resource_count": 6,
-        "resource": "Queue de Scorbute Royal"
-    },
-    {
-        "short_date": "09-19",
-        "offering_to": "Chât",
-        "bonus": "Récolte abondanteLes quantités de Bois de Châtaignier récupérées par les Bûcherons sont augmentées de 125 %.",
-        "resource_count": 40,
-        "resource": "Bois de Châtaignier"
-    },
-    {
-        "short_date": "09-20",
-        "offering_to": "Aven",
-        "bonus": "Objets de qualitéLa qualité des objets fabriqués dans la ville des Aventuriers est augmentée.",
-        "resource_count": 1,
-        "resource": "Anneau de l'Aventurier"
-    },
-    {
-        "short_date": "09-21",
-        "offering_to": "Corb",
-        "bonus": "ButinLes chances d'obtenir du butin sont augmentées de 100 % dans le donjon du Donjon des Corbacs Royaux.",
-        "resource_count": 6,
-        "resource": "Œil de Corbac Royal"
-    },
-    {
-        "short_date": "09-22",
-        "offering_to": "Vian",
-        "bonus": "Économie d'ingrédientsLes Bouchers économisent 15 % de leurs ingrédients lorsqu'ils fabriquent des objets.",
-        "resource_count": 2,
-        "resource": "Viande de Dragodinde Sauvage"
-    },
-    {
-        "short_date": "09-23",
-        "offering_to": "Cuiv",
-        "bonus": "Récolte abondanteLes quantités de Cuivre récupérées par les Mineurs sont augmentées de 125 %.",
-        "resource_count": 30,
-        "resource": "Cuivre"
-    },
-    {
-        "short_date": "09-24",
-        "offering_to": "Voya",
-        "bonus": "Objets de qualitéLa qualité des objets fabriqués dans la ville des Voyageurs est augmentée.",
-        "resource_count": 1,
-        "resource": "Bottes du Voyageur"
-    },
-    {
-        "short_date": "09-25",
-        "offering_to": "Corb",
-        "bonus": "ButinLes chances d'obtenir du butin sont augmentées de 100 % dans le donjon du Donjon des Corbacs Mystiques.",
-        "resource_count": 2,
-        "resource": "Œil de Corbac Mystique"
-    },
-    {
-        "short_date": "09-26",
-        "offering_to": "Drag",
-        "bonus": "Points d'expérienceLes gains d'expérience sont augmentés de 50 % sur les créatures de type Dragodindes Célestes.",
-        "resource_count": 6,
-        "resource": "Queue de Dragodinde Céleste"
-    },
-    {
-        "short_date": "09-27",
-        "offering_to": "Trop",
-        "bonus": "Objets de qualitéLa qualité des objets fabriqués dans la ville des Trophées est augmentée.",
-        "resource_count": 1,
-        "resource": "Trophée du Voyageur"
-    },
-    {
-        "short_date": "09-28",
-        "offering_to": "Wabb",
-        "bonus": "Points d'expérienceLes gains d'expérience sont augmentés de 50 % sur les créatures de type Wabbits Géants.",
-        "resource_count": 4,
-        "resource": "Patte de Wabbit Géant"
-    },
-    {
-        "short_date": "09-29",
-        "offering_to": "Bouf",
-        "bonus": "ButinLes chances d'obtenir du butin sont augmentées de 100 % dans le donjon du Donjon des Bouftous Mystiques.",
-        "resource_count": 6,
-        "resource": "Peau de Bouftou Mystique"
-    },
-    {
-        "short_date": "09-30",
-        "offering_to": "Blé",
-        "bonus": "Récolte abondanteLes quantités de Blé d'Or récupérées par les Paysans sont augmentées de 125 %.",
-        "resource_count": 40,
-        "resource": "Blé d'Or"
-    },
-    {
-        "short_date": "10-01",
-        "offering_to": "Corb",
-        "bonus": "Points d'expérienceLes gains d'expérience sont augmentés de 50 % sur les créatures de type Corbacs Légendaires.",
-        "resource_count": 1,
-        "resource": "Plume de Corbac Légendaire"
-    },
-    {
-        "short_date": "10-02",
-        "offering_to": "Vian",
-        "bonus": "Économie d'ingrédientsLes Bouchers économisent 15 % de leurs ingrédients lorsqu'ils fabriquent des objets.",
-        "resource_count": 3,
-        "resource": "Viande Séchée de Dragodinde Sauvage"
-    },
-    {
-        "short_date": "10-03",
-        "offering_to": "Corb",
-        "bonus": "ButinLes chances d'obtenir du butin sont augmentées de 100 % dans le donjon du Donjon des Corbacs Légendaires.",
-        "resource_count": 2,
-        "resource": "Œil de Corbac Légendaire"
-    },
-    {
-        "short_date": "10-04",
-        "offering_to": "Dofu",
-        "bonus": "ButinLes chances d'obtenir du butin sont augmentées de 100 % dans le donjon du Donjon des Dofus.",
-        "resource_count": 1,
-        "resource": "Dofus Pourpre"
-    },
-    {
-        "short_date": "10-05",
-        "offering_to": "Scor",
-        "bonus": "Points d'expérienceLes gains d'expérience sont augmentés de 50 % sur les créatures de type Scorbutes Mystiques.",
-        "resource_count": 6,
-        "resource": "Queue de Scorbute Mystique"
-    },
-    {
-        "short_date": "10-06",
-        "offering_to": "Cèdr",
-        "bonus": "Récolte abondanteLes quantités de Bois de Cèdre récupérées par les Bûcherons sont augmentées de 125 %.",
-        "resource_count": 40,
-        "resource": "Bois de Cèdre"
-    },
-    {
-        "short_date": "10-07",
-        "offering_to": "Voya",
-        "bonus": "Objets de qualitéLa qualité des objets fabriqués dans la ville des Voyageurs est augmentée.",
-        "resource_count": 1,
-        "resource": "Anneau du Voyageur"
-    },
-    {
-        "short_date": "10-08",
-        "offering_to": "Corb",
-        "bonus": "ButinLes chances d'obtenir du butin sont augmentées de 100 % dans le donjon du Donjon des Corbacs Ancestraux.",
-        "resource_count": 6,
-        "resource": "Œil de Corbac Ancestral"
-    },
-    {
-        "short_date": "10-09",
-        "offering_to": "Vian",
-        "bonus": "Économie d'ingrédientsLes Bouchers économisent 15 % de leurs ingrédients lorsqu'ils fabriquent des objets.",
-        "resource_count": 2,
-        "resource": "Viande de Dragodinde Céleste"
-    },
-    {
-        "short_date": "10-10",
-        "offering_to": "Bron",
-        "bonus": "Récolte abondanteLes quantités de Bronze récupérées par les Mineurs sont augmentées de 125 %.",
+        "short_date": "08-17",
+        "offering_to": "Marjul",
+        "bonus": "Minerai abondantLes quantités de Bronze récupérées par les Mineurs sont augmentées de 125 %.",
         "resource_count": 30,
         "resource": "Bronze"
     },
     {
-        "short_date": "10-11",
-        "offering_to": "Conq",
-        "bonus": "Objets de qualitéLa qualité des objets fabriqués dans la ville des Conquérants est augmentée.",
+        "short_date": "08-18",
+        "offering_to": "Ynniw",
+        "bonus": "ButinLes chances d'obtenir du butin sont augmentées de 50 % sur les créatures de type Ravageurs.",
+        "resource_count": 2,
+        "resource": "Corne de Typhomet"
+    },
+    {
+        "short_date": "08-19",
+        "offering_to": "Pilserpus",
+        "bonus": "Objets de qualitéLa qualité des objets fabriqués dans la ville d'Astrub est augmentée.",
         "resource_count": 1,
-        "resource": "Bottes du Conquérant"
+        "resource": "Bottes de Satisfaction"
+    },
+    {
+        "short_date": "08-20",
+        "offering_to": "Gridoo",
+        "bonus": "Gibier abondantLes quantités de Viande Ladre et de Viande Avariée récupérées par les Chasseurs sont augmentées de 125 %.",
+        "resource_count": 6,
+        "resource": "Viande Avariée"
+    },
+    {
+        "short_date": "08-21",
+        "offering_to": "Theomak",
+        "bonus": "Challenges augmentésLes bonus apportés par les challenges réussis sont augmentés de 150 % dans les 4 donjons de l'Eliocalypse (Arbre, Blessures, Désert et Sentence).",
+        "resource_count": 1,
+        "resource": "Terre Stérile"
+    },
+    {
+        "short_date": "08-22",
+        "offering_to": "Pierdem",
+        "bonus": "Pêche abondanteLes quantités de Morue et d'Espadon récupérées par les Pêcheurs sont augmentées de 125 %.",
+        "resource_count": 40,
+        "resource": "Morue"
+    },
+    {
+        "short_date": "08-23",
+        "offering_to": "Guiboun",
+        "bonus": "ButinLes chances d'obtenir du butin sont augmentées de 75 % dans les zones du Mont Torrideau et de la Ruche des Gloursons.",
+        "resource_count": 2,
+        "resource": "Poils de Boulglours"
+    },
+    {
+        "short_date": "08-24",
+        "offering_to": "Mikala",
+        "bonus": "Points d'expérienceLes gains d'expérience sont augmentés de 100 % dans le donjon de la Sousouricière du Rat Noir.",
+        "resource_count": 3,
+        "resource": "Pustule de Rat Sio"
+    },
+    {
+        "short_date": "08-25",
+        "offering_to": "Lolzeolf",
+        "bonus": "Récolte abondanteLes quantités de céréales récupérées par les Paysans de tous niveaux sont augmentées de 100 %.",
+        "resource_count": 50,
+        "resource": "Millet"
+    },
+    {
+        "short_date": "08-26",
+        "offering_to": "Fizzi",
+        "bonus": "Percepteurs avidesLe butin généré par les Percepteurs est augmenté de 200 % dans les donjons de niveau 200.",
+        "resource_count": 1,
+        "resource": "Collier d'esclave"
+    },
+    {
+        "short_date": "08-27",
+        "offering_to": "Talentyre",
+        "bonus": "Pêche abondanteLes quantités de Raie Bleue et de Requin Marteau-Faucille récupérées par les Pêcheurs sont augmentées de 125 %.",
+        "resource_count": 40,
+        "resource": "Requin Marteau-Faucille"
+    },
+    {
+        "short_date": "08-28",
+        "offering_to": "Noon",
+        "bonus": "Bois abondantLes quantités de Noyer récupérées par les Bûcherons sont augmentées de 125 %.",
+        "resource_count": 40,
+        "resource": "Bois de Noyer"
+    },
+    {
+        "short_date": "08-29",
+        "offering_to": "Dyw",
+        "bonus": "ButinLes chances d'obtenir du butin sont augmentées de 100 % dans le donjon du Clos des Blops.",
+        "resource_count": 6,
+        "resource": "Fleur de Blopignon"
+    },
+    {
+        "short_date": "08-30",
+        "offering_to": "So",
+        "bonus": "Challenges augmentésLes bonus apportés par les challenges réussis sont augmentés de 125 % sur les créatures de type Porcos.",
+        "resource_count": 1,
+        "resource": "Peau de Don Dorgan"
+    },
+    {
+        "short_date": "08-31",
+        "offering_to": "Bitkyo",
+        "bonus": "Forgemagie amélioréeLes Costumages ont 15 % de chances de ne pas consumer de rune lorsqu'ils tentent d'améliorer un objet.",
+        "resource_count": 4,
+        "resource": "Rune Ré Eau"
+    },
+    {
+        "short_date": "09-01",
+        "offering_to": "Manoush",
+        "bonus": "Points d'expérienceLes gains d'expérience sont augmentés de 100 % dans le donjon de la Chambre des maléfices.",
+        "resource_count": 2,
+        "resource": "Épine d'Armuguet"
+    },
+    {
+        "short_date": "09-02",
+        "offering_to": "Ancestrotek",
+        "bonus": "Vitalité débordanteLa régénération des Points de Vie est augmentée de 300 % (hors combat), et les soins par consommables (vie et énergie) sont augmentés de 100 %.",
+        "resource_count": 4,
+        "resource": "Potion de Mini Soin Supérieure"
+    },
+    {
+        "short_date": "09-03",
+        "offering_to": "Vikotoru",
+        "bonus": "ButinLes chances d'obtenir du butin sont augmentées de 50 % sur les créatures de type Yokianzhi d'encre et Yokianzhi de papier.",
+        "resource_count": 1,
+        "resource": "Pétale d'encre"
+    },
+    {
+        "short_date": "09-04",
+        "offering_to": "Lorko",
+        "bonus": "Fabrication intensivePour chaque objet fabriqué, les Bûcherons ont 10 % de chances de créer un second objet.",
+        "resource_count": 1,
+        "resource": "Planche Contreplaquée"
+    },
+    {
+        "short_date": "09-05",
+        "offering_to": "Lucimay",
+        "bonus": "Challenges augmentésLes bonus apportés par les challenges réussis sont augmentés de 150 % dans la zone et le donjon du Labyrinthe du Minotoror (et son centre).",
+        "resource_count": 4,
+        "resource": "Plume du Serpiplume"
+    },
+    {
+        "short_date": "09-06",
+        "offering_to": "Zouzo",
+        "bonus": "Points d'expérienceLes gains d'expérience sont augmentés de 50 % sur les créatures de type Corbacs.",
+        "resource_count": 5,
+        "resource": "Poil de Renarbo"
+    },
+    {
+        "short_date": "09-07",
+        "offering_to": "Cherop",
+        "bonus": "Challenge supplémentaireUn challenge supplémentaire est généré contre les créatures de type Florifaune obscure.",
+        "resource_count": 4,
+        "resource": "Sépale de Nerbe"
+    },
+    {
+        "short_date": "09-08",
+        "offering_to": "Davut",
+        "bonus": "Apparition des ressourcesLa vitesse d'apparition des ressources est augmentée de 150 % dans les zones des Profondeurs de Sufokia.",
+        "resource_count": 10,
+        "resource": "Écume de mer"
+    },
+    {
+        "short_date": "09-09",
+        "offering_to": "Mud",
+        "bonus": "Points d'expérienceLes gains d'expérience sont augmentés de 75 % dans la zone de la Plaine des Porkass.",
+        "resource_count": 6,
+        "resource": "Trident Cassé"
+    },
+    {
+        "short_date": "09-10",
+        "offering_to": "Mau",
+        "bonus": "Élevage de monturesToutes les variétés de dragodindes, volkornes et muldos ébène ainsi que de volkornes améthyste donnent naissance à un bébé supplémentaire.",
+        "resource_count": 1,
+        "resource": "Aile de Dragodinde"
+    },
+    {
+        "short_date": "09-11",
+        "offering_to": "Xa",
+        "bonus": "Points d'expérienceLes gains d'expérience sont augmentés de 75 % dans la zone du Territoire des Dragodindes Sauvages.",
+        "resource_count": 4,
+        "resource": "Sueur de dragodinde"
+    },
+    {
+        "short_date": "09-12",
+        "offering_to": "Grugin",
+        "bonus": "Bonta et BrâkmarLes récompenses en points d'expérience des quêtes d'alignement sont augmentées de 100 %. De plus, une quête répétable spéciale est disponible aujourd'hui à l'intérieur des milices de Bonta ou de Brâkmar. Réalisable à partir du niveau 20 par les personnages alignés, elle est indépendante de la quête d'offrande.\nNom de la quête : Troubles à Bonta. (Être d'alignement Bontarien)\nNom de la quête : Troubles à Brâkmar. (Être d'alignement Brâkmarien)",
+        "resource_count": 6,
+        "resource": "Flamme Spectrale"
+    },
+    {
+        "short_date": "09-13",
+        "offering_to": "Yukin",
+        "bonus": "Récolte abondanteLes quantités de Lin récupérées par les Paysans sont augmentées de 125 %.",
+        "resource_count": 50,
+        "resource": "Lin"
+    },
+    {
+        "short_date": "09-14",
+        "offering_to": "Farod",
+        "bonus": "Anomalies temporellesLes gains d'expérience sont augmentés de 50 % dans toutes les zones influencées par une anomalie temporelle. De plus, les gains d'expérience et les chances d'obtenir du butin sont augmentés de 25 % dans la zone de la Bordure de Brâkmar.",
+        "resource_count": 6,
+        "resource": "Sueur Froide de Fantôme"
+    },
+    {
+        "short_date": "09-15",
+        "offering_to": "Makss",
+        "bonus": "Challenges augmentésLes bonus apportés par les challenges réussis sont augmentés de 150 % dans le donjon du Laboratoire de Nileza.",
+        "resource_count": 2,
+        "resource": "Bractée de Drosérâle"
+    },
+    {
+        "short_date": "09-16",
+        "offering_to": "Latürb",
+        "bonus": "ButinLes chances d'obtenir du butin sont augmentées de 75 % dans les zones de la Gorge des Vents Hurlants et de la Cité Oubliée.",
+        "resource_count": 1,
+        "resource": "Carapace de Ver des Sables"
+    },
+    {
+        "short_date": "09-17",
+        "offering_to": "Nosruo",
+        "bonus": "Apparition des ressourcesLa vitesse d'apparition des ressources est augmentée de 150 % dans la zone de la Forêt d'Amakna.",
+        "resource_count": 1,
+        "resource": "Substrat de Buisson"
+    },
+    {
+        "short_date": "09-18",
+        "offering_to": "Guidys",
+        "bonus": "Points d'expérienceLes gains d'expérience sont augmentés de 100 % dans le Donjon des Squelettes.",
+        "resource_count": 9,
+        "resource": "Os de Chafer"
+    },
+    {
+        "short_date": "09-19",
+        "offering_to": "Olvido",
+        "bonus": "Points d'expérience et butin sur les piratesLes gains d'expérience et les chances d'obtenir du butin sont augmentés de 50 % sur tous les monstres considérés comme des pirates.",
+        "resource_count": 6,
+        "resource": "Rhum de Qualité"
+    },
+    {
+        "short_date": "09-20",
+        "offering_to": "Nido",
+        "bonus": "Gibier abondantLes quantités de Viande Fraîche et de Viande Maigre récupérées par les Chasseurs sont augmentées de 125%.",
+        "resource_count": 4,
+        "resource": "Mijoté Récréatif"
+    },
+    {
+        "short_date": "09-21",
+        "offering_to": "Bodirom",
+        "bonus": "Objets de qualitéLa qualité des objets fabriqués dans la ville de Brâkmar est augmentée.",
+        "resource_count": 1,
+        "resource": "Épée d'Ha"
+    },
+    {
+        "short_date": "09-22",
+        "offering_to": "Djuuma",
+        "bonus": "Challenge supplémentaireUn challenge supplémentaire est généré contre les monstres présents dans la zone des Dunes des ossements.",
+        "resource_count": 2,
+        "resource": "Sable Fin"
+    },
+    {
+        "short_date": "09-23",
+        "offering_to": "Foluk",
+        "bonus": "ButinLes chances d'obtenir du butin sont augmentées de 50 % sur les créatures de type Herboricoles.",
+        "resource_count": 1,
+        "resource": "Crinière fleurie"
+    },
+    {
+        "short_date": "09-24",
+        "offering_to": "Emp",
+        "bonus": "Percepteurs avidesLe butin généré par les Percepteurs est augmenté de 200 % dans tous les donjons.",
+        "resource_count": 3,
+        "resource": "Pépite"
+    },
+    {
+        "short_date": "09-25",
+        "offering_to": "Franho",
+        "bonus": "Cadeaux surprisesDes Présents surprenants ont été ajoutés aux butins des monstres des donjons. Lorsqu'ils sont utilisés, ils permettent d'obtenir une bonne ou mauvaise surprise.",
+        "resource_count": 3,
+        "resource": "Crabe Surprise"
+    },
+    {
+        "short_date": "09-26",
+        "offering_to": "Nufrank",
+        "bonus": "Minerai abondantLes quantités de Dolomite et d'Obsidienne récupérées par les Mineurs sont augmentées de 125 %.",
+        "resource_count": 30,
+        "resource": "Obsidienne"
+    },
+    {
+        "short_date": "09-27",
+        "offering_to": "Wasaru",
+        "bonus": "Points d'expérienceLes gains d'expérience sont augmentés de 100 % dans le donjon de la Canopée du Kimbo.",
+        "resource_count": 1,
+        "resource": "Tresse du Poolay"
+    },
+    {
+        "short_date": "09-28",
+        "offering_to": "Sad",
+        "bonus": "Coffres aux trésorsDes Coffres de Sad peuvent être gagnés à la fin des chasses aux trésors.",
+        "resource_count": 1,
+        "resource": "Arc Déroutant"
+    },
+    {
+        "short_date": "09-29",
+        "offering_to": "Dethoama",
+        "bonus": "Challenges augmentésLes bonus apportés par les challenges réussis sont augmentés de 125 % sur les fantômes de l'Équipage du Grolandais.",
+        "resource_count": 3,
+        "resource": "Mât de Fantômat"
+    },
+    {
+        "short_date": "09-30",
+        "offering_to": "Sulp",
+        "bonus": "ButinLes chances d'obtenir du butin sont augmentées de 100 % dans le donjon des Pitons rocheux des Craqueleurs.",
+        "resource_count": 1,
+        "resource": "Dent en Or de Craqueleur"
+    },
+    {
+        "short_date": "10-01",
+        "offering_to": "Moomoo",
+        "bonus": "Points d'expérienceLes gains d'expérience sont augmentés de 50 % sur les soldats de la Fratrie des Oubliés : les Calcinés et les Submergés.",
+        "resource_count": 2,
+        "resource": "Aquarakne de Crânonier"
+    },
+    {
+        "short_date": "10-02",
+        "offering_to": "Kosal",
+        "bonus": "Bois abondantLes quantités de Bois de Pin et de Bois d'Oliviolet récupérées par les Bûcherons sont augmentées de 125 %.",
+        "resource_count": 40,
+        "resource": "Bois de Pin"
+    },
+    {
+        "short_date": "10-03",
+        "offering_to": "Chik",
+        "bonus": "Quête répétableUne quête répétable spéciale est disponible aujourd'hui près de la fontaine du village d'Amakna. Réalisable à partir du niveau 20, elle est indépendante de la quête d'offrande.\nNom de la quête : La fête aux tire-fesses.",
+        "resource_count": 1,
+        "resource": "Arc Holic"
+    },
+    {
+        "short_date": "10-04",
+        "offering_to": "Jujü",
+        "bonus": "Challenge supplémentaireUn challenge supplémentaire est généré contre les monstres présents dans la zone de la Futaie enneigée.",
+        "resource_count": 2,
+        "resource": "Pom de pin"
+    },
+    {
+        "short_date": "10-05",
+        "offering_to": "Ounirom",
+        "bonus": "Pêche abondanteLes quantités de Poisson Pané, de Sardine Brillante et de Kralamoure récupérées par les Pêcheurs sont augmentées de 125 %.",
+        "resource_count": 40,
+        "resource": "Kralamoure"
+    },
+    {
+        "short_date": "10-06",
+        "offering_to": "Ketzakwet",
+        "bonus": "ButinLes chances d'obtenir du butin sont augmentées de 100 % dans le donjon du Laboratoire du Tynril.",
+        "resource_count": 4,
+        "resource": "Étamine de Floribonde"
+    },
+    {
+        "short_date": "10-07",
+        "offering_to": "Krûnsh",
+        "bonus": "Points d'expérienceLes gains d'expérience sont augmentés de 75 % dans la zone du Cauchemar des Ravageurs.",
+        "resource_count": 1,
+        "resource": "Pic de Ravageur"
+    },
+    {
+        "short_date": "10-08",
+        "offering_to": "Kroketh",
+        "bonus": "Gibier abondantLes quantités de viande récupérées par les Chasseurs de tous niveaux sont augmentées de 100 %.",
+        "resource_count": 5,
+        "resource": "Viande Saignante"
+    },
+    {
+        "short_date": "10-09",
+        "offering_to": "Nitsougnal",
+        "bonus": "Challenge supplémentaireUn challenge supplémentaire est généré contre les créatures de type Firefoux.",
+        "resource_count": 4,
+        "resource": "Poils de Pétartifoux"
+    },
+    {
+        "short_date": "10-10",
+        "offering_to": "Benjo",
+        "bonus": "Élevage de monturesToutes les variétés de dragodindes, volkornes et muldos ivoire donnent naissance à un bébé supplémentaire.",
+        "resource_count": 6,
+        "resource": "Dent de Dragodinde"
+    },
+    {
+        "short_date": "10-11",
+        "offering_to": "Emattera",
+        "bonus": "ButinLes chances d'obtenir du butin sont augmentées de 75 % dans la zone de la Désolation de Sidimote.",
+        "resource_count": 1,
+        "resource": "Kolérat Mort"
     },
     {
         "short_date": "10-12",
-        "offering_to": "Corb",
-        "bonus": "ButinLes chances d'obtenir du butin sont augmentées de 100 % dans le donjon du Donjon des Corbacs Anciens.",
-        "resource_count": 2,
-        "resource": "Œil de Corbac Ancien"
+        "offering_to": "Diakollec",
+        "bonus": "Voyages dimensionnelsLes gains d'expérience et les chances d'obtenir du butin sont augmentés de 50 % dans toutes les zones des dimensions divines.",
+        "resource_count": 5,
+        "resource": "Tige de Bambouto"
     },
     {
         "short_date": "10-13",
-        "offering_to": "Drag",
-        "bonus": "Points d'expérienceLes gains d'expérience sont augmentés de 50 % sur les créatures de type Dragodindes Ancestrales.",
-        "resource_count": 6,
-        "resource": "Queue de Dragodinde Ancestrale"
+        "offering_to": "Takeza",
+        "bonus": "Expérience des monturesLes gains d'expérience des montures sont augmentés de 200 %.",
+        "resource_count": 4,
+        "resource": "Parmentier à l'Oignon"
     },
     {
         "short_date": "10-14",
-        "offering_to": "Trop",
-        "bonus": "Objets de qualitéLa qualité des objets fabriqués dans la ville des Trophées est augmentée.",
-        "resource_count": 1,
-        "resource": "Trophée du Conquérant"
+        "offering_to": "Eylen",
+        "bonus": "Challenges augmentésLes bonus apportés par les challenges réussis sont augmentés de 150 % dans le donjon de la Pyramide d'Ombre.",
+        "resource_count": 2,
+        "resource": "Masque de la Vengeance"
     },
     {
         "short_date": "10-15",
-        "offering_to": "Wabb",
-        "bonus": "Points d'expérienceLes gains d'expérience sont augmentés de 50 % sur les créatures de type Wabbits Anciens.",
-        "resource_count": 4,
-        "resource": "Patte de Wabbit Ancien"
+        "offering_to": "Dnegeleht",
+        "bonus": "Récolte abondanteLes quantités de Chanvre récupérées par les Paysans sont augmentées de 125 %.",
+        "resource_count": 50,
+        "resource": "Chanvre"
     },
     {
         "short_date": "10-16",
-        "offering_to": "Bouf",
-        "bonus": "ButinLes chances d'obtenir du butin sont augmentées de 100 % dans le donjon du Donjon des Bouftous Ancestraux.",
-        "resource_count": 6,
-        "resource": "Peau de Bouftou Ancestral"
+        "offering_to": "Kuri",
+        "bonus": "Points d'expérienceLes gains d'expérience sont augmentés de 100 % dans le donjon de la Caverne du Koulosse.",
+        "resource_count": 5,
+        "resource": "Corne du Boufcoul"
     },
     {
         "short_date": "10-17",
-        "offering_to": "Riz",
-        "bonus": "Récolte abondanteLes quantités de Riz récupérées par les Paysans sont augmentées de 125 %.",
+        "offering_to": "Yaloop",
+        "bonus": "Bois abondantLes quantités de Bois de Noisetier et deBois de Merisier récupérées par les Bûcherons sont augmentées de 125 %.",
         "resource_count": 40,
-        "resource": "Riz"
+        "resource": "Bois de Noisetier"
     },
     {
         "short_date": "10-18",
-        "offering_to": "Corb",
-        "bonus": "Points d'expérienceLes gains d'expérience sont augmentés de 50 % sur les créatures de type Corbacs Anciens.",
-        "resource_count": 1,
-        "resource": "Plume de Corbac Ancien"
+        "offering_to": "Fry",
+        "bonus": "Challenges augmentésLes bonus apportés par les challenges réussis sont augmentés de 125 % sur les créatures de l'Armée de brume.",
+        "resource_count": 3,
+        "resource": "Plastron de Tambouraï"
     },
     {
         "short_date": "10-19",
-        "offering_to": "Vian",
-        "bonus": "Économie d'ingrédientsLes Bouchers économisent 15 % de leurs ingrédients lorsqu'ils fabriquent des objets.",
-        "resource_count": 3,
-        "resource": "Viande Séchée de Dragodinde Céleste"
+        "offering_to": "Zellina",
+        "bonus": "Apparition des ressourcesLa vitesse d'apparition des poissons de tous types est augmentée de 100 %.",
+        "resource_count": 40,
+        "resource": "Perche"
     },
     {
         "short_date": "10-20",
-        "offering_to": "Corb",
-        "bonus": "ButinLes chances d'obtenir du butin sont augmentées de 100 % dans le donjon du Donjon des Corbacs Vénérables.",
-        "resource_count": 2,
-        "resource": "Œil de Corbac Vénérable"
+        "offering_to": "Sephy",
+        "bonus": "Points d'expérienceLes gains d'expérience sont augmentés de 100 % dans les donjons de la Mémoire d'Orukam et du Souvenir d'Imagiro.",
+        "resource_count": 1,
+        "resource": "Pétale de Papier"
     },
     {
         "short_date": "10-21",
-        "offering_to": "Dofu",
-        "bonus": "ButinLes chances d'obtenir du butin sont augmentées de 100 % dans le donjon du Donjon des Dofus.",
-        "resource_count": 1,
-        "resource": "Dofus Turquoise"
+        "offering_to": "Baba",
+        "bonus": "Fabrication intensiveLes quantités d'objets fabriqués par les Chasseurs sont augmentées de 25 %.",
+        "resource_count": 4,
+        "resource": "Poêlée Paysanne"
     },
     {
         "short_date": "10-22",
-        "offering_to": "Scor",
-        "bonus": "Points d'expérienceLes gains d'expérience sont augmentés de 50 % sur les créatures de type Scorbutes Anciens.",
-        "resource_count": 6,
-        "resource": "Queue de Scorbute Ancien"
+        "offering_to": "Viviantho",
+        "bonus": "Expérience des métiersLes gains d'expérience sont augmentés de 50 % pour les Bûcherons, les Mineurs et les Alchimistes.",
+        "resource_count": 30,
+        "resource": "Silicate"
     },
     {
         "short_date": "10-23",
-        "offering_to": "Bamb",
-        "bonus": "Récolte abondanteLes quantités de Bois de Bambou Sombre récupérées par les Bûcherons sont augmentées de 125 %.",
-        "resource_count": 40,
-        "resource": "Bois de Bambou Sombre"
+        "offering_to": "Patawaii",
+        "bonus": "Anomalies temporellesLes chances d'obtenir du butin sont augmentées de 50 % dans toutes les zones influencées par une anomalie temporelle. De plus, les gains d'expérience et les chances d'obtenir du butin sont augmentés de 25 % dans la zone de la Dimension Obscure.",
+        "resource_count": 1,
+        "resource": "Symbole des Obscuranti"
     },
     {
         "short_date": "10-24",
-        "offering_to": "Conq",
-        "bonus": "Objets de qualitéLa qualité des objets fabriqués dans la ville des Conquérants est augmentée.",
-        "resource_count": 1,
-        "resource": "Anneau du Conquérant"
+        "offering_to": "Sili",
+        "bonus": "Minerai abondantLes quantités de Fer récupérées par les Mineurs sont augmentées de 125 %.",
+        "resource_count": 30,
+        "resource": "Fer"
     },
     {
         "short_date": "10-25",
-        "offering_to": "Corb",
-        "bonus": "ButinLes chances d'obtenir du butin sont augmentées de 100 % dans le donjon du Donjon des Corbacs Immortels.",
-        "resource_count": 6,
-        "resource": "Œil de Corbac Immortel"
+        "offering_to": "Rikoo",
+        "bonus": "ButinLes chances d'obtenir du butin sont augmentées de 50 % sur les créatures de type Faune des Pins Perdus.",
+        "resource_count": 40,
+        "resource": "Poils de Smilomouth"
     },
     {
         "short_date": "10-26",
-        "offering_to": "Vian",
-        "bonus": "Économie d'ingrédientsLes Bouchers économisent 15 % de leurs ingrédients lorsqu'ils fabriquent des objets.",
-        "resource_count": 2,
-        "resource": "Viande de Dragodinde Ancestrale"
+        "offering_to": "Capt",
+        "bonus": "Points d'expérienceLes gains d'expérience sont augmentés de 50 % sur les créatures de type Wabbits, Wabbits mutants et Gawde du Wa.",
+        "resource_count": 9,
+        "resource": "Dent de Wabbit"
     },
     {
         "short_date": "10-27",
-        "offering_to": "Arge",
-        "bonus": "Récolte abondanteLes quantités d'Argent Pur récupérées par les Mineurs sont augmentées de 125 %.",
-        "resource_count": 30,
-        "resource": "Argent Pur"
+        "offering_to": "Coyo",
+        "bonus": "Économie d'ingrédientsLes Sculpteurs économisent 15 % de leurs ingrédients lorsqu'ils fabriquent des objets.",
+        "resource_count": 1,
+        "resource": "Bâton Feuillu"
     },
     {
         "short_date": "10-28",
-        "offering_to": "Lége",
-        "bonus": "Objets de qualitéLa qualité des objets fabriqués dans la ville des Légendaires est augmentée.",
-        "resource_count": 1,
-        "resource": "Bottes du Légendaire"
+        "offering_to": "Fredocigam",
+        "bonus": "Cueillette abondanteLes quantités de Mandragore et de Belladone récupérées par les Alchimistes sont augmentées de 125 %.",
+        "resource_count": 40,
+        "resource": "Mandragore"
     },
     {
         "short_date": "10-29",
-        "offering_to": "Corb",
-        "bonus": "ButinLes chances d'obtenir du butin sont augmentées de 100 % dans le donjon du Donjon des Corbacs Éternels.",
-        "resource_count": 2,
-        "resource": "Œil de Corbac Éternel"
+        "offering_to": "Tchokun",
+        "bonus": "ButinLes chances d'obtenir du butin sont augmentées de 75 % dans la zone de la Crevasse Perge.",
+        "resource_count": 3,
+        "resource": "Malléole de Yomi Givrefoux"
     },
     {
         "short_date": "10-30",
-        "offering_to": "Drag",
-        "bonus": "Points d'expérienceLes gains d'expérience sont augmentés de 50 % sur les créatures de type Dragodindes Immortelles.",
-        "resource_count": 6,
-        "resource": "Queue de Dragodinde Immortelle"
+        "offering_to": "Macugny",
+        "bonus": "Percepteurs avidesLe butin généré par les Percepteurs est augmenté de 200 % dans les donjons de niveau 120 à 150.",
+        "resource_count": 4,
+        "resource": "Akaslip d'Akakwa"
     },
     {
         "short_date": "10-31",
-        "offering_to": "Trop",
-        "bonus": "Objets de qualitéLa qualité des objets fabriqués dans la ville des Trophées est augmentée.",
-        "resource_count": 1,
-        "resource": "Trophée du Légendaire"
+        "offering_to": "Asid",
+        "bonus": "Cadeaux surprisesDes Surprises de Trikortritt ont été ajoutées aux butins des monstres. Lorsqu'elles sont utilisées, elles permettent d'obtenir des Bonbons d'Halouine ou bien de se retrouver transformé en Petite Chauffe-Soutrille.",
+        "resource_count": 6,
+        "resource": "Poils de Barbe du Bwork Mage"
     },
     {
         "short_date": "11-01",
-        "offering_to": "Wabb",
-        "bonus": "Points d'expérienceLes gains d'expérience sont augmentés de 50 % sur les créatures de type Wabbits Immortels.",
-        "resource_count": 4,
-        "resource": "Patte de Wabbit Immortel"
+        "offering_to": "Mitomiel",
+        "bonus": "Points d'expérience et butin en slipLes gains d'expérience lors des combats contre les monstres et les chances d'obtenir du butin sont augmentés de 50 % pour tous les aventuriers qui sont équipés d'un slip.",
+        "resource_count": 1,
+        "resource": "Slip de Troollaraj"
     },
     {
         "short_date": "11-02",
-        "offering_to": "Bouf",
-        "bonus": "ButinLes chances d'obtenir du butin sont augmentées de 100 % dans le donjon du Donjon des Bouftous Immortels.",
-        "resource_count": 6,
-        "resource": "Peau de Bouftou Immortel"
+        "offering_to": "Nikodeus",
+        "bonus": "ButinLes chances d'obtenir du butin sont augmentées de 75 % dans les zones du Port des Ravageurs et de Pandamonium.",
+        "resource_count": 2,
+        "resource": "Groin de Porkzebuth"
     },
     {
         "short_date": "11-03",
-        "offering_to": "Maïs",
-        "bonus": "Récolte abondanteLes quantités de Maïs Doré récupérées par les Paysans sont augmentées de 125 %.",
-        "resource_count": 40,
-        "resource": "Maïs Doré"
+        "offering_to": "Miloune",
+        "bonus": "Économie d'ingrédientsLes Tailleurs ont 15 % de chances d'économiser des ingrédients lorsqu'ils fabriquent des objets.",
+        "resource_count": 1,
+        "resource": "Cape Abilité"
     },
     {
         "short_date": "11-04",
-        "offering_to": "Corb",
-        "bonus": "Points d'expérienceLes gains d'expérience sont augmentés de 50 % sur les créatures de type Corbacs Divins.",
+        "offering_to": "Kacinka",
+        "bonus": "Avis de rechercheLa vitesse d'apparition des monstres d'Avis de recherche est augmentée de 200 % .",
         "resource_count": 1,
-        "resource": "Plume de Corbac Divin"
+        "resource": "Fibre criminelle"
     },
     {
         "short_date": "11-05",
-        "offering_to": "Vian",
-        "bonus": "Économie d'ingrédientsLes Bouchers économisent 15 % de leurs ingrédients lorsqu'ils fabriquent des objets.",
-        "resource_count": 3,
-        "resource": "Viande Séchée de Dragodinde Ancestrale"
+        "offering_to": "Mathrû",
+        "bonus": "Challenges augmentésLes bonus apportés par les challenges réussis sont augmentés de 150 % dans le donjon de la Brasserie du roi Dazak.",
+        "resource_count": 2,
+        "resource": "Dent de Vatenbière"
     },
     {
         "short_date": "11-06",
-        "offering_to": "Corb",
-        "bonus": "ButinLes chances d'obtenir du butin sont augmentées de 100 % dans le donjon du Donjon des Corbacs Divins.",
-        "resource_count": 2,
-        "resource": "Œil de Corbac Divin"
+        "offering_to": "Hito",
+        "bonus": "Bois abondantLes quantités de Bois de Châtaignier récupérées par les Bûcherons sont augmentées de 125 %.",
+        "resource_count": 40,
+        "resource": "Bois de Châtaignier"
     },
     {
         "short_date": "11-07",
-        "offering_to": "Dofu",
-        "bonus": "ButinLes chances d'obtenir du butin sont augmentées de 100 % dans le donjon du Donjon des Dofus.",
-        "resource_count": 1,
-        "resource": "Dofus Ébène"
+        "offering_to": "Pouki",
+        "bonus": "ButinLes chances d'obtenir du butin sont augmentées de 50 % sur les Animaux de la forêt.",
+        "resource_count": 6,
+        "resource": "Pic de Prespic"
     },
     {
         "short_date": "11-08",
-        "offering_to": "Scor",
-        "bonus": "Points d'expérienceLes gains d'expérience sont augmentés de 50 % sur les créatures de type Scorbutes Immortels.",
-        "resource_count": 6,
-        "resource": "Queue de Scorbute Immortel"
+        "offering_to": "Poup",
+        "bonus": "Points d'expérienceLes gains d'expérience sont augmentés de 50 % sur les créatures de type Serviteurs de l'Indicible.",
+        "resource_count": 2,
+        "resource": "Patte de Li-Fo"
     },
     {
         "short_date": "11-09",
-        "offering_to": "Bamb",
-        "bonus": "Récolte abondanteLes quantités de Bois de Bambou Sacré récupérées par les Bûcherons sont augmentées de 125 %.",
-        "resource_count": 40,
-        "resource": "Bois de Bambou Sacré"
+        "offering_to": "Tilapiatsu",
+        "bonus": "Challenges augmentésLes bonus apportés par les challenges réussis sont augmentés de 125 % sur les Pirates naufragés et les Pirates de l'Arche d'Otomaï.",
+        "resource_count": 6,
+        "resource": "Foulard du Sparo"
     },
     {
         "short_date": "11-10",
-        "offering_to": "Lége",
-        "bonus": "Objets de qualitéLa qualité des objets fabriqués dans la ville des Légendaires est augmentée.",
-        "resource_count": 1,
-        "resource": "Anneau du Légendaire"
+        "offering_to": "Otoul",
+        "bonus": "Élevage de monturesToutes les variétés de dragodindes, volkornes et muldos orchidée ainsi que de volkornes rubis donnent naissance à un bébé supplémentaire.",
+        "resource_count": 40,
+        "resource": "Goujon"
     },
     {
         "short_date": "11-11",
-        "offering_to": "Corb",
-        "bonus": "ButinLes chances d'obtenir du butin sont augmentées de 100 % dans le donjon du Donjon des Corbacs Sacrés.",
+        "offering_to": "Namsporp",
+        "bonus": "Bénédiction de Miss TristeMiss Triste attend les aventuriers qui veulent se refaire une laideur près de la fontaine du village d'Amakna. Sa bénédiction transforme temporairement en Crocodaille (effet qui disparaît quand un combat est lancé) et en Souffre-Douleur (bonus de 50 Puissance et 10 dommages fixes durant 15 combats).",
         "resource_count": 6,
-        "resource": "Œil de Corbac Sacré"
+        "resource": "Écaille de Crocodaille"
     },
     {
         "short_date": "11-12",
-        "offering_to": "Vian",
-        "bonus": "Économie d'ingrédientsLes Bouchers économisent 15 % de leurs ingrédients lorsqu'ils fabriquent des objets.",
+        "offering_to": "Jacoula",
+        "bonus": "ButinLes chances d'obtenir du butin sont augmentées de 50 % sur les créatures de type Trithons.",
         "resource_count": 2,
-        "resource": "Viande de Dragodinde Immortelle"
+        "resource": "Lanterne de Tourthon"
     },
     {
         "short_date": "11-13",
-        "offering_to": "Or",
-        "bonus": "Récolte abondanteLes quantités d'Or Pur récupérées par les Mineurs sont augmentées de 125 %.",
-        "resource_count": 30,
-        "resource": "Or Pur"
+        "offering_to": "Dek",
+        "bonus": "Challenges augmentésLes bonus apportés par les challenges réussis sont augmentés de 150 % dans le donjon du Laboratoire de Brumen Tinctorias.",
+        "resource_count": 6,
+        "resource": "Graine de Scorbute"
     },
     {
         "short_date": "11-14",
-        "offering_to": "Divi",
-        "bonus": "Objets de qualitéLa qualité des objets fabriqués dans la ville des Divins est augmentée.",
-        "resource_count": 1,
-        "resource": "Bottes du Divin"
+        "offering_to": "Flouky",
+        "bonus": "Forgemagie amélioréeLes Joaillomages ont 15 % de chances de ne pas consumer de rune lorsqu'ils tentent d'améliorer un objet.",
+        "resource_count": 4,
+        "resource": "Rune Vi"
     },
     {
         "short_date": "11-15",
-        "offering_to": "Corb",
-        "bonus": "ButinLes chances d'obtenir du butin sont augmentées de 100 % dans le donjon du Donjon des Corbacs Célestes.",
-        "resource_count": 2,
-        "resource": "Œil de Corbac Céleste"
+        "offering_to": "Reniator",
+        "bonus": "Quête répétableUne quête répétable spéciale est disponible aujourd'hui près de la vieille chapelle d'Astrub. Réalisable à partir du niveau 20, elle est indépendante de la quête d'offrande.\nNom de la quête : Vols à la charrette.",
+        "resource_count": 1,
+        "resource": "Leurnettes"
     },
     {
         "short_date": "11-16",
-        "offering_to": "Drag",
-        "bonus": "Points d'expérienceLes gains d'expérience sont augmentés de 50 % sur les créatures de type Dragodindes Divines.",
+        "offering_to": "Mustasly",
+        "bonus": "Points d'expérienceLes gains d'expérience sont augmentés de 50 % sur les Rats Strubiens et les Rats Maknéens.",
         "resource_count": 6,
-        "resource": "Queue de Dragodinde Divine"
+        "resource": "Peau de Ramane d'Égoutant"
     },
     {
         "short_date": "11-17",
-        "offering_to": "Trop",
-        "bonus": "Objets de qualitéLa qualité des objets fabriqués dans la ville des Trophées est augmentée.",
-        "resource_count": 1,
-        "resource": "Trophée du Divin"
+        "offering_to": "Messikriss",
+        "bonus": "Gibier abondantLes quantités de Viande séchée récupérées par les Chasseurs sont augmentées de 125%.",
+        "resource_count": 5,
+        "resource": "Viande Macérée"
     },
     {
         "short_date": "11-18",
-        "offering_to": "Wabb",
-        "bonus": "Points d'expérienceLes gains d'expérience sont augmentés de 50 % sur les créatures de type Wabbits Divins.",
-        "resource_count": 4,
-        "resource": "Patte de Wabbit Divin"
+        "offering_to": "Annbonny",
+        "bonus": "Challenge supplémentaireUn challenge supplémentaire est généré contre les monstres présents dans les zones des Canaux Méphitiques et des Entrailles de Brâkmar.",
+        "resource_count": 1,
+        "resource": "Patte de la Gardienne des Égouts"
     },
     {
         "short_date": "11-19",
-        "offering_to": "Bouf",
-        "bonus": "ButinLes chances d'obtenir du butin sont augmentées de 100 % dans le donjon du Donjon des Bouftous Divins.",
-        "resource_count": 6,
-        "resource": "Peau de Bouftou Divin"
+        "offering_to": "Waro",
+        "bonus": "Économie d'ingrédientsLes Bûcherons économisent 15 % de leurs ingrédients lorsqu'ils fabriquent des objets.",
+        "resource_count": 1,
+        "resource": "Substrat de Bocage"
     },
     {
         "short_date": "11-20",
-        "offering_to": "Chan",
-        "bonus": "Récolte abondanteLes quantités de Chanvre Sacré récupérées par les Paysans sont augmentées de 125 %.",
-        "resource_count": 40,
-        "resource": "Chanvre Sacré"
+        "offering_to": "Julo",
+        "bonus": "Anomalies temporellesLes gains d'expérience des montures sont augmentés de 100 % dans toutes les zones influencées par une anomalie temporelle. De plus, les gains d'expérience et les chances d'obtenir du butin sont augmentés de 25 % dans les zones (hors donjons) des Cavaliers de l'Eliocalypse.",
+        "resource_count": 2,
+        "resource": "Sang coagulé"
     },
     {
         "short_date": "11-21",
-        "offering_to": "Corb",
-        "bonus": "Points d'expérienceLes gains d'expérience sont augmentés de 50 % sur les créatures de type Corbacs Royaux.",
-        "resource_count": 1,
-        "resource": "Plume de Corbac Royal"
+        "offering_to": "Mûnir",
+        "bonus": "Points d'expérienceLes gains d'expérience sont augmentés de 50 % sur les créatures de type Vermines des champs.",
+        "resource_count": 6,
+        "resource": "Ailes de Moskito"
     },
     {
         "short_date": "11-22",
-        "offering_to": "Vian",
-        "bonus": "Économie d'ingrédientsLes Bouchers économisent 15 % de leurs ingrédients lorsqu'ils fabriquent des objets.",
+        "offering_to": "Jeffarctor",
+        "bonus": "ButinLes chances d'obtenir du butin sont augmentées de 50 % sur les créatures de type Kanigs des Dents de Pierre.",
         "resource_count": 3,
-        "resource": "Viande Séchée de Dragodinde Immortelle"
+        "resource": "Griffe de Félygiène"
     },
     {
         "short_date": "11-23",
-        "offering_to": "Corb",
-        "bonus": "ButinLes chances d'obtenir du butin sont augmentées de 100 % dans le donjon du Donjon des Corbacs Royaux.",
+        "offering_to": "Angy",
+        "bonus": "Challenges augmentésLes bonus apportés par les challenges réussis sont augmentés de 125 % sur les créatures de type Brûlâmes.",
         "resource_count": 2,
-        "resource": "Œil de Corbac Royal"
+        "resource": "Fragment d'Ectorche"
     },
     {
         "short_date": "11-24",
-        "offering_to": "Dofu",
-        "bonus": "ButinLes chances d'obtenir du butin sont augmentées de 100 % dans le donjon du Donjon des Dofus.",
-        "resource_count": 1,
-        "resource": "Dofus Vulbis"
+        "offering_to": "Fafah",
+        "bonus": "Récolte abondanteLes quantités d'Avoine récupérées par les Paysans sont augmentées de 125 %.",
+        "resource_count": 50,
+        "resource": "Avoine"
     },
     {
         "short_date": "11-25",
-        "offering_to": "Scor",
-        "bonus": "Points d'expérienceLes gains d'expérience sont augmentés de 50 % sur les créatures de type Scorbutes Divins.",
-        "resource_count": 6,
-        "resource": "Queue de Scorbute Divine"
+        "offering_to": "Lateralus",
+        "bonus": "Challenge supplémentaireUn challenge supplémentaire est généré contre les monstres présents dans la zone des Champs de glace.",
+        "resource_count": 5,
+        "resource": "Laine de Boufmouth légendaire"
     },
     {
         "short_date": "11-26",
-        "offering_to": "Bamb",
-        "bonus": "Récolte abondanteLes quantités de Bois de Bambou Royal récupérées par les Bûcherons sont augmentées de 125 %.",
-        "resource_count": 40,
-        "resource": "Bois de Bambou Royal"
+        "offering_to": "Uicuic",
+        "bonus": "ButinLes chances d'obtenir du butin sont augmentées de 50 % sur les Vilinsekts.",
+        "resource_count": 9,
+        "resource": "Antennes de Vilinsekt"
     },
     {
         "short_date": "11-27",
-        "offering_to": "Divi",
-        "bonus": "Objets de qualitéLa qualité des objets fabriqués dans la ville des Divins est augmentée.",
+        "offering_to": "Vanderivz",
+        "bonus": "Double butinLes aventuriers ont 20 % de chances de générer un second butin sur tous les monstres affrontés dans les donjons.",
         "resource_count": 1,
-        "resource": "Anneau du Divin"
+        "resource": "Poils de Barbe de Dragodinde"
     },
     {
         "short_date": "11-28",
-        "offering_to": "Corb",
-        "bonus": "ButinLes chances d'obtenir du butin sont augmentées de 100 % dans le donjon du Donjon des Corbacs Suprêmes.",
-        "resource_count": 6,
-        "resource": "Œil de Corbac Suprême"
+        "offering_to": "Troyle",
+        "bonus": "Points d'expérienceLes gains d'expérience sont augmentés de 50 % sur les créatures de type Sulfurieux.",
+        "resource_count": 3,
+        "resource": "Résidu de Solfataré"
     },
     {
         "short_date": "11-29",
-        "offering_to": "Vian",
-        "bonus": "Économie d'ingrédientsLes Bouchers économisent 15 % de leurs ingrédients lorsqu'ils fabriquent des objets.",
-        "resource_count": 2,
-        "resource": "Viande de Dragodinde Divine"
+        "offering_to": "Eltux",
+        "bonus": "Minerai abondantLes quantités de Kobalte récupérées par les mineurs sont augmentées de 125 %.",
+        "resource_count": 30,
+        "resource": "Kobalte"
     },
     {
         "short_date": "11-30",
-        "offering_to": "Diam",
-        "bonus": "Récolte abondanteLes quantités de Diamant récupérées par les Mineurs sont augmentées de 125 %.",
-        "resource_count": 30,
-        "resource": "Diamant"
+        "offering_to": "Inooni",
+        "bonus": "Challenges augmentésLes bonus apportés par les challenges réussis sont augmentés de 125 % sur les créatures de type Givrefoux.",
+        "resource_count": 3,
+        "resource": "Laine de Yokaï Givrefoux"
     },
     {
         "short_date": "12-01",
-        "offering_to": "Supr",
-        "bonus": "Objets de qualitéLa qualité des objets fabriqués dans la ville des Suprêmes est augmentée.",
-        "resource_count": 1,
-        "resource": "Bottes du Suprême"
-    },
-    {
-        "short_date": "12-02",
         "offering_to": "Ezimuos",
         "bonus": "Points d'expérienceLes gains d'expérience sont augmentés de 50 % sur les créatures de type Goules.",
         "resource_count": 2,
         "resource": "Œil de Gouligane"
     },
     {
-        "short_date": "12-03",
-        "offering_to": "Ulgrude",
-        "bonus": "Apparition des ressourcesLa vitesse d'apparition des ressources récoltées par les Paysans est augmentée de 100 %.",
+        "short_date": "12-02",
+        "offering_to": "Tiris",
+        "bonus": "Expérience des métiersLes gains d'expérience sont augmentés de 50 % pour les Bricoleurs, les Forgerons, les Sculpteurs et les Façonneurs.",
         "resource_count": 1,
         "resource": "Bouclier du tournesol sauvage"
     },
     {
-        "short_date": "12-04",
-        "offering_to": "Manso",
-        "bonus": "ButinLes chances d'obtenir du butin sont augmentées de 100 % dans le donjon de l'Excavation du Mansot Royal.",
+        "short_date": "12-03",
+        "offering_to": "Edacsak",
+        "bonus": "Challenge supplémentaireUn challenge supplémentaire est généré contre les monstres présents dans la zone du Lac Gelé.",
         "resource_count": 4,
         "resource": "Peau de Mansobèse"
     },
     {
-        "short_date": "12-05",
-        "offering_to": "Oliv",
-        "bonus": "Récolte abondanteLes quantités de Bois d'Oliviolet récupérées par les Bûcherons sont augmentées de 125 %.",
+        "short_date": "12-04",
+        "offering_to": "Eltruteht",
+        "bonus": "Bois abondantLes quantités de Bois récupérées par les Bûcherons de tous niveaux sont augmentées de 100 %.",
         "resource_count": 40,
         "resource": "Bois d'Oliviolet"
     },
     {
-        "short_date": "12-06",
-        "offering_to": "Mart",
-        "bonus": "Points d'expérienceLes gains d'expérience sont augmentés de 50 % sur les créatures de type Marteaux-Aigris.",
+        "short_date": "12-05",
+        "offering_to": "Ologar",
+        "bonus": "Points d'expérienceLes gains d'expérience sont augmentés de 75 % dans la zone de la Carrière d'Astrub.",
         "resource_count": 6,
-        "resource": "Casque de Martoa"
+        "resource": "Casque de Sherpoa"
     },
     {
-        "short_date": "12-07",
-        "offering_to": "Charb",
-        "bonus": "Apparition des ressourcesLa vitesse d'apparition des ressources récoltées par les Mineurs est augmentée de 100 %.",
+        "short_date": "12-06",
+        "offering_to": "Adam",
+        "bonus": "KolizétonsLa quantité de jetons gagnée en Kolizéum est augmentée de 100 %.",
         "resource_count": 6,
         "resource": "Charbon"
     },
     {
-        "short_date": "12-08",
-        "offering_to": "Dok",
-        "bonus": "ButinLes chances d'obtenir du butin sont augmentées de 100 % dans le donjon du Donjon des Dopeuls.",
+        "short_date": "12-07",
+        "offering_to": "Kountar",
+        "bonus": "ButinLes chances d'obtenir du butin sont augmentées de 50 % sur les Koalaks et les Koalaks sauvages.",
         "resource_count": 6,
         "resource": "Étoffe de Dok Alako"
     },
     {
-        "short_date": "12-09",
-        "offering_to": "Perc",
-        "bonus": "Récolte abondanteLes quantités de Perce-Neige récupérées par les Alchimistes sont augmentées de 200 %.",
+        "short_date": "12-08",
+        "offering_to": "Moko",
+        "bonus": "Cueillette abondanteLes quantités de Perce-Neige récupérées par les Alchimistes sont augmentées de 200 %.",
         "resource_count": 10,
         "resource": "Perce-Neige"
     },
     {
-        "short_date": "12-10",
-        "offering_to": "Rabo",
-        "bonus": "ButinLes chances d'obtenir du butin sont augmentées de 100 % dans le donjon du Laboratoire de Nelween.",
+        "short_date": "12-09",
+        "offering_to": "Ingmar",
+        "bonus": "Points d'expérienceLes gains d'expérience sont augmentés de 100 % dans le donjon du Garde-manger du Rat Blanc.",
         "resource_count": 2,
         "resource": "Poil de Rat Bontarien"
     },
     {
-        "short_date": "12-11",
-        "offering_to": "Kasu",
-        "bonus": "Élevage de monturesToutes les variétés de dragodindes, volkornes et muldos ébène donnent naissance à un bébé supplémentaire.",
+        "short_date": "12-10",
+        "offering_to": "Foya",
+        "bonus": "Élevage de monturesToutes les variétés de dragodindes, volkornes et muldos émeraude donnent naissance à un bébé supplémentaire.",
         "resource_count": 1,
         "resource": "Queue de Dragodinde"
     },
     {
+        "short_date": "12-11",
+        "offering_to": "Bovjouski",
+        "bonus": "Économie d'ingrédientsLes Cordonniers économisent 15 % de leurs ingrédients lorsqu'ils fabriquent des objets.",
+        "resource_count": 2,
+        "resource": "Pacmabottes"
+    },
+    {
         "short_date": "12-12",
-        "offering_to": "Ratal",
-        "bonus": "ButinLes chances d'obtenir du butin sont augmentées de 100 % dans le donjon du Château d'Amakna.",
-        "resource_count": 6,
-        "resource": "Plume de Corbac"
+        "offering_to": "Mig",
+        "bonus": "Quête répétableUne quête répétable spéciale est disponible aujourd'hui près des portes de Brâkmar. Réalisable à partir du niveau 20, elle est indépendante de la quête d'offrande.\nNom de la quête : Contrôles anti-baston.",
+        "resource_count": 3,
+        "resource": "Potion de cité : Brâkmar"
     },
     {
         "short_date": "12-13",
-        "offering_to": "Ben",
-        "bonus": "ButinLes chances d'obtenir du butin sont augmentées de 100 % dans le donjon de l'Arche d'Otomaï.",
-        "resource_count": 40,
-        "resource": "Graine de Pandouille"
+        "offering_to": "Sêpt",
+        "bonus": "Apparition des ressourcesLa vitesse d'apparition des minerais de tous types est augmentée de 100 %.",
+        "resource_count": 30,
+        "resource": "Dolomite"
     },
     {
         "short_date": "12-14",
-        "offering_to": "Nowel",
-        "bonus": "Cadeaux de NowelDes Cadeaux de Nowel ont été ajoutés aux butins des monstres de l'île de Nowel. Lorsqu'ils sont utilisés, ils permettent d'obtenir des ressources ou d'autres objets aléatoires.",
-        "resource_count": 2,
-        "resource": "Capsule Explosive"
+        "offering_to": "Jason",
+        "bonus": "Challenges augmentésLes bonus apportés par les challenges réussis sont augmentés de 150 % dans le donjon de la Chambre de Tal Kasha.",
+        "resource_count": 1,
+        "resource": "Paupière Dorée"
     },
     {
         "short_date": "12-15",
-        "offering_to": "Givri",
-        "bonus": "ButinLes chances d'obtenir du butin sont augmentées de 100 % dans le donjon de la Caverne de Nowel.",
-        "resource_count": 1,
-        "resource": "Langue de Champodonte"
+        "offering_to": "Eboren",
+        "bonus": "ButinLes chances d'obtenir du butin sont augmentées de 75 % dans la zone de la plaine des Porkass.",
+        "resource_count": 6,
+        "resource": "Cuir de Porkass"
     },
     {
         "short_date": "12-16",
-        "offering_to": "Gro",
-        "bonus": "ButinLes chances d'obtenir du butin sont augmentées de 100 % dans le donjon de la Maison du Papa Nowel.",
-        "resource_count": 4,
-        "resource": "Croupion de Truchmuche"
+        "offering_to": "Lucyvan",
+        "bonus": "Challenge supplémentaireUn challenge supplémentaire est généré contre les monstres de Nowel.",
+        "resource_count": 2,
+        "resource": "Emballage de Nowel Écarlate"
     },
     {
         "short_date": "12-17",
-        "offering_to": "Hog",
-        "bonus": "ButinLes chances d'obtenir du butin sont augmentées de 100 % dans le donjon du Donjon de Nowel.",
-        "resource_count": 6,
-        "resource": "Longue-vue de Gob-Trotteur"
+        "offering_to": "Ryf",
+        "bonus": "Pêche abondanteLes quantités d'Anguille et de Dorade Grise récupérées par les Pêcheurs sont augmentées de 125 %.",
+        "resource_count": 40,
+        "resource": "Anguille"
     },
     {
         "short_date": "12-18",
-        "offering_to": "Red",
-        "bonus": "ButinLes chances d'obtenir du butin sont augmentées de 100 % dans le donjon du Donjon de Nowel.",
-        "resource_count": 6,
-        "resource": "Fragment de Pierre Pointue"
+        "offering_to": "Sebsokk",
+        "bonus": "Challenges des donjonsLes bonus apportés par les challenges réussis sont augmentés de 150 % dans tous les donjons.",
+        "resource_count": 1,
+        "resource": "Chance d'Ecaflip"
     },
     {
         "short_date": "12-19",
-        "offering_to": "Tofu",
-        "bonus": "ButinLes chances d'obtenir du butin sont augmentées de 100 % dans le donjon du Donjon de Nowel.",
-        "resource_count": 40,
-        "resource": "Bois d'Érable"
+        "offering_to": "Reivax",
+        "bonus": "Points d'expérienceLes gains d'expérience sont augmentés de 50 % sur les monstres de Nowel.",
+        "resource_count": 2,
+        "resource": "Flocon de Neige"
     },
     {
         "short_date": "12-20",
-        "offering_to": "Glutin",
-        "bonus": "ButinLes chances d'obtenir du butin sont augmentées de 100 % dans le donjon du Donjon de Nowel.",
+        "offering_to": "Benjak",
+        "bonus": "Fabrication intensivePour chaque objet fabriqué, les Mineurs ont 10 % de chances de créer un second objet.",
         "resource_count": 1,
-        "resource": "Dent de Klémort"
+        "resource": "Ebonite"
     },
     {
         "short_date": "12-21",
-        "offering_to": "Monstre",
-        "bonus": "ButinLes chances d'obtenir du butin sont augmentées de 100 % dans le donjon du Donjon de Nowel.",
-        "resource_count": 20,
-        "resource": "Pomme de Terre"
+        "offering_to": "Grüg",
+        "bonus": "Challenge supplémentaireUn challenge supplémentaire est généré contre les monstres présents dans les zones du Cimetière d'Amakna et des Cryptes du Cimetière.",
+        "resource_count": 6,
+        "resource": "Canine Vampiresque"
     },
     {
         "short_date": "12-22",
-        "offering_to": "Papa",
-        "bonus": "ButinLes chances d'obtenir du butin sont augmentées de 100 % dans le donjon du Donjon de Nowel.",
-        "resource_count": 1,
-        "resource": "Sac du Petit Récolteur"
+        "offering_to": "Maxarès",
+        "bonus": "Apparition des ressourcesLa vitesse d'apparition des ressources est augmentée de 150 % dans la zone du Port de Madrestam.",
+        "resource_count": 40,
+        "resource": "Poisson Pané"
     },
     {
         "short_date": "12-23",
-        "offering_to": "Félix",
-        "bonus": "ButinLes chances d'obtenir du butin sont augmentées de 100 % dans le donjon du Donjon de Nowel.",
+        "offering_to": "Math",
+        "bonus": "Gibier abondantLes quantités de Viande Tendre récupérées par les Chasseurs sont augmentées de 125%.",
         "resource_count": 6,
-        "resource": "Pic de Dragodinde"
+        "resource": "Viande Tendre"
     },
     {
         "short_date": "12-24",
@@ -2557,7 +2557,7 @@
     {
         "short_date": "12-31",
         "offering_to": "Aisk",
-        "bonus": "ButinLes chances d'obtenir du butin sont augmentées de 50 % dans la zone des Larmes d'Ouronigride.",
+        "bonus": "Anomalies temporellesLes bonus apportés par les challenges réussis sont augmentés de 75 % dans toutes les zones influencées par une anomalie temporelle. De plus, les gains d'expérience et les chances d'obtenir du butin sont augmentés de 25 % dans la zone de la Forêt des Masques.",
         "resource_count": 6,
         "resource": "Viande Ladre"
     }
