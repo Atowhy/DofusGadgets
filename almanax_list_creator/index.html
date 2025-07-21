@@ -115,6 +115,25 @@
             color: white;
             font-weight: bold;
         }
+        
+        /* CSV Button Animation */
+        @keyframes pulse {
+            0%, 100% {
+                transform: scale(1);
+                box-shadow: 0 0 0 0 rgba(22, 163, 74, 0.7);
+            }
+            50% {
+                transform: scale(1.05);
+                box-shadow: 0 0 0 10px rgba(22, 163, 74, 0);
+            }
+        }
+        .export-button-animated {
+            background-color: #16a34a; /* bg-green-600 */
+            animation: pulse 2s infinite;
+        }
+        .export-button-animated:hover {
+             background-color: #15803d; /* bg-green-700 */
+        }
     </style>
 </head>
 <body class="text-white antialiased">
@@ -179,7 +198,7 @@
 
                     <div id="almanax-loading-message" class="message-box info hidden text-center">
                         <div class="loader"></div>
-                        <p class="mt-2" data-translate-key="loading_data">Chargement des données de l'Almanax...</p>
+                        <p class="mt-2" data-translate-key="loading_data">Chargement des données...</p>
                     </div>
                     <div id="almanax-error-message" class="message-box error hidden"></div>
                 </div>
@@ -187,12 +206,12 @@
                 <div id="almanax-results-container" class="hidden mb-8">
                     <div class="flex justify-between items-center mb-4">
                         <h2 class="text-xl font-semibold" data-translate-key="results_title">Liste des offrandes journalières :</h2>
-                        <button id="exportCsvBtn" class="bg-gray-600 hover:bg-gray-700 text-white font-bold py-2 px-4 rounded-lg text-sm transition-colors whitespace-nowrap" data-translate-key="btn_export_csv">
+                        <button id="exportCsvBtn" class="export-button-animated text-white font-bold py-2 px-4 rounded-lg text-sm transition-colors whitespace-nowrap" data-translate-key="btn_export_csv">
                             Exporter (CSV)
                         </button>
                     </div>
                     
-                    <div id="almanax-list" class="grid grid-cols-1 md:grid-cols-2 gap-4"></div>
+                    <div id="almanax-list" class="grid grid-cols-1 md:grid-cols-2 gap-4 min-h-[480px]"></div>
                     <div id="pagination-controls" class="flex justify-center items-center mt-6 space-x-2"></div>
                     <p id="almanax-empty-results" class="text-center text-gray-500 py-8 hidden" data-translate-key="empty_results">
                         Aucune ressource trouvée pour la période sélectionnée.
@@ -204,7 +223,7 @@
                 <img src="../images/LogoDofus.webp" alt="Logo Dofus" class="h-12 mx-auto mb-2 opacity-50">
                 <p data-translate-key="signature">Apps by Ato</p>
                 <p class="text-xs text-gray-600 mt-4" data-translate-key="disclaimer">Dofus et toutes les images associées utilisées sur ce site sont la propriété d'Ankama</p>
-                <p class="text-xs text-gray-600 mt-2" data-translate-key="version_info">Version 1.5.0 - Juillet 2025</p>
+                <p class="text-xs text-gray-600 mt-2" data-translate-key="version_info">Version 1.6.0 - Juillet 2025</p>
             </footer>
         </div>
     </div>
@@ -213,8 +232,8 @@
         // Global variables
         let currentLanguage = 'fr';
         let almanaxData = [];
-        let currentDailyOfferings = [];
-        const resourceCache = {}; // API Cache
+        let fullOfferingsList = []; // Holds the complete list of offerings for the selected range without API details
+        const itemDetailsCache = {}; // Cache for API fetched item details
         let currentPage = 1;
         const itemsPerPage = 10;
 
@@ -230,7 +249,7 @@
                 btn_back_home: "← Retour à l'accueil",
                 signature: "Apps by Ato",
                 disclaimer: "Dofus et toutes les images associées utilisées sur ce site sont la propriété d'Ankama",
-                version_info: "Version 1.5.0 - Juillet 2025", 
+                version_info: "Version 1.6.0 - Juillet 2025", 
                 almanax_list_creator_title: "Créateur de liste pour l'Almanax",
                 almanax_list_creator_desc: "Vous permet de générer une liste de ressources pour une période donnée.",
                 form_title: "Générer une liste de ressources",
@@ -252,9 +271,13 @@
                 today_offering_not_found: "Offrande du jour non trouvée.",
                 pagination_prev: "Précédent",
                 pagination_next: "Suivant",
+                csv_header_date: "Date",
+                csv_header_name: "Nom",
+                csv_header_quantity: "Quantité",
+                csv_header_image_url: "URL Image",
+                csv_header_dofusdb_url: "URL DofusDB"
             },
             en: {
-                // English translations
                 pagination_prev: "Previous",
                 pagination_next: "Next",
             },
@@ -293,8 +316,8 @@
         }
 
         async function fetchResourceDetails(resourceName) {
-            if (resourceCache[resourceName]) {
-                return resourceCache[resourceName];
+            if (itemDetailsCache[resourceName]) {
+                return itemDetailsCache[resourceName];
             }
             const defaultDetails = {
                 imgUrl: `https://placehold.co/48x48/1f2937/9ca3af?text=${resourceName.substring(0, 2).toUpperCase()}`,
@@ -313,17 +336,19 @@
                         imgUrl: item.img,
                         dofusDbUrl: `https://dofusdb.fr/fr/database/object/${item.id}`
                     };
-                    resourceCache[resourceName] = details;
+                    itemDetailsCache[resourceName] = details;
                     return details;
                 }
+                itemDetailsCache[resourceName] = defaultDetails;
                 return defaultDetails;
             } catch (error) {
                 console.error(`Failed to fetch details for ${resourceName}:`, error);
+                itemDetailsCache[resourceName] = defaultDetails;
                 return defaultDetails;
             }
         }
 
-        async function processAlmanaxData(startDate, endDate, numCharacters, fullAlmanaxData) {
+        function createBaseOfferingsList(startDate, endDate, numCharacters, fullAlmanaxData) {
             const offerings = [];
             let loopDate = new Date(startDate.getTime());
             let endLoopDate = new Date(endDate.getTime());
@@ -335,13 +360,11 @@
                 const entry = fullAlmanaxData.find(item => item.short_date === monthDayKey);
 
                 if (entry) {
-                    const details = await fetchResourceDetails(entry.resource);
                     offerings.push({
                         date: new Date(loopDate.getTime()),
                         name: entry.resource,
                         quantity: entry.resource_count * numCharacters,
-                        imgUrl: details.imgUrl,
-                        dofusDbUrl: details.dofusDbUrl
+                        // Details will be fetched on demand
                     });
                 }
                 loopDate.setUTCDate(loopDate.getUTCDate() + 1); 
@@ -349,7 +372,7 @@
             return offerings;
         }
         
-        function renderListPage(offeringsPage) {
+        async function renderListPage(offeringsPage) {
             almanaxList.innerHTML = '';
             if (offeringsPage.length === 0) {
                 almanaxEmptyResults.classList.remove('hidden');
@@ -357,7 +380,13 @@
             }
 
             almanaxEmptyResults.classList.add('hidden');
-            offeringsPage.forEach(offering => {
+
+            const offeringsWithDetails = await Promise.all(offeringsPage.map(async (offering) => {
+                const details = await fetchResourceDetails(offering.name);
+                return { ...offering, ...details };
+            }));
+
+            offeringsWithDetails.forEach(offering => {
                 const dateOptions = { year: 'numeric', month: 'long', day: 'numeric', timeZone: 'UTC' };
                 const date = offering.date.toLocaleDateString(currentLanguage, dateOptions);
                 
@@ -383,57 +412,37 @@
 
         function renderPaginationControls() {
             paginationControls.innerHTML = '';
-            const totalPages = Math.ceil(currentDailyOfferings.length / itemsPerPage);
+            const totalPages = Math.ceil(fullOfferingsList.length / itemsPerPage);
 
-            if (totalPages <= 1) {
-                return;
-            }
+            if (totalPages <= 1) return;
 
-            // Previous Button
             const prevButton = document.createElement('button');
             prevButton.textContent = translations[currentLanguage].pagination_prev || 'Previous';
             prevButton.disabled = currentPage === 1;
-            prevButton.addEventListener('click', () => {
-                if (currentPage > 1) {
-                    currentPage--;
-                    updateDisplay();
-                }
-            });
+            prevButton.addEventListener('click', () => { if (currentPage > 1) { currentPage--; updateDisplay(); } });
             paginationControls.appendChild(prevButton);
 
-            // Page Number Buttons
             for (let i = 1; i <= totalPages; i++) {
                 const pageButton = document.createElement('button');
                 pageButton.textContent = i;
-                if (i === currentPage) {
-                    pageButton.classList.add('active');
-                }
-                pageButton.addEventListener('click', () => {
-                    currentPage = i;
-                    updateDisplay();
-                });
+                if (i === currentPage) pageButton.classList.add('active');
+                pageButton.addEventListener('click', () => { currentPage = i; updateDisplay(); });
                 paginationControls.appendChild(pageButton);
             }
 
-            // Next Button
             const nextButton = document.createElement('button');
             nextButton.textContent = translations[currentLanguage].pagination_next || 'Next';
             nextButton.disabled = currentPage === totalPages;
-            nextButton.addEventListener('click', () => {
-                if (currentPage < totalPages) {
-                    currentPage++;
-                    updateDisplay();
-                }
-            });
+            nextButton.addEventListener('click', () => { if (currentPage < totalPages) { currentPage++; updateDisplay(); } });
             paginationControls.appendChild(nextButton);
         }
 
-        function updateDisplay() {
+        async function updateDisplay() {
             const startIndex = (currentPage - 1) * itemsPerPage;
             const endIndex = startIndex + itemsPerPage;
-            const paginatedItems = currentDailyOfferings.slice(startIndex, endIndex);
+            const paginatedItems = fullOfferingsList.slice(startIndex, endIndex);
             
-            renderListPage(paginatedItems);
+            await renderListPage(paginatedItems);
             renderPaginationControls();
             almanaxResultsContainer.classList.remove('hidden');
         }
@@ -466,9 +475,9 @@
             showMessage(almanaxLoadingMessage, translations[currentLanguage].loading_data, 'info');
             
             try {
-                currentDailyOfferings = await processAlmanaxData(startDate, endDate, numCharacters, almanaxData);
-                currentPage = 1; // Reset to first page
-                updateDisplay();
+                fullOfferingsList = createBaseOfferingsList(startDate, endDate, numCharacters, almanaxData);
+                currentPage = 1; 
+                await updateDisplay();
             } catch (error) {
                 console.error("Error processing Almanax data:", error);
                 showMessage(almanaxErrorMessage, translations[currentLanguage].error_api_fetch, 'error');
@@ -478,7 +487,63 @@
             }
         }
 
+        async function exportToCSV() {
+            if (fullOfferingsList.length === 0) {
+                showMessage(almanaxErrorMessage, translations[currentLanguage].error_no_export_data, 'error');
+                return;
+            }
+
+            exportCsvBtn.disabled = true;
+            exportCsvBtn.innerHTML = `<div class="loader inline-block"></div> Exportation...`;
+            
+            try {
+                const allOfferingsWithDetails = await Promise.all(fullOfferingsList.map(async (offering) => {
+                    const details = await fetchResourceDetails(offering.name);
+                    return { ...offering, ...details };
+                }));
+
+                const lang = currentLanguage;
+                let csvContent = "data:text/csv;charset=utf-8,";
+                const headers = [
+                    `"${translations[lang].csv_header_date}"`,
+                    `"${translations[lang].csv_header_name}"`,
+                    `"${translations[lang].csv_header_quantity}"`,
+                    `"${translations[lang].csv_header_image_url}"`,
+                    `"${translations[lang].csv_header_dofusdb_url}"`
+                ];
+                csvContent += headers.join(',') + '\r\n';
+
+                allOfferingsWithDetails.forEach(offering => {
+                    const date = offering.date.toISOString().split('T')[0];
+                    const row = [
+                        `"${date}"`,
+                        `"${offering.name.replace(/"/g, '""')}"`,
+                        offering.quantity,
+                        `"${offering.imgUrl}"`,
+                        `"${offering.dofusDbUrl}"`
+                    ];
+                    csvContent += row.join(',') + '\r\n';
+                });
+
+                const encodedUri = encodeURI(csvContent);
+                const link = document.createElement("a");
+                link.setAttribute("href", encodedUri);
+                link.setAttribute("download", "liste_almanax.csv");
+                document.body.appendChild(link);
+                link.click();
+                document.body.removeChild(link);
+
+            } catch (error) {
+                console.error("Failed to export CSV:", error);
+                showMessage(almanaxErrorMessage, "Erreur lors de la préparation de l'exportation.", 'error');
+            } finally {
+                exportCsvBtn.disabled = false;
+                exportCsvBtn.innerHTML = translations[currentLanguage].btn_export_csv;
+            }
+        }
+
         async function displayTodayOffering() {
+            // This function remains the same, it fetches details for one item.
             if (almanaxData.length === 0) {
                 todayAlmanaxOfferingDiv.classList.add('hidden');
                 return;
@@ -551,7 +616,7 @@
             }
 
             generateListBtn.addEventListener('click', generateAlmanaxList);
-            // exportCsvBtn.addEventListener('click', exportToCSV); // CSV export needs adjustment for pagination if desired
+            exportCsvBtn.addEventListener('click', exportToCSV);
             languageSelector.addEventListener('change', (e) => setLanguage(e.target.value));
 
             const savedLang = localStorage.getItem('dofusAlmanaxLang') || 'fr';
