@@ -236,9 +236,8 @@
         // === GLOBAL VARIABLES ===
         let currentLanguage = 'fr';
         let almanaxData = [];
-        // NOUVELLE LOGIQUE : Ce tableau contiendra la liste complète AVEC tous les détails pré-chargés.
         let fullOfferingsListWithDetails = []; 
-        const itemDetailsCache = {}; // Cache pour les détails des items déjà récupérés via l'API
+        const itemDetailsCache = {};
         let currentPage = 1;
         const itemsPerPage = 10;
 
@@ -311,39 +310,47 @@
         // === CORE LOGIC ===
 
         /**
-         * CORRIGÉ : Récupère les détails d'une ressource depuis l'API DofusDB.
-         * La recherche est plus souple pour éviter les erreurs avec les caractères spéciaux.
+         * Récupère les détails d'une ressource.
+         * Utilise une image locale et récupère l'URL DofusDB depuis l'API.
          */
         async function fetchResourceDetails(resourceName) {
             if (itemDetailsCache[resourceName]) {
                 return itemDetailsCache[resourceName];
             }
+
+            // --- NOUVELLE LOGIQUE : Générer le chemin de l'image locale ---
+            // Remplace les espaces par des underscores et suppose une extension .png
+            const imageName = resourceName.replace(/ /g, '_') + '.png';
+            const localImgUrl = `images/${imageName}`;
+
             const defaultDetails = {
-                imgUrl: `https://placehold.co/48x48/1f2937/9ca3af?text=${resourceName.substring(0, 2).toUpperCase()}`,
+                imgUrl: localImgUrl, // Utilise le chemin local par défaut
                 dofusDbUrl: '#'
             };
+
             try {
+                // On appelle toujours l'API pour obtenir l'URL de la page de l'objet sur DofusDB.
                 const searchName = encodeURIComponent(resourceName);
                 const response = await fetch(`https://api.dofusdb.fr/items?name.fr=${searchName}&lang=fr`);
                 if (!response.ok) throw new Error('API response not OK');
                 
                 const data = await response.json();
-                // **CORRECTION** : On prend le premier résultat retourné par l'API, 
-                // qui est généralement le plus pertinent, au lieu d'une comparaison stricte.
                 const item = data.data && data.data.length > 0 ? data.data[0] : null;
 
                 if (item && item.id) {
                     const details = {
-                        imgUrl: item.img,
+                        imgUrl: localImgUrl, // Toujours utiliser le chemin local pour l'image
                         dofusDbUrl: `https://dofusdb.fr/fr/database/object/${item.id}`
                     };
                     itemDetailsCache[resourceName] = details;
                     return details;
                 }
+                // Si l'objet n'est pas trouvé dans l'API, on retourne les détails par défaut (avec l'image locale)
                 itemDetailsCache[resourceName] = defaultDetails;
                 return defaultDetails;
             } catch (error) {
-                console.error(`Failed to fetch details for ${resourceName}:`, error);
+                console.error(`Échec de la récupération de l'URL DofusDB pour ${resourceName}:`, error);
+                // Si l'appel API échoue, on retourne les détails par défaut (avec l'image locale)
                 itemDetailsCache[resourceName] = defaultDetails;
                 return defaultDetails;
             }
@@ -377,7 +384,6 @@
         
         /**
          * Affiche une page de la liste des offrandes.
-         * Ne fait plus de fetch, utilise les données pré-chargées.
          */
         function renderListPage(offeringsPage) {
             almanaxList.innerHTML = '';
@@ -426,7 +432,6 @@
             prevButton.addEventListener('click', () => { if (currentPage > 1) { currentPage--; updateDisplay(); } });
             paginationControls.appendChild(prevButton);
 
-            // Logique d'affichage des pages (simplifiée pour n'afficher que quelques numéros)
             const maxPagesToShow = 7;
             let startPage = Math.max(1, currentPage - Math.floor(maxPagesToShow / 2));
             let endPage = Math.min(totalPages, startPage + maxPagesToShow - 1);
@@ -466,7 +471,7 @@
         }
 
         /**
-         * Met à jour la page affichée. Ne fait plus de fetch.
+         * Met à jour la page affichée.
          */
         function updateDisplay() {
             const startIndex = (currentPage - 1) * itemsPerPage;
@@ -479,7 +484,7 @@
         }
 
         /**
-         * NOUVELLE LOGIQUE : Génère la liste, charge TOUS les détails, puis affiche le résultat.
+         * Génère la liste, charge tous les détails, puis affiche le résultat.
          */
         async function generateAlmanaxList() {
             const startDateParts = startDateInput.value.split('-');
@@ -504,33 +509,29 @@
 
             generateListBtn.disabled = true;
             showMessage(almanaxLoadingMessage, `<div class="loader mx-auto"></div><p id="loading-text" class="mt-2">${translations[currentLanguage].loading_data}</p>`, 'info', true);
-            const loadingTextElement = document.getElementById('loading-text'); // Re-select after innerHTML change
+            const loadingTextElement = document.getElementById('loading-text');
             
             try {
-                // 1. On crée la liste de base (sans détails)
                 const baseOfferings = createBaseOfferingsList(startDate, endDate, numCharacters, almanaxData);
                 
                 if (baseOfferings.length === 0) {
                     fullOfferingsListWithDetails = [];
-                    updateDisplay(); // Affichera le message "Aucun résultat"
+                    updateDisplay();
                     return;
                 }
 
-                // 2. On charge TOUS les détails en une seule fois avec un indicateur de progression
                 const tempOfferingsWithDetails = [];
                 for (let i = 0; i < baseOfferings.length; i++) {
                     const offering = baseOfferings[i];
                     const details = await fetchResourceDetails(offering.name);
                     tempOfferingsWithDetails.push({ ...offering, ...details });
                     
-                    // Mettre à jour le message de progression
                     loadingTextElement.textContent = (translations[currentLanguage].export_progress || "Loading: {current}/{total}")
                         .replace('{current}', i + 1)
                         .replace('{total}', baseOfferings.length);
                 }
                 fullOfferingsListWithDetails = tempOfferingsWithDetails;
 
-                // 3. On affiche la première page de la liste complète
                 currentPage = 1; 
                 updateDisplay();
 
@@ -544,7 +545,7 @@
         }
 
         /**
-         * NOUVELLE LOGIQUE : Exporte les données pré-chargées. Rapide et fiable.
+         * Exporte les données pré-chargées en CSV.
          */
         function exportToCSV() {
             if (fullOfferingsListWithDetails.length === 0) {
@@ -565,7 +566,6 @@
                 ];
                 csvContent += headers.join(',') + '\r\n';
 
-                // Plus de fetch ! On utilise directement les données déjà prêtes.
                 fullOfferingsListWithDetails.forEach(offering => {
                     const date = offering.date.toISOString().split('T')[0];
                     const row = [
