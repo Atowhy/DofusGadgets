@@ -124,6 +124,7 @@
                     <img id="todayOfferingImg" src="" alt="Icône de l'offrande du jour" class="w-12 h-12 object-contain rounded-md bg-gray-700" onerror="this.onerror=null;this.src='https://placehold.co/48x48/1f2937/9ca3af?text=?';">
                     <div>
                         <p class="text-white text-xl font-bold" id="todayOfferingName"></p>
+                        <p class="text-gray-400 text-sm" id="todayOfferingDate"></p>
                         <p class="text-gray-400 text-sm" id="todayOfferingQuantity"></p>
                     </div>
                 </div>
@@ -179,7 +180,7 @@
                 <img src="../images/LogoDofus.webp" alt="Logo Dofus" class="h-12 mx-auto mb-2 opacity-50">
                 <p data-translate-key="signature">Apps by Ato</p>
                 <p class="text-xs text-gray-600 mt-4" data-translate-key="disclaimer">Dofus et toutes les images associées utilisées sur ce site sont la propriété d'Ankama</p>
-                <p class="text-xs text-gray-600 mt-2" data-translate-key="version_info">Version 1.0.8 - Juillet 2025</p>
+                <p class="text-xs text-gray-600 mt-2" data-translate-key="version_info">Version 1.0.9 - Juillet 2025</p>
             </footer>
         </div>
     </div>
@@ -196,7 +197,7 @@
             almanaxLoadingMessage, almanaxErrorMessage,
             almanaxResultsContainer, almanaxList, almanaxEmptyResults,
             languageSelector, versionInfoElement, exportCsvBtn,
-            todayAlmanaxOfferingDiv, todayOfferingImg, todayOfferingName, todayOfferingQuantity; 
+            todayAlmanaxOfferingDiv, todayOfferingImg, todayOfferingName, todayOfferingDate, todayOfferingQuantity; 
 
         // Translations object
         const translations = {
@@ -204,7 +205,7 @@
                 btn_back_home: "← Retour à l'accueil",
                 signature: "Apps by Ato",
                 disclaimer: "Dofus et toutes les images associées utilisées sur ce site sont la propriété d'Ankama",
-                version_info: "Version 1.0.8 - Juillet 2025", 
+                version_info: "Version 1.0.9 - Juillet 2025", 
                 almanax_list_creator_title: "Créateur de liste pour l'Almanax",
                 almanax_list_creator_desc: "Vous permet de générer une liste de ressources pour une période donnée.",
                 form_title: "Générer une liste de ressources",
@@ -233,7 +234,7 @@
                 btn_back_home: "← Back to Home",
                 signature: "Apps by Ato",
                 disclaimer: "Dofus and any related images used on this website are the properties of Ankama",
-                version_info: "Version 1.0.8 - July 2025", 
+                version_info: "Version 1.0.9 - July 2025", 
                 almanax_list_creator_title: "Almanax List Creator",
                 almanax_list_creator_desc: "Allows you to generate a list of resources for a given period.",
                 form_title: "Generate Resource List",
@@ -335,7 +336,9 @@
 
             almanaxEmptyResults.classList.add('hidden');
             dailyOfferings.forEach(offering => {
-                const date = offering.date.toLocaleDateString(currentLanguage, { year: 'numeric', month: 'long', day: 'numeric' });
+                // FIX: Added timeZone: 'UTC' to prevent the date from shifting based on the user's local timezone.
+                const dateOptions = { year: 'numeric', month: 'long', day: 'numeric', timeZone: 'UTC' };
+                const date = offering.date.toLocaleDateString(currentLanguage, dateOptions);
                 const resourceDiv = document.createElement('div');
                 resourceDiv.classList.add('resource-item');
                 resourceDiv.innerHTML = `
@@ -380,11 +383,8 @@
             showMessage(almanaxLoadingMessage, translations[currentLanguage].loading_data, 'info');
             
             try {
-                // Process data to get daily offerings (already sorted chronologically)
                 const dailyOfferings = processAlmanaxData(startDate, endDate, numCharacters, almanaxData);
-                currentDailyOfferings = dailyOfferings; // Store for export
-                
-                // Render the new daily list
+                currentDailyOfferings = dailyOfferings;
                 renderDailyList(currentDailyOfferings);
 
             } catch (error) {
@@ -422,7 +422,7 @@
             csvContent += headers.join(',') + '\r\n';
 
             currentDailyOfferings.forEach(offering => {
-                const date = offering.date.toISOString().split('T')[0]; // Format date as YYYY-MM-DD
+                const date = offering.date.toISOString().split('T')[0];
                 const row = [
                     `"${date}"`,
                     `"${offering.name.replace(/"/g, '""')}"`, 
@@ -452,6 +452,10 @@
             const day = parisTime.getDate();
             const monthDayKey = `${month.toString().padStart(2, '0')}-${day.toString().padStart(2, '0')}`;
             const todayEntry = almanaxData.find(item => item.short_date === monthDayKey);
+            
+            // ADD: Format the date string for display
+            const dateOptions = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+            const dateString = parisTime.toLocaleDateString(currentLanguage, dateOptions);
 
             if (todayEntry && todayEntry.resource && todayEntry.resource_count !== null) {
                 const resourceName = todayEntry.resource;
@@ -459,10 +463,12 @@
                 todayOfferingImg.src = resourceImg;
                 todayOfferingImg.alt = resourceName;
                 todayOfferingName.textContent = resourceName;
+                todayOfferingDate.textContent = dateString; // ADD: Display the date
                 todayOfferingQuantity.textContent = `${translations[currentLanguage].today_offering_quantity_prefix} ${todayEntry.resource_count.toLocaleString(currentLanguage)}`;
                 todayAlmanaxOfferingDiv.classList.remove('hidden');
             } else {
                 todayOfferingName.textContent = translations[currentLanguage].today_offering_not_found;
+                todayOfferingDate.textContent = dateString; // ADD: Display the date even if not found
                 todayOfferingQuantity.textContent = '';
                 todayOfferingImg.src = 'https://placehold.co/48x48/1f2937/9ca3af?text=?';
                 todayAlmanaxOfferingDiv.classList.remove('hidden');
@@ -485,6 +491,7 @@
             todayAlmanaxOfferingDiv = document.getElementById('today-almanax-offering');
             todayOfferingImg = document.getElementById('todayOfferingImg');
             todayOfferingName = document.getElementById('todayOfferingName');
+            todayOfferingDate = document.getElementById('todayOfferingDate'); // ADD: Get the new date element
             todayOfferingQuantity = document.getElementById('todayOfferingQuantity');
 
             const today = new Date();
