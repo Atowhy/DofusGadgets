@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title data-translate-key="almanax_list_creator_title">Créateur de liste pour l'Almanax</title>
-    <link rel="icon" type="image/png" href="../images/LogoDGv1.png"> <!-- Ajustez le chemin si nécessaire -->
+    <link rel="icon" type="image/png" href="../images/tifoux.png"> <!-- Ajustez le chemin si nécessaire -->
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&display=swap" rel="stylesheet">
     <style>
@@ -88,18 +88,25 @@
             background-color: rgba(45, 55, 72, 0.8);
         }
         .resource-item img {
-            width: 40px;
-            height: 40px;
+            width: 48px; /* Slightly larger image */
+            height: 48px; /* Slightly larger image */
             object-fit: contain;
             border-radius: 0.25rem;
             background-color: rgba(255, 255, 255, 0.05);
+        }
+        .resource-item span.text-lg { /* Ensure text size is consistent */
+            font-size: 1.125rem; /* Tailwind text-lg */
+        }
+        .resource-item span.text-xl { /* Ensure total quantity text size is consistent */
+            font-size: 1.25rem; /* Tailwind text-xl */
         }
     </style>
 </head>
 <body class="text-white antialiased">
 
     <div class="main-container relative min-h-screen">
-        <div class="relative z-10 container mx-auto p-4 md:p-8 max-w-md min-h-screen flex flex-col">
+        <!-- Changed max-w-md to max-w-xl for a wider container -->
+        <div class="relative z-10 container mx-auto p-4 md:p-8 max-w-xl min-h-screen flex flex-col">
             
             <div class="flex justify-between items-center mb-4">
                 <!-- Link back to the main GitHub Pages index -->
@@ -119,6 +126,19 @@
                 <p class="text-gray-400 mt-2" data-translate-key="almanax_list_creator_desc">Vous permet de générer une liste de ressources pour une période donnée.</p>
             </header>
 
+            <!-- New: Today's Almanax Offering Section -->
+            <div id="today-almanax-offering" class="card-bg p-4 rounded-lg shadow-lg mb-8 hidden">
+                <h3 class="text-lg font-semibold text-teal-300 mb-2" data-translate-key="today_offering_title">Offrande du jour :</h3>
+                <div class="flex items-center gap-4">
+                    <img id="todayOfferingImg" src="" alt="Icône de l'offrande du jour" class="w-12 h-12 object-contain rounded-md bg-gray-700" onerror="this.onerror=null;this.src='https://placehold.co/48x48/1f2937/9ca3af?text=?';">
+                    <div>
+                        <p class="text-white text-xl font-bold" id="todayOfferingName"></p>
+                        <p class="text-gray-400 text-sm" id="todayOfferingQuantity"></p>
+                    </div>
+                </div>
+            </div>
+            <!-- End New: Today's Almanax Offering Section -->
+
             <!-- Almanax List Creator Content -->
             <div id="content-almanax-creator">
                 <div class="card-bg p-6 rounded-2xl shadow-lg mb-8">
@@ -129,9 +149,15 @@
                         <input type="date" id="startDate" class="w-full bg-gray-700 border border-gray-600 rounded-lg px-3 py-2 text-white focus:ring-2 focus:ring-teal-500 focus:border-teal-500 transition">
                     </div>
 
-                    <div class="mb-6">
+                    <div class="mb-4">
                         <label for="endDate" class="block text-sm font-medium text-gray-300 mb-1" data-translate-key="label_end_date">Date de fin :</label>
                         <input type="date" id="endDate" class="w-full bg-gray-700 border border-gray-600 rounded-lg px-3 py-2 text-white focus:ring-2 focus:ring-teal-500 focus:border-teal-500 transition">
+                    </div>
+
+                    <!-- Number of Characters Multiplier -->
+                    <div class="mb-6">
+                        <label for="numCharacters" class="block text-sm font-medium text-gray-300 mb-1" data-translate-key="label_num_characters">Nombre de personnages :</label>
+                        <input type="number" id="numCharacters" value="1" min="1" class="w-full bg-gray-700 border border-gray-600 rounded-lg px-3 py-2 text-white focus:ring-2 focus:ring-teal-500 focus:border-teal-500 transition">
                     </div>
 
                     <button id="generateListBtn" class="w-full bg-teal-600 hover:bg-teal-700 text-white font-bold py-2 px-4 rounded-lg transition-transform transform hover:scale-105 shadow-md" data-translate-key="btn_generate_list">
@@ -148,7 +174,14 @@
                 </div>
 
                 <div id="almanax-results-container" class="hidden">
-                    <h2 class="text-xl font-semibold mb-4" data-translate-key="results_title">Liste des ressources requises :</h2>
+                    <div class="flex justify-between items-center mb-4">
+                        <h2 class="text-xl font-semibold" data-translate-key="results_title">Liste des ressources requises :</h2>
+                        <!-- New: Export CSV Button -->
+                        <button id="exportCsvBtn" class="bg-gray-600 hover:bg-gray-700 text-white font-bold py-2 px-4 rounded-lg text-sm transition-colors whitespace-nowrap" data-translate-key="btn_export_csv">
+                            Exporter (CSV)
+                        </button>
+                    </div>
+                    
                     <div id="almanax-resource-list" class="space-y-3">
                         <!-- Aggregated resources will be displayed here -->
                     </div>
@@ -163,7 +196,7 @@
                 <img src="../images/LogoDofus.webp" alt="Logo Dofus" class="h-12 mx-auto mb-2 opacity-50">
                 <p data-translate-key="signature">Apps by Ato</p>
                 <p class="text-xs text-gray-600 mt-4" data-translate-key="disclaimer">Dofus et toutes les images associées utilisées sur ce site sont la propriété d'Ankama</p>
-                <p class="text-xs text-gray-600 mt-2" data-translate-key="version_info">Version 1.0.0 - Juillet 2025</p>
+                <p class="text-xs text-gray-600 mt-2" data-translate-key="version_info">Version 1.0.3 - Juillet 2025</p>
             </footer>
         </div>
     </div>
@@ -172,13 +205,15 @@
         // Global variables
         let currentLanguage = 'fr';
         let almanaxData = []; // This will hold the loaded JSON data
-        const defaultItemIconUrl = 'https://placehold.co/40x40/374151/9ca3af?text=?';
+        let currentAggregatedResources = []; // Store aggregated resources for export
+        const defaultItemIconUrl = 'https://placehold.co/48x48/1f2937/9ca3af?text=?'; // Updated default size
 
         // DOM elements
-        let startDateInput, endDateInput, generateListBtn,
+        let startDateInput, endDateInput, numCharactersInput, generateListBtn, 
             almanaxLoadingMessage, almanaxErrorMessage,
             almanaxResultsContainer, almanaxResourceList, almanaxEmptyResults,
-            languageSelector, versionInfoElement;
+            languageSelector, versionInfoElement, exportCsvBtn,
+            todayAlmanaxOfferingDiv, todayOfferingImg, todayOfferingName, todayOfferingQuantity; // New DOM elements for today's offering
 
         // Translations object
         const translations = {
@@ -186,96 +221,131 @@
                 btn_back_home: "← Retour à l'accueil",
                 signature: "Apps by Ato",
                 disclaimer: "Dofus et toutes les images associées utilisées sur ce site sont la propriété d'Ankama",
-                version_info: "Version 1.0.0 - Juillet 2025",
+                version_info: "Version 1.0.3 - Juillet 2025", // Updated version
                 almanax_list_creator_title: "Créateur de liste pour l'Almanax",
                 almanax_list_creator_desc: "Vous permet de générer une liste de ressources pour une période donnée.",
                 form_title: "Générer une liste de ressources",
                 label_start_date: "Date de début :",
                 label_end_date: "Date de fin :",
+                label_num_characters: "Nombre de personnages :",
                 btn_generate_list: "Générer la liste",
                 loading_data: "Chargement des données de l'Almanax...",
                 error_invalid_dates: "Veuillez sélectionner des dates valides. La date de fin doit être postérieure à la date de début.",
+                error_invalid_characters: "Le nombre de personnages doit être un nombre entier positif (minimum 1).",
                 error_api_fetch: "Erreur lors du chargement des données de l'Almanax. Le fichier de données local est peut-être manquant ou corrompu.",
                 error_no_data: "Aucune donnée d'Almanax trouvée pour la période sélectionnée.",
                 results_title: "Liste des ressources requises :",
                 empty_results: "Aucune ressource trouvée pour la période sélectionnée.",
                 total_quantity: "Total :",
+                btn_export_csv: "Exporter (CSV)",
+                error_no_export_data: "Aucune donnée à exporter !",
+                today_offering_title: "Offrande du jour :", // New translation key
+                today_offering_quantity_prefix: "Quantité :", // New translation key
+                today_offering_not_found: "Offrande du jour non trouvée." // New translation key
             },
             en: {
                 btn_back_home: "← Back to Home",
                 signature: "Apps by Ato",
                 disclaimer: "Dofus and any related images used on this website are the properties of Ankama",
-                version_info: "Version 1.0.0 - July 2025",
+                version_info: "Version 1.0.3 - July 2025", // Updated version
                 almanax_list_creator_title: "Almanax List Creator",
                 almanax_list_creator_desc: "Allows you to generate a list of resources for a given period.",
                 form_title: "Generate Resource List",
                 label_start_date: "Start Date:",
                 label_end_date: "End Date:",
+                label_num_characters: "Number of characters:",
                 btn_generate_list: "Generate List",
                 loading_data: "Loading Almanax data...",
                 error_invalid_dates: "Please select valid dates. End date must be after start date.",
+                error_invalid_characters: "Number of characters must be a positive integer (minimum 1).",
                 error_api_fetch: "Error loading Almanax data. The local data file might be missing or corrupted.",
                 error_no_data: "No Almanax data found for the selected period.",
                 results_title: "Required Resources List:",
                 empty_results: "No resources found for the selected period.",
                 total_quantity: "Total:",
+                btn_export_csv: "Export (CSV)",
+                error_no_export_data: "No data to export!",
+                today_offering_title: "Today's Offering:", // New translation key
+                today_offering_quantity_prefix: "Quantity:", // New translation key
+                today_offering_not_found: "Today's offering not found." // New translation key
             },
             es: {
                 btn_back_home: "← Volver al Inicio",
                 signature: "Apps by Ato",
                 disclaimer: "Dofus y cualquier imagen relacionada utilizada en este sitio web son propiedad de Ankama",
-                version_info: "Versión 1.0.0 - Julio 2025",
+                version_info: "Versión 1.0.3 - Julio 2025", // Updated version
                 almanax_list_creator_title: "Creador de lista para el Almanax",
                 almanax_list_creator_desc: "Te permite generar una lista de recursos para un período dado.",
                 form_title: "Generar lista de recursos",
                 label_start_date: "Fecha de inicio:",
                 label_end_date: "Fecha de fin:",
+                label_num_characters: "Número de personajes:",
                 btn_generate_list: "Generar lista",
                 loading_data: "Cargando datos del Almanax...",
                 error_invalid_dates: "Por favor, selecciona fechas válidas. La fecha de fin debe ser posterior a la fecha de inicio.",
+                error_invalid_characters: "El número de personajes debe ser un número entero positivo (mínimo 1).",
                 error_api_fetch: "Error al cargar datos del Almanax. El archivo de datos local podría faltar o estar corrupto.",
                 error_no_data: "No se encontraron datos del Almanax para el período seleccionado.",
                 results_title: "Lista de recursos requeridos:",
                 empty_results: "No se encontraron recursos para el período seleccionado.",
                 total_quantity: "Total:",
+                btn_export_csv: "Exportar (CSV)",
+                error_no_export_data: "¡No hay datos para exportar!",
+                today_offering_title: "Offrande del día:", // New translation key
+                today_offering_quantity_prefix: "Cantidad:", // New translation key
+                today_offering_not_found: "Offrande del día no encontrada." // New translation key
             },
             'pt-br': {
                 btn_back_home: "← Voltar ao Início",
                 signature: "Apps by Ato",
                 disclaimer: "Dofus e quaisquer imagens relacionadas usadas neste site são propriedade da Ankama",
-                version_info: "Versão 1.0.0 - Julho 2025",
+                version_info: "Versão 1.0.3 - Julho 2025", // Updated version
                 almanax_list_creator_title: "Criador de lista para o Almanax",
                 almanax_list_creator_desc: "Permite gerar uma lista de recursos para um determinado período.",
                 form_title: "Gerar Lista de Recursos",
                 label_start_date: "Data de Início:",
                 label_end_date: "Data de Fim:",
+                label_num_characters: "Número de personagens:",
                 btn_generate_list: "Gerar Lista",
                 loading_data: "Carregando dados do Almanax...",
                 error_invalid_dates: "Por favor, selecione datas válidas. A data final deve ser posterior à data inicial.",
+                error_invalid_characters: "O número de personagens deve ser um número inteiro positivo (mínimo 1).",
                 error_api_fetch: "Erro ao carregar dados do Almanax. O arquivo de dados local pode estar faltando ou corrompido.",
                 error_no_data: "Nenhum dado do Almanax encontrado para o período selecionado.",
                 results_title: "Lista de Recursos Necessários:",
                 empty_results: "Nenhum recurso encontrado para o período selecionado.",
                 total_quantity: "Total:",
+                btn_export_csv: "Exportar (CSV)",
+                error_no_export_data: "Sem dados para exportar!",
+                today_offering_title: "Offrande do dia:", // New translation key
+                today_offering_quantity_prefix: "Quantidade:", // New translation key
+                today_offering_not_found: "Offrande do dia não encontrada." // New translation key
             },
             it: {
                 btn_back_home: "← Torna alla Home",
                 signature: "Apps by Ato",
                 disclaimer: "Dofus e qualsiasi immagine correlata utilizzata su questo sito Web sono di proprietà di Ankama",
-                version_info: "Versione 1.0.0 - Luglio 2025",
+                version_info: "Versione 1.0.3 - Luglio 2025", // Updated version
                 almanax_list_creator_title: "Creatore di liste per l'Almanax",
                 almanax_list_creator_desc: "Ti permette di generare una lista di risorse per un dato periodo.",
                 form_title: "Genera lista risorse",
                 label_start_date: "Data di inizio:",
                 label_end_date: "Data di fine:",
+                label_num_characters: "Numero di personaggi:",
                 btn_generate_list: "Genera lista",
                 loading_data: "Caricamento dati Almanax...",
                 error_invalid_dates: "Seleziona date valide. La data di fine deve essere successiva alla data di inizio.",
+                error_invalid_characters: "Il numero di personaggi deve essere un numero intero positivo (minimo 1).",
                 error_api_fetch: "Errore durante il caricamento dei dati dell'Almanax. Il file di dati locale potrebbe mancare o essere corrotto.",
                 error_no_data: "Nessun dato Almanax trovato per il periodo selezionato.",
                 results_title: "Lista risorse richieste:",
                 empty_results: "Nessuna risorsa trovata per il periodo selezionato.",
                 total_quantity: "Totale:",
+                btn_export_csv: "Esporta (CSV)",
+                error_no_export_data: "Nessun dato da esportare!",
+                today_offering_title: "Offerta del giorno:", // New translation key
+                today_offering_quantity_prefix: "Quantità:", // New translation key
+                today_offering_not_found: "Offerta del giorno non trovata." // New translation key
             }
         };
 
@@ -318,12 +388,13 @@
             almanaxResultsContainer.classList.add('hidden');
             almanaxResourceList.innerHTML = '';
             almanaxEmptyResults.classList.add('hidden');
+            displayTodayOffering(); // Update today's offering display on language change
         }
 
         // Function to process Almanax data and aggregate resources
-        async function processAlmanaxData(startDate, endDate, fullAlmanaxData) {
+        async function processAlmanaxData(startDate, endDate, numCharacters, fullAlmanaxData) {
             const aggregatedResources = {}; // { resource_id: { name: "...", img: "...", totalQuantity: X } }
-            const defaultItemIconUrl = 'https://placehold.co/40x40/374151/9ca3af?text=?';
+            const defaultItemIconUrl = 'https://placehold.co/48x48/1f2937/9ca3af?text=?'; // Updated default size
 
             let currentDate = new Date(startDate);
             let tempEndDate = new Date(endDate);
@@ -354,11 +425,18 @@
                 }
                 currentDate.setDate(currentDate.getDate() + 1); // Move to the next day
             }
+
+            // Apply character multiplier after aggregation
+            for (const resourceId in aggregatedResources) {
+                aggregatedResources[resourceId].totalQuantity *= numCharacters;
+            }
+
             return Object.values(aggregatedResources).sort((a, b) => a.name.localeCompare(b.name));
         }
 
         // Function to render the aggregated resource list
         function renderResourceList(resources) {
+            currentAggregatedResources = resources; // Store for export
             almanaxResourceList.innerHTML = '';
             if (resources.length === 0) {
                 almanaxEmptyResults.classList.remove('hidden');
@@ -384,6 +462,7 @@
         async function generateAlmanaxList() {
             const startDate = new Date(startDateInput.value);
             const endDate = new Date(endDateInput.value);
+            const numCharacters = parseInt(numCharactersInput.value);
 
             if (isNaN(startDate.getTime()) || isNaN(endDate.getTime()) || startDate > endDate) {
                 showMessage(almanaxErrorMessage, translations[currentLanguage].error_invalid_dates, 'error');
@@ -391,33 +470,113 @@
                 return;
             }
 
-            // Use the locally loaded almanaxData instead of fetching
-            if (almanaxData.length === 0) {
-                showMessage(almanaxErrorMessage, translations[currentLanguage].error_api_fetch, 'error'); // Use the updated error message
+            if (isNaN(numCharacters) || numCharacters < 1) {
+                showMessage(almanaxErrorMessage, translations[currentLanguage].error_invalid_characters, 'error');
+                almanaxResultsContainer.classList.add('hidden');
                 return;
             }
 
-            // No loading message for local data, as it's already loaded on DOMContentLoaded
-            generateListBtn.disabled = true; // Disable button during processing
+            if (almanaxData.length === 0) {
+                showMessage(almanaxErrorMessage, translations[currentLanguage].error_api_fetch, 'error');
+                return;
+            }
+
+            generateListBtn.disabled = true;
             almanaxResultsContainer.classList.add('hidden');
             almanaxResourceList.innerHTML = '';
             almanaxEmptyResults.classList.add('hidden');
             
             try {
-                const aggregatedResources = await processAlmanaxData(startDate, endDate, almanaxData);
+                const aggregatedResources = await processAlmanaxData(startDate, endDate, numCharacters, almanaxData);
                 renderResourceList(aggregatedResources);
             } catch (error) {
                 console.error("Error processing Almanax data:", error);
                 showMessage(almanaxErrorMessage, translations[currentLanguage].error_api_fetch, 'error');
             } finally {
-                generateListBtn.disabled = false; // Re-enable button
+                generateListBtn.disabled = false;
             }
         }
+
+        // New: Function to export data to CSV
+        function exportToCSV() {
+            if (currentAggregatedResources.length === 0) {
+                const originalText = exportCsvBtn.textContent;
+                exportCsvBtn.textContent = translations[currentLanguage].error_no_export_data;
+                exportCsvBtn.classList.add('bg-red-600', 'cursor-not-allowed');
+                exportCsvBtn.classList.remove('bg-gray-600', 'hover:bg-gray-700');
+                
+                setTimeout(() => {
+                    exportCsvBtn.textContent = originalText;
+                    exportCsvBtn.classList.remove('bg-red-600', 'cursor-not-allowed');
+                    exportCsvBtn.classList.add('bg-gray-600', 'hover:bg-gray-700');
+                }, 2000);
+                return;
+            }
+
+            let csvContent = "data:text/csv;charset=utf-8,";
+            // CSV Headers
+            const headers = [
+                `"${translations[currentLanguage].csv_header_name || 'Nom'}"`,
+                `"${translations[currentLanguage].total_quantity || 'Quantité Totale'}"`,
+                `"URL Image"` // Always include image URL for reference
+            ];
+            csvContent += headers.join(',') + '\r\n';
+
+            // CSV Rows
+            currentAggregatedResources.forEach(res => {
+                const row = [
+                    `"${res.name.replace(/"/g, '""')}"`, // Escape double quotes
+                    res.totalQuantity,
+                    res.img // Image URL
+                ];
+                csvContent += row.join(',') + '\r\n';
+            });
+
+            const encodedUri = encodeURI(csvContent);
+            const link = document.createElement("a");
+            link.setAttribute("href", encodedUri);
+            link.setAttribute("download", "liste_almanax.csv");
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+        }
+
+        // New: Function to display today's Almanax offering
+        function displayTodayOffering() {
+            if (almanaxData.length === 0) {
+                todayAlmanaxOfferingDiv.classList.add('hidden');
+                return;
+            }
+
+            // Get current date in France's timezone
+            const now = new Date();
+            const options = { timeZone: 'Europe/Paris', month: '2-digit', day: '2-digit' };
+            const formatter = new Intl.DateTimeFormat('fr-FR', options);
+            const [month, day] = formatter.format(now).split('/');
+            const monthDayKey = `${month}-${day}`; // Format as MM-DD (e.g., "07-20")
+
+            const todayEntry = almanaxData.find(item => item.month_day === monthDayKey);
+
+            if (todayEntry && todayEntry.resource_name && todayEntry.quantity !== null) {
+                todayOfferingImg.src = todayEntry.resource_img;
+                todayOfferingImg.alt = todayEntry.resource_name;
+                todayOfferingName.textContent = todayEntry.resource_name;
+                todayOfferingQuantity.textContent = `${translations[currentLanguage].today_offering_quantity_prefix} ${todayEntry.quantity.toLocaleString(currentLanguage)}`;
+                todayAlmanaxOfferingDiv.classList.remove('hidden');
+            } else {
+                todayOfferingName.textContent = translations[currentLanguage].today_offering_not_found;
+                todayOfferingQuantity.textContent = '';
+                todayOfferingImg.src = 'https://placehold.co/48x48/1f2937/9ca3af?text=?'; // Reset to default
+                todayAlmanaxOfferingDiv.classList.remove('hidden'); // Still show the box, but with "not found" message
+            }
+        }
+
 
         document.addEventListener('DOMContentLoaded', async () => {
             // Initialize DOM elements
             startDateInput = document.getElementById('startDate');
             endDateInput = document.getElementById('endDate');
+            numCharactersInput = document.getElementById('numCharacters');
             generateListBtn = document.getElementById('generateListBtn');
             almanaxLoadingMessage = document.getElementById('almanax-loading-message');
             almanaxErrorMessage = document.getElementById('almanax-error-message');
@@ -426,6 +585,14 @@
             almanaxEmptyResults = document.getElementById('almanax-empty-results');
             languageSelector = document.getElementById('language-selector');
             versionInfoElement = document.querySelector('[data-translate-key="version_info"]');
+            exportCsvBtn = document.getElementById('exportCsvBtn');
+
+            // New: Initialize DOM elements for today's offering
+            todayAlmanaxOfferingDiv = document.getElementById('today-almanax-offering');
+            todayOfferingImg = document.getElementById('todayOfferingImg');
+            todayOfferingName = document.getElementById('todayOfferingName');
+            todayOfferingQuantity = document.getElementById('todayOfferingQuantity');
+
 
             // Set default dates (e.g., today to 30 days from now)
             const today = new Date();
@@ -453,6 +620,7 @@
 
             // Event Listeners
             generateListBtn.addEventListener('click', generateAlmanaxList);
+            exportCsvBtn.addEventListener('click', exportToCSV);
             languageSelector.addEventListener('change', (e) => {
                 setLanguage(e.target.value);
             });
@@ -464,6 +632,9 @@
             if (versionInfoElement) {
                 versionInfoElement.textContent = translations[currentLanguage].version_info;
             }
+
+            // New: Display today's offering after data is loaded and language is set
+            displayTodayOffering();
         });
     </script>
 
