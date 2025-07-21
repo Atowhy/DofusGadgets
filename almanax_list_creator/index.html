@@ -100,6 +100,47 @@
         .resource-item span.text-xl { /* Ensure total quantity text size is consistent */
             font-size: 1.25rem; /* Tailwind text-xl */
         }
+        /* Style for daily list items */
+        .daily-list-item {
+            display: flex;
+            flex-direction: column; /* Stack date and resource info */
+            gap: 0.5rem;
+            padding: 0.75rem;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 0.5rem;
+            background-color: rgba(45, 55, 72, 0.8);
+        }
+        .daily-list-item .date-header {
+            font-weight: 600;
+            color: #4fd1c5; /* Teal-300 */
+            margin-bottom: 0.25rem;
+        }
+        .daily-list-item .resource-info {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+        .daily-list-item .resource-info img {
+            width: 40px; /* Slightly smaller for daily list */
+            height: 40px; /* Slightly smaller for daily list */
+            object-fit: contain;
+            border-radius: 0.25rem;
+            background-color: rgba(255, 255, 255, 0.05);
+        }
+        .daily-list-item .resource-info .name-quantity {
+            flex-grow: 1;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .daily-list-item .resource-info .name-quantity .name {
+            font-size: 1rem; /* Base font size */
+            color: #e2e8f0;
+        }
+        .daily-list-item .resource-info .name-quantity .quantity {
+            font-weight: 600;
+            color: #14b8a6; /* Teal-500 */
+        }
     </style>
 </head>
 <body class="text-white antialiased">
@@ -173,20 +214,32 @@
                     </div>
                 </div>
 
-                <div id="almanax-results-container" class="hidden">
+                <!-- Daily Offerings List -->
+                <div id="almanax-daily-results-container" class="hidden mb-8">
+                    <h2 class="text-xl font-semibold mb-4" data-translate-key="daily_results_title">Offrandes journalières :</h2>
+                    <div id="almanax-daily-list" class="space-y-3">
+                        <!-- Daily resources will be displayed here -->
+                    </div>
+                    <p id="almanax-empty-daily-results" class="text-center text-gray-500 py-8 hidden" data-translate-key="empty_results">
+                        Aucune offrande trouvée pour la période sélectionnée.
+                    </p>
+                </div>
+
+                <!-- Aggregated Results Section -->
+                <div id="almanax-aggregated-results-container" class="hidden">
                     <div class="flex justify-between items-center mb-4">
-                        <h2 class="text-xl font-semibold" data-translate-key="results_title">Liste des ressources requises :</h2>
-                        <!-- New: Export CSV Button -->
+                        <h2 class="text-xl font-semibold" data-translate-key="aggregated_results_title">Résumé des ressources totales :</h2>
+                        <!-- Export CSV Button -->
                         <button id="exportCsvBtn" class="bg-gray-600 hover:bg-gray-700 text-white font-bold py-2 px-4 rounded-lg text-sm transition-colors whitespace-nowrap" data-translate-key="btn_export_csv">
                             Exporter (CSV)
                         </button>
                     </div>
                     
-                    <div id="almanax-resource-list" class="space-y-3">
+                    <div id="almanax-aggregated-list" class="space-y-3">
                         <!-- Aggregated resources will be displayed here -->
                     </div>
-                    <p id="almanax-empty-results" class="text-center text-gray-500 py-8 hidden" data-translate-key="empty_results">
-                        Aucune ressource trouvée pour la période sélectionnée.
+                    <p id="almanax-empty-aggregated-results" class="text-center text-gray-500 py-8 hidden" data-translate-key="empty_results">
+                        Aucune ressource totale trouvée pour la période sélectionnée.
                     </p>
                 </div>
             </div>
@@ -196,7 +249,7 @@
                 <img src="../images/LogoDofus.webp" alt="Logo Dofus" class="h-12 mx-auto mb-2 opacity-50">
                 <p data-translate-key="signature">Apps by Ato</p>
                 <p class="text-xs text-gray-600 mt-4" data-translate-key="disclaimer">Dofus et toutes les images associées utilisées sur ce site sont la propriété d'Ankama</p>
-                <p class="text-xs text-gray-600 mt-2" data-translate-key="version_info">Version 1.0.3 - Juillet 2025</p>
+                <p class="text-xs text-gray-600 mt-2" data-translate-key="version_info">Version 1.0.4 - Juillet 2025</p>
             </footer>
         </div>
     </div>
@@ -206,14 +259,16 @@
         let currentLanguage = 'fr';
         let almanaxData = []; // This will hold the loaded JSON data
         let currentAggregatedResources = []; // Store aggregated resources for export
-        const defaultItemIconUrl = 'https://placehold.co/48x48/1f2937/9ca3af?text=?'; // Updated default size
+        let currentDailyOfferings = []; // Store daily offerings for display
+        const defaultItemIconUrl = 'https://placehold.co/48x48/1f2937/9ca3af?text=?'; 
 
         // DOM elements
         let startDateInput, endDateInput, numCharactersInput, generateListBtn, 
             almanaxLoadingMessage, almanaxErrorMessage,
-            almanaxResultsContainer, almanaxResourceList, almanaxEmptyResults,
+            almanaxDailyResultsContainer, almanaxDailyList, almanaxEmptyDailyResults, // Daily list elements
+            almanaxAggregatedResultsContainer, almanaxAggregatedList, almanaxEmptyAggregatedResults, // Aggregated list elements
             languageSelector, versionInfoElement, exportCsvBtn,
-            todayAlmanaxOfferingDiv, todayOfferingImg, todayOfferingName, todayOfferingQuantity; // New DOM elements for today's offering
+            todayAlmanaxOfferingDiv, todayOfferingImg, todayOfferingName, todayOfferingQuantity; 
 
         // Translations object
         const translations = {
@@ -221,7 +276,7 @@
                 btn_back_home: "← Retour à l'accueil",
                 signature: "Apps by Ato",
                 disclaimer: "Dofus et toutes les images associées utilisées sur ce site sont la propriété d'Ankama",
-                version_info: "Version 1.0.3 - Juillet 2025", // Updated version
+                version_info: "Version 1.0.4 - Juillet 2025", // Updated version
                 almanax_list_creator_title: "Créateur de liste pour l'Almanax",
                 almanax_list_creator_desc: "Vous permet de générer une liste de ressources pour une période donnée.",
                 form_title: "Générer une liste de ressources",
@@ -234,20 +289,22 @@
                 error_invalid_characters: "Le nombre de personnages doit être un nombre entier positif (minimum 1).",
                 error_api_fetch: "Erreur lors du chargement des données de l'Almanax. Le fichier de données local est peut-être manquant ou corrompu.",
                 error_no_data: "Aucune donnée d'Almanax trouvée pour la période sélectionnée.",
-                results_title: "Liste des ressources requises :",
-                empty_results: "Aucune ressource trouvée pour la période sélectionnée.",
-                total_quantity: "Total :",
+                daily_results_title: "Offrandes journalières :", // New translation key
+                aggregated_results_title: "Résumé des ressources totales :", // New translation key
+                empty_results: "Aucune ressource trouvée pour la période sélectionnée.", // Used for both empty lists
+                total_quantity: "Total :", // Used for aggregated total
+                daily_quantity: "Quantité :", // New translation key for daily list
                 btn_export_csv: "Exporter (CSV)",
                 error_no_export_data: "Aucune donnée à exporter !",
-                today_offering_title: "Offrande du jour :", // New translation key
-                today_offering_quantity_prefix: "Quantité :", // New translation key
-                today_offering_not_found: "Offrande du jour non trouvée." // New translation key
+                today_offering_title: "Offrande du jour :", 
+                today_offering_quantity_prefix: "Quantité :", 
+                today_offering_not_found: "Offrande du jour non trouvée." 
             },
             en: {
                 btn_back_home: "← Back to Home",
                 signature: "Apps by Ato",
                 disclaimer: "Dofus and any related images used on this website are the properties of Ankama",
-                version_info: "Version 1.0.3 - July 2025", // Updated version
+                version_info: "Version 1.0.4 - July 2025", 
                 almanax_list_creator_title: "Almanax List Creator",
                 almanax_list_creator_desc: "Allows you to generate a list of resources for a given period.",
                 form_title: "Generate Resource List",
@@ -260,20 +317,22 @@
                 error_invalid_characters: "Number of characters must be a positive integer (minimum 1).",
                 error_api_fetch: "Error loading Almanax data. The local data file might be missing or corrupted.",
                 error_no_data: "No Almanax data found for the selected period.",
-                results_title: "Required Resources List:",
+                daily_results_title: "Daily Offerings:", 
+                aggregated_results_title: "Aggregated Resources Summary:", 
                 empty_results: "No resources found for the selected period.",
-                total_quantity: "Total:",
+                total_quantity: "Total:", 
+                daily_quantity: "Quantity:", 
                 btn_export_csv: "Export (CSV)",
                 error_no_export_data: "No data to export!",
-                today_offering_title: "Today's Offering:", // New translation key
-                today_offering_quantity_prefix: "Quantity:", // New translation key
-                today_offering_not_found: "Today's offering not found." // New translation key
+                today_offering_title: "Today's Offering:", 
+                today_offering_quantity_prefix: "Quantity:", 
+                today_offering_not_found: "Today's offering not found." 
             },
             es: {
                 btn_back_home: "← Volver al Inicio",
                 signature: "Apps by Ato",
                 disclaimer: "Dofus y cualquier imagen relacionada utilizada en este sitio web son propiedad de Ankama",
-                version_info: "Versión 1.0.3 - Julio 2025", // Updated version
+                version_info: "Versión 1.0.4 - Julio 2025", 
                 almanax_list_creator_title: "Creador de lista para el Almanax",
                 almanax_list_creator_desc: "Te permite generar una lista de recursos para un período dado.",
                 form_title: "Generar lista de recursos",
@@ -286,20 +345,22 @@
                 error_invalid_characters: "El número de personajes debe ser un número entero positivo (mínimo 1).",
                 error_api_fetch: "Error al cargar datos del Almanax. El archivo de datos local podría faltar o estar corrupto.",
                 error_no_data: "No se encontraron datos del Almanax para el período seleccionado.",
-                results_title: "Lista de recursos requeridos:",
+                daily_results_title: "Offrandes diarias:", 
+                aggregated_results_title: "Resumen de recursos totales:", 
                 empty_results: "No se encontraron recursos para el período seleccionado.",
-                total_quantity: "Total:",
+                total_quantity: "Total:", 
+                daily_quantity: "Cantidad:", 
                 btn_export_csv: "Exportar (CSV)",
                 error_no_export_data: "¡No hay datos para exportar!",
-                today_offering_title: "Offrande del día:", // New translation key
-                today_offering_quantity_prefix: "Cantidad:", // New translation key
-                today_offering_not_found: "Offrande del día no encontrada." // New translation key
+                today_offering_title: "Offrande del día:", 
+                today_offering_quantity_prefix: "Cantidad:", 
+                today_offering_not_found: "Offrande del día no encontrada." 
             },
             'pt-br': {
                 btn_back_home: "← Voltar ao Início",
                 signature: "Apps by Ato",
                 disclaimer: "Dofus e quaisquer imagens relacionadas usadas neste site são propriedade da Ankama",
-                version_info: "Versão 1.0.3 - Julho 2025", // Updated version
+                version_info: "Versão 1.0.4 - Julho 2025", 
                 almanax_list_creator_title: "Criador de lista para o Almanax",
                 almanax_list_creator_desc: "Permite gerar uma lista de recursos para um determinado período.",
                 form_title: "Gerar Lista de Recursos",
@@ -312,20 +373,22 @@
                 error_invalid_characters: "O número de personagens deve ser um número inteiro positivo (mínimo 1).",
                 error_api_fetch: "Erro ao carregar dados do Almanax. O arquivo de dados local pode estar faltando ou corrompido.",
                 error_no_data: "Nenhum dado do Almanax encontrado para o período selecionado.",
-                results_title: "Lista de Recursos Necessários:",
+                daily_results_title: "Offrandes diárias:", 
+                aggregated_results_title: "Resumo de recursos totais:", 
                 empty_results: "Nenhum recurso encontrado para o período selecionado.",
-                total_quantity: "Total:",
+                total_quantity: "Total:", 
+                daily_quantity: "Quantidade:", 
                 btn_export_csv: "Exportar (CSV)",
                 error_no_export_data: "Sem dados para exportar!",
-                today_offering_title: "Offrande do dia:", // New translation key
-                today_offering_quantity_prefix: "Quantidade:", // New translation key
-                today_offering_not_found: "Offrande do dia não encontrada." // New translation key
+                today_offering_title: "Offrande do dia:", 
+                today_offering_quantity_prefix: "Quantidade:", 
+                today_offering_not_found: "Offrande do dia não encontrada." 
             },
             it: {
                 btn_back_home: "← Torna alla Home",
                 signature: "Apps by Ato",
                 disclaimer: "Dofus e qualsiasi immagine correlata utilizzata su questo sito Web sono di proprietà di Ankama",
-                version_info: "Versione 1.0.3 - Luglio 2025", // Updated version
+                version_info: "Versione 1.0.4 - Luglio 2025", 
                 almanax_list_creator_title: "Creatore di liste per l'Almanax",
                 almanax_list_creator_desc: "Ti permette di generare una lista di risorse per un dato periodo.",
                 form_title: "Genera lista risorse",
@@ -338,14 +401,16 @@
                 error_invalid_characters: "Il numero di personaggi deve essere un numero intero positivo (minimo 1).",
                 error_api_fetch: "Errore durante il caricamento dei dati dell'Almanax. Il file di dati locale potrebbe mancare o essere corrotto.",
                 error_no_data: "Nessun dato Almanax trovato per il periodo selezionato.",
-                results_title: "Lista risorse richieste:",
+                daily_results_title: "Offerte giornaliere:", 
+                aggregated_results_title: "Riepilogo risorse totali:", 
                 empty_results: "Nessuna risorsa trovata per il periodo selezionato.",
-                total_quantity: "Totale:",
+                total_quantity: "Totale:", 
+                daily_quantity: "Quantità:", 
                 btn_export_csv: "Esporta (CSV)",
                 error_no_export_data: "Nessun dato da esportare!",
-                today_offering_title: "Offerta del giorno:", // New translation key
-                today_offering_quantity_prefix: "Quantità:", // New translation key
-                today_offering_not_found: "Offerta del giorno non trovata." // New translation key
+                today_offering_title: "Offerta del giorno:", 
+                today_offering_quantity_prefix: "Quantità:", 
+                today_offering_not_found: "Offerta del giorno non trovata." 
             }
         };
 
@@ -385,72 +450,126 @@
             // Clear results and messages on language change
             hideMessage(almanaxLoadingMessage);
             hideMessage(almanaxErrorMessage);
-            almanaxResultsContainer.classList.add('hidden');
-            almanaxResourceList.innerHTML = '';
-            almanaxEmptyResults.classList.add('hidden');
+            almanaxDailyResultsContainer.classList.add('hidden'); // Hide daily results
+            almanaxAggregatedResultsContainer.classList.add('hidden'); // Hide aggregated results
+            almanaxDailyList.innerHTML = '';
+            almanaxAggregatedList.innerHTML = '';
+            almanaxEmptyDailyResults.classList.add('hidden');
+            almanaxEmptyAggregatedResults.classList.add('hidden');
             displayTodayOffering(); // Update today's offering display on language change
         }
 
-        // Function to process Almanax data and aggregate resources
-        async function processAlmanaxData(startDate, endDate, numCharacters, fullAlmanaxData) {
-            const aggregatedResources = {}; // { resource_id: { name: "...", img: "...", totalQuantity: X } }
-            const defaultItemIconUrl = 'https://placehold.co/48x48/1f2937/9ca3af?text=?'; // Updated default size
+        /**
+         * Processes Almanax data for a given date range and number of characters.
+         * Returns a list of daily offerings, each with date, resource details, and quantity.
+         * @param {Date} startDate - The start date of the period.
+         * @param {Date} endDate - The end date of the period.
+         * @param {number} numCharacters - The number of characters multiplier.
+         * @param {Array} fullAlmanaxData - The loaded full Almanax data from JSON.
+         * @returns {Array} A list of daily offering objects.
+         */
+        function processAlmanaxData(startDate, endDate, numCharacters, fullAlmanaxData) {
+            const dailyOfferings = [];
+            const defaultItemIconUrl = 'https://placehold.co/48x48/1f2937/9ca3af?text=?';
 
-            let loopDate = new Date(startDate); // Create a mutable copy for the loop
+            let loopDate = new Date(startDate);
             loopDate.setHours(0, 0, 0, 0); // Normalize to midnight
 
             let endLoopDate = new Date(endDate);
             endLoopDate.setHours(0, 0, 0, 0); // Normalize to midnight
 
-            // Loop through each day in the selected range
-            while (loopDate.getTime() <= endLoopDate.getTime()) { // Use getTime() for robust comparison
-                const month = loopDate.getMonth() + 1; // getMonth() is 0-indexed
+            while (loopDate.getTime() <= endLoopDate.getTime()) {
+                const month = loopDate.getMonth() + 1;
                 const day = loopDate.getDate();
-                const monthDayKey = `${month.toString().padStart(2, '0')}-${day.toString().padStart(2, '0')}`; // Format as MM-DD (e.g., "01-01")
+                const monthDayKey = `${month.toString().padStart(2, '0')}-${day.toString().padStart(2, '0')}`;
 
-                // Find the entry for the current day in the loaded data
                 const entry = fullAlmanaxData.find(item => item.month_day === monthDayKey);
 
                 if (entry && entry.resource_name && entry.quantity !== null) {
-                    const resourceId = entry.resource_id; // Use the resource_id from JSON
                     const resourceName = entry.resource_name;
-                    const quantity = entry.quantity;
-                    const resourceImg = entry.resource_img || defaultItemIconUrl; // Use resource_img from JSON or default
+                    const quantity = entry.quantity * numCharacters; // Apply multiplier here
+                    const resourceImg = entry.resource_img || defaultItemIconUrl;
 
-                    if (!aggregatedResources[resourceId]) {
-                        aggregatedResources[resourceId] = {
-                            name: resourceName,
-                            img: resourceImg,
-                            totalQuantity: 0
-                        };
-                    }
-                    aggregatedResources[resourceId].totalQuantity += quantity;
+                    dailyOfferings.push({
+                        date: new Date(loopDate), // Store a copy of the date
+                        name: resourceName,
+                        quantity: quantity,
+                        img: resourceImg
+                    });
                 }
-                
-                // Increment date by one day
-                loopDate.setDate(loopDate.getDate() + 1); 
+                loopDate.setDate(loopDate.getDate() + 1);
             }
-
-            // Apply character multiplier after aggregation
-            for (const resourceId in aggregatedResources) {
-                aggregatedResources[resourceId].totalQuantity *= numCharacters;
-            }
-
-            return Object.values(aggregatedResources).sort((a, b) => a.name.localeCompare(b.name));
+            return dailyOfferings;
         }
 
-        // Function to render the aggregated resource list
-        function renderResourceList(resources) {
-            currentAggregatedResources = resources; // Store for export
-            almanaxResourceList.innerHTML = '';
-            if (resources.length === 0) {
-                almanaxEmptyResults.classList.remove('hidden');
-                almanaxResultsContainer.classList.remove('hidden');
+        /**
+         * Aggregates a list of daily offerings into total quantities per resource.
+         * @param {Array} dailyOfferings - The list of daily offering objects.
+         * @returns {Array} A list of aggregated resource objects.
+         */
+        function aggregateResources(dailyOfferings) {
+            const aggregated = {};
+            dailyOfferings.forEach(offering => {
+                if (!aggregated[offering.name]) {
+                    aggregated[offering.name] = {
+                        name: offering.name,
+                        img: offering.img,
+                        totalQuantity: 0
+                    };
+                }
+                aggregated[offering.name].totalQuantity += offering.quantity;
+            });
+            return Object.values(aggregated).sort((a, b) => a.name.localeCompare(b.name));
+        }
+
+        /**
+         * Renders the list of daily offerings.
+         * @param {Array} dailyOfferings - The list of daily offering objects.
+         */
+        function renderDailyList(dailyOfferings) {
+            almanaxDailyList.innerHTML = '';
+            if (dailyOfferings.length === 0) {
+                almanaxEmptyDailyResults.classList.remove('hidden');
+                almanaxDailyResultsContainer.classList.remove('hidden');
                 return;
             }
 
-            almanaxEmptyResults.classList.add('hidden');
-            resources.forEach(resource => {
+            almanaxEmptyDailyResults.classList.add('hidden');
+            dailyOfferings.forEach(offering => {
+                const listItem = document.createElement('div');
+                listItem.classList.add('daily-list-item');
+                
+                const formattedDate = offering.date.toLocaleDateString(currentLanguage, { year: 'numeric', month: 'long', day: 'numeric' });
+
+                listItem.innerHTML = `
+                    <div class="date-header">${formattedDate}</div>
+                    <div class="resource-info">
+                        <img src="${offering.img}" onerror="this.onerror=null;this.src='${defaultItemIconUrl}';" alt="${offering.name}">
+                        <div class="name-quantity">
+                            <span class="name">${offering.name}</span>
+                            <span class="quantity">${translations[currentLanguage].daily_quantity} ${offering.quantity.toLocaleString(currentLanguage)}</span>
+                        </div>
+                    </div>
+                `;
+                almanaxDailyList.appendChild(listItem);
+            });
+            almanaxDailyResultsContainer.classList.remove('hidden');
+        }
+
+        /**
+         * Renders the aggregated resources summary.
+         * @param {Array} aggregatedResources - The list of aggregated resource objects.
+         */
+        function renderAggregatedSummary(aggregatedResources) {
+            almanaxAggregatedList.innerHTML = '';
+            if (aggregatedResources.length === 0) {
+                almanaxEmptyAggregatedResults.classList.remove('hidden');
+                almanaxAggregatedResultsContainer.classList.remove('hidden');
+                return;
+            }
+
+            almanaxEmptyAggregatedResults.classList.add('hidden');
+            aggregatedResources.forEach(resource => {
                 const resourceDiv = document.createElement('div');
                 resourceDiv.classList.add('resource-item');
                 resourceDiv.innerHTML = `
@@ -458,9 +577,9 @@
                     <span class="flex-grow text-lg font-semibold">${resource.name}</span>
                     <span class="text-teal-300 text-xl font-bold">${translations[currentLanguage].total_quantity} ${resource.totalQuantity.toLocaleString(currentLanguage)}</span>
                 `;
-                almanaxResourceList.appendChild(resourceDiv);
+                almanaxAggregatedList.appendChild(resourceDiv);
             });
-            almanaxResultsContainer.classList.remove('hidden');
+            almanaxAggregatedResultsContainer.classList.remove('hidden');
         }
 
         // Main function to generate the list
@@ -469,15 +588,20 @@
             const endDate = new Date(endDateInput.value);
             const numCharacters = parseInt(numCharactersInput.value);
 
+            // Hide previous results and messages
+            almanaxDailyResultsContainer.classList.add('hidden');
+            almanaxAggregatedResultsContainer.classList.add('hidden');
+            almanaxDailyList.innerHTML = '';
+            almanaxAggregatedList.innerHTML = '';
+            hideMessage(almanaxErrorMessage);
+
             if (isNaN(startDate.getTime()) || isNaN(endDate.getTime()) || startDate > endDate) {
                 showMessage(almanaxErrorMessage, translations[currentLanguage].error_invalid_dates, 'error');
-                almanaxResultsContainer.classList.add('hidden');
                 return;
             }
 
             if (isNaN(numCharacters) || numCharacters < 1) {
                 showMessage(almanaxErrorMessage, translations[currentLanguage].error_invalid_characters, 'error');
-                almanaxResultsContainer.classList.add('hidden');
                 return;
             }
 
@@ -487,22 +611,27 @@
             }
 
             generateListBtn.disabled = true;
-            almanaxResultsContainer.classList.add('hidden');
-            almanaxResourceList.innerHTML = '';
-            almanaxEmptyResults.classList.add('hidden');
+            showMessage(almanaxLoadingMessage, translations[currentLanguage].loading_data, 'info');
             
             try {
-                const aggregatedResources = await processAlmanaxData(startDate, endDate, numCharacters, almanaxData);
-                renderResourceList(aggregatedResources);
+                // Get daily offerings
+                currentDailyOfferings = processAlmanaxData(startDate, endDate, numCharacters, almanaxData);
+                renderDailyList(currentDailyOfferings);
+
+                // Get aggregated totals
+                currentAggregatedResources = aggregateResources(currentDailyOfferings);
+                renderAggregatedSummary(currentAggregatedResources);
+
             } catch (error) {
                 console.error("Error processing Almanax data:", error);
                 showMessage(almanaxErrorMessage, translations[currentLanguage].error_api_fetch, 'error');
             } finally {
+                hideMessage(almanaxLoadingMessage);
                 generateListBtn.disabled = false;
             }
         }
 
-        // Function to export data to CSV
+        // Function to export data to CSV (exports aggregated list)
         function exportToCSV() {
             if (currentAggregatedResources.length === 0) {
                 const originalText = exportCsvBtn.textContent;
@@ -523,16 +652,16 @@
             const headers = [
                 `"${translations[currentLanguage].csv_header_name || 'Nom'}"`,
                 `"${translations[currentLanguage].total_quantity || 'Quantité Totale'}"`,
-                `"URL Image"` // Always include image URL for reference
+                `"URL Image"` 
             ];
             csvContent += headers.join(',') + '\r\n';
 
             // CSV Rows
             currentAggregatedResources.forEach(res => {
                 const row = [
-                    `"${res.name.replace(/"/g, '""')}"`, // Escape double quotes
+                    `"${res.name.replace(/"/g, '""')}"`, 
                     res.totalQuantity,
-                    res.img // Image URL
+                    res.img 
                 ];
                 csvContent += row.join(',') + '\r\n';
             });
@@ -540,7 +669,7 @@
             const encodedUri = encodeURI(csvContent);
             const link = document.createElement("a");
             link.setAttribute("href", encodedUri);
-            link.setAttribute("download", "liste_almanax.csv");
+            link.setAttribute("download", "liste_almanax_totaux.csv"); // Changed filename for clarity
             document.body.appendChild(link);
             link.click();
             document.body.removeChild(link);
@@ -555,12 +684,11 @@
 
             // Get current date in France's timezone
             const now = new Date();
-            // Create a new Date object representing the current time in Paris
             const parisTime = new Date(now.toLocaleString('en-US', { timeZone: 'Europe/Paris' }));
             
-            const month = parisTime.getMonth() + 1; // getMonth() is 0-indexed
+            const month = parisTime.getMonth() + 1;
             const day = parisTime.getDate();
-            const monthDayKey = `${month.toString().padStart(2, '0')}-${day.toString().padStart(2, '0')}`; // Format as MM-DD (e.g., "07-20")
+            const monthDayKey = `${month.toString().padStart(2, '0')}-${day.toString().padStart(2, '0')}`;
 
             const todayEntry = almanaxData.find(item => item.month_day === monthDayKey);
 
@@ -573,8 +701,8 @@
             } else {
                 todayOfferingName.textContent = translations[currentLanguage].today_offering_not_found;
                 todayOfferingQuantity.textContent = '';
-                todayOfferingImg.src = 'https://placehold.co/48x48/1f2937/9ca3af?text=?'; // Reset to default
-                todayAlmanaxOfferingDiv.classList.remove('hidden'); // Still show the box, but with "not found" message
+                todayOfferingImg.src = 'https://placehold.co/48x48/1f2937/9ca3af?text=?';
+                todayAlmanaxOfferingDiv.classList.remove('hidden');
             }
         }
 
@@ -587,14 +715,19 @@
             generateListBtn = document.getElementById('generateListBtn');
             almanaxLoadingMessage = document.getElementById('almanax-loading-message');
             almanaxErrorMessage = document.getElementById('almanax-error-message');
-            almanaxResultsContainer = document.getElementById('almanax-results-container');
-            almanaxResourceList = document.getElementById('almanax-resource-list');
-            almanaxEmptyResults = document.getElementById('almanax-empty-results');
+            
+            almanaxDailyResultsContainer = document.getElementById('almanax-daily-results-container');
+            almanaxDailyList = document.getElementById('almanax-daily-list');
+            almanaxEmptyDailyResults = document.getElementById('almanax-empty-daily-results');
+
+            almanaxAggregatedResultsContainer = document.getElementById('almanax-aggregated-results-container');
+            almanaxAggregatedList = document.getElementById('almanax-aggregated-list');
+            almanaxEmptyAggregatedResults = document.getElementById('almanax-empty-aggregated-results');
+
             languageSelector = document.getElementById('language-selector');
             versionInfoElement = document.querySelector('[data-translate-key="version_info"]');
             exportCsvBtn = document.getElementById('exportCsvBtn');
 
-            // New: Initialize DOM elements for today's offering
             todayAlmanaxOfferingDiv = document.getElementById('today-almanax-offering');
             todayOfferingImg = document.getElementById('todayOfferingImg');
             todayOfferingName = document.getElementById('todayOfferingName');
@@ -640,7 +773,7 @@
                 versionInfoElement.textContent = translations[currentLanguage].version_info;
             }
 
-            // New: Display today's offering after data is loaded and language is set
+            // Display today's offering after data is loaded and language is set
             displayTodayOffering();
         });
     </script>
