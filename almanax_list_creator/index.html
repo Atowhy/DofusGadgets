@@ -69,12 +69,11 @@
             background-color: rgba(255, 255, 255, 0.05); flex-shrink: 0;
         }
 
-        /* IMPROVEMENT: Make date input more clickable */
+        /* Make date input more clickable */
         input[type="date"] {
             cursor: pointer;
             position: relative;
         }
-        /* Hide the default calendar icon to make the whole field the button */
         input[type="date"]::-webkit-calendar-picker-indicator {
             position: absolute;
             top: 0;
@@ -125,24 +124,27 @@
                 <div class="card-bg p-6 rounded-2xl shadow-lg mb-8">
                     <h2 class="text-xl font-semibold mb-4" data-translate-key="form_title">Générer une liste de ressources</h2>
                     
-                    <div class="mb-4">
-                        <label for="startDate" class="block text-sm font-medium text-gray-300 mb-1" data-translate-key="label_start_date">Date de début :</label>
-                        <input type="date" id="startDate" class="w-full bg-gray-700 border border-gray-600 rounded-lg px-3 py-2 text-white focus:ring-2 focus:ring-teal-500 focus:border-teal-500 transition">
-                    </div>
+                    <!-- IMPROVEMENT: Use a responsive grid for the form inputs -->
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 items-end">
+                        <div>
+                            <label for="startDate" class="block text-sm font-medium text-gray-300 mb-1" data-translate-key="label_start_date">Date de début :</label>
+                            <input type="date" id="startDate" class="w-full bg-gray-700 border border-gray-600 rounded-lg px-3 py-2 text-white focus:ring-2 focus:ring-teal-500 focus:border-teal-500 transition">
+                        </div>
 
-                    <div class="mb-4">
-                        <label for="endDate" class="block text-sm font-medium text-gray-300 mb-1" data-translate-key="label_end_date">Date de fin :</label>
-                        <input type="date" id="endDate" class="w-full bg-gray-700 border border-gray-600 rounded-lg px-3 py-2 text-white focus:ring-2 focus:ring-teal-500 focus:border-teal-500 transition">
-                    </div>
+                        <div>
+                            <label for="endDate" class="block text-sm font-medium text-gray-300 mb-1" data-translate-key="label_end_date">Date de fin :</label>
+                            <input type="date" id="endDate" class="w-full bg-gray-700 border border-gray-600 rounded-lg px-3 py-2 text-white focus:ring-2 focus:ring-teal-500 focus:border-teal-500 transition">
+                        </div>
 
-                    <div class="mb-6">
-                        <label for="numCharacters" class="block text-sm font-medium text-gray-300 mb-1" data-translate-key="label_num_characters">Nombre de personnages :</label>
-                        <input type="number" id="numCharacters" value="1" min="1" class="w-full bg-gray-700 border border-gray-600 rounded-lg px-3 py-2 text-white focus:ring-2 focus:ring-teal-500 focus:border-teal-500 transition">
-                    </div>
+                        <div>
+                            <label for="numCharacters" class="block text-sm font-medium text-gray-300 mb-1" data-translate-key="label_num_characters">Nombre de personnages :</label>
+                            <input type="number" id="numCharacters" value="1" min="1" class="w-full bg-gray-700 border border-gray-600 rounded-lg px-3 py-2 text-white focus:ring-2 focus:ring-teal-500 focus:border-teal-500 transition">
+                        </div>
 
-                    <button id="generateListBtn" class="w-full bg-teal-600 hover:bg-teal-700 text-white font-bold py-2 px-4 rounded-lg transition-transform transform hover:scale-105 shadow-md" data-translate-key="btn_generate_list">
-                        Générer la liste
-                    </button>
+                        <button id="generateListBtn" class="w-full bg-teal-600 hover:bg-teal-700 text-white font-bold py-2 px-4 rounded-lg transition-transform transform hover:scale-105 shadow-md h-10">
+                            Générer la liste
+                        </button>
+                    </div>
 
                     <div id="almanax-loading-message" class="message-box info hidden text-center">
                         <div class="loader"></div>
@@ -160,7 +162,6 @@
                         </button>
                     </div>
                     
-                    <!-- IMPROVEMENT: Use a responsive grid for the list -->
                     <div id="almanax-list" class="grid grid-cols-1 md:grid-cols-2 gap-4"></div>
                     <p id="almanax-empty-results" class="text-center text-gray-500 py-8 hidden" data-translate-key="empty_results">
                         Aucune ressource trouvée pour la période sélectionnée.
@@ -172,7 +173,7 @@
                 <img src="../images/LogoDofus.webp" alt="Logo Dofus" class="h-12 mx-auto mb-2 opacity-50">
                 <p data-translate-key="signature">Apps by Ato</p>
                 <p class="text-xs text-gray-600 mt-4" data-translate-key="disclaimer">Dofus et toutes les images associées utilisées sur ce site sont la propriété d'Ankama</p>
-                <p class="text-xs text-gray-600 mt-2" data-translate-key="version_info">Version 1.2.0 - Juillet 2025</p>
+                <p class="text-xs text-gray-600 mt-2" data-translate-key="version_info">Version 1.3.0 - Juillet 2025</p>
             </footer>
         </div>
     </div>
@@ -195,7 +196,7 @@
                 btn_back_home: "← Retour à l'accueil",
                 signature: "Apps by Ato",
                 disclaimer: "Dofus et toutes les images associées utilisées sur ce site sont la propriété d'Ankama",
-                version_info: "Version 1.2.0 - Juillet 2025", 
+                version_info: "Version 1.3.0 - Juillet 2025", 
                 almanax_list_creator_title: "Créateur de liste pour l'Almanax",
                 almanax_list_creator_desc: "Vous permet de générer une liste de ressources pour une période donnée.",
                 form_title: "Générer une liste de ressources",
@@ -224,7 +225,7 @@
                 btn_back_home: "← Back to Home",
                 signature: "Apps by Ato",
                 disclaimer: "Dofus and any related images used on this website are the properties of Ankama",
-                version_info: "Version 1.2.0 - July 2025", 
+                version_info: "Version 1.3.0 - July 2025", 
                 almanax_list_creator_title: "Almanax List Creator",
                 almanax_list_creator_desc: "Allows you to generate a list of resources for a given period.",
                 form_title: "Generate Resource List",
@@ -473,7 +474,6 @@
             todayOfferingDate = document.getElementById('todayOfferingDate');
             todayOfferingQuantity = document.getElementById('todayOfferingQuantity');
 
-            // IMPROVEMENT: Set default date range to one week
             const today = new Date();
             const sevenDaysLater = new Date();
             sevenDaysLater.setDate(today.getDate() + 7);
