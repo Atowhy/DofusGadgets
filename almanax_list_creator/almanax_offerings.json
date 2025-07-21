@@ -1,0 +1,2557 @@
+[
+  {
+    "month_day": "01-01",
+    "resource_name": "Métronome du Début-Temps",
+    "quantity": 1,
+    "resource_id": "metronome-du-debut-temps",
+    "resource_img": "https://placehold.co/40x40/1f2937/9ca3af?text=ME"
+  },
+  {
+    "month_day": "01-02",
+    "resource_name": "Michette",
+    "quantity": 4,
+    "resource_id": "michette",
+    "resource_img": "https://placehold.co/40x40/1f2937/9ca3af?text=MI"
+  },
+  {
+    "month_day": "01-03",
+    "resource_name": "Capuche d'Armécréante",
+    "quantity": 1,
+    "resource_id": "capuche-darmecrante",
+    "resource_img": "https://placehold.co/40x40/1f2937/9ca3af?text=CA"
+  },
+  {
+    "month_day": "01-04",
+    "resource_name": "Cœur de Crapeur",
+    "quantity": 3,
+    "resource_id": "coeur-de-crapeur",
+    "resource_img": "https://placehold.co/40x40/1f2937/9ca3af?text=CO"
+  },
+  {
+    "month_day": "01-05",
+    "resource_name": "Frostiz",
+    "quantity": 10,
+    "resource_id": "frostiz",
+    "resource_img": "https://placehold.co/40x40/1f2937/9ca3af?text=FR"
+  },
+  {
+    "month_day": "01-06",
+    "resource_name": "Poils de Barbe du Grand Pa Wabbit",
+    "quantity": 6,
+    "resource_id": "poils-de-barbe-du-grand-pa-wabbit",
+    "resource_img": "https://placehold.co/40x40/1f2937/9ca3af?text=PO"
+  },
+  {
+    "month_day": "01-07",
+    "resource_name": "Boue du Boo",
+    "quantity": 6,
+    "resource_id": "boue-du-boo",
+    "resource_img": "https://placehold.co/40x40/1f2937/9ca3af?text=BO"
+  },
+  {
+    "month_day": "01-08",
+    "resource_name": "Serviette de Plage",
+    "quantity": 6,
+    "resource_id": "serviette-de-plage",
+    "resource_img": "https://placehold.co/40x40/1f2937/9ca3af?text=SE"
+  },
+  {
+    "month_day": "01-09",
+    "resource_name": "Épée Sacrée",
+    "quantity": 1,
+    "resource_id": "epee-sacree",
+    "resource_img": "https://placehold.co/40x40/1f2937/9ca3af?text=EP"
+  },
+  {
+    "month_day": "01-10",
+    "resource_name": "Ceinture de Célérité",
+    "quantity": 1,
+    "resource_id": "ceinture-de-celerite",
+    "resource_img": "https://placehold.co/40x40/1f2937/9ca3af?text=CE"
+  },
+  {
+    "month_day": "01-11",
+    "resource_name": "Miroir de Dopeul",
+    "quantity": 6,
+    "resource_id": "miroir-de-dopeul",
+    "resource_img": "https://placehold.co/40x40/1f2937/9ca3af?text=MI"
+  },
+  {
+    "month_day": "01-12",
+    "resource_name": "Argent",
+    "quantity": 30,
+    "resource_id": "argent",
+    "resource_img": "https://placehold.co/40x40/1f2937/9ca3af?text=AR"
+  },
+  {
+    "month_day": "01-13",
+    "resource_name": "Bave de Nessil",
+    "quantity": 2,
+    "resource_id": "bave-de-nessil",
+    "resource_img": "https://placehold.co/40x40/1f2937/9ca3af?text=BA"
+  },
+  {
+    "month_day": "01-14",
+    "resource_name": "Bois de Tremble",
+    "quantity": 10,
+    "resource_id": "bois-de-tremble",
+    "resource_img": "https://placehold.co/40x40/1f2937/9ca3af?text=BO"
+  },
+  {
+    "month_day": "01-15",
+    "resource_name": "Botte trouée de Mégabwork",
+    "quantity": 6,
+    "resource_id": "botte-trouee-de-megabwork",
+    "resource_img": "https://placehold.co/40x40/1f2937/9ca3af?text=BO"
+  },
+  {
+    "month_day": "01-16",
+    "resource_name": "Relique Familiale",
+    "quantity": 6,
+    "resource_id": "relique-familiale",
+    "resource_img": "https://placehold.co/40x40/1f2937/9ca3af?text=RE"
+  },
+  {
+    "month_day": "01-17",
+    "resource_name": "Glande d'Arak-haï",
+    "quantity": 9,
+    "resource_id": "glande-darak-hai",
+    "resource_img": "https://placehold.co/40x40/1f2937/9ca3af?text=GL"
+  },
+  {
+    "month_day": "01-18",
+    "resource_name": "Poisson-Chaton",
+    "quantity": 40,
+    "resource_id": "poisson-chaton",
+    "resource_img": "https://placehold.co/40x40/1f2937/9ca3af?text=PO"
+  },
+  {
+    "month_day": "01-19",
+    "resource_name": "Pagne d'Alashasss",
+    "quantity": 2,
+    "resource_id": "pagne-dalashasss",
+    "resource_img": "https://placehold.co/40x40/1f2937/9ca3af?text=PA"
+  },
+  {
+    "month_day": "01-20",
+    "resource_name": "Poil de Rat Brâkmarien",
+    "quantity": 2,
+    "resource_id": "poil-de-rat-brakmarien",
+    "resource_img": "https://placehold.co/40x40/1f2937/9ca3af?text=PO"
+  },
+  {
+    "month_day": "01-21",
+    "resource_name": "Bouteille de Gloutoburg",
+    "quantity": 1,
+    "resource_id": "bouteille-de-gloutoburg",
+    "resource_img": "https://placehold.co/40x40/1f2937/9ca3af?text=BO"
+  },
+  {
+    "month_day": "01-22",
+    "resource_name": "Ailes de Moskito",
+    "quantity": 6,
+    "resource_id": "ailes-de-moskito",
+    "resource_img": "https://placehold.co/40x40/1f2937/9ca3af?text=AI"
+  },
+  {
+    "month_day": "01-23",
+    "resource_name": "Coiffe du Bouftou",
+    "quantity": 1,
+    "resource_id": "coiffe-du-bouftou",
+    "resource_img": "https://placehold.co/40x40/1f2937/9ca3af?text=CO"
+  },
+  {
+    "month_day": "01-24",
+    "resource_name": "Queue de Scorbute",
+    "quantity": 4,
+    "resource_id": "queue-de-scorbute",
+    "resource_img": "https://placehold.co/40x40/1f2937/9ca3af?text=QU"
+  },
+  {
+    "month_day": "01-25",
+    "resource_name": "Cocon de Ver à Soie",
+    "quantity": 10,
+    "resource_id": "cocon-de-ver-a-soie",
+    "resource_img": "https://placehold.co/40x40/1f2937/9ca3af?text=CO"
+  },
+  {
+    "month_day": "01-26",
+    "resource_name": "Patte d'Arakne",
+    "quantity": 6,
+    "resource_id": "patte-darakne",
+    "resource_img": "https://placehold.co/40x40/1f2937/9ca3af?text=PA"
+  },
+  {
+    "month_day": "01-27",
+    "resource_name": "Corne de Bouftou",
+    "quantity": 6,
+    "resource_id": "corne-de-bouftou",
+    "resource_img": "https://placehold.co/40x40/1f2937/9ca3af?text=CO"
+  },
+  {
+    "month_day": "01-28",
+    "resource_name": "Bave de Bouftou",
+    "quantity": 6,
+    "resource_id": "bave-de-bouftou",
+    "resource_img": "https://placehold.co/40x40/1f2937/9ca3af?text=BA"
+  },
+  {
+    "month_day": "01-29",
+    "resource_name": "Patte de Bwork",
+    "quantity": 1,
+    "resource_id": "patte-de-bwork",
+    "resource_img": "https://placehold.co/40x40/1f2937/9ca3af?text=PA"
+  },
+  {
+    "month_day": "01-30",
+    "resource_name": "Œil de Corbac",
+    "quantity": 1,
+    "resource_id": "oeil-de-corbac",
+    "resource_img": "https://placehold.co/40x40/1f2937/9ca3af?text=OE"
+  },
+  {
+    "month_day": "01-31",
+    "resource_name": "Plume de Corbac",
+    "quantity": 6,
+    "resource_id": "plume-de-corbac",
+    "resource_img": "https://placehold.co/40x40/1f2937/9ca3af?text=PL"
+  },
+  {
+    "month_day": "02-01",
+    "resource_name": "Œil de Craqueleur",
+    "quantity": 2,
+    "resource_id": "oeil-de-craqueleur",
+    "resource_img": "https://placehold.co/40x40/1f2937/9ca3af?text=OE"
+  },
+  {
+    "month_day": "02-02",
+    "resource_name": "Queue de Prespic",
+    "quantity": 4,
+    "resource_id": "queue-de-prespic",
+    "resource_img": "https://placehold.co/40x40/1f2937/9ca3af?text=QU"
+  },
+  {
+    "month_day": "02-03",
+    "resource_name": "Étoffe de Chef de Guerre",
+    "quantity": 1,
+    "resource_id": "etoffe-de-chef-de-guerre",
+    "resource_img": "https://placehold.co/40x40/1f2937/9ca3af?text=ET"
+  },
+  {
+    "month_day": "02-04",
+    "resource_name": "Poil de Sanglier",
+    "quantity": 6,
+    "resource_id": "poil-de-sanglier",
+    "resource_img": "https://placehold.co/40x40/1f2937/9ca3af?text=PO"
+  },
+  {
+    "month_day": "02-05",
+    "resource_name": "Duvet de Kido",
+    "quantity": 6,
+    "resource_id": "duvet-de-kido",
+    "resource_img": "https://placehold.co/40x40/1f2937/9ca3af?text=DU"
+  },
+  {
+    "month_day": "02-06",
+    "resource_name": "Plume du Kwak de Flammes",
+    "quantity": 6,
+    "resource_id": "plume-du-kwak-de-flammes",
+    "resource_img": "https://placehold.co/40x40/1f2937/9ca3af?text=PL"
+  },
+  {
+    "month_day": "02-07",
+    "resource_name": "Langue de Chef de Guerre",
+    "quantity": 1,
+    "resource_id": "langue-de-chef-de-guerre",
+    "resource_img": "https://placehold.co/40x40/1f2937/9ca3af?text=LA"
+  },
+  {
+    "month_day": "02-08",
+    "resource_name": "Corne du Chef de Guerre",
+    "quantity": 1,
+    "resource_id": "corne-du-chef-de-guerre",
+    "resource_img": "https://placehold.co/40x40/1f2937/9ca3af?text=CO"
+  },
+  {
+    "month_day": "02-09",
+    "resource_name": "Plume du Corbac",
+    "quantity": 6,
+    "resource_id": "plume-de-corbac",
+    "resource_img": "https://placehold.co/40x40/1f2937/9ca3af?text=PL"
+  },
+  {
+    "month_day": "02-10",
+    "resource_name": "Patte d'Arakne",
+    "quantity": 6,
+    "resource_id": "patte-darakne",
+    "resource_img": "https://placehold.co/40x40/1f2937/9ca3af?text=PA"
+  },
+  {
+    "month_day": "02-11",
+    "resource_name": "Corne de Bouftou",
+    "quantity": 6,
+    "resource_id": "corne-de-bouftou",
+    "resource_img": "https://placehold.co/40x40/1f2937/9ca3af?text=CO"
+  },
+  {
+    "month_day": "02-12",
+    "resource_name": "Bave de Bouftou",
+    "quantity": 6,
+    "resource_id": "bave-de-bouftou",
+    "resource_img": "https://placehold.co/40x40/1f2937/9ca3af?text=BA"
+  },
+  {
+    "month_day": "02-13",
+    "resource_name": "Patte de Bwork",
+    "quantity": 1,
+    "resource_id": "patte-de-bwork",
+    "resource_img": "https://placehold.co/40x40/1f2937/9ca3af?text=PA"
+  },
+  {
+    "month_day": "02-14",
+    "resource_name": "Œil de Corbac",
+    "quantity": 1,
+    "resource_id": "oeil-de-corbac",
+    "resource_img": "https://placehold.co/40x40/1f2937/9ca3af?text=OE"
+  },
+  {
+    "month_day": "02-15",
+    "resource_name": "Plume de Corbac",
+    "quantity": 6,
+    "resource_id": "plume-de-corbac",
+    "resource_img": "https://placehold.co/40x40/1f2937/9ca3af?text=PL"
+  },
+  {
+    "month_day": "02-16",
+    "resource_name": "Œil de Craqueleur",
+    "quantity": 2,
+    "resource_id": "oeil-de-craqueleur",
+    "resource_img": "https://placehold.co/40x40/1f2937/9ca3af?text=OE"
+  },
+  {
+    "month_day": "02-17",
+    "resource_name": "Queue de Prespic",
+    "quantity": 4,
+    "resource_id": "queue-de-prespic",
+    "resource_img": "https://placehold.co/40x40/1f2937/9ca3af?text=QU"
+  },
+  {
+    "month_day": "02-18",
+    "resource_name": "Étoffe de Chef de Guerre",
+    "quantity": 1,
+    "resource_id": "etoffe-de-chef-de-guerre",
+    "resource_img": "https://placehold.co/40x40/1f2937/9ca3af?text=ET"
+  },
+  {
+    "month_day": "02-19",
+    "resource_name": "Poil de Sanglier",
+    "quantity": 6,
+    "resource_id": "poil-de-sanglier",
+    "resource_img": "https://placehold.co/40x40/1f2937/9ca3af?text=PO"
+  },
+  {
+    "month_day": "02-20",
+    "resource_name": "Duvet de Kido",
+    "quantity": 6,
+    "resource_id": "duvet-de-kido",
+    "resource_img": "https://placehold.co/40x40/1f2937/9ca3af?text=DU"
+  },
+  {
+    "month_day": "02-21",
+    "resource_name": "Plume du Kwak de Flammes",
+    "quantity": 6,
+    "resource_id": "plume-du-kwak-de-flammes",
+    "resource_img": "https://placehold.co/40x40/1f2937/9ca3af?text=PL"
+  },
+  {
+    "month_day": "02-22",
+    "resource_name": "Langue de Chef de Guerre",
+    "quantity": 1,
+    "resource_id": "langue-de-chef-de-guerre",
+    "resource_img": "https://placehold.co/40x40/1f2937/9ca3af?text=LA"
+  },
+  {
+    "month_day": "02-23",
+    "resource_name": "Corne du Chef de Guerre",
+    "quantity": 1,
+    "resource_id": "corne-du-chef-de-guerre",
+    "resource_img": "https://placehold.co/40x40/1f2937/9ca3af?text=CO"
+  },
+  {
+    "month_day": "02-24",
+    "resource_name": "Plume du Corbac",
+    "quantity": 6,
+    "resource_id": "plume-de-corbac",
+    "resource_img": "https://placehold.co/40x40/1f2937/9ca3af?text=PL"
+  },
+  {
+    "month_day": "02-25",
+    "resource_name": "Patte d'Arakne",
+    "quantity": 6,
+    "resource_id": "patte-darakne",
+    "resource_img": "https://placehold.co/40x40/1f2937/9ca3af?text=PA"
+  },
+  {
+    "month_day": "02-26",
+    "resource_name": "Corne de Bouftou",
+    "quantity": 6,
+    "resource_id": "corne-de-bouftou",
+    "resource_img": "https://placehold.co/40x40/1f2937/9ca3af?text=CO"
+  },
+  {
+    "month_day": "02-27",
+    "resource_name": "Bave de Bouftou",
+    "quantity": 6,
+    "resource_id": "bave-de-bouftou",
+    "resource_img": "https://placehold.co/40x40/1f2937/9ca3af?text=BA"
+  },
+  {
+    "month_day": "02-28",
+    "resource_name": "Patte de Bwork",
+    "quantity": 1,
+    "resource_id": "patte-de-bwork",
+    "resource_img": "https://placehold.co/40x40/1f2937/9ca3af?text=PA"
+  },
+  {
+    "month_day": "03-01",
+    "resource_name": "Œil de Corbac",
+    "quantity": 1,
+    "resource_id": "oeil-de-corbac",
+    "resource_img": "https://placehold.co/40x40/1f2937/9ca3af?text=OE"
+  },
+  {
+    "month_day": "03-02",
+    "resource_name": "Plume de Corbac",
+    "quantity": 6,
+    "resource_id": "plume-de-corbac",
+    "resource_img": "https://placehold.co/40x40/1f2937/9ca3af?text=PL"
+  },
+  {
+    "month_day": "03-03",
+    "resource_name": "Œil de Craqueleur",
+    "quantity": 2,
+    "resource_id": "oeil-de-craqueleur",
+    "resource_img": "https://placehold.co/40x40/1f2937/9ca3af?text=OE"
+  },
+  {
+    "month_day": "03-04",
+    "resource_name": "Queue de Prespic",
+    "quantity": 4,
+    "resource_id": "queue-de-prespic",
+    "resource_img": "https://placehold.co/40x40/1f2937/9ca3af?text=QU"
+  },
+  {
+    "month_day": "03-05",
+    "resource_name": "Étoffe de Chef de Guerre",
+    "quantity": 1,
+    "resource_id": "etoffe-de-chef-de-guerre",
+    "resource_img": "https://placehold.co/40x40/1f2937/9ca3af?text=ET"
+  },
+  {
+    "month_day": "03-06",
+    "resource_name": "Poil de Sanglier",
+    "quantity": 6,
+    "resource_id": "poil-de-sanglier",
+    "resource_img": "https://placehold.co/40x40/1f2937/9ca3af?text=PO"
+  },
+  {
+    "month_day": "03-07",
+    "resource_name": "Duvet de Kido",
+    "quantity": 6,
+    "resource_id": "duvet-de-kido",
+    "resource_img": "https://placehold.co/40x40/1f2937/9ca3af?text=DU"
+  },
+  {
+    "month_day": "03-08",
+    "resource_name": "Plume du Kwak de Flammes",
+    "quantity": 6,
+    "resource_id": "plume-du-kwak-de-flammes",
+    "resource_img": "https://placehold.co/40x40/1f2937/9ca3af?text=PL"
+  },
+  {
+    "month_day": "03-09",
+    "resource_name": "Langue de Chef de Guerre",
+    "quantity": 1,
+    "resource_id": "langue-de-chef-de-guerre",
+    "resource_img": "https://placehold.co/40x40/1f2937/9ca3af?text=LA"
+  },
+  {
+    "month_day": "03-10",
+    "resource_name": "Corne du Chef de Guerre",
+    "quantity": 1,
+    "resource_id": "corne-du-chef-de-guerre",
+    "resource_img": "https://placehold.co/40x40/1f2937/9ca3af?text=CO"
+  },
+  {
+    "month_day": "03-11",
+    "resource_name": "Plume du Corbac",
+    "quantity": 6,
+    "resource_id": "plume-de-corbac",
+    "resource_img": "https://placehold.co/40x40/1f2937/9ca3af?text=PL"
+  },
+  {
+    "month_day": "03-12",
+    "resource_name": "Patte d'Arakne",
+    "quantity": 6,
+    "resource_id": "patte-darakne",
+    "resource_img": "https://placehold.co/40x40/1f2937/9ca3af?text=PA"
+  },
+  {
+    "month_day": "03-13",
+    "resource_name": "Corne de Bouftou",
+    "quantity": 6,
+    "resource_id": "corne-de-bouftou",
+    "resource_img": "https://placehold.co/40x40/1f2937/9ca3af?text=CO"
+  },
+  {
+    "month_day": "03-14",
+    "resource_name": "Bave de Bouftou",
+    "quantity": 6,
+    "resource_id": "bave-de-bouftou",
+    "resource_img": "https://placehold.co/40x40/1f2937/9ca3af?text=BA"
+  },
+  {
+    "month_day": "03-15",
+    "resource_name": "Patte de Bwork",
+    "quantity": 1,
+    "resource_id": "patte-de-bwork",
+    "resource_img": "https://placehold.co/40x40/1f2937/9ca3af?text=PA"
+  },
+  {
+    "month_day": "03-16",
+    "resource_name": "Œil de Corbac",
+    "quantity": 1,
+    "resource_id": "oeil-de-corbac",
+    "resource_img": "https://placehold.co/40x40/1f2937/9ca3af?text=OE"
+  },
+  {
+    "month_day": "03-17",
+    "resource_name": "Plume de Corbac",
+    "quantity": 6,
+    "resource_id": "plume-de-corbac",
+    "resource_img": "https://placehold.co/40x40/1f2937/9ca3af?text=PL"
+  },
+  {
+    "month_day": "03-18",
+    "resource_name": "Œil de Craqueleur",
+    "quantity": 2,
+    "resource_id": "oeil-de-craqueleur",
+    "resource_img": "https://placehold.co/40x40/1f2937/9ca3af?text=OE"
+  },
+  {
+    "month_day": "03-19",
+    "resource_name": "Queue de Prespic",
+    "quantity": 4,
+    "resource_id": "queue-de-prespic",
+    "resource_img": "https://placehold.co/40x40/1f2937/9ca3af?text=QU"
+  },
+  {
+    "month_day": "03-20",
+    "resource_name": "Étoffe de Chef de Guerre",
+    "quantity": 1,
+    "resource_id": "etoffe-de-chef-de-guerre",
+    "resource_img": "https://placehold.co/40x40/1f2937/9ca3af?text=ET"
+  },
+  {
+    "month_day": "03-21",
+    "resource_name": "Poil de Sanglier",
+    "quantity": 6,
+    "resource_id": "poil-de-sanglier",
+    "resource_img": "https://placehold.co/40x40/1f2937/9ca3af?text=PO"
+  },
+  {
+    "month_day": "03-22",
+    "resource_name": "Duvet de Kido",
+    "quantity": 6,
+    "resource_id": "duvet-de-kido",
+    "resource_img": "https://placehold.co/40x40/1f2937/9ca3af?text=DU"
+  },
+  {
+    "month_day": "03-23",
+    "resource_name": "Plume du Kwak de Flammes",
+    "quantity": 6,
+    "resource_id": "plume-du-kwak-de-flammes",
+    "resource_img": "https://placehold.co/40x40/1f2937/9ca3af?text=PL"
+  },
+  {
+    "month_day": "03-24",
+    "resource_name": "Langue de Chef de Guerre",
+    "quantity": 1,
+    "resource_id": "langue-de-chef-de-guerre",
+    "resource_img": "https://placehold.co/40x40/1f2937/9ca3af?text=LA"
+  },
+  {
+    "month_day": "03-25",
+    "resource_name": "Corne du Chef de Guerre",
+    "quantity": 1,
+    "resource_id": "corne-du-chef-de-guerre",
+    "resource_img": "https://placehold.co/40x40/1f2937/9ca3af?text=CO"
+  },
+  {
+    "month_day": "03-26",
+    "resource_name": "Plume du Corbac",
+    "quantity": 6,
+    "resource_id": "plume-de-corbac",
+    "resource_img": "https://placehold.co/40x40/1f2937/9ca3af?text=PL"
+  },
+  {
+    "month_day": "03-27",
+    "resource_name": "Patte d'Arakne",
+    "quantity": 6,
+    "resource_id": "patte-darakne",
+    "resource_img": "https://placehold.co/40x40/1f2937/9ca3af?text=PA"
+  },
+  {
+    "month_day": "03-28",
+    "resource_name": "Corne de Bouftou",
+    "quantity": 6,
+    "resource_id": "corne-de-bouftou",
+    "resource_img": "https://placehold.co/40x40/1f2937/9ca3af?text=CO"
+  },
+  {
+    "month_day": "03-29",
+    "resource_name": "Bave de Bouftou",
+    "quantity": 6,
+    "resource_id": "bave-de-bouftou",
+    "resource_img": "https://placehold.co/40x40/1f2937/9ca3af?text=BA"
+  },
+  {
+    "month_day": "03-30",
+    "resource_name": "Patte de Bwork",
+    "quantity": 1,
+    "resource_id": "patte-de-bwork",
+    "resource_img": "https://placehold.co/40x40/1f2937/9ca3af?text=PA"
+  },
+  {
+    "month_day": "03-31",
+    "resource_name": "Œil de Corbac",
+    "quantity": 1,
+    "resource_id": "oeil-de-corbac",
+    "resource_img": "https://placehold.co/40x40/1f2937/9ca3af?text=OE"
+  },
+  {
+    "month_day": "04-01",
+    "resource_name": "Plume de Corbac",
+    "quantity": 6,
+    "resource_id": "plume-de-corbac",
+    "resource_img": "https://placehold.co/40x40/1f2937/9ca3af?text=PL"
+  },
+  {
+    "month_day": "04-02",
+    "resource_name": "Œil de Craqueleur",
+    "quantity": 2,
+    "resource_id": "oeil-de-craqueleur",
+    "resource_img": "https://placehold.co/40x40/1f2937/9ca3af?text=OE"
+  },
+  {
+    "month_day": "04-03",
+    "resource_name": "Queue de Prespic",
+    "quantity": 4,
+    "resource_id": "queue-de-prespic",
+    "resource_img": "https://placehold.co/40x40/1f2937/9ca3af?text=QU"
+  },
+  {
+    "month_day": "04-04",
+    "resource_name": "Étoffe de Chef de Guerre",
+    "quantity": 1,
+    "resource_id": "etoffe-de-chef-de-guerre",
+    "resource_img": "https://placehold.co/40x40/1f2937/9ca3af?text=ET"
+  },
+  {
+    "month_day": "04-05",
+    "resource_name": "Poil de Sanglier",
+    "quantity": 6,
+    "resource_id": "poil-de-sanglier",
+    "resource_img": "https://placehold.co/40x40/1f2937/9ca3af?text=PO"
+  },
+  {
+    "month_day": "04-06",
+    "resource_name": "Duvet de Kido",
+    "quantity": 6,
+    "resource_id": "duvet-de-kido",
+    "resource_img": "https://placehold.co/40x40/1f2937/9ca3af?text=DU"
+  },
+  {
+    "month_day": "04-07",
+    "resource_name": "Plume du Kwak de Flammes",
+    "quantity": 6,
+    "resource_id": "plume-du-kwak-de-flammes",
+    "resource_img": "https://placehold.co/40x40/1f2937/9ca3af?text=PL"
+  },
+  {
+    "month_day": "04-08",
+    "resource_name": "Langue de Chef de Guerre",
+    "quantity": 1,
+    "resource_id": "langue-de-chef-de-guerre",
+    "resource_img": "https://placehold.co/40x40/1f2937/9ca3af?text=LA"
+  },
+  {
+    "month_day": "04-09",
+    "resource_name": "Corne du Chef de Guerre",
+    "quantity": 1,
+    "resource_id": "corne-du-chef-de-guerre",
+    "resource_img": "https://placehold.co/40x40/1f2937/9ca3af?text=CO"
+  },
+  {
+    "month_day": "04-10",
+    "resource_name": "Plume du Corbac",
+    "quantity": 6,
+    "resource_id": "plume-de-corbac",
+    "resource_img": "https://placehold.co/40x40/1f2937/9ca3af?text=PL"
+  },
+  {
+    "month_day": "04-11",
+    "resource_name": "Patte d'Arakne",
+    "quantity": 6,
+    "resource_id": "patte-darakne",
+    "resource_img": "https://placehold.co/40x40/1f2937/9ca3af?text=PA"
+  },
+  {
+    "month_day": "04-12",
+    "resource_name": "Corne de Bouftou",
+    "quantity": 6,
+    "resource_id": "corne-de-bouftou",
+    "resource_img": "https://placehold.co/40x40/1f2937/9ca3af?text=CO"
+  },
+  {
+    "month_day": "04-13",
+    "resource_name": "Bave de Bouftou",
+    "quantity": 6,
+    "resource_id": "bave-de-bouftou",
+    "resource_img": "https://placehold.co/40x40/1f2937/9ca3af?text=BA"
+  },
+  {
+    "month_day": "04-14",
+    "resource_name": "Patte de Bwork",
+    "quantity": 1,
+    "resource_id": "patte-de-bwork",
+    "resource_img": "https://placehold.co/40x40/1f2937/9ca3af?text=PA"
+  },
+  {
+    "month_day": "04-15",
+    "resource_name": "Œil de Corbac",
+    "quantity": 1,
+    "resource_id": "oeil-de-corbac",
+    "resource_img": "https://placehold.co/40x40/1f2937/9ca3af?text=OE"
+  },
+  {
+    "month_day": "04-16",
+    "resource_name": "Plume de Corbac",
+    "quantity": 6,
+    "resource_id": "plume-de-corbac",
+    "resource_img": "https://placehold.co/40x40/1f2937/9ca3af?text=PL"
+  },
+  {
+    "month_day": "04-17",
+    "resource_name": "Œil de Craqueleur",
+    "quantity": 2,
+    "resource_id": "oeil-de-craqueleur",
+    "resource_img": "https://placehold.co/40x40/1f2937/9ca3af?text=OE"
+  },
+  {
+    "month_day": "04-18",
+    "resource_name": "Queue de Prespic",
+    "quantity": 4,
+    "resource_id": "queue-de-prespic",
+    "resource_img": "https://placehold.co/40x40/1f2937/9ca3af?text=QU"
+  },
+  {
+    "month_day": "04-19",
+    "resource_name": "Étoffe de Chef de Guerre",
+    "quantity": 1,
+    "resource_id": "etoffe-de-chef-de-guerre",
+    "resource_img": "https://placehold.co/40x40/1f2937/9ca3af?text=ET"
+  },
+  {
+    "month_day": "04-20",
+    "resource_name": "Poil de Sanglier",
+    "quantity": 6,
+    "resource_id": "poil-de-sanglier",
+    "resource_img": "https://placehold.co/40x40/1f2937/9ca3af?text=PO"
+  },
+  {
+    "month_day": "04-21",
+    "resource_name": "Duvet de Kido",
+    "quantity": 6,
+    "resource_id": "duvet-de-kido",
+    "resource_img": "https://placehold.co/40x40/1f2937/9ca3af?text=DU"
+  },
+  {
+    "month_day": "04-22",
+    "resource_name": "Plume du Kwak de Flammes",
+    "quantity": 6,
+    "resource_id": "plume-du-kwak-de-flammes",
+    "resource_img": "https://placehold.co/40x40/1f2937/9ca3af?text=PL"
+  },
+  {
+    "month_day": "04-23",
+    "resource_name": "Langue de Chef de Guerre",
+    "quantity": 1,
+    "resource_id": "langue-de-chef-de-guerre",
+    "resource_img": "https://placehold.co/40x40/1f2937/9ca3af?text=LA"
+  },
+  {
+    "month_day": "04-24",
+    "resource_name": "Corne du Chef de Guerre",
+    "quantity": 1,
+    "resource_id": "corne-du-chef-de-guerre",
+    "resource_img": "https://placehold.co/40x40/1f2937/9ca3af?text=CO"
+  },
+  {
+    "month_day": "04-25",
+    "resource_name": "Plume du Corbac",
+    "quantity": 6,
+    "resource_id": "plume-de-corbac",
+    "resource_img": "https://placehold.co/40x40/1f2937/9ca3af?text=PL"
+  },
+  {
+    "month_day": "04-26",
+    "resource_name": "Patte d'Arakne",
+    "quantity": 6,
+    "resource_id": "patte-darakne",
+    "resource_img": "https://placehold.co/40x40/1f2937/9ca3af?text=PA"
+  },
+  {
+    "month_day": "04-27",
+    "resource_name": "Corne de Bouftou",
+    "quantity": 6,
+    "resource_id": "corne-de-bouftou",
+    "resource_img": "https://placehold.co/40x40/1f2937/9ca3af?text=CO"
+  },
+  {
+    "month_day": "04-28",
+    "resource_name": "Bave de Bouftou",
+    "quantity": 6,
+    "resource_id": "bave-de-bouftou",
+    "resource_img": "https://placehold.co/40x40/1f2937/9ca3af?text=BA"
+  },
+  {
+    "month_day": "04-29",
+    "resource_name": "Patte de Bwork",
+    "quantity": 1,
+    "resource_id": "patte-de-bwork",
+    "resource_img": "https://placehold.co/40x40/1f2937/9ca3af?text=PA"
+  },
+  {
+    "month_day": "04-30",
+    "resource_name": "Œil de Corbac",
+    "quantity": 1,
+    "resource_id": "oeil-de-corbac",
+    "resource_img": "https://placehold.co/40x40/1f2937/9ca3af?text=OE"
+  },
+  {
+    "month_day": "05-01",
+    "resource_name": "Plume de Corbac",
+    "quantity": 6,
+    "resource_id": "plume-de-corbac",
+    "resource_img": "https://placehold.co/40x40/1f2937/9ca3af?text=PL"
+  },
+  {
+    "month_day": "05-02",
+    "resource_name": "Œil de Craqueleur",
+    "quantity": 2,
+    "resource_id": "oeil-de-craqueleur",
+    "resource_img": "https://placehold.co/40x40/1f2937/9ca3af?text=OE"
+  },
+  {
+    "month_day": "05-03",
+    "resource_name": "Queue de Prespic",
+    "quantity": 4,
+    "resource_id": "queue-de-prespic",
+    "resource_img": "https://placehold.co/40x40/1f2937/9ca3af?text=QU"
+  },
+  {
+    "month_day": "05-04",
+    "resource_name": "Étoffe de Chef de Guerre",
+    "quantity": 1,
+    "resource_id": "etoffe-de-chef-de-guerre",
+    "resource_img": "https://placehold.co/40x40/1f2937/9ca3af?text=ET"
+  },
+  {
+    "month_day": "05-05",
+    "resource_name": "Poil de Sanglier",
+    "quantity": 6,
+    "resource_id": "poil-de-sanglier",
+    "resource_img": "https://placehold.co/40x40/1f2937/9ca3af?text=PO"
+  },
+  {
+    "month_day": "05-06",
+    "resource_name": "Duvet de Kido",
+    "quantity": 6,
+    "resource_id": "duvet-de-kido",
+    "resource_img": "https://placehold.co/40x40/1f2937/9ca3af?text=DU"
+  },
+  {
+    "month_day": "05-07",
+    "resource_name": "Plume du Kwak de Flammes",
+    "quantity": 6,
+    "resource_id": "plume-du-kwak-de-flammes",
+    "resource_img": "https://placehold.co/40x40/1f2937/9ca3af?text=PL"
+  },
+  {
+    "month_day": "05-08",
+    "resource_name": "Langue de Chef de Guerre",
+    "quantity": 1,
+    "resource_id": "langue-de-chef-de-guerre",
+    "resource_img": "https://placehold.co/40x40/1f2937/9ca3af?text=LA"
+  },
+  {
+    "month_day": "05-09",
+    "resource_name": "Corne du Chef de Guerre",
+    "quantity": 1,
+    "resource_id": "corne-du-chef-de-guerre",
+    "resource_img": "https://placehold.co/40x40/1f2937/9ca3af?text=CO"
+  },
+  {
+    "month_day": "05-10",
+    "resource_name": "Plume du Corbac",
+    "quantity": 6,
+    "resource_id": "plume-de-corbac",
+    "resource_img": "https://placehold.co/40x40/1f2937/9ca3af?text=PL"
+  },
+  {
+    "month_day": "05-11",
+    "resource_name": "Patte d'Arakne",
+    "quantity": 6,
+    "resource_id": "patte-darakne",
+    "resource_img": "https://placehold.co/40x40/1f2937/9ca3af?text=PA"
+  },
+  {
+    "month_day": "05-12",
+    "resource_name": "Corne de Bouftou",
+    "quantity": 6,
+    "resource_id": "corne-de-bouftou",
+    "resource_img": "https://placehold.co/40x40/1f2937/9ca3af?text=CO"
+  },
+  {
+    "month_day": "05-13",
+    "resource_name": "Bave de Bouftou",
+    "quantity": 6,
+    "resource_id": "bave-de-bouftou",
+    "resource_img": "https://placehold.co/40x40/1f2937/9ca3af?text=BA"
+  },
+  {
+    "month_day": "05-14",
+    "resource_name": "Patte de Bwork",
+    "quantity": 1,
+    "resource_id": "patte-de-bwork",
+    "resource_img": "https://placehold.co/40x40/1f2937/9ca3af?text=PA"
+  },
+  {
+    "month_day": "05-15",
+    "resource_name": "Œil de Corbac",
+    "quantity": 1,
+    "resource_id": "oeil-de-corbac",
+    "resource_img": "https://placehold.co/40x40/1f2937/9ca3af?text=OE"
+  },
+  {
+    "month_day": "05-16",
+    "resource_name": "Plume de Corbac",
+    "quantity": 6,
+    "resource_id": "plume-de-corbac",
+    "resource_img": "https://placehold.co/40x40/1f2937/9ca3af?text=PL"
+  },
+  {
+    "month_day": "05-17",
+    "resource_name": "Œil de Craqueleur",
+    "quantity": 2,
+    "resource_id": "oeil-de-craqueleur",
+    "resource_img": "https://placehold.co/40x40/1f2937/9ca3af?text=OE"
+  },
+  {
+    "month_day": "05-18",
+    "resource_name": "Queue de Prespic",
+    "quantity": 4,
+    "resource_id": "queue-de-prespic",
+    "resource_img": "https://placehold.co/40x40/1f2937/9ca3af?text=QU"
+  },
+  {
+    "month_day": "05-19",
+    "resource_name": "Étoffe de Chef de Guerre",
+    "quantity": 1,
+    "resource_id": "etoffe-de-chef-de-guerre",
+    "resource_img": "https://placehold.co/40x40/1f2937/9ca3af?text=ET"
+  },
+  {
+    "month_day": "05-20",
+    "resource_name": "Poil de Sanglier",
+    "quantity": 6,
+    "resource_id": "poil-de-sanglier",
+    "resource_img": "https://placehold.co/40x40/1f2937/9ca3af?text=PO"
+  },
+  {
+    "month_day": "05-21",
+    "resource_name": "Duvet de Kido",
+    "quantity": 6,
+    "resource_id": "duvet-de-kido",
+    "resource_img": "https://placehold.co/40x40/1f2937/9ca3af?text=DU"
+  },
+  {
+    "month_day": "05-22",
+    "resource_name": "Plume du Kwak de Flammes",
+    "quantity": 6,
+    "resource_id": "plume-du-kwak-de-flammes",
+    "resource_img": "https://placehold.co/40x40/1f2937/9ca3af?text=PL"
+  },
+  {
+    "month_day": "05-23",
+    "resource_name": "Langue de Chef de Guerre",
+    "quantity": 1,
+    "resource_id": "langue-de-chef-de-guerre",
+    "resource_img": "https://placehold.co/40x40/1f2937/9ca3af?text=LA"
+  },
+  {
+    "month_day": "05-24",
+    "resource_name": "Corne du Chef de Guerre",
+    "quantity": 1,
+    "resource_id": "corne-du-chef-de-guerre",
+    "resource_img": "https://placehold.co/40x40/1f2937/9ca3af?text=CO"
+  },
+  {
+    "month_day": "05-25",
+    "resource_name": "Plume du Corbac",
+    "quantity": 6,
+    "resource_id": "plume-de-corbac",
+    "resource_img": "https://placehold.co/40x40/1f2937/9ca3af?text=PL"
+  },
+  {
+    "month_day": "05-26",
+    "resource_name": "Patte d'Arakne",
+    "quantity": 6,
+    "resource_id": "patte-darakne",
+    "resource_img": "https://placehold.co/40x40/1f2937/9ca3af?text=PA"
+  },
+  {
+    "month_day": "05-27",
+    "resource_name": "Corne de Bouftou",
+    "quantity": 6,
+    "resource_id": "corne-de-bouftou",
+    "resource_img": "https://placehold.co/40x40/1f2937/9ca3af?text=CO"
+  },
+  {
+    "month_day": "05-28",
+    "resource_name": "Bave de Bouftou",
+    "quantity": 6,
+    "resource_id": "bave-de-bouftou",
+    "resource_img": "https://placehold.co/40x40/1f2937/9ca3af?text=BA"
+  },
+  {
+    "month_day": "05-29",
+    "resource_name": "Patte de Bwork",
+    "quantity": 1,
+    "resource_id": "patte-de-bwork",
+    "resource_img": "https://placehold.co/40x40/1f2937/9ca3af?text=PA"
+  },
+  {
+    "month_day": "05-30",
+    "resource_name": "Œil de Corbac",
+    "quantity": 1,
+    "resource_id": "oeil-de-corbac",
+    "resource_img": "https://placehold.co/40x40/1f2937/9ca3af?text=OE"
+  },
+  {
+    "month_day": "05-31",
+    "resource_name": "Plume de Corbac",
+    "quantity": 6,
+    "resource_id": "plume-de-corbac",
+    "resource_img": "https://placehold.co/40x40/1f2937/9ca3af?text=PL"
+  },
+  {
+    "month_day": "06-01",
+    "resource_name": "Œil de Craqueleur",
+    "quantity": 2,
+    "resource_id": "oeil-de-craqueleur",
+    "resource_img": "https://placehold.co/40x40/1f2937/9ca3af?text=OE"
+  },
+  {
+    "month_day": "06-02",
+    "resource_name": "Queue de Prespic",
+    "quantity": 4,
+    "resource_id": "queue-de-prespic",
+    "resource_img": "https://placehold.co/40x40/1f2937/9ca3af?text=QU"
+  },
+  {
+    "month_day": "06-03",
+    "resource_name": "Étoffe de Chef de Guerre",
+    "quantity": 1,
+    "resource_id": "etoffe-de-chef-de-guerre",
+    "resource_img": "https://placehold.co/40x40/1f2937/9ca3af?text=ET"
+  },
+  {
+    "month_day": "06-04",
+    "resource_name": "Poil de Sanglier",
+    "quantity": 6,
+    "resource_id": "poil-de-sanglier",
+    "resource_img": "https://placehold.co/40x40/1f2937/9ca3af?text=PO"
+  },
+  {
+    "month_day": "06-05",
+    "resource_name": "Duvet de Kido",
+    "quantity": 6,
+    "resource_id": "duvet-de-kido",
+    "resource_img": "https://placehold.co/40x40/1f2937/9ca3af?text=DU"
+  },
+  {
+    "month_day": "06-06",
+    "resource_name": "Plume du Kwak de Flammes",
+    "quantity": 6,
+    "resource_id": "plume-du-kwak-de-flammes",
+    "resource_img": "https://placehold.co/40x40/1f2937/9ca3af?text=PL"
+  },
+  {
+    "month_day": "06-07",
+    "resource_name": "Langue de Chef de Guerre",
+    "quantity": 1,
+    "resource_id": "langue-de-chef-de-guerre",
+    "resource_img": "https://placehold.co/40x40/1f2937/9ca3af?text=LA"
+  },
+  {
+    "month_day": "06-08",
+    "resource_name": "Corne du Chef de Guerre",
+    "quantity": 1,
+    "resource_id": "corne-du-chef-de-guerre",
+    "resource_img": "https://placehold.co/40x40/1f2937/9ca3af?text=CO"
+  },
+  {
+    "month_day": "06-09",
+    "resource_name": "Plume du Corbac",
+    "quantity": 6,
+    "resource_id": "plume-de-corbac",
+    "resource_img": "https://placehold.co/40x40/1f2937/9ca3af?text=PL"
+  },
+  {
+    "month_day": "06-10",
+    "resource_name": "Patte d'Arakne",
+    "quantity": 6,
+    "resource_id": "patte-darakne",
+    "resource_img": "https://placehold.co/40x40/1f2937/9ca3af?text=PA"
+  },
+  {
+    "month_day": "06-11",
+    "resource_name": "Corne de Bouftou",
+    "quantity": 6,
+    "resource_id": "corne-de-bouftou",
+    "resource_img": "https://placehold.co/40x40/1f2937/9ca3af?text=CO"
+  },
+  {
+    "month_day": "06-12",
+    "resource_name": "Bave de Bouftou",
+    "quantity": 6,
+    "resource_id": "bave-de-bouftou",
+    "resource_img": "https://placehold.co/40x40/1f2937/9ca3af?text=BA"
+  },
+  {
+    "month_day": "06-13",
+    "resource_name": "Patte de Bwork",
+    "quantity": 1,
+    "resource_id": "patte-de-bwork",
+    "resource_img": "https://placehold.co/40x40/1f2937/9ca3af?text=PA"
+  },
+  {
+    "month_day": "06-14",
+    "resource_name": "Œil de Corbac",
+    "quantity": 1,
+    "resource_id": "oeil-de-corbac",
+    "resource_img": "https://placehold.co/40x40/1f2937/9ca3af?text=OE"
+  },
+  {
+    "month_day": "06-15",
+    "resource_name": "Plume de Corbac",
+    "quantity": 6,
+    "resource_id": "plume-de-corbac",
+    "resource_img": "https://placehold.co/40x40/1f2937/9ca3af?text=PL"
+  },
+  {
+    "month_day": "06-16",
+    "resource_name": "Œil de Craqueleur",
+    "quantity": 2,
+    "resource_id": "oeil-de-craqueleur",
+    "resource_img": "https://placehold.co/40x40/1f2937/9ca3af?text=OE"
+  },
+  {
+    "month_day": "06-17",
+    "resource_name": "Queue de Prespic",
+    "quantity": 4,
+    "resource_id": "queue-de-prespic",
+    "resource_img": "https://placehold.co/40x40/1f2937/9ca3af?text=QU"
+  },
+  {
+    "month_day": "06-18",
+    "resource_name": "Étoffe de Chef de Guerre",
+    "quantity": 1,
+    "resource_id": "etoffe-de-chef-de-guerre",
+    "resource_img": "https://placehold.co/40x40/1f2937/9ca3af?text=ET"
+  },
+  {
+    "month_day": "06-19",
+    "resource_name": "Poil de Sanglier",
+    "quantity": 6,
+    "resource_id": "poil-de-sanglier",
+    "resource_img": "https://placehold.co/40x40/1f2937/9ca3af?text=PO"
+  },
+  {
+    "month_day": "06-20",
+    "resource_name": "Duvet de Kido",
+    "quantity": 6,
+    "resource_id": "duvet-de-kido",
+    "resource_img": "https://placehold.co/40x40/1f2937/9ca3af?text=DU"
+  },
+  {
+    "month_day": "06-21",
+    "resource_name": "Plume du Kwak de Flammes",
+    "quantity": 6,
+    "resource_id": "plume-du-kwak-de-flammes",
+    "resource_img": "https://placehold.co/40x40/1f2937/9ca3af?text=PL"
+  },
+  {
+    "month_day": "06-22",
+    "resource_name": "Langue de Chef de Guerre",
+    "quantity": 1,
+    "resource_id": "langue-de-chef-de-guerre",
+    "resource_img": "https://placehold.co/40x40/1f2937/9ca3af?text=LA"
+  },
+  {
+    "month_day": "06-23",
+    "resource_name": "Corne du Chef de Guerre",
+    "quantity": 1,
+    "resource_id": "corne-du-chef-de-guerre",
+    "resource_img": "https://placehold.co/40x40/1f2937/9ca3af?text=CO"
+  },
+  {
+    "month_day": "06-24",
+    "resource_name": "Plume du Corbac",
+    "quantity": 6,
+    "resource_id": "plume-de-corbac",
+    "resource_img": "https://placehold.co/40x40/1f2937/9ca3af?text=PL"
+  },
+  {
+    "month_day": "06-25",
+    "resource_name": "Patte d'Arakne",
+    "quantity": 6,
+    "resource_id": "patte-darakne",
+    "resource_img": "https://placehold.co/40x40/1f2937/9ca3af?text=PA"
+  },
+  {
+    "month_day": "06-26",
+    "resource_name": "Corne de Bouftou",
+    "quantity": 6,
+    "resource_id": "corne-de-bouftou",
+    "resource_img": "https://placehold.co/40x40/1f2937/9ca3af?text=CO"
+  },
+  {
+    "month_day": "06-27",
+    "resource_name": "Bave de Bouftou",
+    "quantity": 6,
+    "resource_id": "bave-de-bouftou",
+    "resource_img": "https://placehold.co/40x40/1f2937/9ca3af?text=BA"
+  },
+  {
+    "month_day": "06-28",
+    "resource_name": "Patte de Bwork",
+    "quantity": 1,
+    "resource_id": "patte-de-bwork",
+    "resource_img": "https://placehold.co/40x40/1f2937/9ca3af?text=PA"
+  },
+  {
+    "month_day": "06-29",
+    "resource_name": "Œil de Corbac",
+    "quantity": 1,
+    "resource_id": "oeil-de-corbac",
+    "resource_img": "https://placehold.co/40x40/1f2937/9ca3af?text=OE"
+  },
+  {
+    "month_day": "06-30",
+    "resource_name": "Plume de Corbac",
+    "quantity": 6,
+    "resource_id": "plume-de-corbac",
+    "resource_img": "https://placehold.co/40x40/1f2937/9ca3af?text=PL"
+  },
+  {
+    "month_day": "07-01",
+    "resource_name": "Œil de Craqueleur",
+    "quantity": 2,
+    "resource_id": "oeil-de-craqueleur",
+    "resource_img": "https://placehold.co/40x40/1f2937/9ca3af?text=OE"
+  },
+  {
+    "month_day": "07-02",
+    "resource_name": "Queue de Prespic",
+    "quantity": 4,
+    "resource_id": "queue-de-prespic",
+    "resource_img": "https://placehold.co/40x40/1f2937/9ca3af?text=QU"
+  },
+  {
+    "month_day": "07-03",
+    "resource_name": "Étoffe de Chef de Guerre",
+    "quantity": 1,
+    "resource_id": "etoffe-de-chef-de-guerre",
+    "resource_img": "https://placehold.co/40x40/1f2937/9ca3af?text=ET"
+  },
+  {
+    "month_day": "07-04",
+    "resource_name": "Poil de Sanglier",
+    "quantity": 6,
+    "resource_id": "poil-de-sanglier",
+    "resource_img": "https://placehold.co/40x40/1f2937/9ca3af?text=PO"
+  },
+  {
+    "month_day": "07-05",
+    "resource_name": "Duvet de Kido",
+    "quantity": 6,
+    "resource_id": "duvet-de-kido",
+    "resource_img": "https://placehold.co/40x40/1f2937/9ca3af?text=DU"
+  },
+  {
+    "month_day": "07-06",
+    "resource_name": "Plume du Kwak de Flammes",
+    "quantity": 6,
+    "resource_id": "plume-du-kwak-de-flammes",
+    "resource_img": "https://placehold.co/40x40/1f2937/9ca3af?text=PL"
+  },
+  {
+    "month_day": "07-07",
+    "resource_name": "Langue de Chef de Guerre",
+    "quantity": 1,
+    "resource_id": "langue-de-chef-de-guerre",
+    "resource_img": "https://placehold.co/40x40/1f2937/9ca3af?text=LA"
+  },
+  {
+    "month_day": "07-08",
+    "resource_name": "Corne du Chef de Guerre",
+    "quantity": 1,
+    "resource_id": "corne-du-chef-de-guerre",
+    "resource_img": "https://placehold.co/40x40/1f2937/9ca3af?text=CO"
+  },
+  {
+    "month_day": "07-09",
+    "resource_name": "Plume du Corbac",
+    "quantity": 6,
+    "resource_id": "plume-de-corbac",
+    "resource_img": "https://placehold.co/40x40/1f2937/9ca3af?text=PL"
+  },
+  {
+    "month_day": "07-10",
+    "resource_name": "Patte d'Arakne",
+    "quantity": 6,
+    "resource_id": "patte-darakne",
+    "resource_img": "https://placehold.co/40x40/1f2937/9ca3af?text=PA"
+  },
+  {
+    "month_day": "07-11",
+    "resource_name": "Corne de Bouftou",
+    "quantity": 6,
+    "resource_id": "corne-de-bouftou",
+    "resource_img": "https://placehold.co/40x40/1f2937/9ca3af?text=CO"
+  },
+  {
+    "month_day": "07-12",
+    "resource_name": "Bave de Bouftou",
+    "quantity": 6,
+    "resource_id": "bave-de-bouftou",
+    "resource_img": "https://placehold.co/40x40/1f2937/9ca3af?text=BA"
+  },
+  {
+    "month_day": "07-13",
+    "resource_name": "Patte de Bwork",
+    "quantity": 1,
+    "resource_id": "patte-de-bwork",
+    "resource_img": "https://placehold.co/40x40/1f2937/9ca3af?text=PA"
+  },
+  {
+    "month_day": "07-14",
+    "resource_name": "Œil de Corbac",
+    "quantity": 1,
+    "resource_id": "oeil-de-corbac",
+    "resource_img": "https://placehold.co/40x40/1f2937/9ca3af?text=OE"
+  },
+  {
+    "month_day": "07-15",
+    "resource_name": "Plume de Corbac",
+    "quantity": 6,
+    "resource_id": "plume-de-corbac",
+    "resource_img": "https://placehold.co/40x40/1f2937/9ca3af?text=PL"
+  },
+  {
+    "month_day": "07-16",
+    "resource_name": "Œil de Craqueleur",
+    "quantity": 2,
+    "resource_id": "oeil-de-craqueleur",
+    "resource_img": "https://placehold.co/40x40/1f2937/9ca3af?text=OE"
+  },
+  {
+    "month_day": "07-17",
+    "resource_name": "Queue de Prespic",
+    "quantity": 4,
+    "resource_id": "queue-de-prespic",
+    "resource_img": "https://placehold.co/40x40/1f2937/9ca3af?text=QU"
+  },
+  {
+    "month_day": "07-18",
+    "resource_name": "Étoffe de Chef de Guerre",
+    "quantity": 1,
+    "resource_id": "etoffe-de-chef-de-guerre",
+    "resource_img": "https://placehold.co/40x40/1f2937/9ca3af?text=ET"
+  },
+  {
+    "month_day": "07-19",
+    "resource_name": "Poil de Sanglier",
+    "quantity": 6,
+    "resource_id": "poil-de-sanglier",
+    "resource_img": "https://placehold.co/40x40/1f2937/9ca3af?text=PO"
+  },
+  {
+    "month_day": "07-20",
+    "resource_name": "Duvet de Kido",
+    "quantity": 6,
+    "resource_id": "duvet-de-kido",
+    "resource_img": "https://placehold.co/40x40/1f2937/9ca3af?text=DU"
+  },
+  {
+    "month_day": "07-21",
+    "resource_name": "Plume du Kwak de Flammes",
+    "quantity": 6,
+    "resource_id": "plume-du-kwak-de-flammes",
+    "resource_img": "https://placehold.co/40x40/1f2937/9ca3af?text=PL"
+  },
+  {
+    "month_day": "07-22",
+    "resource_name": "Langue de Chef de Guerre",
+    "quantity": 1,
+    "resource_id": "langue-de-chef-de-guerre",
+    "resource_img": "https://placehold.co/40x40/1f2937/9ca3af?text=LA"
+  },
+  {
+    "month_day": "07-23",
+    "resource_name": "Corne du Chef de Guerre",
+    "quantity": 1,
+    "resource_id": "corne-du-chef-de-guerre",
+    "resource_img": "https://placehold.co/40x40/1f2937/9ca3af?text=CO"
+  },
+  {
+    "month_day": "07-24",
+    "resource_name": "Plume du Corbac",
+    "quantity": 6,
+    "resource_id": "plume-de-corbac",
+    "resource_img": "https://placehold.co/40x40/1f2937/9ca3af?text=PL"
+  },
+  {
+    "month_day": "07-25",
+    "resource_name": "Patte d'Arakne",
+    "quantity": 6,
+    "resource_id": "patte-darakne",
+    "resource_img": "https://placehold.co/40x40/1f2937/9ca3af?text=PA"
+  },
+  {
+    "month_day": "07-26",
+    "resource_name": "Corne de Bouftou",
+    "quantity": 6,
+    "resource_id": "corne-de-bouftou",
+    "resource_img": "https://placehold.co/40x40/1f2937/9ca3af?text=CO"
+  },
+  {
+    "month_day": "07-27",
+    "resource_name": "Bave de Bouftou",
+    "quantity": 6,
+    "resource_id": "bave-de-bouftou",
+    "resource_img": "https://placehold.co/40x40/1f2937/9ca3af?text=BA"
+  },
+  {
+    "month_day": "07-28",
+    "resource_name": "Patte de Bwork",
+    "quantity": 1,
+    "resource_id": "patte-de-bwork",
+    "resource_img": "https://placehold.co/40x40/1f2937/9ca3af?text=PA"
+  },
+  {
+    "month_day": "07-29",
+    "resource_name": "Œil de Corbac",
+    "quantity": 1,
+    "resource_id": "oeil-de-corbac",
+    "resource_img": "https://placehold.co/40x40/1f2937/9ca3af?text=OE"
+  },
+  {
+    "month_day": "07-30",
+    "resource_name": "Plume de Corbac",
+    "quantity": 6,
+    "resource_id": "plume-de-corbac",
+    "resource_img": "https://placehold.co/40x40/1f2937/9ca3af?text=PL"
+  },
+  {
+    "month_day": "07-31",
+    "resource_name": "Œil de Craqueleur",
+    "quantity": 2,
+    "resource_id": "oeil-de-craqueleur",
+    "resource_img": "https://placehold.co/40x40/1f2937/9ca3af?text=OE"
+  },
+  {
+    "month_day": "08-01",
+    "resource_name": "Queue de Prespic",
+    "quantity": 4,
+    "resource_id": "queue-de-prespic",
+    "resource_img": "https://placehold.co/40x40/1f2937/9ca3af?text=QU"
+  },
+  {
+    "month_day": "08-02",
+    "resource_name": "Étoffe de Chef de Guerre",
+    "quantity": 1,
+    "resource_id": "etoffe-de-chef-de-guerre",
+    "resource_img": "https://placehold.co/40x40/1f2937/9ca3af?text=ET"
+  },
+  {
+    "month_day": "08-03",
+    "resource_name": "Poil de Sanglier",
+    "quantity": 6,
+    "resource_id": "poil-de-sanglier",
+    "resource_img": "https://placehold.co/40x40/1f2937/9ca3af?text=PO"
+  },
+  {
+    "month_day": "08-04",
+    "resource_name": "Duvet de Kido",
+    "quantity": 6,
+    "resource_id": "duvet-de-kido",
+    "resource_img": "https://placehold.co/40x40/1f2937/9ca3af?text=DU"
+  },
+  {
+    "month_day": "08-05",
+    "resource_name": "Plume du Kwak de Flammes",
+    "quantity": 6,
+    "resource_id": "plume-du-kwak-de-flammes",
+    "resource_img": "https://placehold.co/40x40/1f2937/9ca3af?text=PL"
+  },
+  {
+    "month_day": "08-06",
+    "resource_name": "Langue de Chef de Guerre",
+    "quantity": 1,
+    "resource_id": "langue-de-chef-de-guerre",
+    "resource_img": "https://placehold.co/40x40/1f2937/9ca3af?text=LA"
+  },
+  {
+    "month_day": "08-07",
+    "resource_name": "Corne du Chef de Guerre",
+    "quantity": 1,
+    "resource_id": "corne-du-chef-de-guerre",
+    "resource_img": "https://placehold.co/40x40/1f2937/9ca3af?text=CO"
+  },
+  {
+    "month_day": "08-08",
+    "resource_name": "Plume du Corbac",
+    "quantity": 6,
+    "resource_id": "plume-de-corbac",
+    "resource_img": "https://placehold.co/40x40/1f2937/9ca3af?text=PL"
+  },
+  {
+    "month_day": "08-09",
+    "resource_name": "Patte d'Arakne",
+    "quantity": 6,
+    "resource_id": "patte-darakne",
+    "resource_img": "https://placehold.co/40x40/1f2937/9ca3af?text=PA"
+  },
+  {
+    "month_day": "08-10",
+    "resource_name": "Corne de Bouftou",
+    "quantity": 6,
+    "resource_id": "corne-de-bouftou",
+    "resource_img": "https://placehold.co/40x40/1f2937/9ca3af?text=CO"
+  },
+  {
+    "month_day": "08-11",
+    "resource_name": "Bave de Bouftou",
+    "quantity": 6,
+    "resource_id": "bave-de-bouftou",
+    "resource_img": "https://placehold.co/40x40/1f2937/9ca3af?text=BA"
+  },
+  {
+    "month_day": "08-12",
+    "resource_name": "Patte de Bwork",
+    "quantity": 1,
+    "resource_id": "patte-de-bwork",
+    "resource_img": "https://placehold.co/40x40/1f2937/9ca3af?text=PA"
+  },
+  {
+    "month_day": "08-13",
+    "resource_name": "Œil de Corbac",
+    "quantity": 1,
+    "resource_id": "oeil-de-corbac",
+    "resource_img": "https://placehold.co/40x40/1f2937/9ca3af?text=OE"
+  },
+  {
+    "month_day": "08-14",
+    "resource_name": "Plume de Corbac",
+    "quantity": 6,
+    "resource_id": "plume-de-corbac",
+    "resource_img": "https://placehold.co/40x40/1f2937/9ca3af?text=PL"
+  },
+  {
+    "month_day": "08-15",
+    "resource_name": "Œil de Craqueleur",
+    "quantity": 2,
+    "resource_id": "oeil-de-craqueleur",
+    "resource_img": "https://placehold.co/40x40/1f2937/9ca3af?text=OE"
+  },
+  {
+    "month_day": "08-16",
+    "resource_name": "Queue de Prespic",
+    "quantity": 4,
+    "resource_id": "queue-de-prespic",
+    "resource_img": "https://placehold.co/40x40/1f2937/9ca3af?text=QU"
+  },
+  {
+    "month_day": "08-17",
+    "resource_name": "Étoffe de Chef de Guerre",
+    "quantity": 1,
+    "resource_id": "etoffe-de-chef-de-guerre",
+    "resource_img": "https://placehold.co/40x40/1f2937/9ca3af?text=ET"
+  },
+  {
+    "month_day": "08-18",
+    "resource_name": "Poil de Sanglier",
+    "quantity": 6,
+    "resource_id": "poil-de-sanglier",
+    "resource_img": "https://placehold.co/40x40/1f2937/9ca3af?text=PO"
+  },
+  {
+    "month_day": "08-19",
+    "resource_name": "Duvet de Kido",
+    "quantity": 6,
+    "resource_id": "duvet-de-kido",
+    "resource_img": "https://placehold.co/40x40/1f2937/9ca3af?text=DU"
+  },
+  {
+    "month_day": "08-20",
+    "resource_name": "Plume du Kwak de Flammes",
+    "quantity": 6,
+    "resource_id": "plume-du-kwak-de-flammes",
+    "resource_img": "https://placehold.co/40x40/1f2937/9ca3af?text=PL"
+  },
+  {
+    "month_day": "08-21",
+    "resource_name": "Langue de Chef de Guerre",
+    "quantity": 1,
+    "resource_id": "langue-de-chef-de-guerre",
+    "resource_img": "https://placehold.co/40x40/1f2937/9ca3af?text=LA"
+  },
+  {
+    "month_day": "08-22",
+    "resource_name": "Corne du Chef de Guerre",
+    "quantity": 1,
+    "resource_id": "corne-du-chef-de-guerre",
+    "resource_img": "https://placehold.co/40x40/1f2937/9ca3af?text=CO"
+  },
+  {
+    "month_day": "08-23",
+    "resource_name": "Plume du Corbac",
+    "quantity": 6,
+    "resource_id": "plume-de-corbac",
+    "resource_img": "https://placehold.co/40x40/1f2937/9ca3af?text=PL"
+  },
+  {
+    "month_day": "08-24",
+    "resource_name": "Patte d'Arakne",
+    "quantity": 6,
+    "resource_id": "patte-darakne",
+    "resource_img": "https://placehold.co/40x40/1f2937/9ca3af?text=PA"
+  },
+  {
+    "month_day": "08-25",
+    "resource_name": "Corne de Bouftou",
+    "quantity": 6,
+    "resource_id": "corne-de-bouftou",
+    "resource_img": "https://placehold.co/40x40/1f2937/9ca3af?text=CO"
+  },
+  {
+    "month_day": "08-26",
+    "resource_name": "Bave de Bouftou",
+    "quantity": 6,
+    "resource_id": "bave-de-bouftou",
+    "resource_img": "https://placehold.co/40x40/1f2937/9ca3af?text=BA"
+  },
+  {
+    "month_day": "08-27",
+    "resource_name": "Patte de Bwork",
+    "quantity": 1,
+    "resource_id": "patte-de-bwork",
+    "resource_img": "https://placehold.co/40x40/1f2937/9ca3af?text=PA"
+  },
+  {
+    "month_day": "08-28",
+    "resource_name": "Œil de Corbac",
+    "quantity": 1,
+    "resource_id": "oeil-de-corbac",
+    "resource_img": "https://placehold.co/40x40/1f2937/9ca3af?text=OE"
+  },
+  {
+    "month_day": "08-29",
+    "resource_name": "Plume de Corbac",
+    "quantity": 6,
+    "resource_id": "plume-de-corbac",
+    "resource_img": "https://placehold.co/40x40/1f2937/9ca3af?text=PL"
+  },
+  {
+    "month_day": "08-30",
+    "resource_name": "Œil de Craqueleur",
+    "quantity": 2,
+    "resource_id": "oeil-de-craqueleur",
+    "resource_img": "https://placehold.co/40x40/1f2937/9ca3af?text=OE"
+  },
+  {
+    "month_day": "08-31",
+    "resource_name": "Queue de Prespic",
+    "quantity": 4,
+    "resource_id": "queue-de-prespic",
+    "resource_img": "https://placehold.co/40x40/1f2937/9ca3af?text=QU"
+  },
+  {
+    "month_day": "09-01",
+    "resource_name": "Étoffe de Chef de Guerre",
+    "quantity": 1,
+    "resource_id": "etoffe-de-chef-de-guerre",
+    "resource_img": "https://placehold.co/40x40/1f2937/9ca3af?text=ET"
+  },
+  {
+    "month_day": "09-02",
+    "resource_name": "Poil de Sanglier",
+    "quantity": 6,
+    "resource_id": "poil-de-sanglier",
+    "resource_img": "https://placehold.co/40x40/1f2937/9ca3af?text=PO"
+  },
+  {
+    "month_day": "09-03",
+    "resource_name": "Duvet de Kido",
+    "quantity": 6,
+    "resource_id": "duvet-de-kido",
+    "resource_img": "https://placehold.co/40x40/1f2937/9ca3af?text=DU"
+  },
+  {
+    "month_day": "09-04",
+    "resource_name": "Plume du Kwak de Flammes",
+    "quantity": 6,
+    "resource_id": "plume-du-kwak-de-flammes",
+    "resource_img": "https://placehold.co/40x40/1f2937/9ca3af?text=PL"
+  },
+  {
+    "month_day": "09-05",
+    "resource_name": "Langue de Chef de Guerre",
+    "quantity": 1,
+    "resource_id": "langue-de-chef-de-guerre",
+    "resource_img": "https://placehold.co/40x40/1f2937/9ca3af?text=LA"
+  },
+  {
+    "month_day": "09-06",
+    "resource_name": "Corne du Chef de Guerre",
+    "quantity": 1,
+    "resource_id": "corne-du-chef-de-guerre",
+    "resource_img": "https://placehold.co/40x40/1f2937/9ca3af?text=CO"
+  },
+  {
+    "month_day": "09-07",
+    "resource_name": "Plume du Corbac",
+    "quantity": 6,
+    "resource_id": "plume-de-corbac",
+    "resource_img": "https://placehold.co/40x40/1f2937/9ca3af?text=PL"
+  },
+  {
+    "month_day": "09-08",
+    "resource_name": "Patte d'Arakne",
+    "quantity": 6,
+    "resource_id": "patte-darakne",
+    "resource_img": "https://placehold.co/40x40/1f2937/9ca3af?text=PA"
+  },
+  {
+    "month_day": "09-09",
+    "resource_name": "Corne de Bouftou",
+    "quantity": 6,
+    "resource_id": "corne-de-bouftou",
+    "resource_img": "https://placehold.co/40x40/1f2937/9ca3af?text=CO"
+  },
+  {
+    "month_day": "09-10",
+    "resource_name": "Bave de Bouftou",
+    "quantity": 6,
+    "resource_id": "bave-de-bouftou",
+    "resource_img": "https://placehold.co/40x40/1f2937/9ca3af?text=BA"
+  },
+  {
+    "month_day": "09-11",
+    "resource_name": "Patte de Bwork",
+    "quantity": 1,
+    "resource_id": "patte-de-bwork",
+    "resource_img": "https://placehold.co/40x40/1f2937/9ca3af?text=PA"
+  },
+  {
+    "month_day": "09-12",
+    "resource_name": "Œil de Corbac",
+    "quantity": 1,
+    "resource_id": "oeil-de-corbac",
+    "resource_img": "https://placehold.co/40x40/1f2937/9ca3af?text=OE"
+  },
+  {
+    "month_day": "09-13",
+    "resource_name": "Plume de Corbac",
+    "quantity": 6,
+    "resource_id": "plume-de-corbac",
+    "resource_img": "https://placehold.co/40x40/1f2937/9ca3af?text=PL"
+  },
+  {
+    "month_day": "09-14",
+    "resource_name": "Œil de Craqueleur",
+    "quantity": 2,
+    "resource_id": "oeil-de-craqueleur",
+    "resource_img": "https://placehold.co/40x40/1f2937/9ca3af?text=OE"
+  },
+  {
+    "month_day": "09-15",
+    "resource_name": "Queue de Prespic",
+    "quantity": 4,
+    "resource_id": "queue-de-prespic",
+    "resource_img": "https://placehold.co/40x40/1f2937/9ca3af?text=QU"
+  },
+  {
+    "month_day": "09-16",
+    "resource_name": "Étoffe de Chef de Guerre",
+    "quantity": 1,
+    "resource_id": "etoffe-de-chef-de-guerre",
+    "resource_img": "https://placehold.co/40x40/1f2937/9ca3af?text=ET"
+  },
+  {
+    "month_day": "09-17",
+    "resource_name": "Poil de Sanglier",
+    "quantity": 6,
+    "resource_id": "poil-de-sanglier",
+    "resource_img": "https://placehold.co/40x40/1f2937/9ca3af?text=PO"
+  },
+  {
+    "month_day": "09-18",
+    "resource_name": "Duvet de Kido",
+    "quantity": 6,
+    "resource_id": "duvet-de-kido",
+    "resource_img": "https://placehold.co/40x40/1f2937/9ca3af?text=DU"
+  },
+  {
+    "month_day": "09-19",
+    "resource_name": "Plume du Kwak de Flammes",
+    "quantity": 6,
+    "resource_id": "plume-du-kwak-de-flammes",
+    "resource_img": "https://placehold.co/40x40/1f2937/9ca3af?text=PL"
+  },
+  {
+    "month_day": "09-20",
+    "resource_name": "Langue de Chef de Guerre",
+    "quantity": 1,
+    "resource_id": "langue-de-chef-de-guerre",
+    "resource_img": "https://placehold.co/40x40/1f2937/9ca3af?text=LA"
+  },
+  {
+    "month_day": "09-21",
+    "resource_name": "Corne du Chef de Guerre",
+    "quantity": 1,
+    "resource_id": "corne-du-chef-de-guerre",
+    "resource_img": "https://placehold.co/40x40/1f2937/9ca3af?text=CO"
+  },
+  {
+    "month_day": "09-22",
+    "resource_name": "Plume du Corbac",
+    "quantity": 6,
+    "resource_id": "plume-de-corbac",
+    "resource_img": "https://placehold.co/40x40/1f2937/9ca3af?text=PL"
+  },
+  {
+    "month_day": "09-23",
+    "resource_name": "Patte d'Arakne",
+    "quantity": 6,
+    "resource_id": "patte-darakne",
+    "resource_img": "https://placehold.co/40x40/1f2937/9ca3af?text=PA"
+  },
+  {
+    "month_day": "09-24",
+    "resource_name": "Corne de Bouftou",
+    "quantity": 6,
+    "resource_id": "corne-de-bouftou",
+    "resource_img": "https://placehold.co/40x40/1f2937/9ca3af?text=CO"
+  },
+  {
+    "month_day": "09-25",
+    "resource_name": "Bave de Bouftou",
+    "quantity": 6,
+    "resource_id": "bave-de-bouftou",
+    "resource_img": "https://placehold.co/40x40/1f2937/9ca3af?text=BA"
+  },
+  {
+    "month_day": "09-26",
+    "resource_name": "Patte de Bwork",
+    "quantity": 1,
+    "resource_id": "patte-de-bwork",
+    "resource_img": "https://placehold.co/40x40/1f2937/9ca3af?text=PA"
+  },
+  {
+    "month_day": "09-27",
+    "resource_name": "Œil de Corbac",
+    "quantity": 1,
+    "resource_id": "oeil-de-corbac",
+    "resource_img": "https://placehold.co/40x40/1f2937/9ca3af?text=OE"
+  },
+  {
+    "month_day": "09-28",
+    "resource_name": "Plume de Corbac",
+    "quantity": 6,
+    "resource_id": "plume-de-corbac",
+    "resource_img": "https://placehold.co/40x40/1f2937/9ca3af?text=PL"
+  },
+  {
+    "month_day": "09-29",
+    "resource_name": "Œil de Craqueleur",
+    "quantity": 2,
+    "resource_id": "oeil-de-craqueleur",
+    "resource_img": "https://placehold.co/40x40/1f2937/9ca3af?text=OE"
+  },
+  {
+    "month_day": "09-30",
+    "resource_name": "Queue de Prespic",
+    "quantity": 4,
+    "resource_id": "queue-de-prespic",
+    "resource_img": "https://placehold.co/40x40/1f2937/9ca3af?text=QU"
+  },
+  {
+    "month_day": "10-01",
+    "resource_name": "Étoffe de Chef de Guerre",
+    "quantity": 1,
+    "resource_id": "etoffe-de-chef-de-guerre",
+    "resource_img": "https://placehold.co/40x40/1f2937/9ca3af?text=ET"
+  },
+  {
+    "month_day": "10-02",
+    "resource_name": "Poil de Sanglier",
+    "quantity": 6,
+    "resource_id": "poil-de-sanglier",
+    "resource_img": "https://placehold.co/40x40/1f2937/9ca3af?text=PO"
+  },
+  {
+    "month_day": "10-03",
+    "resource_name": "Duvet de Kido",
+    "quantity": 6,
+    "resource_id": "duvet-de-kido",
+    "resource_img": "https://placehold.co/40x40/1f2937/9ca3af?text=DU"
+  },
+  {
+    "month_day": "10-04",
+    "resource_name": "Plume du Kwak de Flammes",
+    "quantity": 6,
+    "resource_id": "plume-du-kwak-de-flammes",
+    "resource_img": "https://placehold.co/40x40/1f2937/9ca3af?text=PL"
+  },
+  {
+    "month_day": "10-05",
+    "resource_name": "Langue de Chef de Guerre",
+    "quantity": 1,
+    "resource_id": "langue-de-chef-de-guerre",
+    "resource_img": "https://placehold.co/40x40/1f2937/9ca3af?text=LA"
+  },
+  {
+    "month_day": "10-06",
+    "resource_name": "Corne du Chef de Guerre",
+    "quantity": 1,
+    "resource_id": "corne-du-chef-de-guerre",
+    "resource_img": "https://placehold.co/40x40/1f2937/9ca3af?text=CO"
+  },
+  {
+    "month_day": "10-07",
+    "resource_name": "Plume du Corbac",
+    "quantity": 6,
+    "resource_id": "plume-de-corbac",
+    "resource_img": "https://placehold.co/40x40/1f2937/9ca3af?text=PL"
+  },
+  {
+    "month_day": "10-08",
+    "resource_name": "Patte d'Arakne",
+    "quantity": 6,
+    "resource_id": "patte-darakne",
+    "resource_img": "https://placehold.co/40x40/1f2937/9ca3af?text=PA"
+  },
+  {
+    "month_day": "10-09",
+    "resource_name": "Corne de Bouftou",
+    "quantity": 6,
+    "resource_id": "corne-de-bouftou",
+    "resource_img": "https://placehold.co/40x40/1f2937/9ca3af?text=CO"
+  },
+  {
+    "month_day": "10-10",
+    "resource_name": "Bave de Bouftou",
+    "quantity": 6,
+    "resource_id": "bave-de-bouftou",
+    "resource_img": "https://placehold.co/40x40/1f2937/9ca3af?text=BA"
+  },
+  {
+    "month_day": "10-11",
+    "resource_name": "Patte de Bwork",
+    "quantity": 1,
+    "resource_id": "patte-de-bwork",
+    "resource_img": "https://placehold.co/40x40/1f2937/9ca3af?text=PA"
+  },
+  {
+    "month_day": "10-12",
+    "resource_name": "Œil de Corbac",
+    "quantity": 1,
+    "resource_id": "oeil-de-corbac",
+    "resource_img": "https://placehold.co/40x40/1f2937/9ca3af?text=OE"
+  },
+  {
+    "month_day": "10-13",
+    "resource_name": "Plume de Corbac",
+    "quantity": 6,
+    "resource_id": "plume-de-corbac",
+    "resource_img": "https://placehold.co/40x40/1f2937/9ca3af?text=PL"
+  },
+  {
+    "month_day": "10-14",
+    "resource_name": "Œil de Craqueleur",
+    "quantity": 2,
+    "resource_id": "oeil-de-craqueleur",
+    "resource_img": "https://placehold.co/40x40/1f2937/9ca3af?text=OE"
+  },
+  {
+    "month_day": "10-15",
+    "resource_name": "Queue de Prespic",
+    "quantity": 4,
+    "resource_id": "queue-de-prespic",
+    "resource_img": "https://placehold.co/40x40/1f2937/9ca3af?text=QU"
+  },
+  {
+    "month_day": "10-16",
+    "resource_name": "Étoffe de Chef de Guerre",
+    "quantity": 1,
+    "resource_id": "etoffe-de-chef-de-guerre",
+    "resource_img": "https://placehold.co/40x40/1f2937/9ca3af?text=ET"
+  },
+  {
+    "month_day": "10-17",
+    "resource_name": "Poil de Sanglier",
+    "quantity": 6,
+    "resource_id": "poil-de-sanglier",
+    "resource_img": "https://placehold.co/40x40/1f2937/9ca3af?text=PO"
+  },
+  {
+    "month_day": "10-18",
+    "resource_name": "Duvet de Kido",
+    "quantity": 6,
+    "resource_id": "duvet-de-kido",
+    "resource_img": "https://placehold.co/40x40/1f2937/9ca3af?text=DU"
+  },
+  {
+    "month_day": "10-19",
+    "resource_name": "Plume du Kwak de Flammes",
+    "quantity": 6,
+    "resource_id": "plume-du-kwak-de-flammes",
+    "resource_img": "https://placehold.co/40x40/1f2937/9ca3af?text=PL"
+  },
+  {
+    "month_day": "10-20",
+    "resource_name": "Langue de Chef de Guerre",
+    "quantity": 1,
+    "resource_id": "langue-de-chef-de-guerre",
+    "resource_img": "https://placehold.co/40x40/1f2937/9ca3af?text=LA"
+  },
+  {
+    "month_day": "10-21",
+    "resource_name": "Corne du Chef de Guerre",
+    "quantity": 1,
+    "resource_id": "corne-du-chef-de-guerre",
+    "resource_img": "https://placehold.co/40x40/1f2937/9ca3af?text=CO"
+  },
+  {
+    "month_day": "10-22",
+    "resource_name": "Plume du Corbac",
+    "quantity": 6,
+    "resource_id": "plume-de-corbac",
+    "resource_img": "https://placehold.co/40x40/1f2937/9ca3af?text=PL"
+  },
+  {
+    "month_day": "10-23",
+    "resource_name": "Patte d'Arakne",
+    "quantity": 6,
+    "resource_id": "patte-darakne",
+    "resource_img": "https://placehold.co/40x40/1f2937/9ca3af?text=PA"
+  },
+  {
+    "month_day": "10-24",
+    "resource_name": "Corne de Bouftou",
+    "quantity": 6,
+    "resource_id": "corne-de-bouftou",
+    "resource_img": "https://placehold.co/40x40/1f2937/9ca3af?text=CO"
+  },
+  {
+    "month_day": "10-25",
+    "resource_name": "Bave de Bouftou",
+    "quantity": 6,
+    "resource_id": "bave-de-bouftou",
+    "resource_img": "https://placehold.co/40x40/1f2937/9ca3af?text=BA"
+  },
+  {
+    "month_day": "10-26",
+    "resource_name": "Patte de Bwork",
+    "quantity": 1,
+    "resource_id": "patte-de-bwork",
+    "resource_img": "https://placehold.co/40x40/1f2937/9ca3af?text=PA"
+  },
+  {
+    "month_day": "10-27",
+    "resource_name": "Œil de Corbac",
+    "quantity": 1,
+    "resource_id": "oeil-de-corbac",
+    "resource_img": "https://placehold.co/40x40/1f2937/9ca3af?text=OE"
+  },
+  {
+    "month_day": "10-28",
+    "resource_name": "Plume de Corbac",
+    "quantity": 6,
+    "resource_id": "plume-de-corbac",
+    "resource_img": "https://placehold.co/40x40/1f2937/9ca3af?text=PL"
+  },
+  {
+    "month_day": "10-29",
+    "resource_name": "Œil de Craqueleur",
+    "quantity": 2,
+    "resource_id": "oeil-de-craqueleur",
+    "resource_img": "https://placehold.co/40x40/1f2937/9ca3af?text=OE"
+  },
+  {
+    "month_day": "10-30",
+    "resource_name": "Queue de Prespic",
+    "quantity": 4,
+    "resource_id": "queue-de-prespic",
+    "resource_img": "https://placehold.co/40x40/1f2937/9ca3af?text=QU"
+  },
+  {
+    "month_day": "10-31",
+    "resource_name": "Étoffe de Chef de Guerre",
+    "quantity": 1,
+    "resource_id": "etoffe-de-chef-de-guerre",
+    "resource_img": "https://placehold.co/40x40/1f2937/9ca3af?text=ET"
+  },
+  {
+    "month_day": "11-01",
+    "resource_name": "Poil de Sanglier",
+    "quantity": 6,
+    "resource_id": "poil-de-sanglier",
+    "resource_img": "https://placehold.co/40x40/1f2937/9ca3af?text=PO"
+  },
+  {
+    "month_day": "11-02",
+    "resource_name": "Duvet de Kido",
+    "quantity": 6,
+    "resource_id": "duvet-de-kido",
+    "resource_img": "https://placehold.co/40x40/1f2937/9ca3af?text=DU"
+  },
+  {
+    "month_day": "11-03",
+    "resource_name": "Plume du Kwak de Flammes",
+    "quantity": 6,
+    "resource_id": "plume-du-kwak-de-flammes",
+    "resource_img": "https://placehold.co/40x40/1f2937/9ca3af?text=PL"
+  },
+  {
+    "month_day": "11-04",
+    "resource_name": "Langue de Chef de Guerre",
+    "quantity": 1,
+    "resource_id": "langue-de-chef-de-guerre",
+    "resource_img": "https://placehold.co/40x40/1f2937/9ca3af?text=LA"
+  },
+  {
+    "month_day": "11-05",
+    "resource_name": "Corne du Chef de Guerre",
+    "quantity": 1,
+    "resource_id": "corne-du-chef-de-guerre",
+    "resource_img": "https://placehold.co/40x40/1f2937/9ca3af?text=CO"
+  },
+  {
+    "month_day": "11-06",
+    "resource_name": "Plume du Corbac",
+    "quantity": 6,
+    "resource_id": "plume-de-corbac",
+    "resource_img": "https://placehold.co/40x40/1f2937/9ca3af?text=PL"
+  },
+  {
+    "month_day": "11-07",
+    "resource_name": "Patte d'Arakne",
+    "quantity": 6,
+    "resource_id": "patte-darakne",
+    "resource_img": "https://placehold.co/40x40/1f2937/9ca3af?text=PA"
+  },
+  {
+    "month_day": "11-08",
+    "resource_name": "Corne de Bouftou",
+    "quantity": 6,
+    "resource_id": "corne-de-bouftou",
+    "resource_img": "https://placehold.co/40x40/1f2937/9ca3af?text=CO"
+  },
+  {
+    "month_day": "11-09",
+    "resource_name": "Bave de Bouftou",
+    "quantity": 6,
+    "resource_id": "bave-de-bouftou",
+    "resource_img": "https://placehold.co/40x40/1f2937/9ca3af?text=BA"
+  },
+  {
+    "month_day": "11-10",
+    "resource_name": "Patte de Bwork",
+    "quantity": 1,
+    "resource_id": "patte-de-bwork",
+    "resource_img": "https://placehold.co/40x40/1f2937/9ca3af?text=PA"
+  },
+  {
+    "month_day": "11-11",
+    "resource_name": "Œil de Corbac",
+    "quantity": 1,
+    "resource_id": "oeil-de-corbac",
+    "resource_img": "https://placehold.co/40x40/1f2937/9ca3af?text=OE"
+  },
+  {
+    "month_day": "11-12",
+    "resource_name": "Plume de Corbac",
+    "quantity": 6,
+    "resource_id": "plume-de-corbac",
+    "resource_img": "https://placehold.co/40x40/1f2937/9ca3af?text=PL"
+  },
+  {
+    "month_day": "11-13",
+    "resource_name": "Œil de Craqueleur",
+    "quantity": 2,
+    "resource_id": "oeil-de-craqueleur",
+    "resource_img": "https://placehold.co/40x40/1f2937/9ca3af?text=OE"
+  },
+  {
+    "month_day": "11-14",
+    "resource_name": "Queue de Prespic",
+    "quantity": 4,
+    "resource_id": "queue-de-prespic",
+    "resource_img": "https://placehold.co/40x40/1f2937/9ca3af?text=QU"
+  },
+  {
+    "month_day": "11-15",
+    "resource_name": "Étoffe de Chef de Guerre",
+    "quantity": 1,
+    "resource_id": "etoffe-de-chef-de-guerre",
+    "resource_img": "https://placehold.co/40x40/1f2937/9ca3af?text=ET"
+  },
+  {
+    "month_day": "11-16",
+    "resource_name": "Poil de Sanglier",
+    "quantity": 6,
+    "resource_id": "poil-de-sanglier",
+    "resource_img": "https://placehold.co/40x40/1f2937/9ca3af?text=PO"
+  },
+  {
+    "month_day": "11-17",
+    "resource_name": "Duvet de Kido",
+    "quantity": 6,
+    "resource_id": "duvet-de-kido",
+    "resource_img": "https://placehold.co/40x40/1f2937/9ca3af?text=DU"
+  },
+  {
+    "month_day": "11-18",
+    "resource_name": "Plume du Kwak de Flammes",
+    "quantity": 6,
+    "resource_id": "plume-du-kwak-de-flammes",
+    "resource_img": "https://placehold.co/40x40/1f2937/9ca3af?text=PL"
+  },
+  {
+    "month_day": "11-19",
+    "resource_name": "Langue de Chef de Guerre",
+    "quantity": 1,
+    "resource_id": "langue-de-chef-de-guerre",
+    "resource_img": "https://placehold.co/40x40/1f2937/9ca3af?text=LA"
+  },
+  {
+    "month_day": "11-20",
+    "resource_name": "Corne du Chef de Guerre",
+    "quantity": 1,
+    "resource_id": "corne-du-chef-de-guerre",
+    "resource_img": "https://placehold.co/40x40/1f2937/9ca3af?text=CO"
+  },
+  {
+    "month_day": "11-21",
+    "resource_name": "Plume du Corbac",
+    "quantity": 6,
+    "resource_id": "plume-de-corbac",
+    "resource_img": "https://placehold.co/40x40/1f2937/9ca3af?text=PL"
+  },
+  {
+    "month_day": "11-22",
+    "resource_name": "Griffe de Félygiène",
+    "quantity": 3,
+    "resource_id": "griffe-de-felygiene",
+    "resource_img": "https://placehold.co/40x40/1f2937/9ca3af?text=GR"
+  },
+  {
+    "month_day": "11-23",
+    "resource_name": "Fragment d'Ectorche",
+    "quantity": 2,
+    "resource_id": "fragment-dectorche",
+    "resource_img": "https://placehold.co/40x40/1f2937/9ca3af?text=FR"
+  },
+  {
+    "month_day": "11-24",
+    "resource_name": "Avoine",
+    "quantity": 50,
+    "resource_id": "avoine",
+    "resource_img": "https://placehold.co/40x40/1f2937/9ca3af?text=AV"
+  },
+  {
+    "month_day": "11-25",
+    "resource_name": "Laine de Boufmouth légendaire",
+    "quantity": 5,
+    "resource_id": "laine-de-boufmouth-legendaire",
+    "resource_img": "https://placehold.co/40x40/1f2937/9ca3af?text=LA"
+  },
+  {
+    "month_day": "11-26",
+    "resource_name": "Antennes de Vilinsekt",
+    "quantity": 9,
+    "resource_id": "antennes-de-vilinsekt",
+    "resource_img": "https://placehold.co/40x40/1f2937/9ca3af?text=AN"
+  },
+  {
+    "month_day": "11-27",
+    "resource_name": "Bois d'If",
+    "quantity": null,
+    "resource_id": "bois-dif",
+    "resource_img": "https://placehold.co/40x40/1f2937/9ca3af?text=BO"
+  },
+  {
+    "month_day": "11-28",
+    "resource_name": "Poils de Barbe de Dragodinde",
+    "quantity": 1,
+    "resource_id": "poils-de-barbe-de-dragodinde",
+    "resource_img": "https://placehold.co/40x40/1f2937/9ca3af?text=PO"
+  },
+  {
+    "month_day": "11-29",
+    "resource_name": "Kobalte",
+    "quantity": 30,
+    "resource_id": "kobalte",
+    "resource_img": "https://placehold.co/40x40/1f2937/9ca3af?text=KO"
+  },
+  {
+    "month_day": "11-30",
+    "resource_name": "Laine de Yokaï Givrefoux",
+    "quantity": 3,
+    "resource_id": "laine-de-yokai-givrefoux",
+    "resource_img": "https://placehold.co/40x40/1f2937/9ca3af?text=LA"
+  },
+  {
+    "month_day": "12-01",
+    "resource_name": "Œil de Gouligane",
+    "quantity": 2,
+    "resource_id": "oeil-de-gouligane",
+    "resource_img": "https://placehold.co/40x40/1f2937/9ca3af?text=OE"
+  },
+  {
+    "month_day": "12-02",
+    "resource_name": "Bouclier du tournesol sauvage",
+    "quantity": 1,
+    "resource_id": "bouclier-du-tournesol-sauvage",
+    "resource_img": "https://placehold.co/40x40/1f2937/9ca3af?text=BO"
+  },
+  {
+    "month_day": "12-03",
+    "resource_name": "Peau de Mansobèse",
+    "quantity": 4,
+    "resource_id": "peau-de-mansobese",
+    "resource_img": "https://placehold.co/40x40/1f2937/9ca3af?text=PE"
+  },
+  {
+    "month_day": "12-04",
+    "resource_name": "Bois d'Oliviolet",
+    "quantity": 40,
+    "resource_id": "bois-doliviolet",
+    "resource_img": "https://placehold.co/40x40/1f2937/9ca3af?text=BO"
+  },
+  {
+    "month_day": "12-05",
+    "resource_name": "Casque de Sherpoa",
+    "quantity": 6,
+    "resource_id": "casque-de-sherpoa",
+    "resource_img": "https://placehold.co/40x40/1f2937/9ca3af?text=CA"
+  },
+  {
+    "month_day": "12-06",
+    "resource_name": "Charbon",
+    "quantity": 6,
+    "resource_id": "charbon",
+    "resource_img": "https://placehold.co/40x40/1f2937/9ca3af?text=CH"
+  },
+  {
+    "month_day": "12-07",
+    "resource_name": "Étoffe de Dok Alako",
+    "quantity": 6,
+    "resource_id": "etoffe-de-dok-alako",
+    "resource_img": "https://placehold.co/40x40/1f2937/9ca3af?text=ET"
+  },
+  {
+    "month_day": "12-08",
+    "resource_name": "Perce-Neige",
+    "quantity": 10,
+    "resource_id": "perce-neige",
+    "resource_img": "https://placehold.co/40x40/1f2937/9ca3af?text=PE"
+  },
+  {
+    "month_day": "12-09",
+    "resource_name": "Poil de Rat Bontarien",
+    "quantity": 2,
+    "resource_id": "poil-de-rat-bontarien",
+    "resource_img": "https://placehold.co/40x40/1f2937/9ca3af?text=PO"
+  },
+  {
+    "month_day": "12-10",
+    "resource_name": "Queue de Dragodinde",
+    "quantity": 1,
+    "resource_id": "queue-de-dragodinde",
+    "resource_img": "https://placehold.co/40x40/1f2937/9ca3af?text=QU"
+  },
+  {
+    "month_day": "12-11",
+    "resource_name": "Pacmabottes",
+    "quantity": 2,
+    "resource_id": "pacmabottes",
+    "resource_img": "https://placehold.co/40x40/1f2937/9ca3af?text=PA"
+  },
+  {
+    "month_day": "12-12",
+    "resource_name": "Potion de cité : Brâkmar",
+    "quantity": 3,
+    "resource_id": "potion-de-cite-brakmar",
+    "resource_img": "https://placehold.co/40x40/1f2937/9ca3af?text=PO"
+  },
+  {
+    "month_day": "12-13",
+    "resource_name": "Laine de Boufmouth",
+    "quantity": 5,
+    "resource_id": "laine-de-boufmouth",
+    "resource_img": "https://placehold.co/40x40/1f2937/9ca3af?text=LA"
+  },
+  {
+    "month_day": "12-14",
+    "resource_name": "Peau de Bwork",
+    "quantity": 1,
+    "resource_id": "peau-de-bwork",
+    "resource_img": "https://placehold.co/40x40/1f2937/9ca3af?text=PE"
+  },
+  {
+    "month_day": "12-15",
+    "resource_name": "Queue de Scorbute",
+    "quantity": 4,
+    "resource_id": "queue-de-scorbute",
+    "resource_img": "https://placehold.co/40x40/1f2937/9ca3af?text=QU"
+  },
+  {
+    "month_day": "12-16",
+    "resource_name": "Cocon de Ver à Soie",
+    "quantity": 10,
+    "resource_id": "cocon-de-ver-a-soie",
+    "resource_img": "https://placehold.co/40x40/1f2937/9ca3af?text=CO"
+  },
+  {
+    "month_day": "12-17",
+    "resource_name": "Patte d'Arakne",
+    "quantity": 6,
+    "resource_id": "patte-darakne",
+    "resource_img": "https://placehold.co/40x40/1f2937/9ca3af?text=PA"
+  },
+  {
+    "month_day": "12-18",
+    "resource_name": "Corne de Bouftou",
+    "quantity": 6,
+    "resource_id": "corne-de-bouftou",
+    "resource_img": "https://placehold.co/40x40/1f2937/9ca3af?text=CO"
+  },
+  {
+    "month_day": "12-19",
+    "resource_name": "Bave de Bouftou",
+    "quantity": 6,
+    "resource_id": "bave-de-bouftou",
+    "resource_img": "https://placehold.co/40x40/1f2937/9ca3af?text=BA"
+  },
+  {
+    "month_day": "12-20",
+    "resource_name": "Patte de Bwork",
+    "quantity": 1,
+    "resource_id": "patte-de-bwork",
+    "resource_img": "https://placehold.co/40x40/1f2937/9ca3af?text=PA"
+  },
+  {
+    "month_day": "12-21",
+    "resource_name": "Œil de Corbac",
+    "quantity": 1,
+    "resource_id": "oeil-de-corbac",
+    "resource_img": "https://placehold.co/40x40/1f2937/9ca3af?text=OE"
+  },
+  {
+    "month_day": "12-22",
+    "resource_name": "Plume de Corbac",
+    "quantity": 6,
+    "resource_id": "plume-de-corbac",
+    "resource_img": "https://placehold.co/40x40/1f2937/9ca3af?text=PL"
+  },
+  {
+    "month_day": "12-23",
+    "resource_name": "Œil de Craqueleur",
+    "quantity": 2,
+    "resource_id": "oeil-de-craqueleur",
+    "resource_img": "https://placehold.co/40x40/1f2937/9ca3af?text=OE"
+  },
+  {
+    "month_day": "12-24",
+    "resource_name": "Queue de Prespic",
+    "quantity": 4,
+    "resource_id": "queue-de-prespic",
+    "resource_img": "https://placehold.co/40x40/1f2937/9ca3af?text=QU"
+  },
+  {
+    "month_day": "12-25",
+    "resource_name": "Étoffe de Chef de Guerre",
+    "quantity": 1,
+    "resource_id": "etoffe-de-chef-de-guerre",
+    "resource_img": "https://placehold.co/40x40/1f2937/9ca3af?text=ET"
+  },
+  {
+    "month_day": "12-26",
+    "resource_name": "Poil de Sanglier",
+    "quantity": 6,
+    "resource_id": "poil-de-sanglier",
+    "resource_img": "https://placehold.co/40x40/1f2937/9ca3af?text=PO"
+  },
+  {
+    "month_day": "12-27",
+    "resource_name": "Duvet de Kido",
+    "quantity": 6,
+    "resource_id": "duvet-de-kido",
+    "resource_img": "https://placehold.co/40x40/1f2937/9ca3af?text=DU"
+  },
+  {
+    "month_day": "12-28",
+    "resource_name": "Plume du Kwak de Flammes",
+    "quantity": 6,
+    "resource_id": "plume-du-kwak-de-flammes",
+    "resource_img": "https://placehold.co/40x40/1f2937/9ca3af?text=PL"
+  },
+  {
+    "month_day": "12-29",
+    "resource_name": "Langue de Chef de Guerre",
+    "quantity": 1,
+    "resource_id": "langue-de-chef-de-guerre",
+    "resource_img": "https://placehold.co/40x40/1f2937/9ca3af?text=LA"
+  },
+  {
+    "month_day": "12-30",
+    "resource_name": "Corne du Chef de Guerre",
+    "quantity": 1,
+    "resource_id": "corne-du-chef-de-guerre",
+    "resource_img": "https://placehold.co/40x40/1f2937/9ca3af?text=CO"
+  },
+  {
+    "month_day": "12-31",
+    "resource_name": "Plume du Corbac",
+    "quantity": 6,
+    "resource_id": "plume-de-corbac",
+    "resource_img": "https://placehold.co/40x40/1f2937/9ca3af?text=PL"
+  }
+]
